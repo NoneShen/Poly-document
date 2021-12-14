@@ -2,9 +2,10 @@
 
 * [Introduction](README.md)
 
+----
 ### Joining the Cross Chain Ecosystem
 
-* [Default header1](FAQ/test.md)
+* [Default Template](How does a chain Join the Cross Chain Ecosystem/template.md)
 * [Default header2](FAQ/test.md)
 
 ### Calling the Cross Chain Smart Contract
@@ -31,8 +32,4 @@
 
 * [Default header1](FAQ/test.md)
 * [Default header2](FAQ/test.md)
-
-----
-
-* [Last part without title](FAQ/test.md)
 
