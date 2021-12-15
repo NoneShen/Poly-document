@@ -1,4 +1,4 @@
-<h1 align="center">Markdown Page Template</h1>
+<h1 align="center">Joining the Cross Chain Ecosystem</h1>
 
 
 ## Overview
@@ -34,6 +34,9 @@ The interface methods that need to implemented by the respective contracts are a
 ## Cross Chain Interaction Between Chains
 
 <div align=center><img width="800" height="570" src="resources/ark.png" alt="loading"/></div>
+
+![Alt text](resources/ark.png)
+
 
 The figure above illustrates the cross chain interaction between chain A to chain B. The user sends a cross chain request from chain A by invoking a dApp's cross chain interface, and on the target chain B the dApp's smart contract executes the necessary logic to produce the final result. Chain A and B implement the two contracts and other necessary interfaces, and anyone can develop an infrastructure for dApps around the cross chain management contract. The contracts deployed on chain A and chain B make up a complete cross chain dApp.
 
