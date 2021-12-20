@@ -2,29 +2,29 @@
 ### Introduction
 
 ### Development 
-* [Joing the Cross Chain Ecosystem](How does a chain Join the Cross Chain Ecosystem/readme.md)
-    * [Chain Elements to be Submitted](How does a chain Join the Cross Chain Ecosystem/elements.md)
-    * [Common Steps](How does a chain Join the Cross Chain Ecosystem/steps.md)
-    * [Guideline for Developers](How does a chain Join the Cross Chain Ecosystem/guideline.md)
+* [Joing the Cross Chain Ecosystem](add_chain/readme.md)
+    * [Chain Elements to be Submitted](add_chain/elements.md)
+    * [Common Steps](add_chain/steps.md)
+    * [Guideline for Developers](add_chain/guideline.md)
   
 * [Calling the Cross Chain Smart Contract](FAQ/template.md)
-    * [Chapter1](How does a chain Join the Cross Chain Ecosystem/template.md)
-    * [Chapter2](How does a chain Join the Cross Chain Ecosystem/template.md)
-    * [Chapter3](How does a chain Join the Cross Chain Ecosystem/template.md)
+    * [Chapter1](add_chain/template.md)
+    * [Chapter2](add_chain/template.md)
+    * [Chapter3](add_chain/template.md)
   
 * [Integrating New Tokens](FAQ/template.md)
-    * [Chapter1](How does a chain Join the Cross Chain Ecosystem/template.md)
-    * [Chapter2](How does a chain Join the Cross Chain Ecosystem/template.md)
-    * [Chapter3](How does a chain Join the Cross Chain Ecosystem/template.md)
+    * [Chapter1](add_chain/template.md)
+    * [Chapter2](add_chain/template.md)
+    * [Chapter3](add_chain/template.md)
   
 * [Integrating Poly Bridge to Websites](FAQ/template.md)
-    * [Chapter1](How does a chain Join the Cross Chain Ecosystem/template.md)
-    * [Chapter2](How does a chain Join the Cross Chain Ecosystem/template.md)
-    * [Chapter3](How does a chain Join the Cross Chain Ecosystem/template.md)
+    * [Chapter1](add_chain/template.md)
+    * [Chapter2](add_chain/template.md)
+    * [Chapter3](add_chain/template.md)
 
 ----
 ### Glossary
-* [Core Smart Contract List](How does a chain Join the Cross Chain Ecosystem/glossary.md)
+* [Core Smart Contract List](add_chain/glossary.md)
 
 ### FAQ
 * [Default header1](FAQ/template.md)
