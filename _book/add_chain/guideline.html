@@ -129,7 +129,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.1" data-path="elements.html">
+        <li class="chapter " data-level="2.1.1" data-path="scenario.html">
+            
+                <a href="scenario.html">
+            
+                    
+                    Two Scenarios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="elements.html">
             
                 <a href="elements.html">
             
@@ -142,7 +155,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2" data-path="steps.html">
+        <li class="chapter " data-level="2.1.3" data-path="steps.html">
             
                 <a href="steps.html">
             
@@ -155,7 +168,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.1.3" data-path="guideline.html">
+        <li class="chapter active" data-level="2.1.4" data-path="guideline.html">
             
                 <a href="guideline.html">
             
@@ -187,9 +200,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="template.html">
+        <li class="chapter " data-level="2.2.1" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter1
@@ -200,9 +213,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="template.html">
+        <li class="chapter " data-level="2.2.2" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter2
@@ -213,9 +226,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="template.html">
+        <li class="chapter " data-level="2.2.3" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter3
@@ -245,9 +258,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="template.html">
+        <li class="chapter " data-level="2.3.1" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter1
@@ -258,9 +271,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2" data-path="template.html">
+        <li class="chapter " data-level="2.3.2" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter2
@@ -271,9 +284,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.3" data-path="template.html">
+        <li class="chapter " data-level="2.3.3" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter3
@@ -303,9 +316,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.4.1" data-path="template.html">
+        <li class="chapter " data-level="2.4.1" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter1
@@ -316,9 +329,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.2" data-path="template.html">
+        <li class="chapter " data-level="2.4.2" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter2
@@ -329,9 +342,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="template.html">
+        <li class="chapter " data-level="2.4.3" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter3
@@ -359,7 +372,7 @@
                 <a href="glossary.html">
             
                     
-                    Core Smart Contract List
+                    Glossary
             
                 </a>
             
@@ -436,10 +449,10 @@
 
 
 <h2 id="overview">Overview</h2>
-<p>This chapter shows the developer how to cooperate with the poly network team to add a chain into the poly cross-chain ecosystem. The functions and interfaces developers need to implement:</p>
+<p>This chapter shows the developer how to cooperate with the poly network team to add a chain into the poly cross-chain ecosystem. The functions developers need to implement:</p>
 <ul>
-<li>Block Header Synchronization Interface Method&#xFF0C; including the two sync header(native/service/header_sync/bsc/header_sync.go) function and the calling function whitch fetch genesis header info (cmd/tools/run.go syncbscgenesisheader)</li>
-<li>Handler for handel cross chain transaction with merkle proof (native/service/cross_chain_manager/bsc/bsc_handler.go)</li>
+<li>Block Header Synchronization Interface Method&#xFF0C; including header sync and the entrance functions.</li>
+<li>Handler for handling the cross-chain transaction with Merkle proof.</li>
 </ul>
 <p>The poly team will accomplish the remaining actions such as smart contract deployment, side chain registration, and relayer setup.</p>
 <h2 id="block-header-synchronization">Block Header Synchronization</h2>
@@ -597,7 +610,7 @@ Val                   []<span class="hljs-keyword">byte</span>    <span class="h
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Guideline for Developers","level":"2.1.3","depth":2,"next":{"title":"Calling the Cross Chain Smart Contract","level":"2.2","depth":1,"path":"FAQ/template.md","ref":"FAQ/template.md","articles":[{"title":"Chapter1","level":"2.2.1","depth":2,"path":"How does a chain Join the Cross Chain Ecosystem/template.md","ref":"How does a chain Join the Cross Chain Ecosystem/template.md","articles":[]},{"title":"Chapter2","level":"2.2.2","depth":2,"path":"How does a chain Join the Cross Chain Ecosystem/template.md","ref":"How does a chain Join the Cross Chain Ecosystem/template.md","articles":[]},{"title":"Chapter3","level":"2.2.3","depth":2,"path":"How does a chain Join the Cross Chain Ecosystem/template.md","ref":"How does a chain Join the Cross Chain Ecosystem/template.md","articles":[]}]},"previous":{"title":"Common Steps","level":"2.1.2","depth":2,"path":"How does a chain Join the Cross Chain Ecosystem/steps.md","ref":"How does a chain Join the Cross Chain Ecosystem/steps.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"How does a chain Join the Cross Chain Ecosystem/guideline.md","mtime":"2021-12-20T08:44:45.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T09:02:55.438Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Guideline for Developers","level":"2.1.4","depth":2,"next":{"title":"Calling the Cross Chain Smart Contract","level":"2.2","depth":1,"path":"FAQ/template.md","ref":"FAQ/template.md","articles":[{"title":"Chapter1","level":"2.2.1","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter2","level":"2.2.2","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter3","level":"2.2.3","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]}]},"previous":{"title":"Common Steps","level":"2.1.3","depth":2,"path":"add_chain/steps.md","ref":"add_chain/steps.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/guideline.md","mtime":"2021-12-20T09:49:09.853Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T09:50:40.137Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

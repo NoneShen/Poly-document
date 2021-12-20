@@ -15,7 +15,7 @@ The term **side chain** refers to a chain that is interested in joining the cros
 Source chain and side chain are relative to a specific asset. A public chain is the source chain for a particular asset if the asset firstly appears in this public chain. Relatively, if we want to cross this asset into another public chain and issue a new token on this public chain, then this is the relative target chain. For instance:
 ```markdown
 For the ether asset, Ethereum is the source chain. When we want to issue a new OEP4 token in 
-Ontology network representing the ether, and the Ontology chain will be the side chain for 
+The Ontology network represents the ether, and the Ontology chain will be the side chain for 
 the ether asset.
 Vice versa, For the ONT token, the Ontology chain is the source chain. When we want to issue
 a new ERC20 token in the Ethereum chain, Ethereum would be the side chain for the Ont network.

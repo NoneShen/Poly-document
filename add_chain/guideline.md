@@ -3,10 +3,10 @@
 
 ## Overview
 
-This chapter shows the developer how to cooperate with the poly network team to add a chain into the poly cross-chain ecosystem. The functions and interfaces developers need to implement:
+This chapter shows the developer how to cooperate with the poly network team to add a chain into the poly cross-chain ecosystem. The functions developers need to implement:
 
-- Block Header Synchronization Interface Method， including the two sync header(native/service/header_sync/bsc/header_sync.go) function and the calling function whitch fetch genesis header info (cmd/tools/run.go syncbscgenesisheader)
-- Handler for handel cross chain transaction with merkle proof (native/service/cross_chain_manager/bsc/bsc_handler.go)
+- Block Header Synchronization Interface Method， including header sync and the entrance functions.
+- Handler for handling the cross-chain transaction with Merkle proof.
 
 The poly team will accomplish the remaining actions such as smart contract deployment, side chain registration, and relayer setup.
 

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Core Smart Contract List · Gitbook Test</title>
+        <title>Common Steps · Gitbook Test</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../FAQ/template.html" />
+    <link rel="next" href="guideline.html" />
     
     
-    <link rel="prev" href="template.html" />
+    <link rel="prev" href="elements.html" />
     
 
     </head>
@@ -129,7 +129,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.1" data-path="elements.html">
+        <li class="chapter " data-level="2.1.1" data-path="scenario.html">
+            
+                <a href="scenario.html">
+            
+                    
+                    Two Scenarios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="elements.html">
             
                 <a href="elements.html">
             
@@ -142,7 +155,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2" data-path="steps.html">
+        <li class="chapter active" data-level="2.1.3" data-path="steps.html">
             
                 <a href="steps.html">
             
@@ -155,7 +168,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.3" data-path="guideline.html">
+        <li class="chapter " data-level="2.1.4" data-path="guideline.html">
             
                 <a href="guideline.html">
             
@@ -187,9 +200,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="template.html">
+        <li class="chapter " data-level="2.2.1" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter1
@@ -200,9 +213,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="template.html">
+        <li class="chapter " data-level="2.2.2" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter2
@@ -213,9 +226,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="template.html">
+        <li class="chapter " data-level="2.2.3" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter3
@@ -245,9 +258,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="template.html">
+        <li class="chapter " data-level="2.3.1" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter1
@@ -258,9 +271,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2" data-path="template.html">
+        <li class="chapter " data-level="2.3.2" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter2
@@ -271,9 +284,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.3" data-path="template.html">
+        <li class="chapter " data-level="2.3.3" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter3
@@ -303,9 +316,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.4.1" data-path="template.html">
+        <li class="chapter " data-level="2.4.1" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter1
@@ -316,9 +329,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.2" data-path="template.html">
+        <li class="chapter " data-level="2.4.2" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter2
@@ -329,9 +342,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="template.html">
+        <li class="chapter " data-level="2.4.3" data-path="template.md">
             
-                <a href="template.html">
+                <span>
             
                     
                     Chapter3
@@ -354,12 +367,12 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="glossary.html">
+        <li class="chapter " data-level="3.1" data-path="glossary.html">
             
                 <a href="glossary.html">
             
                     
-                    Core Smart Contract List
+                    Glossary
             
                 </a>
             
@@ -417,7 +430,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Core Smart Contract List</a>
+        <a href=".." >Common Steps</a>
     </h1>
 </div>
 
@@ -432,25 +445,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 align="center" id="glossary">Glossary</h1>
+                                <h1 align="center" id="steps-for-adding-a-new-chain-to-poly">Steps for adding a new chain to poly</h1>
 
-<h3 id="relayer">Relayer</h3>
-<p>A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world. </p>
-<p>Each chain in the cross-chain ecosystem has a relayer associated with it. Relayer monitors its corresponding chain network for cross-chain transactions and forwards the respective block headers to the relay chain if detected, gaining available incentives in the process. At the same time, it also monitors for cross-chain transactions taking place on the relay chain and transfers them to the respective side chain.</p>
-<h3 id="side-chain">Side Chain</h3>
-<p>The term <strong>side chain</strong> refers to a chain that is interested in joining the cross-chain ecosystem</p>
-<h3 id="source-chain-and-target-chain">Source Chain and Target Chain</h3>
-<p>Source chain and side chain are relative to a specific asset. A public chain is the source chain for a particular asset if the asset firstly appears in this public chain. Relatively, if we want to cross this asset into another public chain and issue a new token on this public chain, then this is the relative target chain. For instance:</p>
-<pre><code class="lang-markdown">For the ether asset, Ethereum is the source chain. When we want to issue a new OEP4 token in 
-Ontology network representing the ether, and the Ontology chain will be the side chain for 
-the ether asset.
-Vice versa, For the ONT token, the Ontology chain is the source chain. When we want to issue
-a new ERC20 token in the Ethereum chain, Ethereum would be the side chain for the Ont network.
-</code></pre>
-<h3 id="relay-chain-poly-chain-poly-relay-chain">Relay Chain/ Poly Chain/ Poly Relay Chain</h3>
-<p>PolyChain is one of the crucial components of the cross-chain ecosystem&#xFF0C;Each different type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.</p>
-<h3 id="canonical-block">Canonical Block</h3>
-<p>A block is included in the primary blockchain and is directly or indirectly referenced by future blocks. Blocks that are not canonical may have been valid but were discarded in favor of the canonical block.</p>
+
+<h2 id="overview">Overview</h2>
+<p>Adding a new chain to poly involves three main parts:</p>
+<ul>
+<li>Initialization includes smart contract deployment and new chain registration. </li>
+<li>Register core interface to poly relayer.</li>
+<li>Sync genesis header involves sync side chain initial header to poly relay chain and sync poly genesis header to the ccm contract deployed on the side chain.</li>
+</ul>
+<p>Part of the steps now proceeded only by the poly team following general specifications. For what a developer should do, see chapter (Attach a link to the guideline. MD)</p>
+<h2 id="initialization">Initialization</h2>
+<p><strong>Deploy Smart Contract</strong></p>
+<p>The core Poly Cross-Chain Smart Contract such as CCM, CCMP, CCD can be found in(Attach a Link to Core smart contract)</p>
+<p>Poly developers will deploy these contracts with a selected contract account on the side chain.</p>
+<p>The</p>
+<p><strong>New Chain Registration</strong></p>
+<p>After the registration process is complete and the Cross Chain Council (formed by poly consensus nodes) approves the application, the chain officially becomes a part of the cross-chain ecosystem. The registration is accomplished using the trusted registered account by the poly team</p>
+<p><strong>Update Registered Chain</strong> </p>
+<p>When updating side chain information, the registered account needs to send an update application to the relay chain. The updateSideChain method is used to send an application to update the registered information of a particular blockchain</p>
+<h2 id="register-core-interface-method">Register Core Interface Method</h2>
+<p>Register header sync and cross-chain management function to relayer. So that relayer can call them for every cross-chain event. The core interface method can be found in the chapter (Attach a link to the guideline. MD)</p>
+<p><strong>Register block Sync Method to Relayer</strong></p>
+<p>Block header synchronization includes two interface methods: SyncGenesisHeader and SyncBlockHeader
+ The former method will only be called once, while the latter is the core method for conducting the cross-chain event and will be called consistently by the relayer.</p>
+<p><strong>Register Cross Chain Transaction management method to Relayer</strong> </p>
+<p>Register the interface method MakeDepositProposal to relayer. This method is the key for handling cross-chain transactions, and it tells the relayers how to ensure the legitimacy of cross-chain transactions by verifying Merkle proof.</p>
+<h2 id="sync-genesis-header">Sync Genesis Header</h2>
+<p><strong>Sync Target Chain&apos;s Genesis Header to Poly</strong></p>
+<p>For Initializing side chain, the side chain&apos;s initial header should be synchronized to the poly relay chain so that the consequent block headers of blocks that contain cross-chain events can be verified and synchronized.</p>
+<p><strong>Sync Poly&apos;s Genesis Header to Target Chain</strong></p>
+<p>Poly chain&apos;s initial header should be synchronized to the side chain&apos;s CCM contract. The initial block header should include epoch switching information of consensus nodes, from which height the cross-chain transaction from or to Cosmos subchain will be effective.</p>
 
                                 
                                 </section>
@@ -478,12 +504,12 @@ a new ERC20 token in the Ethereum chain, Ethereum would be the side chain for th
 
             
                 
-                <a href="template.html" class="navigation navigation-prev " aria-label="Previous page: Chapter3">
+                <a href="elements.html" class="navigation navigation-prev " aria-label="Previous page: Chain Elements to be Submitted">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../FAQ/template.html" class="navigation navigation-next " aria-label="Next page: Default header1">
+                <a href="guideline.html" class="navigation navigation-next " aria-label="Next page: Guideline for Developers">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -494,7 +520,7 @@ a new ERC20 token in the Ethereum chain, Ethereum would be the side chain for th
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Core Smart Contract List","level":"3.1","depth":1,"next":{"title":"Default header1","level":"4.1","depth":1,"path":"FAQ/template.md","ref":"FAQ/template.md","articles":[]},"previous":{"title":"Chapter3","level":"2.4.3","depth":2,"path":"How does a chain Join the Cross Chain Ecosystem/template.md","ref":"How does a chain Join the Cross Chain Ecosystem/template.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"How does a chain Join the Cross Chain Ecosystem/glossary.md","mtime":"2021-12-20T08:45:06.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T09:02:55.438Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Common Steps","level":"2.1.3","depth":2,"next":{"title":"Guideline for Developers","level":"2.1.4","depth":2,"path":"add_chain/guideline.md","ref":"add_chain/guideline.md","articles":[]},"previous":{"title":"Chain Elements to be Submitted","level":"2.1.2","depth":2,"path":"add_chain/elements.md","ref":"add_chain/elements.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/steps.md","mtime":"2021-12-20T09:49:30.582Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T09:50:40.137Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
