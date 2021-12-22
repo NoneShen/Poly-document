@@ -1,4 +1,4 @@
-<h1 align="center">Steps for adding a new chain to poly</h1>
+<h1 align="center">Technical Flow in Header Sync Scenario</h1>
 
 
 ## Overview
@@ -7,7 +7,7 @@ Adding a new chain to poly involves three main parts:
 
 - Initialization includes smart contract deployment and new chain registration. 
 - Register core interface to poly relayer.
-- Sync genesis header involves sync side chain initial header to poly relay chain and sync poly genesis header to the ccm contract deployed on the side chain.
+- Sync genesis header involves synchronizing a  side chain initial header to poly relay chain and synchronizing poly genesis header to the ccm contract deployed on the side chain.
 
 Part of the steps now proceeded only by the poly team following general specifications. For what a developer should do, see chapter (Attach a link to the guideline. MD)
 
@@ -19,15 +19,13 @@ The core Poly Cross-Chain Smart Contract such as CCM, CCMP, CCD can be found in(
 
 Poly developers will deploy these contracts with a selected contract account on the side chain.
 
-The
-
 **New Chain Registration**
 
 After the registration process is complete and the Cross Chain Council (formed by poly consensus nodes) approves the application, the chain officially becomes a part of the cross-chain ecosystem. The registration is accomplished using the trusted registered account by the poly team
 
 **Update Registered Chain** 
 
-When updating side chain information, the registered account needs to send an update application to the relay chain. The updateSideChain method is used to send an application to update the registered information of a particular blockchain
+The registered account needs to send an update application to the relay chain when updating side chain information. The updateSideChain method is used to send an application to update the registered information of a particular blockchain
 
 
 

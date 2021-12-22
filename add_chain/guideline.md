@@ -1,4 +1,4 @@
-<h1 align="center">Guideline for Developers</h1>
+<h1 align="center">Guideline for Developers for Header Sync Scenario</h1>
 
 
 ## Overview

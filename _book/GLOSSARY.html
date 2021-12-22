@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · Gitbook Test</title>
+        <title> · Gitbook Test</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,6 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="add_chain/readme.html" />
-    
     
 
     </head>
@@ -93,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -428,7 +426,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." ></a>
     </h1>
 </div>
 
@@ -443,49 +441,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="summary">Summary</h1>
-<h3 id="introduction">Introduction</h3>
-<h3 id="development">Development</h3>
-<ul>
-<li><p><a href="add_chain/readme.html">Joing the Cross Chain Ecosystem</a></p>
-<ul>
-<li><a href="add_chain/scenario.html">Two Scenarios</a></li>
-<li><a href="add_chain/elements.html">Chain Elements to be Submitted</a></li>
-<li><a href="add_chain/steps.html">Common Steps</a></li>
-<li><a href="add_chain/guideline.html">Guideline for Developers</a></li>
-</ul>
-</li>
-<li><p><a href="FAQ/template.html">Calling the Cross Chain Smart Contract</a></p>
-<ul>
-<li><a href="add_chain/template.md">Chapter1</a></li>
-<li><a href="add_chain/template.md">Chapter2</a></li>
-<li><a href="add_chain/template.md">Chapter3</a></li>
-</ul>
-</li>
-<li><p><a href="FAQ/template.html">Integrating New Tokens</a></p>
-<ul>
-<li><a href="add_chain/template.md">Chapter1</a></li>
-<li><a href="add_chain/template.md">Chapter2</a></li>
-<li><a href="add_chain/template.md">Chapter3</a></li>
-</ul>
-</li>
-<li><p><a href="FAQ/template.html">Integrating Poly Bridge to Websites</a></p>
-<ul>
-<li><a href="add_chain/template.md">Chapter1</a></li>
-<li><a href="add_chain/template.md">Chapter2</a></li>
-<li><a href="add_chain/template.md">Chapter3</a></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="glossary">Glossary</h3>
-<ul>
-<li><a href="add_chain/glossary.html">Glossary</a></li>
-</ul>
-<h3 id="faq">FAQ</h3>
-<ul>
-<li><a href="FAQ/template.html">Default header1</a></li>
-</ul>
+                                <h2 id="relayer">Relayer</h2>
+<p>A <a href="GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the <a href="GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a> and the outside world.</p>
+<p>Each chain in the cross-chain ecosystem has a <a href="GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> associated with it. <a href="GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">Relayer</a> monitors its corresponding chain network for cross-chain transactions and forwards the respective block headers to the relay chain if detected, gaining available incentives in the process. At the same time, it also monitors for cross-chain transactions taking place on the relay chain and transfers them to the respective <a href="GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a>.</p>
+<h2 id="side-chain">Side Chain</h2>
+<p>The term <strong><a href="GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a></strong> refers to a chain that is interested in joining the cross-chain ecosystem</p>
+<h2 id="source-chain-and-target-chain">Source Chain and Target Chain</h2>
+<p>Source chain and <a href="GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a> are relative to a specific asset. A public chain is the source chain for a particular asset if the asset firstly appears in this public chain. Relatively, if we want to cross this asset into another public chain and issue a new token on this public chain, then this is the relative target chain. For instance:</p>
+<pre><code class="lang-markdown">For the ether asset, Ethereum is the source chain. When we want to issue a new OEP4 token in 
+The Ontology network represents the ether, and the Ontology chain will be the side chain for 
+the ether asset.
+Vice versa, For the ONT token, the Ontology chain is the source chain. When we want to issue
+a new ERC20 token in the Ethereum chain, Ethereum would be the side chain for the Ont network.
+</code></pre>
+<h2 id="relay-chain-poly-chain-poly-relay-chain">Relay Chain/ Poly Chain/ Poly Relay Chain</h2>
+<p>PolyChain is one of the crucial components of the cross-chain ecosystem&#xFF0C;Each different type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.</p>
+<h2 id="canonical-block">Canonical Block</h2>
+<p>A block is included in the primary blockchain and is directly or indirectly referenced by future blocks. Blocks that are not canonical may have been valid but were discarded in favor of the <a href="GLOSSARY.html#canonical-block" class="glossary-term" title="A block is included in the primary blockchain and is directly or indirectly referenced by future blocks. Blocks that are not canonical may have been valid but were discarded in favor of the canonical block.">canonical block</a>.</p>
 
                                 
                                 </section>
@@ -514,10 +486,6 @@
             
                 
                 
-                <a href="add_chain/readme.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Joing the Cross Chain Ecosystem">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
             
         
     </div>
@@ -525,7 +493,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Joing the Cross Chain Ecosystem","level":"2.1","depth":1,"path":"add_chain/readme.md","ref":"add_chain/readme.md","articles":[{"title":"Two Scenarios","level":"2.1.1","depth":2,"path":"add_chain/scenario.md","ref":"add_chain/scenario.md","articles":[]},{"title":"Chain Elements to be Submitted","level":"2.1.2","depth":2,"path":"add_chain/elements.md","ref":"add_chain/elements.md","articles":[]},{"title":"Common Steps","level":"2.1.3","depth":2,"path":"add_chain/steps.md","ref":"add_chain/steps.md","articles":[]},{"title":"Guideline for Developers","level":"2.1.4","depth":2,"path":"add_chain/guideline.md","ref":"add_chain/guideline.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"README.md","mtime":"2021-12-20T09:41:43.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-22T03:07:20.100Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"GLOSSARY.md","mtime":"2021-12-20T10:02:26.401Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-22T03:07:20.100Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
