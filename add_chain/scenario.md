@@ -7,8 +7,8 @@ Poly has two scenarios for verifying the transaction block and the cross-chain t
 
 Consensus Vote is not suggested for security and scalability reasons unless Header Sync can not be achieved. Here are two factors that determine the cross-chain event can be verified based on Header Sync:
 
-- The blockchain support Merkle proof for verifying transactions, whether it has Merkle tree generation and verification method for the ledger records or transactions. This allows the relay chain to determine the legitimacy of the transaction records.
-- The block headers have the validator set and their commitment or signature for verification. In other words, relayers who act as light clients can obtain the validator sets and their commitment or signature from only the block header information and ensure the legitimacy of the block headers.
+- The blockchain support **Merkle proof** for verifying transactions, whether it has Merkle tree generation and verification method for the ledger records or transactions. This allows the relay chain to determine the legitimacy of the transaction records.
+- The block headers have the validator set and their commitment or signature for verification. In other words, relayers who act as **light clients** can obtain the **validator sets** and their **commitment** or **signature** from **only** the block header information and ensure the legitimacy of the block headers.
 
 ### Block Header Synchronization Scenario
 

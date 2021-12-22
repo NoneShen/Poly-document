@@ -6,10 +6,10 @@ There are two scenarios for adding a new chain to the poly cross-chain ecosystem
 
 This Branch is intended for developers who want to help add a new chain to the poly cross-chain ecosystem, mainly for Header Sync Scenario because the Consensus Vote hardly needs any development. Here is the outline that will be introduced:
 
-- The overview of two scenarios for handling cross-chain events (Link to the scenario. MD).
-- The technical flow for adding a new side chain to the poly cross-chain ecosystem (Link to steps. MD).
-- The features and attributes required for adding a new side chain to the poly cross-chain ecosystem (Link to elements. MD).
-- The interface method needs to be implemented (Link to the guideline. MD).
+- [The overview of two scenarios for handling cross-chain events](scenario.md)
+- [The features and attributes required for adding a new side chain to the poly cross-chain ecosystem](elements.md)
+- [The technical flow for adding a new side chain to the poly cross-chain ecosystem](steps.md)
+- [The interface method needs to be implemented](guideline.md)
 
 
 
