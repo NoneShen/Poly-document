@@ -4,7 +4,7 @@
 
 Before starting implementation, some features and attributes are required for joining the cross-chain ecosystem. These features are the critical elements for implementing the core interface method for handling block headers or cross-chain transactions.
 
-Please note that this chapter is intended for the Header Sync scenario. There is no need to clarify these technical resources for blockchains where Header Sync is not applicable.
+Please **note** that this chapter is intended for the Header Sync scenario. There is no need to clarify these technical resources for blockchains where Header Sync is not applicable.
 
 ## Requirement List
 

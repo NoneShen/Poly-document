@@ -9,7 +9,7 @@ Adding a new chain to poly involves three main parts:
 - Register core interface to poly relayer.
 - Sync genesis header involves synchronizing a  side chain initial header to poly relay chain and synchronizing poly genesis header to the ccm contract deployed on the side chain.
 
-Part of the steps now proceeded only by the poly team following general specifications. For what a developer should do, see chapter (Attach a link to the guideline. MD)
+Part of these steps now proceeded only by the poly team following general specifications. For what a developer should do, see chapter (Attach a link to the guideline. MD)
 
 ## Initialization
 

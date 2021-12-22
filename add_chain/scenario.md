@@ -32,5 +32,5 @@ The general steps for joining poly cross-chain ecosystem using header sync scena
 - Every Poly node acts as a full node of the side chain, validating the blocks and cross-chain transactions following the side chain rules and submitting them to the poly chain.
 - Verify cross-chain events and transactions using consensus vote of poly nodes
 
-Please note that For chains that can only use Consensus Vote, only the full node code of the side chain is needed for joining the poly cross-chain ecosystem. Most of the remaining content of this branch is prepared for Header Sync
+Please **note** that For chains that can only use Consensus Vote, only the full node code of the side chain is needed for joining the poly cross-chain ecosystem. Most of the remaining content of this branch is prepared for Header Sync
 
