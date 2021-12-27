@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Common Steps · Gitbook Test</title>
+        <title>Common Steps for Header Sync · Gitbook Test</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -21,11 +21,23 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -147,7 +159,7 @@
                 <a href="elements.html">
             
                     
-                    Chain Elements to be Submitted
+                    Essential Elements for Header Sync
             
                 </a>
             
@@ -160,7 +172,7 @@
                 <a href="steps.html">
             
                     
-                    Common Steps
+                    Common Steps for Header Sync
             
                 </a>
             
@@ -173,7 +185,7 @@
                 <a href="guideline.html">
             
                     
-                    Guideline for Developers
+                    Develp Guideline for Header Sync
             
                 </a>
             
@@ -367,9 +379,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="glossary.html">
+        <li class="chapter " data-level="3.1" data-path="../GLOSSARY.html">
             
-                <a href="glossary.html">
+                <a href="../GLOSSARY.html">
             
                     
                     Glossary
@@ -430,7 +442,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Common Steps</a>
+        <a href=".." >Common Steps for Header Sync</a>
     </h1>
 </div>
 
@@ -445,38 +457,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 align="center" id="technical-flow-in-header-sync-scenario">Technical Flow in Header Sync Scenario</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#technical-flow-in-header-sync-scenario"><b></b>Technical Flow in Header Sync Scenario</a></li><ul><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><li><span class="title-icon "></span><a href="#initialization"><b></b>Initialization</a></li><ul><li><span class="title-icon "></span><a href="#deploy-smart-contract"><b></b>Deploy Smart Contract</a></li><li><span class="title-icon "></span><a href="#new-chain-registration"><b></b>New Chain Registration</a></li><li><span class="title-icon "></span><a href="#update-registered-chain"><b></b>Update Registered Chain</a></li></ul><li><span class="title-icon "></span><a href="#register-core-interface-method"><b></b>Register Core Interface Method</a></li><ul><li><span class="title-icon "></span><a href="#register-block-sync-method-to-relayer"><b></b>Register block Sync Method to Relayer</a></li><li><span class="title-icon "></span><a href="#register-cross-chain-transaction-management-method-to-relayer"><b></b>Register Cross Chain Transaction management method to Relayer</a></li></ul><li><span class="title-icon "></span><a href="#sync-genesis-header"><b></b>Sync Genesis Header</a></li><ul><li><span class="title-icon "></span><a href="#sync-target-chains-genesis-header-to-poly"><b></b>Sync Target Chain&apos;s Genesis Header to Poly</a></li><li><span class="title-icon "></span><a href="#sync-polys-genesis-header-to-target-chain"><b></b>Sync Poly&apos;s Genesis Header to Target Chain</a></li></ul></ul></ul></div><a href="#technical-flow-in-header-sync-scenario" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 align="center" id="technical-flow-in-header-sync-scenario"><a name="technical-flow-in-header-sync-scenario" class="anchor-navigation-ex-anchor" href="#technical-flow-in-header-sync-scenario"><i class="fa fa-link" aria-hidden="true"></i></a>Technical Flow in Header Sync Scenario</h1>
 
 
-<h2 id="overview">Overview</h2>
+<h2 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h2>
 <p>Adding a new chain to poly involves three main parts:</p>
 <ul>
 <li>Initialization includes smart contract deployment and new chain registration. </li>
-<li>Register core interface to poly <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a>.</li>
-<li>Sync genesis header involves synchronizing a  <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a> initial header to poly relay chain and synchronizing poly genesis header to the ccm contract deployed on the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a>.</li>
+<li>Register core interface to poly <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a>.</li>
+<li>Sync genesis header involves synchronizing a  <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a> initial header to poly relay chain and synchronizing poly genesis header to the ccm contract deployed on the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a>.</li>
 </ul>
-<p>Part of these steps now proceeded only by the poly team following general specifications. For what a developer should do, see chapter (Attach a link to the guideline. MD)</p>
-<h2 id="initialization">Initialization</h2>
-<p><strong>Deploy Smart Contract</strong></p>
+<p>Some of these steps now proceeded only by the poly team following general specifications. For what a developer should do, see <a href="guideline.html">Guideline for Developers</a>.</p>
+<h2 id="initialization"><a name="initialization" class="anchor-navigation-ex-anchor" href="#initialization"><i class="fa fa-link" aria-hidden="true"></i></a>Initialization</h2>
+<h3 id="deploy-smart-contract"><a name="deploy-smart-contract" class="anchor-navigation-ex-anchor" href="#deploy-smart-contract"><i class="fa fa-link" aria-hidden="true"></i></a>Deploy Smart Contract</h3>
 <p>The core Poly Cross-Chain Smart Contract such as CCM, CCMP, CCD can be found in(Attach a Link to Core smart contract)</p>
-<p>Poly developers will deploy these contracts with a selected contract account on the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a>.</p>
-<p><strong>New Chain Registration</strong></p>
+<p>Poly developers will deploy these contracts with a selected contract account on the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a>.</p>
+<h3 id="new-chain-registration"><a name="new-chain-registration" class="anchor-navigation-ex-anchor" href="#new-chain-registration"><i class="fa fa-link" aria-hidden="true"></i></a>New Chain Registration</h3>
 <p>After the registration process is complete and the Cross Chain Council (formed by poly consensus nodes) approves the application, the chain officially becomes a part of the cross-chain ecosystem. The registration is accomplished using the trusted registered account by the poly team</p>
-<p><strong>Update Registered Chain</strong> </p>
-<p>The registered account needs to send an update application to the relay chain when updating <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a> information. The updateSideChain method is used to send an application to update the registered information of a particular blockchain</p>
-<h2 id="register-core-interface-method">Register Core Interface Method</h2>
-<p>Register header sync and cross-chain management function to <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a>. So that <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> can call them for every cross-chain event. The core interface method can be found in the chapter (Attach a link to the guideline. MD)</p>
-<p><strong>Register block Sync Method to <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">Relayer</a></strong></p>
-<p>Block header synchronization includes two interface methods: SyncGenesisHeader and SyncBlockHeader
- The former method will only be called once, while the latter is the core method for conducting the cross-chain event and will be called consistently by the <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a>.</p>
-<p><strong>Register Cross Chain Transaction management method to <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">Relayer</a></strong> </p>
-<p>Register the interface method MakeDepositProposal to <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A relayer is a cross-chain information porter,  performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a>. This method is the key for handling cross-chain transactions, and it tells the relayers how to ensure the legitimacy of cross-chain transactions by verifying Merkle proof.</p>
-<h2 id="sync-genesis-header">Sync Genesis Header</h2>
-<p><strong>Sync Target Chain&apos;s Genesis Header to Poly</strong></p>
-<p>For Initializing <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a>, the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a>&apos;s initial header should be synchronized to the poly relay chain so that the consequent block headers of blocks that contain cross-chain events can be verified and synchronized.</p>
-<p><strong>Sync Poly&apos;s Genesis Header to Target Chain</strong></p>
-<p>Poly chain&apos;s initial header should be synchronized to the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="The term side chain refers to a chain that is interested in joining the cross-chain ecosystem">side chain</a>&apos;s CCM contract. The initial block header should include epoch switching information of consensus nodes, from which height the cross-chain transaction from or to Cosmos subchain will be effective.</p>
-
+<h3 id="update-registered-chain"><a name="update-registered-chain" class="anchor-navigation-ex-anchor" href="#update-registered-chain"><i class="fa fa-link" aria-hidden="true"></i></a>Update Registered Chain</h3>
+<p>When updating <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a> information, the registered account needs to send an update application to the relay chain. The updateSideChain method is used to send an application to update the registered information of a particular blockchain</p>
+<h2 id="register-core-interface-method"><a name="register-core-interface-method" class="anchor-navigation-ex-anchor" href="#register-core-interface-method"><i class="fa fa-link" aria-hidden="true"></i></a>Register Core Interface Method</h2>
+<p>Register header sync and cross-chain management function to <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a>. So that <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> can call them for every cross-chain event. The core interface method can be found in <a href="guideline.html">Guideline for Developers</a>.</p>
+<h3 id="register-block-sync-method-to-relayer"><a name="register-block-sync-method-to-relayer" class="anchor-navigation-ex-anchor" href="#register-block-sync-method-to-relayer"><i class="fa fa-link" aria-hidden="true"></i></a>Register block Sync Method to Relayer</h3>
+<p>Block header synchronization includes two interface methods: <strong>SyncGenesisHeader</strong> and <strong>SyncBlockHeader</strong>
+ The former method will only be called once, while the latter is the core method for conducting the cross-chain event and will be called consistently by the <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a>.</p>
+<h3 id="register-cross-chain-transaction-management-method-to-relayer"><a name="register-cross-chain-transaction-management-method-to-relayer" class="anchor-navigation-ex-anchor" href="#register-cross-chain-transaction-management-method-to-relayer"><i class="fa fa-link" aria-hidden="true"></i></a>Register Cross Chain Transaction management method to Relayer</h3>
+<p>Register the interface method <strong>MakeDepositProposal</strong> to <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a>. This method is the key for handling cross-chain transactions, and it tells the relayers how to ensure the legitimacy of cross-chain transactions by verifying Merkle proof.</p>
+<h2 id="sync-genesis-header"><a name="sync-genesis-header" class="anchor-navigation-ex-anchor" href="#sync-genesis-header"><i class="fa fa-link" aria-hidden="true"></i></a>Sync Genesis Header</h2>
+<h3 id="sync-target-chains-genesis-header-to-poly"><a name="sync-target-chains-genesis-header-to-poly" class="anchor-navigation-ex-anchor" href="#sync-target-chains-genesis-header-to-poly"><i class="fa fa-link" aria-hidden="true"></i></a>Sync Target Chain&apos;s Genesis Header to Poly</h3>
+<p>For Initializing <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a>, the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a>&apos;s initial header should be synchronized to the poly relay chain so that the consequent block headers of blocks that contain cross-chain events can be verified and synchronized.</p>
+<h3 id="sync-polys-genesis-header-to-target-chain"><a name="sync-polys-genesis-header-to-target-chain" class="anchor-navigation-ex-anchor" href="#sync-polys-genesis-header-to-target-chain"><i class="fa fa-link" aria-hidden="true"></i></a>Sync Poly&apos;s Genesis Header to Target Chain</h3>
+<p><a href="../GLOSSARY.html#poly-chain" class="glossary-term" title="The Relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">Poly chain</a>&apos;s initial header should be synchronized to the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a>&apos;s CCM contract. The initial block header should include epoch switching information of consensus nodes, from which height the cross-chain transaction from or to Cosmos subchain will be effective.</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2021 PolyNetwork all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Last modification date&#xFF1A;
+2021-12-27 15:01:48
+</span></footer>
                                 
                                 </section>
                             
@@ -503,12 +517,12 @@
 
             
                 
-                <a href="elements.html" class="navigation navigation-prev " aria-label="Previous page: Chain Elements to be Submitted">
+                <a href="elements.html" class="navigation navigation-prev " aria-label="Previous page: Essential Elements for Header Sync">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="guideline.html" class="navigation navigation-next " aria-label="Next page: Guideline for Developers">
+                <a href="guideline.html" class="navigation navigation-next " aria-label="Next page: Develp Guideline for Header Sync">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -519,7 +533,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Common Steps","level":"2.1.3","depth":2,"next":{"title":"Guideline for Developers","level":"2.1.4","depth":2,"path":"add_chain/guideline.md","ref":"add_chain/guideline.md","articles":[]},"previous":{"title":"Chain Elements to be Submitted","level":"2.1.2","depth":2,"path":"add_chain/elements.md","ref":"add_chain/elements.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/steps.md","mtime":"2021-12-22T03:27:51.579Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-22T03:35:22.525Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Common Steps for Header Sync","level":"2.1.3","depth":2,"next":{"title":"Develp Guideline for Header Sync","level":"2.1.4","depth":2,"path":"add_chain/guideline.md","ref":"add_chain/guideline.md","articles":[]},"previous":{"title":"Essential Elements for Header Sync","level":"2.1.2","depth":2,"path":"add_chain/elements.md","ref":"add_chain/elements.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/steps.md","mtime":"2021-12-27T07:01:48.352Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-27T07:06:14.771Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -533,23 +547,27 @@
         
     
         
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
         <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

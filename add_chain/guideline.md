@@ -1,4 +1,4 @@
-<h1 align="center">Guideline for Developers for Header Sync Scenario</h1>
+<h1 align="center">Develop Guideline for Header Sync</h1>
 
 
 ## Overview
@@ -25,9 +25,13 @@ The interface methods that need to be implemented by the respective contracts ar
 | **SyncGenesisHeader** | Synchronizes the relay chain's genesis block header (or another block header where a change in block generation cycle occurred). The method is called one time only when initializing the side chain. It stores and handles the genesis block header, then fetches the consensus node info of the relay chain; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L59-L116) for more details. |
 | **SyncBlockHeader**   | Consistently synchronizes block cycle change and cross-chain transaction block headers from the relay chain; the relayers use this interface method to synchronize block headers, stores, and process block headers, fetches the consensus node info if block generation cycle changes; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L208-L314 ) for more details. |
 
-Code Example for SyncGenesisHeader https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L59-L116 （加上详细注释）
+Code Example for BSC SyncGenesisHeader https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L59-L116 （加上详细注释）
 
-Code Example for SyncBlockHeader https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L208-L314 （加上详细注释）
+Code Example for BSC SyncBlockHeader https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L208-L314 （加上详细注释）
+
+Code Example for ethreum SyncGenesisHeader https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61-L98（加上详细注释）
+
+Code Example for ethereal SyncBlockHeader https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L100-L207（加上详细注释）
 
 ### Block Header Synchronization Entrance Method
 
