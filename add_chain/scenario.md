@@ -2,13 +2,13 @@
 
 Poly has two scenarios for verifying the transaction block and the cross-chain transaction information it carries:
 
-- Header Sync: Verify the block header based on the critical blockchain data such as validator set and their commitment, signature, mining difficulties. Verify the cross-chain transaction based on the corresponding Merkle proof of cross-chain events and transactions
-- Consensus vote： Every Poly node act as a full node of the target blockchain, validating the blocks and cross-chain transactions following the rules of the side chain. The success of the cross-chain request depends on the consensus vote result of poly nodes
+- **Header Sync**: Verify the block header based on the critical blockchain data such as validator set and their commitment, signature, mining difficulties. Verify the cross-chain transaction based on the corresponding Merkle proof of cross-chain events and transactions
+- **Consensus vote**： Every Poly node act as a full node of the target blockchain, validating the blocks and cross-chain transactions following the rules of the side chain. The success of the cross-chain request depends on the consensus vote result of poly nodes
 
 Consensus Vote is not suggested for security and scalability reasons unless Header Sync can not be achieved. Here are two factors that determine the cross-chain event can be verified based on Header Sync:
 
 - The blockchain support **Merkle proof** for verifying transactions, whether it has Merkle tree generation and verification method for the ledger records or transactions. This allows the relay chain to determine the legitimacy of the transaction records.
-- The block headers have the validator set and their commitment or signature for verification. In other words, relayers who act as **light clients** can obtain the **validator sets** and their **commitment** or **signature** from **only** the block header information and ensure the legitimacy of the block headers.
+- The block headers have the validator set and their commitment or signature for verification. In other words, relayers who act as **light clients** can obtain the **validator sets** and their commitment or signature from **only** the block header information and ensure the legitimacy of the block headers.
 
 ### Block Header Synchronization Scenario
 
@@ -32,5 +32,5 @@ The general steps for joining poly cross-chain ecosystem using header sync scena
 - Every Poly node acts as a full node of the side chain, validating the blocks and cross-chain transactions following the side chain rules and submitting them to the poly chain.
 - Verify cross-chain events and transactions using consensus vote of poly nodes.
 
-Please **note** that For chains that can only use Consensus Vote, only the code for holding a full blockchain node of the side chain is needed for joining the poly cross-chain ecosystem. Most of the remaining content of this branch is prepared for **Header Sync**.
+Please **note** that for chains that can only use Consensus Vote, only the code for holding a full blockchain node of the side chain is needed for joining the poly cross-chain ecosystem. Most of the remaining content of this branch is prepared for **Header Sync**.
 

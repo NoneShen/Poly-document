@@ -46,7 +46,7 @@ Register the interface method **MakeDepositProposal** to relayer. This method is
 
 ### Sync Target Chain's Genesis Header to Poly
 
-For Initializing side chain, the side chain's initial header should be synchronized to the poly relay chain so that the consequent block headers of blocks that contain cross-chain events can be verified and synchronized.
+For Initializing side chain, the side chain's initial block header should be synchronized to the poly relay chain so that the consequent block headers of blocks that contain cross-chain events can be verified and synchronized.
 
 ### Sync Poly's Genesis Header to Target Chain
 

@@ -2,7 +2,7 @@
 ### Introduction
 
 ### Development
-* [Joing the Cross Chain Ecosystem](add_chain/readme.md)
+* [Joining the Cross Chain Ecosystem](add_chain/readme.md)
   * [Two Scenarios](add_chain/scenario.md)
   * [Essential Elements for Header Sync](add_chain/elements.md)
   * [Common Steps for Header Sync](add_chain/steps.md)
