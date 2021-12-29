@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Develp Guideline for Header Sync · Gitbook Test</title>
+        <title>Develop Guideline for Header Sync · Gitbook Test</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,7 +77,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../How to Call the Cross Chain Smart Contract/" />
+    <link rel="next" href="../call_contract/" />
     
     
     <link rel="prev" href="steps.html" />
@@ -189,7 +189,7 @@
                 <a href="guideline.html">
             
                     
-                    Develp Guideline for Header Sync
+                    Develop Guideline for Header Sync
             
                 </a>
             
@@ -202,9 +202,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../How to Call the Cross Chain Smart Contract/">
+        <li class="chapter " data-level="2.2" data-path="../call_contract/">
             
-                <a href="../How to Call the Cross Chain Smart Contract/">
+                <a href="../call_contract/">
             
                     
                     Calling the Cross Chain Smart Contract
@@ -216,9 +216,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="../How to Call the Cross Chain Smart Contract/Interaction.html">
+        <li class="chapter " data-level="2.2.1" data-path="../call_contract/Interaction.html">
             
-                <a href="../How to Call the Cross Chain Smart Contract/Interaction.html">
+                <a href="../call_contract/Interaction.html">
             
                     
                     Cross Chain Interaction Between Chains
@@ -229,9 +229,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="../How to Call the Cross Chain Smart Contract/Interfaces.html">
+        <li class="chapter " data-level="2.2.2" data-path="../call_contract/Interfaces.html">
             
-                <a href="../How to Call the Cross Chain Smart Contract/Interfaces.html">
+                <a href="../call_contract/Interfaces.html">
             
                     
                     Interfaces Offered by Cross Chain Manager
@@ -242,9 +242,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="../How to Call the Cross Chain Smart Contract/Example.html">
+        <li class="chapter " data-level="2.2.3" data-path="../call_contract/Example.html">
             
-                <a href="../How to Call the Cross Chain Smart Contract/Example.html">
+                <a href="../call_contract/Example.html">
             
                     
                     Example of Business Logic Smart Contract
@@ -446,7 +446,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Develp Guideline for Header Sync</a>
+        <a href=".." >Develop Guideline for Header Sync</a>
     </h1>
 </div>
 
@@ -486,18 +486,14 @@
 <tbody>
 <tr>
 <td><strong>SyncGenesisHeader</strong></td>
-<td>Synchronizes the relay chain&apos;s genesis block header (or another block header where a change in block generation cycle occurred). The method is called one time only when initializing the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a>. It stores and handles the genesis block header, then fetches the consensus node info of the relay chain; please refer to the <a href="https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L59-L120" target="_blank">code</a> for more details.</td>
+<td>Synchronizes the relay chain&apos;s genesis block header (or another block header where a change in block generation cycle occurred). The method is called one time only when initializing the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a>. It stores and handles the genesis block header, then fetches the consensus node info of the relay chain; please refer to the <a href="https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61" target="_blank">code</a> for more details.</td>
 </tr>
 <tr>
 <td><strong>SyncBlockHeader</strong></td>
-<td>Consistently synchronizes block cycle change and cross-chain transaction block headers from the relay chain; the relayers use this interface method to synchronize block headers, stores, and process block headers, fetches the consensus node info if block generation cycle changes; please refer to the <a href="https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L218-L326" target="_blank">code</a> for more details.</td>
+<td>Consistently synchronizes block cycle change and cross-chain transaction block headers from the relay chain; the relayers use this interface method to synchronize block headers, stores, and process block headers, fetches the consensus node info if block generation cycle changes; please refer to the <a href="https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L99" target="_blank">code</a> for more details.</td>
 </tr>
 </tbody>
 </table>
-<p>Code Example for BSC SyncGenesisHeader <a href="https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L59-L120" target="_blank">https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L59-L120</a> &#xFF08;&#x52A0;&#x4E0A;&#x8BE6;&#x7EC6;&#x6CE8;&#x91CA;&#xFF09;</p>
-<p>Code Example for BSC SyncBlockHeader <a href="https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L218-L326" target="_blank">https://github.com/polynetwork/poly/blob/master/native/service/header_sync/bsc/header_sync.go#L218-L326</a> &#xFF08;&#x52A0;&#x4E0A;&#x8BE6;&#x7EC6;&#x6CE8;&#x91CA;&#xFF09;</p>
-<p>Code Example for ethreum SyncGenesisHeader <a href="https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61-L98&#xFF08;&#x52A0;&#x4E0A;&#x8BE6;&#x7EC6;&#x6CE8;&#x91CA;&#xFF09;" target="_blank">https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61-L98&#xFF08;&#x52A0;&#x4E0A;&#x8BE6;&#x7EC6;&#x6CE8;&#x91CA;&#xFF09;</a></p>
-<p>Code Example for ethereal SyncBlockHeader <a href="https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L99-L210&#xFF08;&#x52A0;&#x4E0A;&#x8BE6;&#x7EC6;&#x6CE8;&#x91CA;&#xFF09;" target="_blank">https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L99-L210&#xFF08;&#x52A0;&#x4E0A;&#x8BE6;&#x7EC6;&#x6CE8;&#x91CA;&#xFF09;</a></p>
 <h3 id="block-header-synchronization-entrance-method"><a name="block-header-synchronization-entrance-method" class="anchor-navigation-ex-anchor" href="#block-header-synchronization-entrance-method"><i class="fa fa-link" aria-hidden="true"></i></a>Block Header Synchronization Entrance Method</h3>
 <table>
 <thead>
@@ -509,7 +505,7 @@
 <tbody>
 <tr>
 <td><strong>SyncSideChainGenesisHeader</strong></td>
-<td>It is the entrance method for synchronizing the genesis block header of the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a> to <a href="../GLOSSARY.html#poly-chain" class="glossary-term" title="The Relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">poly chain</a> and synchronizing the genesis header of the <a href="../GLOSSARY.html#poly-chain" class="glossary-term" title="The Relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">poly chain</a> to ccm contract of the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a>; please refer to the <a href="https://github.com/polynetwork/poly-io-test/blob/master/cmd/tools/run.go#L1156-L1247" target="_blank">code</a> for more details.</td>
+<td>It is the entrance method for synchronizing the genesis block header of the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a> to <a href="../GLOSSARY.html#poly-chain" class="glossary-term" title="The Relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">poly chain</a> and synchronizing the genesis header of the <a href="../GLOSSARY.html#poly-chain" class="glossary-term" title="The Relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">poly chain</a> to ccm contract of the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a>; please refer to the <a href="https://github.com/polynetwork/poly-io-test/blob/master/cmd/tools/run.go#L607" target="_blank">code</a> for more details.</td>
 </tr>
 <tr>
 <td></td>
@@ -518,12 +514,15 @@
 </table>
 <p>The Key information for this method:</p>
 <ul>
-<li>Service provider(endpoint) Url of <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a></li>
-<li>Selected genesis block height</li>
-<li>validators information for verifying genesis headers, it may exist in header information already or need to be fetched from block headers from other block height</li>
-<li>Other parameters that required for the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a> block header verification</li>
+<li><p>Service provider(endpoint) Url of <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a></p>
+</li>
+<li><p>Selected genesis block height</p>
+</li>
+<li><p>validators information for verifying genesis headers, it may exist in header information already or need to be fetched from block headers from other block height</p>
+</li>
+<li><p>Other parameters that required for the <a href="../GLOSSARY.html#side-chain" class="glossary-term" title="A chain that is interested in joining the poly cross-chain ecosystem">side chain</a> block header verification</p>
+</li>
 </ul>
-<p>Code Example <a href="https://github.com/polynetwork/poly-io-test/blob/master/cmd/tools/run.go#L1156-L1247" target="_blank">https://github.com/polynetwork/poly-io-test/blob/master/cmd/tools/run.go#L1156-L1247</a> &#xFF08;&#x52A0;&#x4E0A;&#x8BE6;&#x7EC6;&#x6CE8;&#x91CA;&#xFF09;</p>
 <h2 id="cross-chain-management"><a name="cross-chain-management" class="anchor-navigation-ex-anchor" href="#cross-chain-management"><i class="fa fa-link" aria-hidden="true"></i></a>Cross-Chain Management</h2>
 <p>Cross-chain management contract: Every chain can have no more than one management contract. It creates cross-chain transactions that are transferred to the relay chain. All the service contracts that contain the business logic need to communicate with the management contract.</p>
 <p>The interface methods that need to be implemented by the respective contracts are as follows:</p>
@@ -538,15 +537,15 @@
 <tbody>
 <tr>
 <td><strong>MakeDepositProposal</strong></td>
-<td style="text-align:left">Creates cross-chain transactions invoked by service contracts. When a cross-chain function is carried out in the logic, a transaction includes a unique chain ID; the transaction is recorded in the Merkle tree. Act as the entrance of verifyFromTx, verifying, storing, and returning MakeTxParam for processing cross-chain steps. Please refer to the <a href="https://github.com/polynetwork/poly/blob/master/native/service/cross_chain_manager/bsc/bsc_handler.go#L50-L73" target="_blank">code</a> for details</td>
+<td style="text-align:left">Creates cross-chain transactions invoked by service contracts. When a cross-chain function is carried out in the logic, a transaction includes a unique chain ID; the transaction is recorded in the Merkle tree. Act as the entrance of verifyFromTx, verifying, storing, and returning MakeTxParam for processing cross-chain steps. Please refer to the <a href="https://github.com/polynetwork/poly/blob/master/native/service/cross_chain_manager/eth/eth_handler.go#L34" target="_blank">code</a> for details</td>
 </tr>
 <tr>
 <td><strong>verifyFromTx</strong></td>
-<td style="text-align:left">Prepare block header and deserialized proof for verifyMerkleProof, decode the extra data from tx and construct MakeTxParam. Please refer to the <a href="https://github.com/polynetwork/poly/blob/master/native/service/cross_chain_manager/bsc/bsc_handler.go#L75-L121" target="_blank">code</a> for details</td>
+<td style="text-align:left">Prepare block header and deserialized proof for verifyMerkleProof, decode the extra data from tx and construct MakeTxParam. Please refer to the <a href="https://github.com/polynetwork/poly/blob/4323af5cfcd2a3277653d5bdc4db015cd9755fee/native/service/cross_chain_manager/eth/utils.go#L41" target="_blank">code</a> for details</td>
 </tr>
 <tr>
 <td><strong>verifyMerkleProof</strong></td>
-<td style="text-align:left">Verify the Merkle proof obtained by the <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> generated from the <a href="../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a> to ensure that all transactions included in this block header have been created and have occurred on the relay chain. Please refer to the <a href="https://github.com/polynetwork/poly/blob/master/native/service/cross_chain_manager/bsc/bsc_handler.go#L149-L222" target="_blank">code</a> for details</td>
+<td style="text-align:left">Verify the Merkle proof obtained by the <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> generated from the <a href="../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a> to ensure that all transactions included in this block header have been created and have occurred on the relay chain. Please refer to the <a href="https://github.com/polynetwork/poly/blob/4323af5cfcd2a3277653d5bdc4db015cd9755fee/native/service/cross_chain_manager/eth/utils.go#L88" target="_blank">code</a> for details</td>
 </tr>
 </tbody>
 </table>
@@ -586,7 +585,7 @@ Val                   <span class="token punctuation">[</span><span class="token
 <h2 id="test-module"><a name="test-module" class="anchor-navigation-ex-anchor" href="#test-module"><i class="fa fa-link" aria-hidden="true"></i></a>Test Module</h2>
 <p>Implement the function for sending cross-chain transactions to itself using lock proxy.  you can see it in Link to test cross-chain code </p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2021 PolyNetwork all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Last modification date&#xFF1A;
-2021-12-27 14:51:19
+2021-12-29 16:48:33
 </span></footer>
                                 
                                 </section>
@@ -619,7 +618,7 @@ Val                   <span class="token punctuation">[</span><span class="token
                 </a>
                 
                 
-                <a href="../How to Call the Cross Chain Smart Contract/" class="navigation navigation-next " aria-label="Next page: Calling the Cross Chain Smart Contract">
+                <a href="../call_contract/" class="navigation navigation-next " aria-label="Next page: Calling the Cross Chain Smart Contract">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -630,7 +629,7 @@ Val                   <span class="token punctuation">[</span><span class="token
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Develp Guideline for Header Sync","level":"2.1.4","depth":2,"next":{"title":"Calling the Cross Chain Smart Contract","level":"2.2","depth":1,"path":"How to Call the Cross Chain Smart Contract/README.md","ref":"How to Call the Cross Chain Smart Contract/README.md","articles":[{"title":"Cross Chain Interaction Between Chains","level":"2.2.1","depth":2,"path":"How to Call the Cross Chain Smart Contract/Interaction.md","ref":"How to Call the Cross Chain Smart Contract/Interaction.md","articles":[]},{"title":"Interfaces Offered by Cross Chain Manager","level":"2.2.2","depth":2,"path":"How to Call the Cross Chain Smart Contract/Interfaces.md","ref":"How to Call the Cross Chain Smart Contract/Interfaces.md","articles":[]},{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"path":"How to Call the Cross Chain Smart Contract/Example.md","ref":"How to Call the Cross Chain Smart Contract/Example.md","articles":[]}]},"previous":{"title":"Common Steps for Header Sync","level":"2.1.3","depth":2,"path":"add_chain/steps.md","ref":"add_chain/steps.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","prism-themes":{},"custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/guideline.md","mtime":"2021-12-27T06:51:19.007Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T08:18:15.003Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Develop Guideline for Header Sync","level":"2.1.4","depth":2,"next":{"title":"Calling the Cross Chain Smart Contract","level":"2.2","depth":1,"path":"call_contract/README.md","ref":"call_contract/README.md","articles":[{"title":"Cross Chain Interaction Between Chains","level":"2.2.1","depth":2,"path":"call_contract/Interaction.md","ref":"call_contract/Interaction.md","articles":[]},{"title":"Interfaces Offered by Cross Chain Manager","level":"2.2.2","depth":2,"path":"call_contract/Interfaces.md","ref":"call_contract/Interfaces.md","articles":[]},{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"path":"call_contract/Example.md","ref":"call_contract/Example.md","articles":[]}]},"previous":{"title":"Common Steps for Header Sync","level":"2.1.3","depth":2,"path":"add_chain/steps.md","ref":"add_chain/steps.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","code","heading-anchors","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/polynetwork"},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","prism-themes":{},"custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/guideline.md","mtime":"2021-12-29T08:48:33.126Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T08:56:54.291Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -673,10 +672,6 @@ Val                   <span class="token punctuation">[</span><span class="token
     
         
         <script src="../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
