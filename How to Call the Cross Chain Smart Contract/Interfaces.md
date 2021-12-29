@@ -1,4 +1,4 @@
-## Interfaces Offered by Cross Chain Manager
+<h1 align="center">Interfaces Offered by Cross Chain Manager</h1>
 
 To implement cross chain features for any chain, cross chain management contract is needed to be deployed. Every chain can have no more than one management contract. On source chain, it creates the cross chain transactions that are transferred to the Poly; On target chain, it verifies the legitimacy of transactions and executes the method on target business logic contract. All the business logic smart contract need to communicate with the management contract. Following are the detailed description of three interfaces which interacts with the business logic contracts.
 

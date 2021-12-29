@@ -37,7 +37,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
                 
             
                 
@@ -457,84 +457,85 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><ul><li><span class="title-icon "></span><a href="#example-of-business-logic-smart-contract"><b></b>Example of Business Logic Smart Contract</a></li><ul><li><span class="title-icon "></span><a href="#lockproxysol"><b></b>LockProxy.sol</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="example-of-business-logic-smart-contract"><a name="example-of-business-logic-smart-contract" class="anchor-navigation-ex-anchor" href="#example-of-business-logic-smart-contract"><i class="fa fa-link" aria-hidden="true"></i></a>Example of Business Logic Smart Contract</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#example-of-business-logic-smart-contract"><b></b>Example of Business Logic Smart Contract</a></li><ul><li><span class="title-icon "></span><a href="#lockproxysol"><b></b>LockProxy.sol</a></li><ul><li><span class="title-icon "></span><a href="#bind-assets"><b></b>Bind assets:</a></li><li><span class="title-icon "></span><a href="#cross-chain-transaction"><b></b>Cross-Chain transaction:</a></li><li><span class="title-icon "></span><a href="#serialize--deserialize-transaction-data"><b></b>Serialize &amp; deserialize transaction data</a></li></ul></ul></ul></div><a href="#example-of-business-logic-smart-contract" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 align="center" id="example-of-business-logic-smart-contract"><a name="example-of-business-logic-smart-contract" class="anchor-navigation-ex-anchor" href="#example-of-business-logic-smart-contract"><i class="fa fa-link" aria-hidden="true"></i></a>Example of Business Logic Smart Contract</h1>
+
 <p>This part provides an example of business logic smart contract, which provides a method to cross-chain transfer token between two chains where already equipped with Cross-Chain Manager Contract and other required contracts mentioned above. Here Chain A and B are still represent the <a href="../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a> and <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a>.</p>
-<h3 id="lockproxysol"><a name="lockproxysol" class="anchor-navigation-ex-anchor" href="#lockproxysol"><i class="fa fa-link" aria-hidden="true"></i></a>LockProxy.sol</h3>
-<h4 id="bind-assets"><a name="bind-assets" class="anchor-navigation-ex-anchor" href="#bind-assets"><i class="fa fa-link" aria-hidden="true"></i></a>Bind assets:</h4>
+<h2 id="lockproxysol"><a name="lockproxysol" class="anchor-navigation-ex-anchor" href="#lockproxysol"><i class="fa fa-link" aria-hidden="true"></i></a>LockProxy.sol</h2>
+<h3 id="bind-assets"><a name="bind-assets" class="anchor-navigation-ex-anchor" href="#bind-assets"><i class="fa fa-link" aria-hidden="true"></i></a>Bind assets:</h3>
 <p>Besides of the verifying the existence of transaction through CCM contract, lock proxy contract needs to make sure of the accuracy of the transaction. The binded mapping relationship which stored in lock proxy contract will help provide the completeness of transaction data. Bind actions also prevent the wrong input from users which may lead to transfer assets to wrong asset contract address.</p>
-<pre><code class="lang-solidity">pragma solidity ^0.5.0;
+<pre class="language-"><code class="lang-solidity"><span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">^</span><span class="token version number">0.5.0</span><span class="token punctuation">;</span>
 
-import &quot;./../../libs/ownership/Ownable.sol&quot;;
+<span class="token keyword">import</span> <span class="token string">&quot;./../../libs/ownership/Ownable.sol&quot;</span><span class="token punctuation">;</span>
 
-contract LockProxy is Ownable {
-        address public managerProxyContract;
-    mapping(uint64 =&gt; bytes) public proxyHashMap;
-    mapping(address =&gt; mapping(uint64 =&gt; bytes)) public assetHashMap;
+<span class="token keyword">contract</span> <span class="token class-name">LockProxy</span> <span class="token keyword">is</span> Ownable <span class="token punctuation">{</span>
+        <span class="token builtin">address</span> <span class="token keyword">public</span> managerProxyContract<span class="token punctuation">;</span>
+    <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">uint64</span> <span class="token operator">=&gt;</span> <span class="token builtin">bytes</span><span class="token punctuation">)</span> <span class="token keyword">public</span> proxyHashMap<span class="token punctuation">;</span>
+    <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token operator">=&gt;</span> <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">uint64</span> <span class="token operator">=&gt;</span> <span class="token builtin">bytes</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">public</span> assetHashMap<span class="token punctuation">;</span>
 
-    // ethCCMProxyAddr: the address of cross chain manager proxy contract on source chain           
-    function setManagerProxy(address ethCCMProxyAddr) onlyOwner public {
-        managerProxyContract = ethCCMProxyAddr;
-        emit SetManagerProxyEvent(managerProxyContract);
-    }
+    <span class="token comment">// ethCCMProxyAddr: the address of cross chain manager proxy contract on source chain           </span>
+    <span class="token keyword">function</span> <span class="token function">setManagerProxy</span><span class="token punctuation">(</span><span class="token builtin">address</span> ethCCMProxyAddr<span class="token punctuation">)</span> onlyOwner <span class="token keyword">public</span> <span class="token punctuation">{</span>
+        managerProxyContract <span class="token operator">=</span> ethCCMProxyAddr<span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">SetManagerProxyEvent</span><span class="token punctuation">(</span>managerProxyContract<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // toChainId: the target chain id
-    // targetProxyHash: the address of cross chain manager proxy contract on target chain
-    function bindProxyHash(uint64 toChainId, bytes memory targetProxyHash) onlyOwner public returns (bool) {
-        proxyHashMap[toChainId] = targetProxyHash;
-        emit BindProxyEvent(toChainId, targetProxyHash);
-        return true;
-    }
+    <span class="token comment">// toChainId: the target chain id</span>
+    <span class="token comment">// targetProxyHash: the address of cross chain manager proxy contract on target chain</span>
+    <span class="token keyword">function</span> <span class="token function">bindProxyHash</span><span class="token punctuation">(</span><span class="token builtin">uint64</span> toChainId<span class="token punctuation">,</span> <span class="token builtin">bytes</span> <span class="token keyword">memory</span> targetProxyHash<span class="token punctuation">)</span> onlyOwner <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        proxyHashMap<span class="token punctuation">[</span>toChainId<span class="token punctuation">]</span> <span class="token operator">=</span> targetProxyHash<span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">BindProxyEvent</span><span class="token punctuation">(</span>toChainId<span class="token punctuation">,</span> targetProxyHash<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // fromAssetHash: asset hash on source chain 
-    // toAssetHash: asset hash on target chain
-    function bindAssetHash(address fromAssetHash, uint64 toChainId, bytes memory toAssetHash) onlyOwner public returns (bool) {
-        assetHashMap[fromAssetHash][toChainId] = toAssetHash;
-        emit BindAssetEvent(fromAssetHash, toChainId, toAssetHash, getBalanceFor(fromAssetHash));
-        return true;
-    }
-}
+    <span class="token comment">// fromAssetHash: asset hash on source chain </span>
+    <span class="token comment">// toAssetHash: asset hash on target chain</span>
+    <span class="token keyword">function</span> <span class="token function">bindAssetHash</span><span class="token punctuation">(</span><span class="token builtin">address</span> fromAssetHash<span class="token punctuation">,</span> <span class="token builtin">uint64</span> toChainId<span class="token punctuation">,</span> <span class="token builtin">bytes</span> <span class="token keyword">memory</span> toAssetHash<span class="token punctuation">)</span> onlyOwner <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        assetHashMap<span class="token punctuation">[</span>fromAssetHash<span class="token punctuation">]</span><span class="token punctuation">[</span>toChainId<span class="token punctuation">]</span> <span class="token operator">=</span> toAssetHash<span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">BindAssetEvent</span><span class="token punctuation">(</span>fromAssetHash<span class="token punctuation">,</span> toChainId<span class="token punctuation">,</span> toAssetHash<span class="token punctuation">,</span> <span class="token function">getBalanceFor</span><span class="token punctuation">(</span>fromAssetHash<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <ul>
 <li>Since cross-chain transaction processed by Cross-Chain Manager (CCM) Contract, user not only needs to set Cross-Chain Manager Proxy (CCMP) address on <a href="../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a>, which works as the proxy of CCM contract, but also needs to bind CCMP contract on <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> to LockProxy contract. </li>
 <li>Both on Chain A and B, the user needs to bind the asset contract to LockProxy smart contract and the <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> id (here for Chain A, Chain B is the <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a>), so that the LockProxy contract can maintain mappings(making connections) from asset contract address on <a href="../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a> and that on <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> with <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> id. After finishing setting all above, LockProxy contract will work properly as the business logic. Here we go!</li>
 </ul>
-<h4 id="cross-chain-transaction"><a name="cross-chain-transaction" class="anchor-navigation-ex-anchor" href="#cross-chain-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>Cross-Chain transaction:</h4>
+<h3 id="cross-chain-transaction"><a name="cross-chain-transaction" class="anchor-navigation-ex-anchor" href="#cross-chain-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>Cross-Chain transaction:</h3>
 <p>One cross chain transaction can be divided into two parts: on <a href="../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a>, the lock proxy contract will lock the asset onto contract; on <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a>, the lock proxy will unlock the same amount to the target address. The whole process needs to convey the transaction data. The relationships between two chain&apos;s transaction data parameters shows below:</p>
 <div align="center"><img width="600" height="300" src="resources/dataflow.jpeg"></div>
 
-<pre><code class="lang-solidity">/*  
+<pre class="language-"><code class="lang-solidity"><span class="token comment">/*  
  *  @param fromAssetHash     The asset address in current chain
  *  @param toChainId         The target chain id
  *  @param toAddress         The address in bytes format to receive same amount of tokens in target chain 
  *  @param amount            The amount of tokens to be crossed from ethereum to the chain with chainId
-*/
-function lock(address fromAssetHash, uint64 toChainId, bytes memory toAddress, uint256 amount) public payable returns (bool) {
-    require(amount != 0, &quot;amount cannot be zero!&quot;);
-    require(_transferToContract(fromAssetHash, amount), &quot;transfer asset from fromAddress to lock_proxy contract failed!&quot;);
+*/</span>
+<span class="token keyword">function</span> <span class="token function">lock</span><span class="token punctuation">(</span><span class="token builtin">address</span> fromAssetHash<span class="token punctuation">,</span> <span class="token builtin">uint64</span> toChainId<span class="token punctuation">,</span> <span class="token builtin">bytes</span> <span class="token keyword">memory</span> toAddress<span class="token punctuation">,</span> <span class="token builtin">uint256</span> amount<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">payable</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">require</span><span class="token punctuation">(</span>amount <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;amount cannot be zero!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token function">_transferToContract</span><span class="token punctuation">(</span>fromAssetHash<span class="token punctuation">,</span> amount<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;transfer asset from fromAddress to lock_proxy contract failed!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    bytes memory toAssetHash = assetHashMap[fromAssetHash][toChainId];
-    require(toAssetHash.length != 0, &quot;empty illegal toAssetHash&quot;);
+    <span class="token builtin">bytes</span> <span class="token keyword">memory</span> toAssetHash <span class="token operator">=</span> assetHashMap<span class="token punctuation">[</span>fromAssetHash<span class="token punctuation">]</span><span class="token punctuation">[</span>toChainId<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">require</span><span class="token punctuation">(</span>toAssetHash<span class="token punctuation">.</span>length <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;empty illegal toAssetHash&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    TxArgs memory txArgs = TxArgs({
-        toAssetHash: toAssetHash,
-        toAddress: toAddress,
-        amount: amount
-    });
-    bytes memory txData = _serializeTxArgs(txArgs);
+    TxArgs <span class="token keyword">memory</span> txArgs <span class="token operator">=</span> <span class="token function">TxArgs</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        toAssetHash<span class="token punctuation">:</span> toAssetHash<span class="token punctuation">,</span>
+        toAddress<span class="token punctuation">:</span> toAddress<span class="token punctuation">,</span>
+        amount<span class="token punctuation">:</span> amount
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">bytes</span> <span class="token keyword">memory</span> txData <span class="token operator">=</span> <span class="token function">_serializeTxArgs</span><span class="token punctuation">(</span>txArgs<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    IEthCrossChainManagerProxy eccmp = IEthCrossChainManagerProxy(managerProxyContract);
-    address eccmAddr = eccmp.getEthCrossChainManager();
-    IEthCrossChainManager eccm = IEthCrossChainManager(eccmAddr);
+    IEthCrossChainManagerProxy eccmp <span class="token operator">=</span> <span class="token function">IEthCrossChainManagerProxy</span><span class="token punctuation">(</span>managerProxyContract<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">address</span> eccmAddr <span class="token operator">=</span> eccmp<span class="token punctuation">.</span><span class="token function">getEthCrossChainManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    IEthCrossChainManager eccm <span class="token operator">=</span> <span class="token function">IEthCrossChainManager</span><span class="token punctuation">(</span>eccmAddr<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    bytes memory toProxyHash = proxyHashMap[toChainId];
-    require(toProxyHash.length != 0, &quot;empty illegal toProxyHash&quot;);
-    require(eccm.crossChain(toChainId, toProxyHash, &quot;unlock&quot;, txData), &quot;EthCrossChainManager crossChain executed error!&quot;);
+    <span class="token builtin">bytes</span> <span class="token keyword">memory</span> toProxyHash <span class="token operator">=</span> proxyHashMap<span class="token punctuation">[</span>toChainId<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">require</span><span class="token punctuation">(</span>toProxyHash<span class="token punctuation">.</span>length <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;empty illegal toProxyHash&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">require</span><span class="token punctuation">(</span>eccm<span class="token punctuation">.</span><span class="token function">crossChain</span><span class="token punctuation">(</span>toChainId<span class="token punctuation">,</span> toProxyHash<span class="token punctuation">,</span> <span class="token string">&quot;unlock&quot;</span><span class="token punctuation">,</span> txData<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;EthCrossChainManager crossChain executed error!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    emit LockEvent(fromAssetHash, _msgSender(), toChainId, toAssetHash, toAddress, amount);
+    <span class="token keyword">emit</span> <span class="token function">LockEvent</span><span class="token punctuation">(</span>fromAssetHash<span class="token punctuation">,</span> <span class="token function">_msgSender</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> toChainId<span class="token punctuation">,</span> toAssetHash<span class="token punctuation">,</span> toAddress<span class="token punctuation">,</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    return true;
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 
-}
+<span class="token punctuation">}</span>
 </code></pre>
 <ul>
 <li>This function is meant to be invoked by the user, a certain amount tokens will be locked in the proxy contract the invoker/msg.sender immediately. Then the same amount of tokens will be unlocked from <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> proxy contract at the <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> with chainId later;</li>
@@ -542,27 +543,27 @@ function lock(address fromAssetHash, uint64 toChainId, bytes memory toAddress, u
 <li>Then the transaction data will be packed, which then in turn invokes the cross chain management contract. The management contract transfers the parameters of transaction data to the <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> and a cross chain transaction is created by management contract which is sent to the <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> based on block generation on Chain A;</li>
 <li>The serialized transaction data, along with the chain id and CCMP contract address of <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> and the method needed to be called on <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a>, will be sent through crossChain() in Cross-Chain Manager contract.</li>
 </ul>
-<pre><code class="lang-solidity">/*  @param argsBs            The argument bytes recevied by the lock proxy contract on source chain, 
+<pre class="language-"><code class="lang-solidity"><span class="token comment">/*  @param argsBs            The argument bytes recevied by the lock proxy contract on source chain, 
  *                           need to be deserialized based on the way of serialization in the source chain proxy contract.
  *  @param fromContractAddr  The source chain contract address
  *  @param fromChainId       The source chain id
-*/
-function unlock(bytes memory argsBs, bytes memory fromContractAddr, uint64 fromChainId) onlyManagerContract public returns (bool) {
-    TxArgs memory args = _deserializeTxArgs(argsBs);
-    require(fromContractAddr.length != 0, &quot;from proxy contract address cannot be empty&quot;);
-    require(Utils.equalStorage(proxyHashMap[fromChainId], fromContractAddr), &quot;From Proxy contract address error!&quot;);
+*/</span>
+<span class="token keyword">function</span> <span class="token function">unlock</span><span class="token punctuation">(</span><span class="token builtin">bytes</span> <span class="token keyword">memory</span> argsBs<span class="token punctuation">,</span> <span class="token builtin">bytes</span> <span class="token keyword">memory</span> fromContractAddr<span class="token punctuation">,</span> <span class="token builtin">uint64</span> fromChainId<span class="token punctuation">)</span> onlyManagerContract <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    TxArgs <span class="token keyword">memory</span> args <span class="token operator">=</span> <span class="token function">_deserializeTxArgs</span><span class="token punctuation">(</span>argsBs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">require</span><span class="token punctuation">(</span>fromContractAddr<span class="token punctuation">.</span>length <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;from proxy contract address cannot be empty&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">require</span><span class="token punctuation">(</span>Utils<span class="token punctuation">.</span><span class="token function">equalStorage</span><span class="token punctuation">(</span>proxyHashMap<span class="token punctuation">[</span>fromChainId<span class="token punctuation">]</span><span class="token punctuation">,</span> fromContractAddr<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;From Proxy contract address error!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    require(args.toAssetHash.length != 0, &quot;toAssetHash cannot be empty&quot;);
-    address toAssetHash = Utils.bytesToAddress(args.toAssetHash);
+    <span class="token keyword">require</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>toAssetHash<span class="token punctuation">.</span>length <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;toAssetHash cannot be empty&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">address</span> toAssetHash <span class="token operator">=</span> Utils<span class="token punctuation">.</span><span class="token function">bytesToAddress</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>toAssetHash<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    require(args.toAddress.length != 0, &quot;toAddress cannot be empty&quot;);
-    address toAddress = Utils.bytesToAddress(args.toAddress);
+    <span class="token keyword">require</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>toAddress<span class="token punctuation">.</span>length <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;toAddress cannot be empty&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">address</span> toAddress <span class="token operator">=</span> Utils<span class="token punctuation">.</span><span class="token function">bytesToAddress</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>toAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    require(_transferFromContract(toAssetHash, toAddress, args.amount), &quot;transfer asset from lock_proxy contract to toAddress failed!&quot;);
+    <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token function">_transferFromContract</span><span class="token punctuation">(</span>toAssetHash<span class="token punctuation">,</span> toAddress<span class="token punctuation">,</span> args<span class="token punctuation">.</span>amount<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;transfer asset from lock_proxy contract to toAddress failed!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    emit UnlockEvent(toAssetHash, toAddress, args.amount);
-    return true;
-}
+    <span class="token keyword">emit</span> <span class="token function">UnlockEvent</span><span class="token punctuation">(</span>toAssetHash<span class="token punctuation">,</span> toAddress<span class="token punctuation">,</span> args<span class="token punctuation">.</span>amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <ul>
 <li>This functions is meant to be invoked by Cross-Chain manager contract. It deserializes the transaction data and invokes the asset/LP contract to release the tokens to target address.</li>
@@ -570,25 +571,25 @@ function unlock(bytes memory argsBs, bytes memory fromContractAddr, uint64 fromC
 <li>verifyHeaderAndExecuteTx() in Cross-Chain Manager contract determines the legitimacy of the cross chain transaction information and resolve the parameters of transaction data from the <a href="../GLOSSARY.html#poly-chain" class="glossary-term" title="The Relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">Poly chain</a> transaction merkle proof and crossStateRoot contained in the block header.</li>
 <li>Then call the function unlock() to deserialize the transaction data and unlock (transfer) the certain amount of token to the target address on Chain B and completes the cross chain contract invocation. </li>
 </ul>
-<h4 id="serialize--deserialize-transaction-data"><a name="serialize--deserialize-transaction-data" class="anchor-navigation-ex-anchor" href="#serialize--deserialize-transaction-data"><i class="fa fa-link" aria-hidden="true"></i></a>Serialize &amp; deserialize transaction data</h4>
-<pre><code class="lang-solidity">function _serializeTxArgs(TxArgs memory args) internal pure returns (bytes memory) {
-    bytes memory buff;
-    buff = abi.encodePacked(
-        ZeroCopySink.WriteVarBytes(args.toAssetHash),
-        ZeroCopySink.WriteVarBytes(args.toAddress),
-        ZeroCopySink.WriteUint255(args.amount)
-    );
-    return buff;
-}
+<h3 id="serialize--deserialize-transaction-data"><a name="serialize--deserialize-transaction-data" class="anchor-navigation-ex-anchor" href="#serialize--deserialize-transaction-data"><i class="fa fa-link" aria-hidden="true"></i></a>Serialize &amp; deserialize transaction data</h3>
+<pre class="language-"><code class="lang-solidity"><span class="token keyword">function</span> <span class="token function">_serializeTxArgs</span><span class="token punctuation">(</span>TxArgs <span class="token keyword">memory</span> args<span class="token punctuation">)</span> <span class="token keyword">internal</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bytes</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">bytes</span> <span class="token keyword">memory</span> buff<span class="token punctuation">;</span>
+    buff <span class="token operator">=</span> abi<span class="token punctuation">.</span><span class="token function">encodePacked</span><span class="token punctuation">(</span>
+        ZeroCopySink<span class="token punctuation">.</span><span class="token function">WriteVarBytes</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>toAssetHash<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ZeroCopySink<span class="token punctuation">.</span><span class="token function">WriteVarBytes</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>toAddress<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ZeroCopySink<span class="token punctuation">.</span><span class="token function">WriteUint255</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>amount<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> buff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-function _deserializeTxArgs(bytes memory valueBs) internal pure returns (TxArgs memory) {
-    TxArgs memory args;
-    uint256 off = 0;
-    (args.toAssetHash, off) = ZeroCopySource.NextVarBytes(valueBs, off);
-    (args.toAddress, off) = ZeroCopySource.NextVarBytes(valueBs, off);
-    (args.amount, off) = ZeroCopySource.NextUint255(valueBs, off);
-    return args;
-}
+<span class="token keyword">function</span> <span class="token function">_deserializeTxArgs</span><span class="token punctuation">(</span><span class="token builtin">bytes</span> <span class="token keyword">memory</span> valueBs<span class="token punctuation">)</span> <span class="token keyword">internal</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span>TxArgs <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    TxArgs <span class="token keyword">memory</span> args<span class="token punctuation">;</span>
+    <span class="token builtin">uint256</span> off <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">(</span>args<span class="token punctuation">.</span>toAssetHash<span class="token punctuation">,</span> off<span class="token punctuation">)</span> <span class="token operator">=</span> ZeroCopySource<span class="token punctuation">.</span><span class="token function">NextVarBytes</span><span class="token punctuation">(</span>valueBs<span class="token punctuation">,</span> off<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">(</span>args<span class="token punctuation">.</span>toAddress<span class="token punctuation">,</span> off<span class="token punctuation">)</span> <span class="token operator">=</span> ZeroCopySource<span class="token punctuation">.</span><span class="token function">NextVarBytes</span><span class="token punctuation">(</span>valueBs<span class="token punctuation">,</span> off<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">(</span>args<span class="token punctuation">.</span>amount<span class="token punctuation">,</span> off<span class="token punctuation">)</span> <span class="token operator">=</span> ZeroCopySource<span class="token punctuation">.</span><span class="token function">NextUint255</span><span class="token punctuation">(</span>valueBs<span class="token punctuation">,</span> off<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> args<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <ul>
 <li>In the process of contract development, developers will always encounter serialization and deserialization problems, that is, how to save a struct type of data in the database and how to deserialize the byte array read from the database to obtain data of struct type. In the lib, ZeroCopySource.sol and ZeroCopySink.sol offered the interfaces to serialize and deserialize data. </li>
@@ -597,7 +598,7 @@ function _deserializeTxArgs(bytes memory valueBs) internal pure returns (TxArgs 
 </ul>
 <p>You may refer to the full <a href="https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/lock_proxy/LockProxy.sol" target="_blank">code</a> of <code>LockProxy</code> contract .  </p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2021 PolyNetwork all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Last modification date&#xFF1A;
-2021-12-29 11:30:51
+2021-12-29 14:43:25
 </span></footer>
                                 
                                 </section>
@@ -641,7 +642,7 @@ function _deserializeTxArgs(bytes memory valueBs) internal pure returns (TxArgs 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"next":{"title":"Integrating New Tokens","level":"2.3","depth":1,"path":"FAQ/template.md","ref":"FAQ/template.md","articles":[{"title":"Chapter1","level":"2.3.1","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter2","level":"2.3.2","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter3","level":"2.3.3","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]}]},"previous":{"title":"Interfaces Offered by Cross Chain Manager","level":"2.2.2","depth":2,"path":"How to Call the Cross Chain Smart Contract/Interfaces.md","ref":"How to Call the Cross Chain Smart Contract/Interfaces.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","copy-code-button","heading-anchors","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"How to Call the Cross Chain Smart Contract/Example.md","mtime":"2021-12-29T03:30:51.373Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T03:34:03.363Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"next":{"title":"Integrating New Tokens","level":"2.3","depth":1,"path":"FAQ/template.md","ref":"FAQ/template.md","articles":[{"title":"Chapter1","level":"2.3.1","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter2","level":"2.3.2","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter3","level":"2.3.3","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]}]},"previous":{"title":"Interfaces Offered by Cross Chain Manager","level":"2.2.2","depth":2,"path":"How to Call the Cross Chain Smart Contract/Interfaces.md","ref":"How to Call the Cross Chain Smart Contract/Interfaces.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","copy-code-button","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","prism-themes":{},"custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"How to Call the Cross Chain Smart Contract/Example.md","mtime":"2021-12-29T06:43:25.769Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T06:44:05.959Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

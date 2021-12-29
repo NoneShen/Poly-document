@@ -37,7 +37,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
                 
             
                 
@@ -547,37 +547,37 @@
 </tbody>
 </table>
 <p>Here are the parameters used in methods:</p>
-<pre><code class="lang-go">MakeDepositProposal:
-Requires:
-service *native.NativeService   <span class="hljs-comment">//Native Service that carries values of necessary information of  a cross-chain event</span>
-Returns:
-<span class="hljs-keyword">type</span> verifyFromTx <span class="hljs-keyword">struct</span> {
-    TxHash              []<span class="hljs-keyword">byte</span>    
-    CrossChainId        []<span class="hljs-keyword">byte</span>    <span class="hljs-comment">//ChainId of source chain</span>
-    FromContractAddress <span class="hljs-keyword">uint64</span>    <span class="hljs-comment">//Cross Chain Management Contarct address of source chain</span>
-    ToChainId           <span class="hljs-keyword">string</span>    <span class="hljs-comment">//ChainId of target chain</span>
-    ToContractAddress   <span class="hljs-keyword">uint64</span>    <span class="hljs-comment">//Cross Chain Management Contarct address of target chain</span>
-    Method              []<span class="hljs-keyword">byte</span>    <span class="hljs-comment">//Unlock or lock</span>
-    Args                []<span class="hljs-keyword">byte</span>
-}
+<pre class="language-"><code class="lang-go">MakeDepositProposal<span class="token punctuation">:</span>
+Requires<span class="token punctuation">:</span>
+service <span class="token operator">*</span>native<span class="token punctuation">.</span>NativeService   <span class="token comment">//Native Service that carries values of necessary information of  a cross-chain event</span>
+Returns<span class="token punctuation">:</span>
+<span class="token keyword">type</span> verifyFromTx <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+    TxHash              <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>    
+    CrossChainId        <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>    <span class="token comment">//ChainId of source chain</span>
+    FromContractAddress <span class="token builtin">uint64</span>    <span class="token comment">//Cross Chain Management Contarct address of source chain</span>
+    ToChainId           <span class="token builtin">string</span>    <span class="token comment">//ChainId of target chain</span>
+    ToContractAddress   <span class="token builtin">uint64</span>    <span class="token comment">//Cross Chain Management Contarct address of target chain</span>
+    Method              <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>    <span class="token comment">//Unlock or lock</span>
+    Args                <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<pre><code class="lang-go">verifyFromTx:
-Requires:
-service               *native.NativeService  
-proof                 []<span class="hljs-keyword">byte</span>    <span class="hljs-comment">//the proof to be serialized and verifyed</span>
-extra                 []<span class="hljs-keyword">byte</span>    <span class="hljs-comment">//the transaction information that will be used for contructing verifyFromTx</span>
-fromChainID           <span class="hljs-keyword">uint64</span>,   <span class="hljs-comment">//ChainId of source chain</span>
-height                <span class="hljs-keyword">uint32</span>,   <span class="hljs-comment">//the block height correspoding to current transaction event</span>
-sideChain             *side_chain_manager.SideChain <span class="hljs-comment">//source chain information that contains ccm  contract address</span>
-Returns:
+<pre class="language-"><code class="lang-go">verifyFromTx<span class="token punctuation">:</span>
+Requires<span class="token punctuation">:</span>
+service               <span class="token operator">*</span>native<span class="token punctuation">.</span>NativeService  
+proof                 <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>    <span class="token comment">//the proof to be serialized and verifyed</span>
+extra                 <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>    <span class="token comment">//the transaction information that will be used for contructing verifyFromTx</span>
+fromChainID           <span class="token builtin">uint64</span><span class="token punctuation">,</span>   <span class="token comment">//ChainId of source chain</span>
+height                <span class="token builtin">uint32</span><span class="token punctuation">,</span>   <span class="token comment">//the block height correspoding to current transaction event</span>
+sideChain             <span class="token operator">*</span>side_chain_manager<span class="token punctuation">.</span>SideChain <span class="token comment">//source chain information that contains ccm  contract address</span>
+Returns<span class="token punctuation">:</span>
 verifyFromTx
 </code></pre>
-<pre><code class="lang-go">verifyMerkleProof:
-Requires:
-blockData             *types.Header <span class="hljs-comment">//the blockheader corresponding to current transaction event  </span>
-proof                 []<span class="hljs-keyword">byte</span>    <span class="hljs-comment">//the serilized proof</span>
-Returns:
-Val                   []<span class="hljs-keyword">byte</span>    <span class="hljs-comment">//the proof result for checking extra before constructing verifyFromTx</span>
+<pre class="language-"><code class="lang-go">verifyMerkleProof<span class="token punctuation">:</span>
+Requires<span class="token punctuation">:</span>
+blockData             <span class="token operator">*</span>types<span class="token punctuation">.</span>Header <span class="token comment">//the blockheader corresponding to current transaction event  </span>
+proof                 <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>    <span class="token comment">//the serilized proof</span>
+Returns<span class="token punctuation">:</span>
+Val                   <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>    <span class="token comment">//the proof result for checking extra before constructing verifyFromTx</span>
 </code></pre>
 <h2 id="test-module"><a name="test-module" class="anchor-navigation-ex-anchor" href="#test-module"><i class="fa fa-link" aria-hidden="true"></i></a>Test Module</h2>
 <p>Implement the function for sending cross-chain transactions to itself using lock proxy.  you can see it in Link to test cross-chain code </p>
@@ -626,7 +626,7 @@ Val                   []<span class="hljs-keyword">byte</span>    <span class="h
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Develp Guideline for Header Sync","level":"2.1.4","depth":2,"next":{"title":"Calling the Cross Chain Smart Contract","level":"2.2","depth":1,"path":"How to Call the Cross Chain Smart Contract/README.md","ref":"How to Call the Cross Chain Smart Contract/README.md","articles":[{"title":"Cross Chain Interaction Between Chains","level":"2.2.1","depth":2,"path":"How to Call the Cross Chain Smart Contract/Interaction.md","ref":"How to Call the Cross Chain Smart Contract/Interaction.md","articles":[]},{"title":"Interfaces Offered by Cross Chain Manager","level":"2.2.2","depth":2,"path":"How to Call the Cross Chain Smart Contract/Interfaces.md","ref":"How to Call the Cross Chain Smart Contract/Interfaces.md","articles":[]},{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"path":"How to Call the Cross Chain Smart Contract/Example.md","ref":"How to Call the Cross Chain Smart Contract/Example.md","articles":[]}]},"previous":{"title":"Common Steps for Header Sync","level":"2.1.3","depth":2,"path":"add_chain/steps.md","ref":"add_chain/steps.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","copy-code-button","heading-anchors","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/guideline.md","mtime":"2021-12-27T06:51:19.007Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T03:34:03.363Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Develp Guideline for Header Sync","level":"2.1.4","depth":2,"next":{"title":"Calling the Cross Chain Smart Contract","level":"2.2","depth":1,"path":"How to Call the Cross Chain Smart Contract/README.md","ref":"How to Call the Cross Chain Smart Contract/README.md","articles":[{"title":"Cross Chain Interaction Between Chains","level":"2.2.1","depth":2,"path":"How to Call the Cross Chain Smart Contract/Interaction.md","ref":"How to Call the Cross Chain Smart Contract/Interaction.md","articles":[]},{"title":"Interfaces Offered by Cross Chain Manager","level":"2.2.2","depth":2,"path":"How to Call the Cross Chain Smart Contract/Interfaces.md","ref":"How to Call the Cross Chain Smart Contract/Interfaces.md","articles":[]},{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"path":"How to Call the Cross Chain Smart Contract/Example.md","ref":"How to Call the Cross Chain Smart Contract/Example.md","articles":[]}]},"previous":{"title":"Common Steps for Header Sync","level":"2.1.3","depth":2,"path":"add_chain/steps.md","ref":"add_chain/steps.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","copy-code-button","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","prism-themes":{},"custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/guideline.md","mtime":"2021-12-27T06:51:19.007Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T06:44:05.959Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

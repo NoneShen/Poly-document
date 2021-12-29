@@ -1,4 +1,4 @@
-## Cross Chain Interaction Between Chains
+<h1 align="center">Cross Chain Interaction Between Chains</h1>
 
 <div align=center><img width="800" height="570" src="resources/ark.png"/></div>
 

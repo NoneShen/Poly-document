@@ -37,7 +37,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
                 
             
                 
@@ -548,14 +548,14 @@
 <p>The merkle tree structure and the respective verification needs to be submitted to the relay chain such that cross chain transactions from this chain can be verified.</p>
 <h2 id="register-the-chain-on-relay-chain"><a name="register-the-chain-on-relay-chain" class="anchor-navigation-ex-anchor" href="#register-the-chain-on-relay-chain"><i class="fa fa-link" aria-hidden="true"></i></a>Register the Chain on Relay Chain</h2>
 <p>After setting up the necessary cross chain infrastructure, the chain can be registered on the relay chain. The registration API used is as follows:</p>
-<pre><code class="lang-go"><span class="hljs-keyword">type</span> RegisterSideChainParam <span class="hljs-keyword">struct</span> {
-    Address      <span class="hljs-keyword">string</span>    
-    ChainId      <span class="hljs-keyword">uint64</span>    
-    Router       <span class="hljs-keyword">uint64</span>    
-    Name         <span class="hljs-keyword">string</span>    
-    BlocksToWait <span class="hljs-keyword">uint64</span>    
-    CCMCAddress  []<span class="hljs-keyword">byte</span>
-}
+<pre class="language-"><code class="lang-go"><span class="token keyword">type</span> RegisterSideChainParam <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+    Address      <span class="token builtin">string</span>    
+    ChainId      <span class="token builtin">uint64</span>    
+    Router       <span class="token builtin">uint64</span>    
+    Name         <span class="token builtin">string</span>    
+    BlocksToWait <span class="token builtin">uint64</span>    
+    CCMCAddress  <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <table>
 <thead>
@@ -638,7 +638,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Integrating New Tokens","level":"2.3","depth":1,"next":{"title":"Chapter1","level":"2.3.1","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},"previous":{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"path":"How to Call the Cross Chain Smart Contract/Example.md","ref":"How to Call the Cross Chain Smart Contract/Example.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","copy-code-button","heading-anchors","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"FAQ/template.md","mtime":"2021-12-14T07:50:48.665Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T03:34:03.363Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Integrating New Tokens","level":"2.3","depth":1,"next":{"title":"Chapter1","level":"2.3.1","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},"previous":{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"path":"How to Call the Cross Chain Smart Contract/Example.md","ref":"How to Call the Cross Chain Smart Contract/Example.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","copy-code-button","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","prism-themes":{},"custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"FAQ/template.md","mtime":"2021-12-14T07:50:48.665Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T06:44:05.959Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
