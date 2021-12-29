@@ -2,11 +2,11 @@
 
 This part provides an example of business logic smart contract, which provides a method to cross-chain transfer token between two chains where already equipped with Cross-Chain Manager Contract and other required contracts mentioned above. Here Chain A and B are still represent the source chain and target chain.
 
-## LockProxy.sol
+### LockProxy.sol
 
-### Bind assets:
+#### Bind assets:
 
-Besides of the verifying the existence of transaction through CCM contract, lock proxy contract needs to make sure of the accuracy of the transaction. The binded mapping relationship which stored in lock proxy contract will help provide the completeness of transaction data. Bind actions also prevent the wrong input from users which may lead to transfer assets to wrong asset contract address.
+Besides of the verifying the existence of transaction through Cross-Chain Manager (CCM) contract, lock proxy contract needs to make sure of the accuracy of the assets relationship in the transaction. The binded asset mapping relationship which stored in lock proxy contract will help provide the completeness of transaction data. Bind actions also prevent the wrong input from users which may lead to transfer assets to wrong asset contract address.
 
 ```solidity
 pragma solidity ^0.5.0;
@@ -42,10 +42,10 @@ contract LockProxy is Ownable {
 }
 ```
 
-- Since cross-chain transaction processed by Cross-Chain Manager (CCM) Contract, user not only needs to set Cross-Chain Manager Proxy (CCMP) address on source chain, which works as the proxy of CCM contract, but also needs to bind CCMP contract on target chain to LockProxy contract. 
-- Both on Chain A and B, the user needs to bind the asset contract to LockProxy smart contract and the target chain id (here for Chain A, Chain B is the target chain), so that the LockProxy contract can maintain mappings(making connections) from asset contract address on source chain and that on target chain with target chain id. After finishing setting all above, LockProxy contract will work properly as the business logic. Here we go!
+- Since cross-chain transaction processed by CCM Contract, user not only needs to set Cross-Chain Manager Proxy (CCMP) address on source chain, but also needs to bind CCMP contract on target chain to LockProxy contract. 
+- Both on Chain A and B, the user needs to bind the asset contract to LockProxy smart contract and the target chain id (here for Chain A, Chain B is the target chain), so that the LockProxy contract can maintain mappings (making connections) from asset contract address on source chain and that on target chain with target chain id. After finishing setting all above, LockProxy contract will work properly as the business logic. Here we go!
 
-### Cross-Chain transaction:
+#### Cross-Chain transaction:
 
 One cross chain transaction can be divided into two parts: on source chain, the lock proxy contract will lock the asset onto contract; on target chain, the lock proxy will unlock the same amount to the target address. The whole process needs to convey the transaction data. The relationships between two chain's transaction data parameters shows below:
 
@@ -116,12 +116,12 @@ function unlock(bytes memory argsBs, bytes memory fromContractAddr, uint64 fromC
 }
 ```
 
-- This functions is meant to be invoked by Cross-Chain manager contract. It deserializes the transaction data and invokes the asset/LP contract to release the tokens to target address.
+- This functions is meant to be invoked by Cross-Chain manager contract. It deserializes the transaction data and invokes the asset contract to release the tokens to target address.
 - After verification through Poly (detailed verification process shown in part Cross Chain Interaction Between Chains), the packed transaction data could be executed on Chain B.
-- verifyHeaderAndExecuteTx() in Cross-Chain Manager contract determines the legitimacy of the cross chain transaction information and resolve the parameters of transaction data from the Poly chain transaction merkle proof and crossStateRoot contained in the block header.
-- Then call the function unlock() to deserialize the transaction data and unlock (transfer) the certain amount of token to the target address on Chain B and completes the cross chain contract invocation. 
+- `verifyHeaderAndExecuteTx()` in Cross-Chain Manager contract determines the legitimacy of the cross chain transaction information and resolve the parameters of transaction data from the Poly chain transaction merkle proof and `crossStateRoot` contained in the block header.
+- Then call the function `unlock()` to deserialize the transaction data and unlock (transfer) the certain amount of token to the target address on Chain B and completes the cross chain contract invocation. 
 
-### Serialize & deserialize transaction data
+#### Serialize & deserialize transaction data
 
 ```solidity
 function _serializeTxArgs(TxArgs memory args) internal pure returns (bytes memory) {
