@@ -6,7 +6,7 @@
     * [Two Scenarios](add_chain/scenario.md)
     * [Essential Elements for Header Sync](add_chain/elements.md)
     * [Common Steps for Header Sync](add_chain/steps.md)
-    * [Develp Guideline for Header Sync](add_chain/guideline.md)
+    * [Develop Guideline for Header Sync](add_chain/guideline.md)
   
 * [Calling the Cross Chain Smart Contract](How to Call the Cross Chain Smart Contract/README.md)
     * [Cross Chain Interaction Between Chains](How to Call the Cross Chain Smart Contract/Interaction.md)
