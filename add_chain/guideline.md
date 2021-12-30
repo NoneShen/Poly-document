@@ -3,12 +3,10 @@
 
 ## Overview
 
-This chapter shows the developer how to cooperate with the poly network team to add a chain into the poly cross-chain ecosystem. The functions developers need to implement:
+This chapter shows developers how to cooperate with the poly network team to add a chain into the poly cross-chain ecosystem. The methods that developers need to implement:
 
-- Block Header Synchronization Interface Method， including header sync and the entrance functions.
+- Block Header Synchronization Method, including header sync functions and their corresponding entrance functions.
 - Handler for handling the cross-chain transaction with Merkle proof.
-
-The poly team will accomplish the remaining actions such as smart contract deployment, side chain registration, and relayer setup.
 
 ## Block Header Synchronization
 

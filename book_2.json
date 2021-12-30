@@ -14,8 +14,12 @@
     "-search",
     "search-pro",
     "github",
-    "copy-code-button",
-    "heading-anchors"
+    "code",
+    "heading-anchors",
+    "-highlight",
+    "prism",
+    "prism-themes"
+
   ],
   "pluginsConfig": {
     "tbfed-pagefooter": {
@@ -50,6 +54,11 @@
     },
     "github": {
       "url": "https://github.com/polynetwork"
+    },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-okaidia.css"
+      ]
     }
   }
 }

@@ -29,5 +29,6 @@ The Relay chain in the cross-chain ecosystem. One of the crucial components of t
 
 A block is included in the primary blockchain and is directly or indirectly referenced by future blocks. Blocks that are not canonical may have been valid but were discarded in favor of the canonical block.
 
+##  Cross Chain Council
 
-
+The Council formed by poly consensus nodes.
