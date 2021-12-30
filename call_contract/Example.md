@@ -14,9 +14,9 @@ pragma solidity ^0.5.0;
 import "./../../libs/ownership/Ownable.sol";
 
 contract LockProxy is Ownable {
-		address public managerProxyContract;
-    mapping(uint64 => bytes) public proxyHashMap;
-    mapping(address => mapping(uint64 => bytes)) public assetHashMap;
+	address public managerProxyContract;
+	mapping(uint64 => bytes) public proxyHashMap;
+	mapping(address => mapping(uint64 => bytes)) public assetHashMap;
     
     // ethCCMProxyAddr: the address of cross chain manager proxy contract on source chain           
     function setManagerProxy(address ethCCMProxyAddr) onlyOwner public {
@@ -49,7 +49,7 @@ contract LockProxy is Ownable {
 
 One cross chain transaction can be divided into two parts: on source chain, the lock proxy contract will lock the asset onto contract; on target chain, the lock proxy will unlock the same amount to the target address. The whole process needs to convey the transaction data. The relationships between two chain's transaction data parameters shows below:
 
-<div align=center><img width="600" height="300" src="resources/dataflow.jpeg"/></div>
+<div align=center><img width="1200" height="360" src="resources/dataflow.jpeg"/></div>
 
 ```solidity
 /*  
