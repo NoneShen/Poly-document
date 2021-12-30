@@ -4,8 +4,8 @@
 ### Development 
 * [Joing the Cross Chain Ecosystem](add_chain/readme.md)
     * [Two Scenarios](add_chain/scenario.md)
-    * [Essential Elements for Header Sync](add_chain/elements.md)
-    * [Common Steps for Header Sync](add_chain/steps.md)
+    * [Essential Elements of Header Sync](add_chain/elements.md)
+    * [Technical Flow of Header Sync](add_chain/steps.md)
     * [Develop Guideline for Header Sync](add_chain/guideline.md)
   
 * [Calling the Cross Chain Smart Contract](call_contract/README.md)

@@ -1,4 +1,4 @@
-<h1 align="center">Technical Flow in Header Sync Scenario</h1>
+<h1 align="center">Technical Flow of Header Sync Scenario</h1>
 
 
 ## Overview

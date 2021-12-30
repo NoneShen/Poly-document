@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Some features and attributes need to be clarified for joining the cross-chain ecosystem. These features are the critical elements for implementing the interface method for handling block headers or cross-chain transactions.
+Some features and attributes need to be clarified for joining the cross-chain ecosystem. These features are the critical elements for implementing the interface method for handling block headers and cross-chain events.
 
 ## Requirement List
 
