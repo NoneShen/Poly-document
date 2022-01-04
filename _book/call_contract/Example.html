@@ -145,12 +145,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.1" data-path="../add_chain/scenario.html">
+        <li class="chapter " data-level="2.1.1" data-path="../add_chain/scenario.md">
             
-                <a href="../add_chain/scenario.html">
+                <span>
             
                     
-                    Two Scenarios
+                    Two solutions
             
                 </a>
             
@@ -158,9 +158,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2" data-path="../add_chain/elements.html">
+        <li class="chapter " data-level="2.1.2" data-path="../add_chain/elements.md">
             
-                <a href="../add_chain/elements.html">
+                <span>
             
                     
                     Essential Elements of Header Sync
@@ -472,7 +472,7 @@
 <span class="token keyword">import</span> <span class="token string">&quot;./../../libs/ownership/Ownable.sol&quot;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">contract</span> <span class="token class-name">LockProxy</span> <span class="token keyword">is</span> Ownable <span class="token punctuation">{</span>
-        <span class="token builtin">address</span> <span class="token keyword">public</span> managerProxyContract<span class="token punctuation">;</span>
+    <span class="token builtin">address</span> <span class="token keyword">public</span> managerProxyContract<span class="token punctuation">;</span>
     <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">uint64</span> <span class="token operator">=&gt;</span> <span class="token builtin">bytes</span><span class="token punctuation">)</span> <span class="token keyword">public</span> proxyHashMap<span class="token punctuation">;</span>
     <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token operator">=&gt;</span> <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">uint64</span> <span class="token operator">=&gt;</span> <span class="token builtin">bytes</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">public</span> assetHashMap<span class="token punctuation">;</span>
 
@@ -505,7 +505,7 @@
 </ul>
 <h4 id="cross-chain-transaction"><a name="cross-chain-transaction" class="anchor-navigation-ex-anchor" href="#cross-chain-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>Cross-Chain transaction:</h4>
 <p>One cross chain transaction can be divided into two parts: on <a href="../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a>, the lock proxy contract will lock the asset onto contract; on <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a>, the lock proxy will unlock the same amount to the target address. The whole process needs to convey the transaction data. The relationships between two chain&apos;s transaction data parameters shows below:</p>
-<div align="center"><img width="600" height="300" src="resources/dataflow.jpeg"></div>
+<div align="center"><img width="1200" height="360" src="resources/dataflow.jpeg"></div>
 
 <pre class="language-"><code class="lang-solidity"><span class="token comment">/*  
  *  @param fromAssetHash     The asset address in current chain
@@ -602,7 +602,7 @@
 </ul>
 <p>You may refer to the full <a href="https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/lock_proxy/LockProxy.sol" target="_blank">code</a> of <code>LockProxy</code> contract . </p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2021 PolyNetwork all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Last modification date&#xFF1A;
-2021-12-29 16:37:37
+2021-12-30 15:42:18
 </span></footer>
                                 
                                 </section>
@@ -646,7 +646,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"next":{"title":"Integrating New Tokens","level":"2.3","depth":1,"path":"FAQ/template.md","ref":"FAQ/template.md","articles":[{"title":"Chapter1","level":"2.3.1","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter2","level":"2.3.2","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter3","level":"2.3.3","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]}]},"previous":{"title":"Interfaces Offered by Cross Chain Manager","level":"2.2.2","depth":2,"path":"call_contract/Interfaces.md","ref":"call_contract/Interfaces.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","code","heading-anchors","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/polynetwork"},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","prism-themes":{},"custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"call_contract/Example.md","mtime":"2021-12-29T08:37:37.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-30T07:21:12.581Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Example of Business Logic Smart Contract","level":"2.2.3","depth":2,"next":{"title":"Integrating New Tokens","level":"2.3","depth":1,"path":"FAQ/template.md","ref":"FAQ/template.md","articles":[{"title":"Chapter1","level":"2.3.1","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter2","level":"2.3.2","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter3","level":"2.3.3","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]}]},"previous":{"title":"Interfaces Offered by Cross Chain Manager","level":"2.2.2","depth":2,"path":"call_contract/Interfaces.md","ref":"call_contract/Interfaces.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","custom-favicon","insert-logo","tbfed-pagefooter","hide-element","anchor-navigation-ex","-lunr","-search","search-pro","github","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2021 PolyNetwork","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"resources/favicon.ico","prism-themes":{},"custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/resources/logo.svg"},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Test","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"call_contract/Example.md","mtime":"2021-12-30T07:42:18.901Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T03:48:22.304Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -689,6 +689,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
