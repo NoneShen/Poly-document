@@ -31,4 +31,5 @@ A block is included in the primary blockchain and is directly or indirectly refe
 
 ##  Cross Chain Council
 
-The Council formed by poly consensus nodes.
+A Council formed by poly consensus nodes.
+

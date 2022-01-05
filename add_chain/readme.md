@@ -4,26 +4,28 @@ The poly cross-chain ecosystem provides a platform for various chains to interac
 
 <div align=center><img src="resources/flow_chart2.png" alt="loading"/></div>
 
-## Overview
+## General Steps
 
-Adding a new chain to poly involves three main parts:
+Adding a new chain to poly involves three main phases:
 
-- **Initialization** includes smart contract deployment and new chain registration. 
-- **Interface methods registration** to poly relayer.
-- **Genesis header synchronization** involves synchronizing a  side chain initial header to the relay chain and synchronizing a genesis header from the relay chain to the ccm contract deployed on the side chain.
+- **Implementation**
 
-Most of the operations such as smart contract deployment, side chain registration, and relayer setup are now proceeded only by the poly team following general specifications. For how developers contribute, see [Develop Guideline for Header Sync](guideline.md).
+  The smart contracts, chain registration interface method, block verification interface method, and relayer interface method.
 
-## 
+- **Deployment and Registration** 
 
+  Operations such as smart contract deployment, side chain registration, and relayer setup. Proceeded only by the poly team following general specifications. 
 
+- **Initialization and Running**
 
-This section is intended for developers who want to help add a new chain to the poly cross-chain ecosystem, mainly for **Header Sync** Scenario because the **Consensus Vote** hardly needs any additional targeted development. Here is the outline that will be introduced:
+  Perform specific actions like business contract call, cross-chain events handling based on the selected solution on poly nodes.
 
-- [The overview of two solutions for handling cross-chain events](scenario.md)
-- [The essential elements for adding a new side chain to the poly cross-chain ecosystem in header sync scenario](elements.md)
-- [The technical flow for adding a new side chain to the poly cross-chain ecosystem in header sync scenario](steps.md)
-- [The develop guideline in header sync scenario](guideline.md)
+This section is intended for developers who want to help add a new chain to the poly cross-chain ecosystem. Here is the outline that will be introduced:
+
+- [The introduction and development specification of Smart Contract](contracts.md)
+- [The introduction and development specification of New chain registration](reigstration.md)
+- [The introduction and development specification of block data verification ](blockdata_verification.md)
+- [The introduction and development specification of relayer](relayer.md)
 
 
 
