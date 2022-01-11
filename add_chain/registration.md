@@ -12,8 +12,8 @@ Registration and update are usually completed by application in a transaction us
 
 | Method                | Description                                                  |
 | --------------------- | :----------------------------------------------------------- |
-| **RegisterSideChain** | Pack essential information and send it as an application to the poly chain. |
-| **updateSideChain**   | Pack updated essential information and send it as an application to the poly chain. |
+| **RegisterSideChain** | Pack essential information and send it as an application to the poly chain. please refer to the [code](https://github.com/polynetwork/poly-io-test/blob/035b7fadee297e6e1b5a0b3dcde80f22442d8fb1/cmd/tools/run.go#L1765) for more details. |
+| **updateSideChain**   | Pack updated essential information and send it as an application to the poly chain. please refer to the [code](https://github.com/polynetwork/poly-io-test/blob/035b7fadee297e6e1b5a0b3dcde80f22442d8fb1/cmd/tools/run.go#L2248) for more details. |
 
 The Key information for chain registration (submitted by .config):
 
