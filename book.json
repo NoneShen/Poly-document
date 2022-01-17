@@ -23,7 +23,7 @@
   ],
   "pluginsConfig": {
     "tbfed-pagefooter": {
-      "copyright": "Copyright &copy 2021 PolyNetwork",
+      "copyright": "Copyright &copy 2022 PolyNetwork",
       "modify_label": "Last modification date：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
