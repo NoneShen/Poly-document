@@ -129,7 +129,7 @@ contract LockProxy is Ownable {
 
 One cross chain transaction can be divided into two parts: on source chain,  `LockProxy` contract will lock the asset to contract; on target chain,  `LockProxy` contract will unlock the same amount to the target address. The whole process needs to convey the transaction data. The relationships between two chain's transaction data parameters shows below:
 
-<div align=center><img width="1200" height="360" src="resources/dataflow.jpeg"/></div>
+<div align=center><img width="1200" height="360" src="resources/dataflow.jpeg" alt=""/></div>
 
 ```solidity
 /*  
