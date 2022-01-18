@@ -1,9 +1,12 @@
 {
-  "title": "Gitbook Test",
+  "title": "Poly Document",
   "theme-default": {
     "showLevel": true
   },
   "plugins": [
+    "emphasize",
+    "popup",
+    "alerts",
     "expandable-chapters",
     "custom-favicon",
     "insert-logo",

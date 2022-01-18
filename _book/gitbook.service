@@ -3,8 +3,7 @@ Description=gitbook service
 After=network.target sshd-keygen.service
 
 [Service]
-WorkingDirectory=/usr/local/lib/nodejs/bin/gitbook
-
+WorkingDirectory=/root/gitbook
 ExecStart=/usr/local/lib/nodejs/bin/gitbook serve --port 80
 
 [Install]
