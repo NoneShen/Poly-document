@@ -2,7 +2,8 @@
 
 Registration is the basis for monitoring and processing block information and checking the execution of cross-chain transactions. After the registration process is complete and the Cross Chain Council approves the application, the chain officially becomes a part of the cross-chain ecosystem. 
 
-Registration and update are usually completed by application in a transaction using the trusted registered account by the poly team. An application needs to be approved by at least two-thirds of the current poly consensus nodes via consensus vote.
+> [!NOTE]
+> Registration and update are usually completed by application in a transaction using the trusted registered account by the poly team.
 
 
 

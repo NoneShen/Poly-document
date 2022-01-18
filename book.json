@@ -5,7 +5,8 @@
   },
   "plugins": [
     "emphasize",
-    "popup",
+    "flexible-alerts",
+    "lightbox",
     "alerts",
     "expandable-chapters",
     "custom-favicon",
@@ -24,6 +25,22 @@
     "prism-themes"
 
   ],
+  "flexible-alerts": {
+    "style": "callout",
+    "comment": {
+      "label": "Comment",
+      "icon": "fa fa-comments",
+      "className": "info"
+    }
+  },
+  "lightbox": {
+    "includeJQuery": false,
+    "sameUuid": true,
+    "options": {
+      "resizeDuration": 500,
+      "wrapAround": false
+    }
+  },
   "pluginsConfig": {
     "tbfed-pagefooter": {
       "copyright": "Copyright &copy 2022 PolyNetwork",

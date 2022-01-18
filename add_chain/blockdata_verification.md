@@ -16,7 +16,9 @@ It is crucial to know whether a chain can join poly using Light Client Verificat
 - Merkle state root hash
 - The necessary information to prove the legitimacy of the block header varies from different consensus mechanisms.
 
-Please get in touch with the poly team for more support if your chain doesn't support techniques like Simple Payment Verification (SPV) protocol in Bitcoin or  Light Ethereum Subprotocol (LES) in Ethereum.
+> [!NOTE]
+> Please get in touch with the poly team for more support if your chain doesn't support techniques like Simple Payment Verification (SPV) protocol in Bitcoin or  Light Ethereum Subprotocol (LES) in Ethereum.
+
 
 ## Essential Chain Elements
 
