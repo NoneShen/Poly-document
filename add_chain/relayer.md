@@ -4,12 +4,12 @@
 
 
 
-## Development Specifications for relayer
+## Development Specifications for Relayer
 
-Poly relayer is the role to relay cross chains messages and interact with cross chain manager contracts. There are two components in the implementation:
+Poly relayer plays the role to relay cross chains messages and interact with cross chain manager contracts. There are two components in the implementation:
 
 ## Chain Listener
-Chain listener is used to fetch data from the chain(as source chain), including fetch block headers, scan cross chain events emitted from cross chain manager contract, fetch merkle proofs if it's used to verify the cross chain message in the `Poly` chain.
+Chain listener is used to fetch data from the chain (as source chain), including block headers, cross chain events emitted from cross chain manager contract and merkle proofs when it's used to verify the cross chain message in the `Poly` chain.
 
 ```
 type IChainListener interface {
@@ -35,7 +35,7 @@ type IChainListener interface {
 ```
 
 ## Chain Submitter
-Chain listener is used to submit messages/transactions to the chain, including submit bookkeeper changes of the poly chain, submit cross chain message to finalize as the last step.
+Chain submitter is used to submit messages/transactions to the chain, including  bookkeeper changes of the poly chain and cross chain message to finalize as the last step.
 
 ```
 type IChainSubmitter interface {
@@ -50,7 +50,7 @@ type IChainSubmitter interface {
 }
 ```
 
-The `poly-relayer` project depends on the `bridge-common` library. When registering a new chain, below steps can be followed.
+The `poly-relayer` project depends on the `bridge-common` library. Listed steps can be followed to register a new chain.
 
 - Add chain ID in the `bridge-common` project.
 - Add chain client SDK here for common usage.
@@ -59,14 +59,14 @@ The `poly-relayer` project depends on the `bridge-common` library. When register
 - Register `ChainListener` and `ChainSubmitter` in [selectors](https://github.com/polynetwork/poly-relayer/blob/main/relayer/relayer.go#L73) located in the `relayer.go` file.
 
 ## Subcommands
-- `settxblock` can set the scan scan start height.
+- `settxblock` can set the scan initial height.
 - `setheaderblock` can set the header sync height.
 - `status` shows the current relayer status.
 
-## Other notes
-- Deployment guide, please follow [here](https://github.com/polynetwork/poly-relayer/tree/main/docs).
+## Other Notes
+- Please follow [here](https://github.com/polynetwork/poly-relayer/tree/main/docs) for deployment guide.
 - Wallet balance should be checked regularly to avoid out of fee balance issue.
-- Mulitple wallet accounts can be created to increase message relay througout.
+- Mulitple wallet accounts can be created to increase message relay throughout.
 
 
 
