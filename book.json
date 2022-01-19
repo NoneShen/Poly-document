@@ -45,6 +45,11 @@
     "themeHqbook":{
       "nav":[
         {
+          "url": "https://poly.network/",
+          "target": "_blank",
+          "name": "Home"
+        },
+        {
           "url": "https://bridge.poly.network/",
           "target": "_blank",
           "name": "Poly Bridge"
