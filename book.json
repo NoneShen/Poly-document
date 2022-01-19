@@ -1,19 +1,19 @@
 {
-  "title": "Poly Document",
+  "title": "",
   "theme-default": {
     "showLevel": true
   },
   "plugins": [
+    "theme-hqbook",
+    "flexible-linkcard",
     "emphasize",
     "flexible-alerts",
     "lightbox",
     "alerts",
     "expandable-chapters",
     "custom-favicon",
-    "insert-logo",
     "tbfed-pagefooter",
     "hide-element",
-    "anchor-navigation-ex",
     "-lunr",
     "-search",
     "search-pro",
@@ -41,36 +41,43 @@
       "wrapAround": false
     }
   },
+  "variables": {
+    "themeHqbook":{
+      "nav":[
+        {
+          "url": "https://bridge.poly.network/",
+          "target": "_blank",
+          "name": "Poly Bridge"
+        },
+        {
+          "url": "https://explorer.poly.network/",
+          "target": "_blank",
+          "name": "Poly Explorer"
+        }
+      ]
+    }
+  },
   "pluginsConfig": {
+    "theme-hqbook":{
+      "logo":"/resources/logo.png",
+      "search-placeholder":"Search...",
+      "copyButtons": false,
+      "copyLines": true,
+      "dragSplitter": true,
+      "hide-elements": [
+        ".summary .gitbook-link"
+      ]
+    },
     "tbfed-pagefooter": {
       "copyright": "Copyright &copy 2022 PolyNetwork.",
       "modify_label": "Last modification date：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
-    },
-    "insert-logo": {
-      "url": "/resources/logo.svg",
-      "style": "background: none; max-height: 30px; min-height: 30px"
     },
     "favicon": "resources/favicon.ico",
     "hide-element": {
       "elements": [
         ".gitbook-link"
       ]
-    },
-    "anchor-navigation-ex": {
-      "showLevel": false,
-      "associatedWithSummary": true,
-      "printLog": false,
-      "multipleH1": true,
-      "mode": "float",
-      "showGoTop": true,
-      "float": {
-        "floatIcon": "fa fa-anchor",
-        "showLevelIcon": false,
-        "level1Icon": "fa fa-hand-o-right",
-        "level2Icon": "fa fa-hand-o-right",
-        "level3Icon": "fa fa-hand-o-right"
-      }
     },
     "github": {
       "url": "https://github.com/polynetwork"
