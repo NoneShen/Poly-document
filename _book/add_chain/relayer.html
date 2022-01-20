@@ -359,11 +359,70 @@
 
     
         
+        <li class="header">Core Smart Contract</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Core_Smart_Contract/">
+            
+                <a href="../Core_Smart_Contract/">
+            
+                    
+                    Main Net
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Core_Smart_Contract/README_TestNet.html">
+            
+                <a href="../Core_Smart_Contract/README_TestNet.html">
+            
+                    
+                    Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../Core_Smart_Contract/README_DevNet.html">
+            
+                <a href="../Core_Smart_Contract/README_DevNet.html">
+            
+                    
+                    Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../Core_Smart_Contract/Zion_dev_contracts.html">
+            
+                <a href="../Core_Smart_Contract/Zion_dev_contracts.html">
+            
+                    
+                    Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
         <li class="header">Glossary</li>
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../GLOSSARY.html">
+        <li class="chapter " data-level="4.1" data-path="../GLOSSARY.html">
             
                 <a href="../GLOSSARY.html">
             
@@ -383,7 +442,7 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../FAQ/template.html">
+        <li class="chapter " data-level="5.1" data-path="../FAQ/template.html">
             
                 <a href="../FAQ/template.html">
             
@@ -455,10 +514,10 @@
 
 
 
-<h2 id="development-specifications-for-relayer">Development Specifications for relayer</h2>
-<p>Poly <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> is the role to relay cross chains messages and interact with cross chain manager contracts. There are two components in the implementation:</p>
+<h2 id="development-specifications-for-relayer">Development Specifications for Relayer</h2>
+<p>Poly <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> plays the role to relay cross chains messages and interact with cross chain manager contracts. There are two components in the implementation:</p>
 <h2 id="chain-listener">Chain Listener</h2>
-<p>Chain listener is used to fetch data from the chain(as <a href="../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a>), including fetch block headers, scan cross chain events emitted from cross chain manager contract, fetch merkle proofs if it&apos;s used to verify the cross chain message in the <code>Poly</code> chain.</p>
+<p>Chain listener is used to fetch data from the chain (as <a href="../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a>), including block headers, cross chain events emitted from cross chain manager contract and merkle proofs when it&apos;s used to verify the cross chain message in the <code>Poly</code> chain.</p>
 <pre class="language-"><code>type IChainListener interface {
   // Initialize with config
     Init(*config.ListenerConfig, *poly.SDK) error
@@ -480,7 +539,7 @@
     LatestHeight() (uint64, error)
 }
 </code></pre><h2 id="chain-submitter">Chain Submitter</h2>
-<p>Chain listener is used to submit messages/transactions to the chain, including submit bookkeeper changes of the <a href="../GLOSSARY.html#poly-chain" class="glossary-term" title="The Relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">poly chain</a>, submit cross chain message to finalize as the last step.</p>
+<p>Chain submitter is used to submit messages/transactions to the chain, including  bookkeeper changes of the <a href="../GLOSSARY.html#poly-chain" class="glossary-term" title="The Relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The relay chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">poly chain</a> and cross chain message to finalize as the last step.</p>
 <pre class="language-"><code>type IChainSubmitter interface {
   // Initialize with config
     Init(*config.SubmitterConfig) error
@@ -491,7 +550,7 @@
   // Process the cross chain message from poly chain
     ProcessTx(*msg.Tx, msg.PolyComposer) error
 }
-</code></pre><p>The <code>poly-relayer</code> project depends on the <code>bridge-common</code> library. When registering a new chain, below steps can be followed.</p>
+</code></pre><p>The <code>poly-relayer</code> project depends on the <code>bridge-common</code> library. Listed steps can be followed to register a new chain.</p>
 <ul>
 <li>Add chain ID in the <code>bridge-common</code> project.</li>
 <li>Add chain client SDK here for common usage.</li>
@@ -501,18 +560,18 @@
 </ul>
 <h2 id="subcommands">Subcommands</h2>
 <ul>
-<li><code>settxblock</code> can set the scan scan start height.</li>
+<li><code>settxblock</code> can set the scan initial height.</li>
 <li><code>setheaderblock</code> can set the header sync height.</li>
 <li><code>status</code> shows the current <a href="../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> status.</li>
 </ul>
-<h2 id="other-notes">Other notes</h2>
+<h2 id="other-notes">Other Notes</h2>
 <ul>
-<li>Deployment guide, please follow <a href="https://github.com/polynetwork/poly-relayer/tree/main/docs" target="_blank">here</a>.</li>
+<li>Please follow <a href="https://github.com/polynetwork/poly-relayer/tree/main/docs" target="_blank">here</a> for deployment guide.</li>
 <li>Wallet balance should be checked regularly to avoid out of fee balance issue.</li>
-<li>Mulitple wallet accounts can be created to increase message relay througout.</li>
+<li>Mulitple wallet accounts can be created to increase message relay throughout.</li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2022 PolyNetwork. All right reserved.</span><span class="footer-modification">Last modification date&#xFF1A;
-2022-01-18 15:18:42
+2022-01-20 17:15:23
 </span></footer>
                         
                     </section>
@@ -559,7 +618,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Relayer","level":"2.1.4","depth":2,"next":{"title":"Integrating New Tokens","level":"2.2","depth":1,"path":"FAQ/template.md","ref":"FAQ/template.md","articles":[{"title":"Chapter1","level":"2.2.1","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter2","level":"2.2.2","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter3","level":"2.2.3","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]}]},"previous":{"title":"Block Data Verification","level":"2.1.3","depth":2,"path":"add_chain/blockdata_verification.md","ref":"add_chain/blockdata_verification.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","github","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/relayer.md","mtime":"2022-01-18T07:18:42.164Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-19T07:47:33.981Z"},"basePath":"..","book":{"language":""}})
+            gitbook.page.hasChanged({"page":{"title":"Relayer","level":"2.1.4","depth":2,"next":{"title":"Integrating New Tokens","level":"2.2","depth":1,"path":"FAQ/template.md","ref":"FAQ/template.md","articles":[{"title":"Chapter1","level":"2.2.1","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter2","level":"2.2.2","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]},{"title":"Chapter3","level":"2.2.3","depth":2,"path":"add_chain/template.md","ref":"add_chain/template.md","articles":[]}]},"previous":{"title":"Block Data Verification","level":"2.1.3","depth":2,"path":"add_chain/blockdata_verification.md","ref":"add_chain/blockdata_verification.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","github","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"add_chain/relayer.md","mtime":"2022-01-20T09:15:23.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-20T09:55:48.647Z"},"basePath":"..","book":{"language":""}})
         });
     </script>
 </div>
