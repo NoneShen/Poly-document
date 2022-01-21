@@ -8,7 +8,7 @@ This's cross chain asset contract info ONLY in <strong>MAINNET</strong> mode, it
 
 | **[Bitcoin-1](README.md#BTC)**             | **[Ethereum-2](README.md#Ethereum)**        | **[Ontology-3](README.md#Ontology)**      | **[Neo Legacy-4](README.md#Neo)**     | **[Switcheo-5](README.md#Switcheo)** |
 | :----------------------------------------- | :------------------------------------------ | :---------------------------------------- | :------------------------------------ | :----------------------------------- |
-| **[Bsc-6](README.md#Binance-Smart-Chain)** | **[Heco-7](README.md#Huobi-Eco-ChainHECO)** | **[Palette-8](README.md#Palette)**        |                                       | **[Curve-10](README.md#Curve)**      |
+| **[Bsc-6](README.md#Binance-Smart-Chain)** | **[Heco-7](README.md#Huobi-Eco-Chain-HECO)** | **[Palette-8](README.md#Palette)**        |                                       | **[Curve-10](README.md#Curve)**      |
 |                                            | **[OKEx-12](README.md#OKEx)**               |                                           | **[Neo N3-14](README.md#Neo-N3)**     | **Heimdall-15**                      |
 |                                            | **[Polygon-17](README.md#Polygon)**         | **[Zilliqa-18](README.md#Zilliqa)**       | **[Arbitrum-19](README.md#Arbitrum)** | **[xDAI-20](README.md#xDAI)**        |
 | **[Avalanche-21](README.md#Avalanche)**    | **[Fantom-22](README.md#Fantom)**           | **[Optimistic-23](README.md#Optimistic)** | **[Metis-24](README.md#Metis)**       |                                      |
@@ -314,7 +314,7 @@ Metis | e552fb52a4f19e44ef5a967632dbc320b0820639 | Metis
 LP Metis | 0x2c0Ad043f17572906cb5A4Dc388Ef6C5F01a2827 | LP Metis
 
 ###### [Back to top](README.md#menu)
-## Huobi Eco Chain(HECO) <div id="Huobi Eco Chain(HECO)"></div>
+## Huobi Eco Chain(HECO) <div id="Huobi Eco Chain-HECO"></div>
 Type | Contract Hash | Desc
 ---|---|---
 CCMP | 0xABD7f7B89c5fD5D0AEf06165f8173b1b83d7D5c9 | Cross Chain Manager Proxy contract hash 
