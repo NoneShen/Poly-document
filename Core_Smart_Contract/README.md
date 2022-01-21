@@ -8,7 +8,7 @@ This's cross chain asset contract info ONLY in <strong>MAINNET</strong> mode, it
 
 | **[Bitcoin-1](README.md#BTC)**             | **[Ethereum-2](README.md#Ethereum)**        | **[Ontology-3](README.md#Ontology)**      | **[Neo Legacy-4](README.md#Neo)**     | **[Switcheo-5](README.md#Switcheo)** |
 | :----------------------------------------- | :------------------------------------------ | :---------------------------------------- | :------------------------------------ | :----------------------------------- |
-| **[Bsc-6](README.md#Binance-Smart-Chain)** | **[Heco-7](README.md#Huobi-Eco-ChainHECO)** | **[Palette-8](README.md#Palette)**        |                                       | **[Curve-10](README.md#Curve)**      |
+| **[Bsc-6](README.md#BSC)** | **[Heco-7](README.md#HECO)** | **[Palette-8](README.md#Palette)**        |                                       | **[Curve-10](README.md#Curve)**      |
 |                                            | **[OKEx-12](README.md#OKEx)**               |                                           | **[Neo N3-14](README.md#Neo-N3)**     | **Heimdall-15**                      |
 |                                            | **[Polygon-17](README.md#Polygon)**         | **[Zilliqa-18](README.md#Zilliqa)**       | **[Arbitrum-19](README.md#Arbitrum)** | **[xDAI-20](README.md#xDAI)**        |
 | **[Avalanche-21](README.md#Avalanche)**    | **[Fantom-22](README.md#Fantom)**           | **[Optimistic-23](README.md#Optimistic)** | **[Metis-24](README.md#Metis)**       |                                      |
@@ -210,7 +210,7 @@ pxUSDT | B: 0x962c16f9b8d031d8bf818f8d5e6d229f1d032d35 </br> L: 352d031d9f226d5e
 SWTH | B: 0x3e09e602eeeb401a2fec8e8ea137d59aae54a139 </br> L: 39a154ae9ad537a18e8eec2f1a40ebee02e6093e | SWTH
 pMBTC | B: 0xe4848b7c552afcc16ea1d4eee0f33880a0364cb8 </br> L: b84c36a08038f3e0eed4a16ec1fc2a557c8b84e4 | pMBTC
 ###### [Back to top](README.md#menu)
-## Neo N3 <div id="Neo N3"></div>
+## Neo N3 <div id="Neo-N3"></div>
 Type | Contract Hash | Desc
 ---|---|---
 CCMC | B: 0x5ba6c543c5a86a85e9ab3f028a4ad849b924fab9 </br> L: b9fa24b949d84a8a023fabe9856aa8c543c5a65b | Cross Chain Manager Contract
@@ -223,7 +223,7 @@ fWETH | B:	0xc14b601252aa5dfa6166cf35fe5ccd2e35f3fdf5 </br> L: f5fdf3352ecd5cfe3
 fUSDT | B:	0xcd48b160c1bbc9d74997b803b9a7ad50a4bef020 </br> L: 20f0bea450ada7b903b89749d7c9bbc160b148cd | 
 pONT | B:	0x8122bc2212ec971690a044b37a6f52a9349b702b </br> L:	2b709b34a9526f7ab344a0901697ec1222bc2281 | 
 ###### [Back to top](README.md#menu)
-## Binance Smart Chain <div id="Binance Smart Chain"></div>
+## BSC <div id="BSC"></div>
 Type | Contract Hash | Desc
 ---|---|---
 CCMP | 0xABD7f7B89c5fD5D0AEf06165f8173b1b83d7D5c9 | Cross Chain Manager Proxy contract hash 
@@ -314,7 +314,7 @@ Metis | e552fb52a4f19e44ef5a967632dbc320b0820639 | Metis
 LP Metis | 0x2c0Ad043f17572906cb5A4Dc388Ef6C5F01a2827 | LP Metis
 
 ###### [Back to top](README.md#menu)
-## Huobi Eco Chain(HECO) <div id="Huobi Eco Chain(HECO)"></div>
+## HECO <div id="HECO"></div>
 Type | Contract Hash | Desc
 ---|---|---
 CCMP | 0xABD7f7B89c5fD5D0AEf06165f8173b1b83d7D5c9 | Cross Chain Manager Proxy contract hash 
