@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>FAQ · GitBook</title>
+        <title>Integrating Poly Bridge to Websites · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -94,7 +94,7 @@
 
     
     
-    <link rel="prev" href="../GLOSSARY.html" />
+    <link rel="prev" href="../integrate_tokens/tokens.html" />
     
 
     </head>
@@ -251,9 +251,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../Integrate_bridge/bridge.html">
+        <li class="chapter active" data-level="2.3" data-path="bridge.html">
             
-                <a href="../Integrate_bridge/bridge.html">
+                <a href="bridge.html">
             
                     
                     Integrating Poly Bridge to Websites
@@ -369,9 +369,9 @@
         
         
     
-        <li class="chapter active" data-level="5.1" data-path="template.html">
+        <li class="chapter " data-level="5.1" data-path="../FAQ/template.html">
             
-                <a href="template.html">
+                <a href="../FAQ/template.html">
             
                     
                     FAQ
@@ -420,7 +420,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >FAQ</a>
+        <a href=".." >Integrating Poly Bridge to Websites</a>
     </h1>
 </div>
 
@@ -435,50 +435,66 @@
     
                     <section class="normal markdown-section">
                         
-                        <h1 align="center" id="faq">FAQ</h1>
+                        <h1 align="center" id="create-dapp-using-the-poly-network-protocol">Create dApp using the Poly Network protocol</h1>
 
-
-<h2 id="about-polynetwork-team">About PolyNetwork Team</h2>
-<ul>
-<li>Q: What is the team members consist of?</li>
-</ul>
-<h2 id="about-polynetwork-ecosystem">About PolyNetwork Ecosystem</h2>
-<ul>
-<li>Q: What is PolyNetwork? How does PolyNetwork work?</li>
-<li>Q: How many kind of chains PolyNetwork support?</li>
-<li>Q: How to integrate the chain to PolyNetwork ecosystem?</li>
-<li>Q: How to establish the product on PolyNetwork ecosystem?</li>
-<li>subQ: How to interact with PolyNetwork protocol?</li>
-<li>Q: What feature PolyNetwork can provide?</li>
-<li>Q: Is PolyNetwork open source?</li>
-</ul>
-<h2 id="about-polybridge">About PolyBridge</h2>
-<p>When you first meet PolyBridge, you may concern:</p>
-<ul>
-<li>Q: What is PolyBridge? What function does it provide? Where is the website?</li>
-</ul>
-<p>If you are a developer,you may concern:</p>
-<ul>
-<li>Q: What kind of pairs are available on the PolyBridge?</li>
-<li>Q: How to integrate token onto PolyBridge&#xFF1F;</li>
-<li>Q&#xFF1A;</li>
-</ul>
-<p>If you are a user, you may concern:</p>
-<ul>
-<li>Q: How to transfer my asset between two chains through PolyBridge?</li>
-<li>Q: How much PolyBridge will charge per transaction?</li>
-<li>Q: How long does it take for per transaction?</li>
-<li>Q: Where can I find my transaction before?</li>
-<li>Q: Is the bridge rate is 1&#xFF1A;1 &#xFF1F;</li>
-</ul>
-<p>Some critical concerned:</p>
-<ul>
-<li>Q: Are PolyBridge&apos;s smart contracts audited?</li>
-<li>Q: Is the bridge decentralized?</li>
-<li>Q: Who or where can I ask for help when I crush a problem?</li>
-</ul>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2022 PolyNetwork. All right reserved.</span><span class="footer-modification">Last modification date&#xFF1A;
-2022-01-21 15:30:18
+<h2 id="overview">Overview</h2>
+<p>Poly Network is a fully decentralized cross chain swap protocol for implementing blockchain interoperability and building the Web 3.0 infrastructure.</p>
+<p>Based on the Poly Network protocol, anyone can create their own dApp to interact and transfer data and conduct cross-chain transactions.  </p>
+<p>Poly bridge is a decentralized application based on poly Network protocol.
+This chapter takes poly bridge as an example to show developers how to use poly network protocol to realize token and NFT cross-chain.</p>
+<h2 id="development-specifications">Development Specifications</h2>
+<p>Poly bridge has the following functions:</p>
+<ol>
+<li>Cross-chain event monitoring</li>
+<li>Concatenation of cross-chain events </li>
+<li>Cross-chain fee refresh</li>
+<li>Cross-chain token price refresh</li>
+</ol>
+<h3 id="1-cross-chain-event-monitoring-original-chain-relay-chain-target-chain">1. Cross-chain event monitoring (original chain, relay chain, target chain)</h3>
+<p>&#x8DE8;&#x94FE;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;<br>Cross-chain event monitoring used to monitor cross-chain events on each chain and scan the wrapper events emitted by the wrapper contract on the original chain
+Scan the lock event (original chain) and unlock event (<a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a>) emitted by the CCM contracts of the original chain and the <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a>, as well as the cross-chain events emitted by the relay chain CCM.  </p>
+<pre class="language-"><code>type ChainHandle interface {
+  // Current chain height
+    GetLatestHeight() (uint64, error)
+  // Scan cross chain events included in the block
+    HandleNewBlock(height uint64) ([]*models.WrapperTransaction, []*models.SrcTransaction, []*models.PolyTransaction, []*models.DstTransaction, int, int, error)
+  // Chain listening interval
+    GetChainListenSlot() uint64
+  // Chain id
+    GetChainId() uint64
+  // Chain name
+    GetChainName() string
+  // Blocks to confirm
+    GetDefer() uint64
+}
+</code></pre><h3 id="2-concatenation-of-cross-chain-events-original-chain-relay-chain-target-chain">2. Concatenation of cross-chain events (original chain, relay chain, target chain)</h3>
+<p>The concatenation of cross-chain events is used to connect the events monitored from the original chain, the relay chain, and the <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> according to the transaction key, and update the status of the cross-chain transaction.  </p>
+<pre class="language-"><code>type Effect interface {
+  // Concatenat cross chain events
+    Effect() error
+  // Interval of concatenated events
+    GetEffectSlot() int64
+}
+</code></pre><h3 id="3-cross-chain-fee-refresh-target-chain">3. Cross-chain fee refresh (target chain)</h3>
+<p>Refresh the cross-chain transaction fee of the <a href="../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a>, and provide cross-chain transaction fee when the user initiates a cross-chain transaction.  </p>
+<pre class="language-"><code>type ChainFee interface {
+  // Get cross-chain transaction fee
+    GetFee() (*big.Int, *big.Int, *big.Int, error)
+  // Chain name
+    GetChainId() uint64
+  // Chain id
+    Name() string
+}
+</code></pre><h3 id="4-cross-chain-token-price-refresh">4. Cross-chain token price refresh</h3>
+<p>Obtain the price of the token from the market, and provide the conversion between the cross-chain transaction fee and the token when the user initiates a cross-chain transaction.  </p>
+<pre class="language-"><code>type PriceMarket interface {
+  // Obtain token price from the market
+    GetCoinPrice(coins []models.NameAndmarketId) (map[string]float64, error)
+  // market name
+    GetMarketName() string
+}
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; 2022 PolyNetwork. All right reserved.</span><span class="footer-modification">Last modification date&#xFF1A;
+2022-01-21 15:31:29
 </span></footer>
                         
                     </section>
@@ -506,9 +522,9 @@
 
         
         
-        <a href="../GLOSSARY.html"
+        <a href="../integrate_tokens/tokens.html"
            class="navigation navigation-prev navigation-unique"
-           aria-label="Previous page: Glossary">
+           aria-label="Previous page: Integrating New Tokens">
             <i class="fa fa-angle-left"></i>
         </a>
         
@@ -519,7 +535,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"FAQ","level":"5.1","depth":1,"previous":{"title":"Glossary","level":"4.1","depth":1,"path":"GLOSSARY.md","ref":"GLOSSARY.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","github","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"FAQ/template.md","mtime":"2022-01-21T07:30:18.883Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-21T07:32:42.611Z"},"basePath":"..","book":{"language":""}})
+            gitbook.page.hasChanged({"page":{"title":"Integrating Poly Bridge to Websites","level":"2.3","depth":1,"next":{"title":"Core Smart Contract","level":"3.1","depth":1,"ref":"","articles":[{"title":"MainNet","level":"3.1.1","depth":2,"path":"Core_Smart_Contract/README.md","ref":"Core_Smart_Contract/README.md","articles":[]},{"title":"TestNet","level":"3.1.2","depth":2,"path":"Core_Smart_Contract/README_TestNet.md","ref":"Core_Smart_Contract/README_TestNet.md","articles":[]},{"title":"DevNet","level":"3.1.3","depth":2,"path":"Core_Smart_Contract/README_DevNet.md","ref":"Core_Smart_Contract/README_DevNet.md","articles":[]},{"title":"Zion_DevNet","level":"3.1.4","depth":2,"path":"Core_Smart_Contract/Zion_dev_contracts.md","ref":"Core_Smart_Contract/Zion_dev_contracts.md","articles":[]}]},"previous":{"title":"Integrating New Tokens","level":"2.2","depth":1,"path":"integrate_tokens/tokens.md","ref":"integrate_tokens/tokens.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","github","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"github":{"url":"https://github.com/polynetwork"},"livereload":{},"search-pro":{},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"Integrate_bridge/bridge.md","mtime":"2022-01-21T07:31:29.745Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-21T07:32:42.611Z"},"basePath":"..","book":{"language":""}})
         });
     </script>
 </div>

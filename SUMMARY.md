@@ -8,15 +8,10 @@
     * [Block Data Verification](add_chain/blockdata_verification.md)
     * [Relayer](add_chain/relayer.md)
     
-* [Integrating New Tokens](FAQ/template.md)
-    * [Chapter1](add_chain/template.md)
-    * [Chapter2](add_chain/template.md)
-    * [Chapter3](add_chain/template.md)
+* [Integrating New Tokens](integrate_tokens/tokens.md)
   
-* [Integrating Poly Bridge to Websites](FAQ/template.md)
-    * [Chapter1](add_chain/template.md)
-    * [Chapter2](add_chain/template.md)
-    * [Chapter3](add_chain/template.md)
+* [Integrating Poly Bridge to Websites](Integrate_bridge/bridge.md)
+
 
 ----
 ### Appendix
@@ -29,6 +24,6 @@
 ### Glossary
 * [Glossary](GLOSSARY.md)
 
-### FAQadd
+### FAQ
 * [FAQ](FAQ/template.md)
 
