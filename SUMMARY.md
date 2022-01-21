@@ -19,15 +19,16 @@
     * [Chapter3](add_chain/template.md)
 
 ----
-### Core Smart Contract
-* [MainNet](Core_Smart_Contract/README.md)
-* [TestNet](Core_Smart_Contract/README_TestNet.md)
-* [DevNet](Core_Smart_Contract/README_DevNet.md)
-* [Zion_DevNet](Core_Smart_Contract/Zion_dev_contracts.md)
+### Appendix
+* [Core Smart Contract]()
+    * [MainNet](Core_Smart_Contract/README.md)
+    * [TestNet](Core_Smart_Contract/README_TestNet.md)
+    * [DevNet](Core_Smart_Contract/README_DevNet.md)
+    * [Zion_DevNet](Core_Smart_Contract/Zion_dev_contracts.md)
 
 ### Glossary
 * [Glossary](GLOSSARY.md)
 
-### FAQ
+### FAQadd
 * [FAQ](FAQ/template.md)
 
