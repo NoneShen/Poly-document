@@ -2,17 +2,15 @@
 ### Introduction
 
 ### Development 
-* [Joining the Cross Chain Ecosystem](add_chain/readme.md)
-    * [Cross-Chain Smart Contract](add_chain/contracts.md)
-    * [Chain Registration](add_chain/registration.md)
-    * [Block Data Verification](add_chain/blockdata_verification.md)
-    * [Relayer](add_chain/relayer.md)
-    
-* [Integrating New Tokens](integrate_tokens/tokens.md)
-  
-* [Integrating Poly Bridge to Websites](Integrate_bridge/bridge.md)
-
-
+* [Add New Side Chain](new_chain/readme.md)
+    * [Relay Chain Development](new_chain/relay_chain/relay_chain_development.md)
+    * [Side Chain Development](new_chain/side_chain/contracts.md)
+    * [Relayer Development](new_chain/relayer/relayer.md)
+    * [Launch And Test](new_chain/launch_and_test/launch.md)
+* [Integrate New Product](new_product/readme.md)
+    * [Integrating New Tokens](new_product/integrate_tokens/tokens.md)
+    * [Integrating Poly Bridge to Websites](new_product/Integrate_bridge/bridge.md)
+    * [Relayer Deployment]()
 ----
 ### Appendix
 * [Core Smart Contract]()

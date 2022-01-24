@@ -1,5 +1,11 @@
 {
   "title": "",
+  "author": "PolyNetwork",
+  "structure":{
+    "readme":"introduction.md",
+    "summary":"SUMMARY.md",
+    "glossary":"GLOSSARY.md"
+  },
   "theme-default": {
     "showLevel": true
   },
@@ -71,7 +77,14 @@
       "dragSplitter": true,
       "hide-elements": [
         ".summary .gitbook-link"
-      ]
+      ],
+      "flexible-linkcard": {
+        "title": "flexible-linkcard",
+        "hrefUrl": "https://poly.network/#/",
+        "target": "_blank",
+        "imgSrc": "/resources/logo.png",
+        "imgClass": "rect"
+      }
     },
     "tbfed-pagefooter": {
       "copyright": "Copyright &copy 2022 PolyNetwork.",
