@@ -7,7 +7,7 @@
     * [Launch And Test](new_chain/launch_and_test/launch.md)
 * [Integrate New Product](new_product/readme.md)
     * [Integrating New Tokens](new_product/integrate_tokens/tokens.md)
-    * [Integrating Poly Bridge to Websites](new_product/Integrate_bridge/bridge.md)
+    * [Integrating Poly Bridge to Websites](new_product/integrate_bridge/bridge.md)
     * [Relayer Deployment]()
 ----
 ### Appendix
