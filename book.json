@@ -10,6 +10,8 @@
     "showLevel": true
   },
   "plugins": [
+    "-sharing",
+    "sharing-plus",
     "theme-hqbook",
     "flexible-linkcard",
     "emphasize",
@@ -23,7 +25,6 @@
     "-lunr",
     "-search",
     "search-pro",
-    "github",
     "code",
     "heading-anchors",
     "-highlight",
@@ -97,13 +98,40 @@
         ".gitbook-link"
       ]
     },
-    "github": {
-      "url": "https://github.com/polynetwork"
+    "links": {
+      "sidebar": {
+        "Blog": "https://blog.csdn.net/ming_97y",
+        "Github": "https://github.com/jiangminggithub"
+      }
     },
     "prism": {
       "css": [
         "prismjs/themes/prism-okaidia.css"
       ]
+    },
+    "sharing": {
+      "twitter": true,
+      "douban": false,
+      "github": true,
+      "discord": true,
+      "medium": true,
+      "telegram": true,
+      "youtube": true,
+      "facebook": false,
+      "google": false,
+      "hatenaBookmark": false,
+      "instapaper": false,
+      "line": false,
+      "linkedin": false,
+      "messenger": false,
+      "pocket": false,
+      "qq": false,
+      "qzone": false,
+      "stumbleupon": false,
+      "viber": false,
+      "vk": false,
+      "weibo": false,
+      "whatsapp": false
     }
   }
 }

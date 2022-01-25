@@ -30,6 +30,12 @@ Poly Network is a global cross-chain interoperability protocol for implementing 
 
 ---
 
+#### Medium
+> @[Medium]{`https://polynetwork.medium.com/`}
+> `resources/Medium.png` "rect"
+
+---
+
 #### Github
 > @[Github]{`https://github.com/polynetwork`}
 > `resources/GitHub.png` "rect"
@@ -48,7 +54,5 @@ Poly Network is a global cross-chain interoperability protocol for implementing 
 
 ---
 
-#### Medium
-> @[Medium]{`https://polynetwork.medium.com/`}
-> `resources/Medium.png` "rect"
+
 
