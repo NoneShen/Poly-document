@@ -19,7 +19,7 @@ This's cross chain asset contract info on <strong>TESTNET</strong>, it's used to
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
 
 
-## Decentralized Application TestNet Nodes <div id="Decentralized Application TestNet Nodes"></div>
+## Decentralized Application TestNet Nodes <div id="Decentralized-Application-TestNet-Nodes"></div>
 
 | Chain | IP                              | Rpc Port |
 | ----- | ------------------------------- | -------- |
@@ -453,7 +453,7 @@ This's cross chain asset contract info on <strong>TESTNET</strong>, it's used to
 
 ###### [Back to top](README_TestNet.md#menu)
 
-## Router And ChainId <div id="Router And ChainId"></div>
+## Router And ChainId <div id="Router-And-ChainId"></div>
 
 |   Type   | Router Number |   ChainId    |
 | :------: | :-----------: | :----------: |
