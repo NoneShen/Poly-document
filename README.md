@@ -14,10 +14,12 @@
   * [Development Guideline](new_product/integrate_bridge/bridge.md)
   * [Launch And Test](new_product/integrate_bridge/launch.md)
 * [Integrate New Tokens](new_product/integrate_tokens/readme.md)
-  * [Integrating New Tokens](new_product/integrate_tokens/tokens.md)
+  * [Tokens Integration](new_product/integrate_tokens/tokens.md)
   * [Launch And Test](new_product/integrate_tokens/launch.md)
   * [Relayer Deployment](new_product/integrate_tokens/relayer.md)
-
+* [Integrate Business Contracts](new_product/integrate_contracts/readme.md)
+  * [Development Guideline](new_product/integrate_contracts/contracts.md)
+  * [Launch And Test](new_product/integrate_contracts/launch.md)
 ----
 ### Appendix
 * [Core Smart Contract]()
