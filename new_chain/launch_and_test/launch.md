@@ -1,6 +1,6 @@
 <h1 align="center">Launch and Test</h1>
 
-## Registration
+## Chain Registration
 Registration is the basis for monitoring and processing block information and checking the execution of cross-chain transactions. After the registration process is complete and the Cross Chain Council approves the application, the chain officially becomes a part of the cross-chain ecosystem. 
 
 > [!NOTE]
@@ -25,5 +25,13 @@ The Key information for chain registration (submitted by .config):
 
 - Number of confirmation blocks
 
-  
+##Contract Deployment
+
+##Relayer Deployment
+
+## Testing
+
+#### Cross-chain using Lock proxy
+
+#### Cross-chain using Wrapper
 
