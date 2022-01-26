@@ -117,6 +117,7 @@
       "medium": true,
       "telegram": true,
       "youtube": true,
+      "email" : true,
       "facebook": false,
       "google": false,
       "hatenaBookmark": false,

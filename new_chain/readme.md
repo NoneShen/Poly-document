@@ -2,7 +2,7 @@
 
 The poly cross-chain ecosystem provides a platform for various chains to interact and transfer data and conduct cross-chain transactions. Any chain can freely join the ecosystem following the steps in this section. This section is intended for developers who want to help add a new side chain to the poly cross-chain ecosystem. 
 
-<div align=center><img src="relay_chain/resources/add_chain_flow_new.png" alt=""/></div>
+<div align=center><img src="resources/add_chain_flow.png" alt=""/></div>
 
 ## Preparation
 
