@@ -16,7 +16,6 @@ Poly bridge has the following functions:
 4. Cross-chain token price refresh
 
 ### 1. Cross-chain event monitoring (original chain, relay chain, target chain)
-跨链事件监听  
 Cross-chain event monitoring used to monitor cross-chain events on each chain and scan the wrapper events emitted by the wrapper contract on the original chain
 Scan the lock event (original chain) and unlock event (target chain) emitted by the CCM contracts of the original chain and the target chain, as well as the cross-chain events emitted by the relay chain CCM.  
 ```
