@@ -410,8 +410,8 @@ This's cross chain asset contract info on <strong>TESTNET</strong>, it's used to
 | Boba | 0x6A6676813d3D4317442CF84667425C13553F4a76|  Boba Token                                   |
 | LP Boba | 0x0a80C08081dAa3B9786B9661F83123C2772c5Df1 |  LP Boba Token                             |
 |NFT Lock Proxy|0x9bEF1AE7304D3d2F344ea00e796ADa18cE1beb03|                                         |
-|NFT Wrapper|0x9bEF1AE7304D3d2F344ea00e796ADa18cE1beb03|                                            |
-|NFT Query |0x6fd13dd4181dDb0f7463e19caC659FD3e9FB8a82|                                              |
+|NFT Wrapper   |0x25BB8E9C0Cc03B30d09769735208a47d389Ff36c|                                         |
+|NFT Query     |0x6fd13dd4181dDb0f7463e19caC659FD3e9FB8a82|                                         |
 
 ###### [Back to top](README_TestNet.md#menu)
 
