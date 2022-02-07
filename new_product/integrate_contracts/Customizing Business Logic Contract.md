@@ -145,9 +145,9 @@ pragma solidity ^0.5.0;
 import "./../../libs/ownership/Ownable.sol";
 
 contract LockProxy is Ownable {
-		address public managerProxyContract;
-	  mapping(uint64 => bytes) public proxyHashMap;
-	  mapping(address => mapping(uint64 => bytes)) public assetHashMap;
+    address public managerProxyContract;
+    mapping(uint64 => bytes) public proxyHashMap;
+    mapping(address => mapping(uint64 => bytes)) public assetHashMap;
     
     // toChainId: the target chain id
     // targetProxyHash: the address of business logic contract on target chain
