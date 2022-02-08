@@ -1,4 +1,4 @@
-<h1 align="center">Development Guideline</h1>
+<h1 align="center">Guidelines for Developing</h1>
 
 ## 1. Developing Customized Business Logic Contract
 

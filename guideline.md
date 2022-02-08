@@ -1,22 +1,22 @@
-<h1 align="center">Reading Guideline</h1>
+<h1 align="center">Guidelines for Reading</h1>
 
 <div align=center><img src="resources/reading_guideline.png" alt=""/></div>
 
-## Add New Chain
+## Add New Chains
 Please read this section if you want to connect your chain to poly
-- [Add new side chain](new_chain/readme.md)
+- [Connect New Chains](new_chain/readme.md)
 
-## Build New Bridge 
+## Build New Bridges
 Please read this section if you want to build a bridge using poly bridge sdk
-- [Build bridge](new_product/integrate_bridge/bridge.md)
+- [Build New Bridges](new_product/integrate_bridge/bridge.md)
 
-## Register New Token
+## Register New Tokens
 Please read this section if for want to register tokens to the poly cross-chain ecosystem
 - [Register new tokens](new_product/integrate_tokens/tokens.md)
 
-## Deploy Business Contract
+## Customize Business Logic Contracts
 
 Please read this section if you want to deploy business contract
 
-- [Customizing Business Logic Contract](new_product/integrate_contracts/contracts.md)
+- [Customizing Business Logic Contracts](new_product/integrate_contracts/readme.md)
 

@@ -1,4 +1,4 @@
-<h1 align="center">Relay Chain Development</h1>
+<h1 align="center">Develop for Relay Chain</h1>
 
 ## Development Requirements
 

@@ -1,5 +1,7 @@
 <h1 align="center">Launch and Testing</h1>
 
+<div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
+
 ## Chain Registration
 Registration is the basis for monitoring and processing block information and checking the execution of cross-chain transactions. After the registration process is complete and the Cross Chain Council approves the application, the chain officially becomes a part of the cross-chain ecosystem. 
 
