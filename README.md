@@ -16,7 +16,6 @@
 * [Register New Tokens](new_product/integrate_tokens/readme.md)
   * [Tokens Integration](new_product/integrate_tokens/tokens.md)
   * [Launch And Test](new_product/integrate_tokens/launch.md)
-  * [Relayer Deployment](new_product/integrate_tokens/relayer.md)
 * [Deploy Business Contracts](new_product/integrate_contracts/readme.md)
   * [Development Guideline](new_product/integrate_contracts/contracts.md)
   * [Launch And Test](new_product/integrate_contracts/launch.md)

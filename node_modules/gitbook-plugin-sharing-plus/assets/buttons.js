@@ -1,5 +1,15 @@
 require(['gitbook', 'jquery'], function(gitbook, $) {
     function site(type, label, icon, link) {
+        if (type == ""){
+            return {
+                label: label,
+                icon: icon,
+                onClick: function (e) {
+                    e.preventDefault();
+                    window.open(link);
+                }
+            }
+        }
         return {
             label: label,
             icon: type+' fa-' + icon,
@@ -15,7 +25,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
     var SITES = {
         youtube: site('fab','youtube', 'youtube', 'https://www.youtube.com/channel/UC4vFRyVgvK7RnlkkLDmp23w/featured'),
-        medium: site('fab','medium', 'medium', 'https://polynetwork.medium.com'),
+        medium: site('','medium', 'icon-icons8-medium', 'https://polynetwork.medium.com'),
         twitter: site('fab','Twitter', 'twitter', 'https://twitter.com/PolyNetwork2'),
         email: site('fa','email', 'envelope', 'mailto:contact@poly.network'),
         telegram: site('fab','telegram', 'telegram', 'https://t.me/polynetworkgroup'),

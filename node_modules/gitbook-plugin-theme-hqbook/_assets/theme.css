@@ -14,7 +14,7 @@ body{font-family:"Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F
 .book-summary ul.summary li a:hover{text-decoration:none}
 .page-inner{max-width:none;padding:20px 270px 40px 40px}
 .header-inner #book-search-input{float:right;width:300px;margin:10px 0;padding:0;border:none;user-select:none}
-.header-inner #book-search-input input[type="text"]{width:80%;background:#e4e4e4}
+.header-inner #book-search-input input[type="text"]{width:100%;background:#e4e4e4}
 .header-inner #book-search-input #searchBtn{color:#ffffff;margin-left:10px;cursor:pointer}
 .header-inner #book-search-input #searchBtn:hover{color:#eae8e8}
 .header-inner{width:100%;padding:10px 30px;border-bottom:1px solid #dededede;margin:auto;*zoom:1;height:80px}
