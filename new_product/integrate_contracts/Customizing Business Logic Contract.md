@@ -1,6 +1,6 @@
 <h1 align="center">Guidelines for Developing</h1>
 
-## 1. Developing Customized Business Logic Contract
+## 1. Developing Customized Business Logic Contracts
 
 To implement cross chain features for any chain, cross chain management contract is needed to be deployed. Every chain can have no more than one management contract. All the business logic contracts need to interact with the CCM contract. Following is the detailed description of two interfaces offered by CCM contract. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol) of CCM contract. 
 
@@ -40,7 +40,7 @@ contract LockProxy is Ownable {
 }
 ```
 
-### Step2. Initiate a Cross-chain Request from the Source Chain
+### Step2. Initiating a Cross-chain Request from the Source Chain
 
 #### Interface:
 
@@ -165,7 +165,7 @@ To realize implementation of cross chain features, developers need to make sure 
 - The cross chain methods in your business logic contracts should allow our Cross Chain Manager Contract to call
 - The mapping assets need to be bound before any cross chain transactions
 
-## 3. Test Your Contracts
+## 3. Testing Your Contracts
 
 We highly encourage project developers to test the business logic contract on testnet before launching on mainnet. If you want to test your contract on mainnet directly, you need to provide us of the business logic contract addresses and cross-chain methods both on source chain and target chain. So that we could maintain the whitelist of CCM contract, which is meant to guarantee the safety of cross chain process. 
 
