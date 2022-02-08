@@ -16,7 +16,7 @@
 * [Register New Tokens](new_product/integrate_tokens/readme.md)
   * [Tokens Integration](new_product/integrate_tokens/tokens.md)
   * [Launch and Testing](new_product/integrate_tokens/launch.md)
-* [Customizing Business Logic Contracts](new_product/integrate_contracts/readme.md)
+* [Customize Business Logic Contracts](new_product/integrate_contracts/readme.md)
   * [Guidelines for Developing](new_product/integrate_contracts/Customizing Business Logic Contract.md)
   * [Launch and Testing](new_product/integrate_contracts/launch.md)
 

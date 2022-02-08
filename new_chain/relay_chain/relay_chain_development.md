@@ -1,16 +1,16 @@
 <h1 align="center">Develop for Relay Chain</h1>
 
-## Development Requirements
+## Requirements
 
 ### 1. Make sure the side chain support Light Client Verification
 
 The block header must contain the following information：
-- The hash of the previous block header
+- Hash of the previous block header
 - Merkle state root hash
-- The necessary information to prove the legitimacy of the block header varies from different consensus mechanisms.
+- Necessary information to prove the legitimacy of the block header varies from different consensus mechanisms.
 
-> [!Note|style:flat|label:Note]
-> Please get in touch with the poly team Via <a href="mailto:contact@poly.network">contact@poly.network</a> Or https://t.me/polynetworkgroup for more support if your chain doesn't support techniques like Simple Payment Verification (SPV) protocol in Bitcoin or  Light Ethereum Subprotocol (LES) in Ethereum.
+> [!Note|style:flat|label:Notice]
+> If your chain doesn't support techniques like Simple Payment Verification (SPV) protocol in Bitcoin or Light Ethereum Subprotocol (LES) in Ethereum, please get in touch with the poly team via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://t.me/polynetworkgroup for more support.
 
 ### 2. Understand the consensus algorithm
 
@@ -23,23 +23,21 @@ The block header must contain the following information：
 
 ### 4. Offer the merkle tree structure, generation and verification methods
 
-- The Merkle tree structure
+- Merkle tree structure
 - State root generation, and verification methods
-- are necessary to verify cross-chain transactions
 
 ## Development Specifications
 
-This chapter shows the interface methods that are necessary for handling block data in the poly relay chain during the cross-chain process. Here are two main steps:
 <div align=center><img src="resources/relay_chain_development.png" alt=""/></div>
 
 ### 1. Implement the methods of block data verification
 
 #### Block Header Synchronization Methods
 
-| Method                | Description                                                  |
-| --------------------- | ------------------------------------------------------------ |
-| **SyncGenesisHeader** | Synchronizes the side chain's genesis block header (or canonical block header that has sufficient information to verify subsequent block headers) to the relay chain. The method is called one time only when initializing the side chain. It stores and handles the initial block header so that the subsequent block headers of blocks that contain cross-chain events can be verified and synchronized; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61) for more details. |
-| **SyncBlockHeader**   | Consistently synchronizes block cycle change and cross-chain transaction block headers from the side chain to the relay chain; the relayers use this interface method to synchronize block headers, stores, and process block headers, fetches the consensus node info if block generation cycle changes; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L99) for more details. |
+| Method                | Description                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **SyncGenesisHeader** | It stores and handles the initial block header so that the subsequent block headers of blocks that contain cross-chain events can be verified and synchronized. The method will only be called onec for initializing the side chain; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61) for more details. |
+| **SyncBlockHeader**   | Consistently synchronizes block cycle change and cross-chain transaction block headers from the side chain to the relay chain; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L99) for more details.                                                                                                       |
 
 
 #### Block Header Synchronization Entrance Method
@@ -61,7 +59,7 @@ The Key information for this method(submitted by .config):
 
 ### 2. Implement methods of cross-chain transaction verification
 
-### Cross Chain Management
+#### Cross Chain Management
 
 | Method                  | Description                                                  |
 | ----------------------- | :----------------------------------------------------------- |
