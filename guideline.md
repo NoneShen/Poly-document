@@ -18,5 +18,5 @@ Please read this section if for want to register tokens to the poly cross-chain 
 
 Please read this section if you want to deploy business contract
 
-- [Deploy business contracts](new_product/integrate_contracts/contracts.md)
+- [Customizing Business Logic Contract](new_product/integrate_contracts/contracts.md)
 

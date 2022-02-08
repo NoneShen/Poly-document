@@ -9,16 +9,16 @@
   * [Relay Chain Development](new_chain/relay_chain/relay_chain_development.md)
   * [Side Chain Development](new_chain/side_chain/contracts.md)
   * [Relayer Development](new_chain/relayer/relayer.md)
-  * [Launch And Test](new_chain/launch_and_test/launch.md)
+  * [Launch and Testing](new_chain/launch_and_test/launch.md)
 * [Build Bridge](new_product/integrate_bridge/readme.md)
   * [Development Guideline](new_product/integrate_bridge/bridge.md)
-  * [Launch And Test](new_product/integrate_bridge/launch.md)
+  * [Launch and Testing](new_product/integrate_bridge/launch.md)
 * [Register New Tokens](new_product/integrate_tokens/readme.md)
   * [Tokens Integration](new_product/integrate_tokens/tokens.md)
-  * [Launch And Test](new_product/integrate_tokens/launch.md)
-* [Deploy Business Contracts](new_product/integrate_contracts/readme.md)
+  * [Launch and Testing](new_product/integrate_tokens/launch.md)
+* [Customizing Business Logic Contract](new_product/integrate_contracts/readme.md)
   * [Development Guideline](new_product/integrate_contracts/contracts.md)
-  * [Launch And Test](new_product/integrate_contracts/launch.md)
+  * [Launch and Testing](new_product/integrate_contracts/launch.md)
 
 ----
 ### Appendix
