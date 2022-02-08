@@ -1,22 +1,58 @@
 <h1 align="center">Customizing Business Logic Contract</h1>
 
-### Introduction
+## Introduction
 
 - List of contracts
   - [Cross Chain Manager Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol): On source chain, it creates the cross chain transactions that are transferred to the Poly; On target chain, it verifies the legitimacy of transactions and executes the method on target business logic contract. In the following context, it may be referred to as CCM contract.
   - [Cross Chain Data Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/data/EthCrossChainData.sol): It serves as a database of cross chain transactions. In the following context, it may be referred to as CCD contract.
   - [Cross Chain Manager Proxy Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol): It serves as a proxy of CCM contract. When there is any need to upgrade the CCM contract, it would pause old CCM contract and set new CCM contract to CCD contract. 
-  - Business Logic Contract: It executes the business logic of cross chain projects. It interacts with users and CCM contract both on source chain and target chain. Here we offer a [template](http://81.69.45.203/new_product/integrate_contracts/Example.md) of business logic contract to realize cross chain features. 
+  - Business Logic Contract: It executes the business logic of cross chain projects. It interacts with users and CCM contract both on source chain and target chain. Here we offer examples of business logic contract to realize cross chain features. 
 - Interactions between contracts
-<div align=center><img src="resources/contracts_interaction.jpeg" alt=""/></div>
+ <img src="/Users/onchain/Desktop/contracts_interaction.jpeg" alt="contracts_interaction" style="zoom:120%;" />
 
-### Step 1: Developing Customized Business Logic Contract
+## 1. Developing Customized Business Logic Contract
 
 To implement cross chain features for any chain, cross chain management contract is needed to be deployed. Every chain can have no more than one management contract. All the business logic contracts need to interact with the CCM contract. Following is the detailed description of two interfaces offered by CCM contract. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol) of CCM contract. 
 
-#### Initiate a Cross-chain Request from the Source Chain
+### Step1. Binding the Mapping Relationship
 
-##### Interface:
+Besides of the verifying the existence of transaction through CCM contract, business logic contract needs to make sure of the accuracy of the assets relationship in the transaction. Therefore, the business contract should maintain both the asset mapping and business logic contract mapping. Asset mapping is from the asset on source chain to the mapping of target chain id to the same kind of asset issued on target chain. CCM contract mapping is from the target chain id to the business logic contract address on target chain.
+
+#### Example:
+
+The asset mapping relationship which stored in business logic contract will help provide the completeness of transaction data. Binding actions also prevent the wrong input from users which may lead to transfer assets to wrong asset contract address.
+
+```solidity
+pragma solidity ^0.5.0;
+
+import "./../../libs/ownership/Ownable.sol";
+
+contract LockProxy is Ownable {
+		address public managerProxyContract;
+		mapping(uint64 => bytes) public proxyHashMap;
+		mapping(address => mapping(uint64 => bytes)) public assetHashMap;
+    
+    // toChainId: the target chain id
+    // targetProxyHash: the address of business logic contract on target chain
+		function bindProxyHash(uint64 toChainId, bytes memory targetProxyHash) onlyOwner public returns (bool) {
+        proxyHashMap[toChainId] = targetProxyHash;
+        emit BindProxyEvent(toChainId, targetProxyHash);
+        return true;
+    }
+    
+    // fromAssetHash: asset hash on source chain 
+    // toAssetHash: asset hash on target chain
+		function bindAssetHash(address fromAssetHash, uint64 toChainId, bytes memory toAssetHash) onlyOwner public returns (bool) {
+        assetHashMap[fromAssetHash][toChainId] = toAssetHash;
+        emit BindAssetEvent(fromAssetHash, toChainId, toAssetHash, getBalanceFor(fromAssetHash));
+        return true;
+    }
+}
+```
+
+### Step2. Initiate a Cross-chain Request from the Source Chain
+
+#### Interface:
 
 ````solidity
 /*  
@@ -33,7 +69,7 @@ function crossChain(uint64 toChainId, bytes calldata toContract, bytes calldata 
 - This method constructs the `rawParam`, which contains transaction hash, `msg.sender`, target chain id, business logic contract to be invoked on target chain, the target method to be invoked and the serialized transaction data which has been already constructed in business logic contract. 
 - Then put the hash of `rawParam` into storage, to help provide proof of transaction existence.
 
-##### Example of Calling the Interface `crossChain()`:
+#### Example of Calling the Interface `crossChain()`:
 
 ```solidity
 /*  
@@ -67,7 +103,7 @@ function lock(address fromAssetHash, uint64 toChainId, bytes memory toAddress, u
     emit LockEvent(fromAssetHash, _msgSender(), toChainId, toAssetHash, toAddress, amount);
         
     return true;
-
+    
 }
 ```
 
@@ -75,9 +111,9 @@ function lock(address fromAssetHash, uint64 toChainId, bytes memory toAddress, u
 - Then the transaction data will be packed, which then in turn invokes the CCM contract. The management contract transfers the parameters of transaction data to the target chain and a cross chain transaction is created by management contract which is sent to the target chain based on block generation on source chain;
 - The serialized transaction data, along with the chain id and business logic contract address of target chain and the method needed to be called on target chain, will be sent through `crossChain()` in CCM contract.
 
-#### Verifying and Executing Cross Chain Transaction on the Target Chain
+### Step3. Verifying and Executing Cross Chain Transaction on the Target Chain
 
-##### Interface:
+#### Interface:
 
 ````solidity
 /*  
@@ -99,7 +135,7 @@ function verifyHeaderAndExecuteTx(bytes memory proof, bytes memory rawHeader, by
   - Then we construct a method call on target business logic contract: first we need to `encodePacked` the `_method` and the format of input data `"(bytes,bytes,uint64)"`. Then it would `keccak256` the encoded string, use `bytes4` to take the first four bytes of the call data for a function call specifies the function to be called. Parameter `_method`  is from the `toMerkleValue` , which is parsed from `proof`. And the input parameters format is restricted as (bytes `_args`, bytes `_fromContractAddr`, uint64 `_fromChainId`). These two parts are encodePacked as a method call.  
   - After calling the method, we need to check the return value. Only if the return value is true, will the whole cross chain transaction be executed successfully. 
 
-##### Example of Calling the Interface `verifyHeaderAndExecuteTx()`:
+#### Example of Calling the Interface `verifyHeaderAndExecuteTx()`:
 
 ```solidity
 /*  
@@ -131,43 +167,7 @@ function unlock(bytes memory argsBs, bytes memory fromContractAddr, uint64 fromC
 - `verifyHeaderAndExecuteTx()` in CCM contract determines the legitimacy of the cross chain transaction information and resolve the parameters of transaction data from the Poly chain transaction merkle proof and `crossStateRoot` contained in the block header. After verification through Poly, the packed transaction data could be executed on target chain.
 - Then call the function `unlock()` to deserialize the transaction data and unlock (transfer) the certain amount of token to the target address on target chain and completes the cross chain contract invocation.
 
-#### Binding the Mapping Relationship
-
-Besides of the verifying the existence of transaction through CCM contract, business logic contract needs to make sure of the accuracy of the assets relationship in the transaction. Therefore, the business contract should maintain both the asset mapping and business logic contract mapping. Asset mapping is from the asset on source chain to the mapping of target chain id to the same kind of asset issued on target chain. CCM contract mapping is from the target chain id to the business logic contract address on target chain.
-
-##### Example:
-
-The asset mapping relationship which stored in business logic contract will help provide the completeness of transaction data. Binding actions also prevent the wrong input from users which may lead to transfer assets to wrong asset contract address.
-
-```solidity
-pragma solidity ^0.5.0;
-
-import "./../../libs/ownership/Ownable.sol";
-
-contract LockProxy is Ownable {
-    address public managerProxyContract;
-    mapping(uint64 => bytes) public proxyHashMap;
-    mapping(address => mapping(uint64 => bytes)) public assetHashMap;
-    
-    // toChainId: the target chain id
-    // targetProxyHash: the address of business logic contract on target chain
-    function bindProxyHash(uint64 toChainId, bytes memory targetProxyHash) onlyOwner public returns (bool) {
-        proxyHashMap[toChainId] = targetProxyHash;
-        emit BindProxyEvent(toChainId, targetProxyHash);
-        return true;
-    }
-    
-    // fromAssetHash: asset hash on source chain 
-    // toAssetHash: asset hash on target chain
-    function bindAssetHash(address fromAssetHash, uint64 toChainId, bytes memory toAssetHash) onlyOwner public returns (bool) {
-        assetHashMap[fromAssetHash][toChainId] = toAssetHash;
-        emit BindAssetEvent(fromAssetHash, toChainId, toAssetHash, getBalanceFor(fromAssetHash));
-        return true;
-    }
-}
-```
-
-### Step 2: Deploying Contracts
+## 2. Deploying Contracts
 
 To realize implementation of cross chain features, developers need to make sure that:
 
@@ -175,15 +175,11 @@ To realize implementation of cross chain features, developers need to make sure 
 - The cross chain methods in your business logic contracts should allow our Cross Chain Manager Contract to call
 - The mapping assets need to be bound before any cross chain transactions
 
-### Step 3: Test Your Contracts
+## 3. Test Your Contracts
 
 We highly encourage project developers to test the business logic contract on testnet before launching on mainnet. If you want to test your contract on mainnet directly, you need to provide us of the business logic contract addresses and cross-chain methods both on source chain and target chain. So that we could maintain the whitelist of CCM contract, which is meant to guarantee the safety of cross chain process. 
 
 Following are the tests required to be done before launching project:
 
 - 
-
- 
-
-
 
