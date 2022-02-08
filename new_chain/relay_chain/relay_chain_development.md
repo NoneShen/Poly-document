@@ -1,11 +1,38 @@
 <h1 align="center">Relay Chain Development</h1>
 
+## Development Requirements
+
+### 1. Make sure the side chain support Light Client Verification
+
+The block header must contain the following information：
+- The hash of the previous block header
+- Merkle state root hash
+- The necessary information to prove the legitimacy of the block header varies from different consensus mechanisms.
+
+> [!Note|style:flat|label:Note]
+> Please get in touch with the poly team Via <a href="mailto:contact@poly.network">contact@poly.network</a> Or https://t.me/polynetworkgroup for more support if your chain doesn't support techniques like Simple Payment Verification (SPV) protocol in Bitcoin or  Light Ethereum Subprotocol (LES) in Ethereum.
+
+### 2. Understand the consensus algorithm
+
+- How does the chain select consensus validators, voters, and block producers for minting new blocks and bookkeeping block transactions. 
+
+### 3. Offer the block header structure and verification methods
+- Block header structure
+- Serialization and Deserilization methods
+- Block header verification mehtods
+
+### 4. Offer the merkle tree structure, generation and verification methods
+
+- The Merkle tree structure
+- State root generation, and verification methods
+- are necessary to verify cross-chain transactions
+
 ## Development Specifications
 
 This chapter shows the interface methods that are necessary for handling block data in the poly relay chain during the cross-chain process. Here are two main steps:
 <div align=center><img src="resources/relay_chain_development.png" alt=""/></div>
 
-### 1. Implement methods of Block data Verification
+### 1. Implement the methods of block data verification
 
 #### Block Header Synchronization Methods
 
@@ -32,9 +59,9 @@ The Key information for this method(submitted by .config):
 - Information required for the side chain block header verification
 
 
-### 2.Implement methods of Cross-Chain Transaction Verification
+### 2. Implement methods of cross-chain transaction verification
 
-#### Cross Chain Management
+### Cross Chain Management
 
 | Method                  | Description                                                  |
 | ----------------------- | :----------------------------------------------------------- |
