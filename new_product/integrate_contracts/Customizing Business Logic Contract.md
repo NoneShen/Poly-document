@@ -8,7 +8,7 @@
   - [Cross Chain Manager Proxy Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol): It serves as a proxy of CCM contract. When there is any need to upgrade the CCM contract, it would pause old CCM contract and set new CCM contract to CCD contract. 
   - Business Logic Contract: It executes the business logic of cross chain projects. It interacts with users and CCM contract both on source chain and target chain. Here we offer examples of business logic contract to realize cross chain features. 
 - Interactions between contracts
- <img src="/Users/onchain/Desktop/contracts_interaction.jpeg" alt="contracts_interaction" style="zoom:120%;" />
+<div align=center><img src="resources/contracts_interaction.jpeg" alt=""/></div>
 
 ## 1. Developing Customized Business Logic Contract
 
@@ -28,13 +28,13 @@ pragma solidity ^0.5.0;
 import "./../../libs/ownership/Ownable.sol";
 
 contract LockProxy is Ownable {
-		address public managerProxyContract;
-		mapping(uint64 => bytes) public proxyHashMap;
-		mapping(address => mapping(uint64 => bytes)) public assetHashMap;
+    address public managerProxyContract;
+    mapping(uint64 => bytes) public proxyHashMap;
+    mapping(address => mapping(uint64 => bytes)) public assetHashMap;
     
     // toChainId: the target chain id
     // targetProxyHash: the address of business logic contract on target chain
-		function bindProxyHash(uint64 toChainId, bytes memory targetProxyHash) onlyOwner public returns (bool) {
+    function bindProxyHash(uint64 toChainId, bytes memory targetProxyHash) onlyOwner public returns (bool) {
         proxyHashMap[toChainId] = targetProxyHash;
         emit BindProxyEvent(toChainId, targetProxyHash);
         return true;
@@ -42,7 +42,7 @@ contract LockProxy is Ownable {
     
     // fromAssetHash: asset hash on source chain 
     // toAssetHash: asset hash on target chain
-		function bindAssetHash(address fromAssetHash, uint64 toChainId, bytes memory toAssetHash) onlyOwner public returns (bool) {
+    function bindAssetHash(address fromAssetHash, uint64 toChainId, bytes memory toAssetHash) onlyOwner public returns (bool) {
         assetHashMap[fromAssetHash][toChainId] = toAssetHash;
         emit BindAssetEvent(fromAssetHash, toChainId, toAssetHash, getBalanceFor(fromAssetHash));
         return true;
