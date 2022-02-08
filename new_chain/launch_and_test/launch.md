@@ -29,6 +29,57 @@ The Key information for chain registration (submitted by .config):
 
 ##Relayer Deployment
 
+### 1. Build and binaries
+
+To build the binary, switch to the right branch [Branch Select](https://github.com/polynetwork/poly-relayer/blob/main/README.md#supported-chains), then run:
+
+
+```
+./build.sh testnet/mainnet
+```
+
+
+### 2. Configuration
+
+* Make sure necessory configuration is specifed in `config.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json).
+
+* Specify roles to enable in `roles.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json)
+
+
+### 3. Run
+
+
+```
+./server --config ./config.json --roles ./roles.json
+```
+
+
+### 4. About Roles 
+
+* Header Sync
+
+Some chains require `HeaderSync` process to run to submit chain headers to poly chain. 
+
+
+* Source Chain -> Poly
+
+`TxListen` observes cross chain transactions from source chain, and push them to message queue.
+
+
+`TxCommit` consumes the message queue, and submit the cross chain transactions to poly.
+
+
+* Poly -> Destination Chain
+
+`PolyListen` observes cross chain transactions from poly chain and push them to message queue.
+
+**ONLY ONE `PolyListen` PROCESS IS NEEDED FOR ALL CHAINS!**
+
+
+`PolyCommit` consumes the message queue, and submit the cross chain transaction to the destination chain.
+
+
+
 ## Testing
 
 #### Cross-chain using Lock proxy
