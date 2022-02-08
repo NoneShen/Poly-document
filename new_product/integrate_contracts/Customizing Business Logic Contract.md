@@ -6,7 +6,7 @@ To implement cross chain features for any chain, cross chain management contract
 
 ### Step1. Binding the Mapping Relationship
 
-Except for verifying the existence of transaction through CCM contract, business logic contract needs to make sure the accuracy of the assets relationship in the transaction. Therefore, the business contract should maintain both the asset mapping and business logic contract mapping. Asset mapping is from the asset on source chain to the mapping of target chain id to the same kind of asset issued on target chain. CCM contract mapping is from the target chain id to the business logic contract address on target chain.
+Except for verifying the existence of transaction through CCM contract, business logic contract needs to make sure the accuracy of the assets relationship in the transaction. Therefore, the business contract should maintain both the asset mapping and business logic contract mapping. Asset hash is mapped from the source chain to the target chain, and target chain Id is mapped to the business logic contract address on target chain.
 
 #### Example:
 
