@@ -29,7 +29,7 @@ The Key information for chain registration (submitted by .config):
 
 ##Relayer Deployment
 
-### 1. Build and binaries
+### Step 1. Build and binaries
 
 To build the binary, switch to the right branch [Branch Select](https://github.com/polynetwork/poly-relayer/blob/main/README.md#supported-chains), then run:
 
@@ -39,14 +39,14 @@ To build the binary, switch to the right branch [Branch Select](https://github.c
 ```
 
 
-### 2. Configuration
+### Step 2. Configuration
 
 * Make sure necessory configuration is specifed in `config.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json).
 
 * Specify roles to enable in `roles.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json)
 
 
-### 3. Run
+### Step 3. Run
 
 
 ```
@@ -54,7 +54,7 @@ To build the binary, switch to the right branch [Branch Select](https://github.c
 ```
 
 
-### 4. About Roles 
+### Step 4. About Roles 
 
 * Header Sync
 
