@@ -148,7 +148,7 @@ To guarantee the safety of CCM contract, we keep whitelists of contract addresse
 - This method can only be called by the contracts in whitelist.
 - This method creates cross chain transactions, invoked by service contracts when a cross chain function is carried out in the logic contract.
 - This method constructs the `rawParam`, which contains transaction hash, `msg.sender`, target chain id, business logic contract to be invoked on target chain, the target method to be invoked and the serialized transaction data which has been already constructed in business logic contract. 
-- Then put the hash of `rawParam` into storage, providing proof of transaction existence.
+- Then put the hash of `rawParam` into storage, proving the existence of transaction .
 
 #### Step4. Verifying Block Header and Proof & Executing Transaction on Target Chain
 
