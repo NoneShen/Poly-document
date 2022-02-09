@@ -126,7 +126,7 @@ To guarantee the safety of CCM contract, we keep whitelists of contract addresse
         // Convert the uint256 into bytes
         bytes memory paramTxHash = Utils.uint256ToBytes(txHashIndex);
         
-        // Construct the makeTxParam, and put the hash info storage, to help provide proof of tx existence
+        // Construct the makeTxParam, and put the hash info storage, proving tx existence
         bytes memory rawParam = abi.encodePacked(ZeroCopySink.WriteVarBytes(paramTxHash),
             ZeroCopySink.WriteVarBytes(abi.encodePacked(sha256(abi.encodePacked(address(this), paramTxHash)))),
             ZeroCopySink.WriteVarBytes(Utils.addressToBytes(msg.sender)),
@@ -199,7 +199,7 @@ To guarantee the safety of CCM contract, we keep whitelists of contract addresse
         // Ethereum ChainId is 2, we need to check the transaction is for Ethereum network
         require(toMerkleValue.makeTxParam.toChainId == chainId, "This Tx is not aiming at this network!");
         
-        // Obtain the targeting contract, so that Ethereum cross chain manager contract can trigger the executation of cross chain tx on Ethereum side
+        // Obtain the target contract, so that Ethereum cross chain manager contract can trigger the executation of cross chain tx on Ethereum side
         address toContract = Utils.bytesToAddress(toMerkleValue.makeTxParam.toContract);
         
         // only invoke PreWhiteListed Contract and method For Now
@@ -216,17 +216,17 @@ To guarantee the safety of CCM contract, we keep whitelists of contract addresse
     }
 
 /* 
- *  @notice                       Dynamically invoke the targeting contract, and trigger executation of cross chain tx 
+ *  @notice                       Dynamically invoke the target contract, and trigger executation of cross chain tx 
                                   on Ethereum side
- *  @param _toContract            The targeting contract that will be invoked by the Ethereum Cross Chain Manager contract
- *  @param _method                At which method will be invoked within the targeting contract
- *  @param _args                  The parameter that will be passed into the targeting contract
+ *  @param _toContract            The target contract that will be invoked by the Ethereum Cross Chain Manager contract
+ *  @param _method                At which method will be invoked within the target contract
+ *  @param _args                  The parameter that will be passed into the target contract
  *  @param _fromContractAddr      From chain smart contract address
  *  @param _fromChainId           Indicate from which chain current cross chain tx comes 
  *  @return                       true or false
 */
     function _executeCrossChainTx(address _toContract, bytes memory _method, bytes memory _args, bytes memory _fromContractAddr, uint64 _fromChainId) internal returns (bool){
-        // Ensure the targeting contract gonna be invoked is indeed a contract rather than a normal account address
+        // Ensure the target contract gonna be invoked is indeed a contract rather than a normal account address
         require(Utils.isContract(_toContract), "The passed in address is not a contract!");
         bytes memory returnData;
         bool success;
@@ -250,7 +250,7 @@ To guarantee the safety of CCM contract, we keep whitelists of contract addresse
 - This method fetches and processes cross chain transactions, finds the merkle root of a transaction based on the block height (in the block header), verifies the legitimacy of transaction using the transaction parameters.
 - After verifying Poly chain block header and proof, we still need to check if the parameters `toContract` and `toMerkleValue.makeTxParam.method` have been pre listed in whitelists.
 - Then it will invoke the business logic contract deployed on the target chain. Invoking will be processed through the internal method `_executeCrossChainTx()`: 
-  - This method is meant to invoke the targeting contract, and trigger executation of cross chain tx on target chain. Firstly, we need to ensure the targeting contract gonna be invoked is indeed a contract rather than a normal account address. 
+  - This method is meant to invoke the target contract, and trigger executation of cross chain tx on target chain. Firstly, we need to ensure the target contract gonna be invoked is indeed a contract rather than a normal account address. 
   - Then we construct a method call on target business logic contract: first we need to `encodePacked` the `_method` and the format of input data `"(bytes,bytes,uint64)"`. 
   - Then it would `keccak256` the encoded string, use `bytes4` to take the first four bytes of the call data for a function call specifies the function to be called. Parameter `_method`  is from the `toMerkleValue` , which is parsed from `proof`. And the input parameters format is restricted as (bytes `_args`, bytes `_fromContractAddr`, uint64 `_fromChainId`). These two parts are encodePacked as a method call.  
   - After calling the method, we need to check the return value. Only if the return value is true, will the whole cross chain transaction be executed successfully. 
