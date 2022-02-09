@@ -6,11 +6,11 @@ To implement cross chain features for any chain, cross chain management contract
 
 ### Step1. Binding the Mapping Relationship
 
-Besides of the verifying the existence of transaction through CCM contract, business logic contract needs to make sure of the accuracy of the assets relationship in the transaction. Therefore, the business contract should maintain both the asset mapping and business logic contract mapping. Asset mapping is from the asset on source chain to the mapping of target chain id to the same kind of asset issued on target chain. CCM contract mapping is from the target chain id to the business logic contract address on target chain.
+Except for verifying the existence of transaction through CCM contract, business logic contract needs to make sure the accuracy of the assets relationship in the transaction. Therefore, the business contract should maintain both the asset mapping and business logic contract mapping. Asset hash is mapped from the source chain to the target chain, and target chain Id is mapped to the business logic contract address on target chain.
 
 #### Example:
 
-The asset mapping relationship which stored in business logic contract will help provide the completeness of transaction data. Binding actions also prevent the wrong input from users which may lead to transfer assets to wrong asset contract address.
+The asset mapping relationship stored in business logic contract will help complete transaction data. Binding actions also prevent the wrong input from users which may lead to transfer assets to wrong asset contract address.
 
 ```solidity
 pragma solidity ^0.5.0;
@@ -119,10 +119,10 @@ function verifyHeaderAndExecuteTx(bytes memory proof, bytes memory rawHeader, by
 ````
 
 - This method is meant to be invoked by relayer, in some cases user could invoke this method by themselves if they get the valid block information from Poly. 
-- This method fetches and processes cross chain transactions, finds the merkle root of a transaction based on the block height (in the block header), verifies the legitimacy of transaction using the transaction parameters.
+- This method fetches and processes cross chain transactions, finds the merkle root of a transaction based on the block height (in the block header), and verifies the legitimacy of transaction using the transaction parameters.
 - After verifying Poly chain block header and proof, it will invoke the business logic contract deployed on the target chain. Invoking will be processed through the internal method `_executeCrossChainTx()`: 
-  - This method is meant to invoke the targeting contract, and trigger executation of cross chain tx on target chain. Firstly, we need to ensure the targeting contract gonna be invoked is indeed a contract rather than a normal account address. 
-  - Then we construct a method call on target business logic contract: first we need to `encodePacked` the `_method` and the format of input data `"(bytes,bytes,uint64)"`. Then it would `keccak256` the encoded string, use `bytes4` to take the first four bytes of the call data for a function call specifies the function to be called. Parameter `_method`  is from the `toMerkleValue` , which is parsed from `proof`. And the input parameters format is restricted as (bytes `_args`, bytes `_fromContractAddr`, uint64 `_fromChainId`). These two parts are encodePacked as a method call.  
+  - This method is meant to invoke the target contract, and trigger executation of cross chain tx on target chain. Firstly, we need to ensure the target contract gonna be invoked is indeed a contract rather than a normal account address. 
+  - Then we construct a method calling on target business logic contract: first we need to `encodePacked` the `_method` and the format of input data `"(bytes,bytes,uint64)"`. Then it would `keccak256` the encoded string, use `bytes4` to take the first four bytes of the call data for a function call specifies the function to be called. Parameter `_method`  is from the `toMerkleValue` , which is parsed from `proof`. And the input parameters format is restricted as (bytes `_args`, bytes `_fromContractAddr`, uint64 `_fromChainId`). These two parts are encodePacked as a method call.  
   - After calling the method, we need to check the return value. Only if the return value is true, will the whole cross chain transaction be executed successfully. 
 
 #### Example of Calling the Interface `verifyHeaderAndExecuteTx()`:
@@ -167,7 +167,7 @@ To realize implementation of cross chain features, developers need to make sure 
 
 ## 3. Testing Your Contracts
 
-We highly encourage project developers to test the business logic contract on testnet before launching on mainnet. If you want to test your contract on mainnet directly, you need to provide us of the business logic contract addresses and cross-chain methods both on source chain and target chain. So that we could maintain the whitelist of CCM contract, which is meant to guarantee the safety of cross chain process. 
+We highly encourage project developers to test the business logic contract on testnet before launching on mainnet. If you want to test your contract on mainnet directly, you need to provide us with the business logic contract addresses and cross-chain methods both on source chain and target chain, so that we could maintain the whitelist of CCM contract, which is meant to guarantee the safety of cross chain process. 
 
 Following are the tests required to be done before launching project:
 

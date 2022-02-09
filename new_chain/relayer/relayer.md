@@ -1,14 +1,12 @@
-<h1 align="center">Relayer</h1>
-
-
-
-
+<h1 align="center">Develop for Relayer</h1>
 
 ## Development Specifications for Relayer
 
 Poly relayer plays the role to relay cross chains messages and interact with cross chain manager contracts. There are two components in the implementation:
+<div align=center><img src="resources/develop_for_relayer.png" alt=""/></div>
 
-## Chain Listener
+
+### Step1. Implement Chain Listener
 Chain listener is used to fetch data from the chain (as source chain), including block headers, cross chain events emitted from cross chain manager contract and merkle proofs when it's used to verify the cross chain message in the `Poly` chain.
 
 ```
@@ -34,7 +32,7 @@ type IChainListener interface {
 }
 ```
 
-## Chain Submitter
+### Step2. Implement Chain Submitter
 Chain submitter is used to submit messages/transactions to the chain, including  bookkeeper changes of the poly chain and cross chain message to finalize as the last step.
 
 ```
