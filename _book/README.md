@@ -22,17 +22,19 @@
 
 ----
 ### Appendix
-* [Core Smart Contract]()
-  * [MainNet](Core_Smart_Contract/README.md)
-  * [TestNet](Core_Smart_Contract/README_TestNet.md)
-  * [DevNet](Core_Smart_Contract/README_DevNet.md)
-  * [Zion_DevNet](Core_Smart_Contract/Zion_dev_contracts.md)
-
+* [Contract]()
+  * [MainNet](Core_Smart_Contract/Contract/MainNet.md)
+  * [TestNet](Core_Smart_Contract/Contract/TestNet.md)
+  * [DevNet](Core_Smart_Contract/Contract/DevNet.md)
+* [Token]()
+  * [MainNet](Core_Smart_Contract/Token/MainNet.md)
+  * [TestNet](Core_Smart_Contract/Token/TestNet.md)
+  * [DevNet](Core_Smart_Contract/Token/DevNet.md)
+* [Relayer and Nodes](Core_Smart_Contract/Relayer and Nodes/Poly-Relayer-Nodes.md)
 ### Glossary
 * [Glossary](GLOSSARY.md)
 
 ### FAQ
 * [FAQ](FAQ/template.md)
-
 
 
