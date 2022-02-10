@@ -1,4 +1,4 @@
-<div id="menu"></div>
+<a id="menu"></a>
 
 # [MainNet](MainNet.md) | [TestNet](TestNet.md) | DevNet 
 
@@ -14,7 +14,7 @@ Here are cross chain contracts ONLY working in <strong>DevNet</strong> mode, whi
 ### Quick Index
 | **[Router And Chain ID](DevNet.md#Router-And-Chain-ID)** |
 |:---------------------------------------------------------|
-## Btc  <div id="Btc"></div>
+## Btc  <a id="Btc"></a>
 
 
 BTCx Redeem Script: 
@@ -24,7 +24,7 @@ BTCx Redeem Key:
 - c737784e5fdae8860fb461d4d30ffd0b34701d5a
 ###### [Back to top](DevNet.md#menu)
 
-## Ethereum  <div id="Ethereum"></div>
+## Ethereum  <a id="Ethereum"></a>
 
 
 | Type       | Contract                                   | Desc                               |
@@ -34,7 +34,7 @@ BTCx Redeem Key:
 
 ###### [Back to top](DevNet.md#menu)
 
-## Ontology  <div id="Ontology"></div>
+## Ontology  <a id="Ontology"></a>
 
 
 | Type        | Contract                                                                                      | Desc                   |
@@ -43,7 +43,7 @@ BTCx Redeem Key:
 
 ###### [Back to top](DevNet.md#menu)
 
-## Neo Legacy  <div id="Neo-Legacy"></div>
+## Neo Legacy  <a id="Neo-Legacy"></a>
 
 
 | Type       | Contract                                                                                         | Desc                         |
@@ -51,11 +51,14 @@ BTCx Redeem Key:
  | CCM        | B: 0x3135a1a4668688a3e15b004af3a718f2d67141ca  </br> L: ca4171d6f218a7f34a005be1a3888666a4a13531 | Cross Chain Manager contract |
  | Lock Proxy | B: 0x3fef7ac6598ad83f5e4d4338e65530eba2173294 </br> L: 943217a2eb3055e638434d5e3fd88a59c67aef3f  | Asset Proxy contract         |
 
-Receiver:</br>A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 </br>B: 0x4fd83a49df40c0a7de2671da20c2a8dfe495b6c2 </br>L: c2b695e4dfa8c220da7126dea7c040df493ad84f
+Receiver:
+A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 
+B: 0x4fd83a49df40c0a7de2671da20c2a8dfe495b6c2 
+L: c2b695e4dfa8c220da7126dea7c040df493ad84f
 ###### [Back to top](DevNet.md#menu)
 
 
-## Neo N3  <div id="Neo-N3"></div>
+## Neo N3  <a id="Neo-N3"></a>
 
 
 | Type       | Contract                                                                                         | Desc                         |
@@ -63,7 +66,10 @@ Receiver:</br>A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 </br>B: 0x4fd83a49df40c0a7de
  | CCM        | B: 0x7c842f3900ceba5bcdeeeec05c9b41ba63ad6cd2  </br> L: d26cad63ba419b5cc0eeeecd5bbace00392f847c | Cross Chain Manager contract |
  | Lock Proxy | B: 0x5376f41082a84fb000c944b6d44ba85b14e20fe5 </br> L: e50fe2145ba84bd4b644c900b04fa88210f47653  | Asset Proxy contract         |
 
-Receiver: </br>A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba </br>B: 0x67ce818168a75d3bedb7d295bf11c060d1c38204 </br>L: 0482c3d160c011bf95d2b7ed3b5da7688181ce67
+Receiver: 
+A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba 
+B: 0x67ce818168a75d3bedb7d295bf11c060d1c38204 
+L: 0482c3d160c011bf95d2b7ed3b5da7688181ce67
 ###### [Back to top](DevNet.md#menu)
 ## Note
 `B` means big-endian, we can search the contract transaction history in corresponding explorer.
@@ -71,7 +77,7 @@ Receiver: </br>A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba </br>B: 0x67ce818168a75d3be
 `L` means little-endian, we usually use it as the asset hash input when we do binding asset hash operation.
 ###### [Back to top](DevNet.md#menu)
 
-## Cosmos-Gaia  <div id="Cosmos-Gaia"></div>
+## Cosmos-Gaia  <a id="Cosmos-Gaia"></a>
 
 
 | Type       | Denom (coin name) | Asset/Contract                           | Desc                     |
@@ -82,7 +88,7 @@ Receiver: </br>A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba </br>B: 0x67ce818168a75d3be
 
 ###### [Back to top](DevNet.md#menu)
 
-## Pixie  <div id="Pixie"></div>
+## Pixie  <a id="Pixie"></a>
 
 
 | Type           | Contract                                   | Desc                                     |

@@ -1,4 +1,4 @@
-<div id="menu"></div>
+<a id="menu"></a>
 
 # [MainNet](MainNet.md) | [TestNet](TestNet.md) | DevNet 
 
@@ -11,7 +11,7 @@ Here are cross chain tokens ONLY working in <strong>DevNet</strong> mode, which 
 | **[Neo N3-220](DevNet.md#Neo-N3)** | **[Pixie-321](DevNet.md#Pixie)**     | **[Cosmos-gaia-8](DevNet.md#Cosmos-Gaia)** |                                            |                    |
 
 
-## Btc  <div id="Btc"></div>
+## Btc  <a id="Btc"></a>
 
 
 BTCx Redeem Script: 
@@ -21,7 +21,7 @@ BTCx Redeem Key:
 - c737784e5fdae8860fb461d4d30ffd0b34701d5a
 ###### [Back to top](DevNet.md#menu)
 
-## Ethereum  <div id="Ethereum"></div>
+## Ethereum  <a id="Ethereum"></a>
 
 
 | Name   | Token                                      | Desc                                  |
@@ -35,7 +35,7 @@ BTCx Redeem Key:
 | NEOx   |                                            | not included in the testing framework |
 ###### [Back to top](DevNet.md#menu)
 
-## Ontology  <div id="Ontology"></div>
+## Ontology  <a id="Ontology"></a>
 
 
 | Name   | Token                                                                                         | Desc                                  |
@@ -49,25 +49,31 @@ BTCx Redeem Key:
 | NEOx   | B:  </br> L:                                                                                  | not included in the testing framework |
 ###### [Back to top](DevNet.md#menu)
 
-## Neo Legacy  <div id="Neo-Legacy"></div>
+## Neo Legacy  <a id="Neo-Legacy"></a>
 
 
 | Name   | Token                                                                                           | Desc  |
 |--------|-------------------------------------------------------------------------------------------------|-------|
 | pnUSDT | B:  0x20bc5bbb4dde06e5ca02bef761a9fdca6a05fd77 <br/>L: 77fd056acafda961f7be02cae506de4dbb5bbc20 |
 
-Receiver: <br/>A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 <br/>B: 0x4fd83a49df40c0a7de2671da20c2a8dfe495b6c2 <br/>L: c2b695e4dfa8c220da7126dea7c040df493ad84f
+Receiver:
+A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 
+B: 0x4fd83a49df40c0a7de2671da20c2a8dfe495b6c2 
+L: c2b695e4dfa8c220da7126dea7c040df493ad84f
 ###### [Back to top](DevNet.md#menu)
 
 
-## Neo N3  <div id="Neo-N3"></div>
+## Neo N3  <a id="Neo-N3"></a>
 
 
 | Name   | Token                                                                                           | Desc  |
 |--------|-------------------------------------------------------------------------------------------------|-------|
 | pnUSDT | B:  0xc9505566e11660d239d987b5522a2232665bd0a8 <br/>L: a8d05b6632222a52b587d939d26016e1665550c9 |
 
-Receiver: <br/>A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba <br/>B: 0x67ce818168a75d3bedb7d295bf11c060d1c38204 <br/>L: 0482c3d160c011bf95d2b7ed3b5da7688181ce67
+Receiver: 
+A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba
+B: 0x67ce818168a75d3bedb7d295bf11c060d1c38204 
+L: 0482c3d160c011bf95d2b7ed3b5da7688181ce67
 ###### [Back to top](DevNet.md#menu)
 ## Note
 `B` means big-endian, we can search the contract transaction history in corresponding explorer.
@@ -75,7 +81,7 @@ Receiver: <br/>A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba <br/>B: 0x67ce818168a75d3be
 `L` means little-endian, we usually use it as the asset hash input when we do binding asset hash operation.
 ###### [Back to top](DevNet.md#menu)
 
-## Cosmos-Gaia  <div id="Cosmos-Gaia"></div>
+## Cosmos-Gaia  <a id="Cosmos-Gaia"></a>
 
 
 | Name   | Denom (coin name)  | Asset/Token  | Desc                                  |
@@ -93,7 +99,7 @@ Receiver: <br/>A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba <br/>B: 0x67ce818168a75d3be
 
 ###### [Back to top](DevNet.md#menu)
 
-## Pixie  <div id="Pixie"></div>
+## Pixie  <a id="Pixie"></a>
 
 
 | Name      | Token                                      | Desc                                                                                                               |
