@@ -27,10 +27,10 @@ BTCx Redeem Key:
 ## Ethereum  <a id="Ethereum"></a>
 
 
-| Type       | Contract                                   | Desc                               |
-|------------|--------------------------------------------|------------------------------------|
- | CCMP       | 0x7087E66D6874899A331b926C261fa5059328d95F | Cross Chain Manager Proxy contract |
-| Lock Proxy | 0x46DE64740cf839374afB264970f8D437732649cA | Asset Proxy contract               |
+| Type       | Contract                                    | Desc                                |
+|------------|---------------------------------------------|-------------------------------------|
+ | CCMP       | 0x7087E66D6874899A331b926C261fa5059328d95F  | Cross Chain Manager Proxy contract  |
+| Lock Proxy | 0x46DE64740cf839374afB264970f8D437732649cA  | Asset Proxy contract                |
 
 ###### [Back to top](DevNet.md#menu)
 
