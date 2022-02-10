@@ -34,7 +34,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | NFT Wrapper    | 0x940300dc3Fc26e3A330a300be766184C0b5Fe019 | NFT Wrapper contract                          |
 | NFT Query      | 0x500674D603331C43ed2288834BAb284BF65fc076 | NFT profile query contract                    |
 | NFT SEASCAPE   | 0x3680fb34F55030326659cd9AaEc522B6E355bdB6 | SEASCAPE NFT contracct hash                   |
-| NFT cat1       | 0xa85c9FC8F2c9060d674E0CA97F703a0A30619305 | NFT collection of `digitalCat1` contract      |
+
 
 
 
@@ -56,7 +56,6 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | NFT Wrapper     | 0x61E289D43C1FEA7598786557A2F309979ad144D3 | NFT Wrapper contract                          |
 | NFT Query       | 0xAB3e1F13127bE931A71Fdc8940bd31506EFC6A70 | NFT profile query contract                    |
 | NFT SEASCAPE    | 0x66638F4970C2ae63773946906922c07a583b6069 | The seascape NFT contract                     |
-| NFT cat1        | 0x455B51D882571E244d03668f1a458ca74E70d196 | NFT collection of `digitalCat1` contract      |
 | NFT Nobel Boss  | 0x301294a9c7c218d439edd6d5ab16f9663fc10f3e | NFT Nobel Boss Mint contract                  |
 
 ###### [Back to top](TestNet.md#menu)
@@ -85,7 +84,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | NFT Wrapper    | 0xbaBaAF5CF7f63437755aAAFE7a4106463c5cD540 | NFT Wrapper contract                     |
 | NFT Query      | 0xE1488842b15E0f084b254588f46e4C570065d6A0 | NFT profile query contract               |
 | NFT SEASCAPE   | 0xF9Dd424e64E9264632a564FBDcC87Ba8eA40B5Ba | SEASCAPE NFT contract                    |
-| NFT cat1       | 0x0C3C33dA088ABeeE376418d3E384528c5AaDBA11 | NFT collection of `digitalCat1` contract |
+
 
 ###### [Back to top](TestNet.md#menu)
 
@@ -125,7 +124,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | Nep17Proxy     | 0x4487494dac2f7eb68bdae009cacd6de88243e542 | 42e54382e86dcdca09e0da8bb67e2fac4d498744 | Asset Proxy contract                          |
 | CCM            | 0x618d44dc3af16c6120dbf65402024f40a04f772a | 2a774fa0404f020254f6db20616cf13adc448d61 | Cross Chain Manager contract                  |
 | NFT Lock Proxy | 0x7acd03102216db84993710cafb924e48a2259e1a | 1a9e25a2484e92fbca10379984db16221003cd7a | NFT Lock Proxy contract                       |
-| NFT cat1       | 0xd74d35311c2a20ba78cd12056d3017da5bd352a6 | a652d35bda17306d0512cd78ba202a1c31354dd7 | NFT collection of digitalCat1 contract        |
+
 
 ###### [Back to top](TestNet.md#menu)
 
