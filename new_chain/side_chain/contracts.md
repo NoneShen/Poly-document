@@ -12,13 +12,13 @@
 
 If the chain integrated to Poly Network supports EVM, developers could freely use our CCM contracts as templates. On the opposite, you may need to develop your own CCM contracts which contains the main features as shown in following guidelines. To help you develop it, here we offer the examples in `Solidity` for each main method. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager) of these contracts.
 
-### 1. Developing Cross Chain Manager Contracts
+## 1. Developing Cross Chain Manager Contracts
 
 To guarantee the safety of CCM contract, we keep whitelists of contract addresses and methods to prevent invalid call. Meanwhile, we also set `whiteLister` to manage these whitelists of CCM contract. We highly encourage developers to develop the similar features of authority management in personal projects.
 
-#### Step1. Initializing Genesis Block
+### Step1. Initializing Genesis Block
 
-##### Example:
+#### Example:
 
 ```solidity
 /*  @notice                       sync Poly chain genesis block header to smart contrat
@@ -53,9 +53,9 @@ function initGenesisBlock(bytes memory rawHeader, bytes memory pubKeyList) whenN
 - Then we will parse the raw header to get the `header.nextBookKeeper`. Comparing it with the `nextBookKeeper` which is converted from `pubKeyList`, we could verify the validity of signature.
 - After verifying the signature, we could record current epoch start height and the public keys by storing them in address format. And then emit the event `InitGenesisBlockEvent`.   
 
-#### Step2. Changing Book Keeper
+### Step2. Changing Book Keeper
 
-##### Example:
+#### Example:
 
 ```solidity
 /*  @notice                       change Poly chain consensus book keeper
@@ -101,9 +101,9 @@ function changeBookKeeper(bytes memory rawHeader, bytes memory pubKeyList, bytes
 - Analogous to `initGenesisBlock()`, we also need to parse the raw header to get the `header.nextBookKeeper`. Comparing it with the `nextBookKeeper` which is converted from `pubKeyList`, we could verify the validity of signature.
 - After verifying the signature, we could record current epoch start height and current epoch consensus peers book keepers by storing them in address format. And then emit the event `ChangeBookKeeperEvent`.   
 
-#### Step3. Pushing Cross-chain Transactions to Poly Chain
+### Step3. Pushing Cross-chain Transactions to Poly Chain
 
-##### Example:
+#### Example:
 
 ````solidity
 /*  
@@ -150,9 +150,9 @@ function crossChain(uint64 toChainId, bytes calldata toContract, bytes calldata 
 - This method constructs the `rawParam`, which contains transaction hash, `msg.sender`, target chain id, business logic contract to be invoked on target chain, the target method to be invoked and the serialized transaction data which has been already constructed in business logic contract. 
 - Then put the hash of `rawParam` into storage, proving the existence of transaction .
 
-#### Step4. Verifying Block Header and Proof & Executing Transaction on Target Chain
+### Step4. Verifying Block Header and Proof & Executing Transaction on Target Chain
 
-##### Example:
+#### Example:
 
 ````solidity
 /*  
@@ -258,8 +258,7 @@ function _executeCrossChainTx(address _toContract, bytes memory _method, bytes m
 
 Except for the methods mentioned above, we highly encourage you to develop interfaces for contracts updating. 
 
-### 2. Deploying Contracts
+## 2. Deploying Contracts
+If you use our CCM contract templates, please make sure all the contracts should be deployed, including CCM contract, CCD contract and CCM Proxy contract.
 
-
-
-### 3. Testing Contracts
+## 3. Testing Contracts
