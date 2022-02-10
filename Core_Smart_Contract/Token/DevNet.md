@@ -40,13 +40,13 @@ BTCx Redeem Key:
 
 | Name   | Token                                                                                         | Desc                                  |
 |--------|-----------------------------------------------------------------------------------------------|---------------------------------------|
-| ERC20x | B: 2bd086d90c282a26d021d01039b84a968ed57444 </br> L: 4474d58e964ab83910d021d0262a280cd986d02b |
-| OEP4   | B: d6967fa9b11b0836ec9dc8572f4bab6f65d710f9 </br> L: f910d7656fab4b2f57c89dec36081bb1a97f96d6 |
-| ONG    | B: 0200000000000000000000000000000000000000 </br> L: 0000000000000000000000000000000000000002 |
-| ONT    | B: 0100000000000000000000000000000000000000 </br> L: 0000000000000000000000000000000000000001 |
-| ETHx   | B: d6b4cd930377e7e81d1ace85bbb9ce59f4dd9410 </br> L: 1094ddf459ceb9bb85ce1a1de8e7770393cdb4d6 |
-| BTCx   | B: d177d904456479dd592d4ce368e5d97ec8ffbcee </br> L: eebcffc87ed9e568e34c2d59dd79644504d977d1 |
-| NEOx   | B:  </br> L:                                                                                  | not included in the testing framework |
+| ERC20x | B: 2bd086d90c282a26d021d01039b84a968ed57444 <br/> L: 4474d58e964ab83910d021d0262a280cd986d02b |
+| OEP4   | B: d6967fa9b11b0836ec9dc8572f4bab6f65d710f9 <br/> L: f910d7656fab4b2f57c89dec36081bb1a97f96d6 |
+| ONG    | B: 0200000000000000000000000000000000000000 <br/> L: 0000000000000000000000000000000000000002 |
+| ONT    | B: 0100000000000000000000000000000000000000 <br/> L: 0000000000000000000000000000000000000001 |
+| ETHx   | B: d6b4cd930377e7e81d1ace85bbb9ce59f4dd9410 <br/> L: 1094ddf459ceb9bb85ce1a1de8e7770393cdb4d6 |
+| BTCx   | B: d177d904456479dd592d4ce368e5d97ec8ffbcee <br/> L: eebcffc87ed9e568e34c2d59dd79644504d977d1 |
+| NEOx   | B:  <br/> L:                                                                                  | not included in the testing framework |
 ###### [Back to top](DevNet.md#menu)
 
 ## Neo Legacy  <a id="Neo-Legacy"></a>

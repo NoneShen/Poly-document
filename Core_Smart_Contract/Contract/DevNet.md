@@ -39,7 +39,7 @@ BTCx Redeem Key:
 
 | Type        | Contract                                                                                      | Desc                   |
 |-------------|-----------------------------------------------------------------------------------------------|------------------------|
-|  Lock Proxy | B: ebad45b887c6bf7cc4c1df8f72da156bc91b04b7 </br> L: b7041bc96b15da728fdfc1c47cbfc687b845adeb | Asset Proxy contract   |
+|  Lock Proxy | B: ebad45b887c6bf7cc4c1df8f72da156bc91b04b7 <br/> L: b7041bc96b15da728fdfc1c47cbfc687b845adeb | Asset Proxy contract   |
 
 ###### [Back to top](DevNet.md#menu)
 
@@ -48,8 +48,8 @@ BTCx Redeem Key:
 
 | Type       | Contract                                                                                         | Desc                         |
 |------------|--------------------------------------------------------------------------------------------------|------------------------------|
- | CCM        | B: 0x3135a1a4668688a3e15b004af3a718f2d67141ca  </br> L: ca4171d6f218a7f34a005be1a3888666a4a13531 | Cross Chain Manager contract |
- | Lock Proxy | B: 0x3fef7ac6598ad83f5e4d4338e65530eba2173294 </br> L: 943217a2eb3055e638434d5e3fd88a59c67aef3f  | Asset Proxy contract         |
+ | CCM        | B: 0x3135a1a4668688a3e15b004af3a718f2d67141ca  <br/> L: ca4171d6f218a7f34a005be1a3888666a4a13531 | Cross Chain Manager contract |
+ | Lock Proxy | B: 0x3fef7ac6598ad83f5e4d4338e65530eba2173294 <br/> L: 943217a2eb3055e638434d5e3fd88a59c67aef3f  | Asset Proxy contract         |
 
 Receiver:
 A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 
@@ -63,8 +63,8 @@ L: c2b695e4dfa8c220da7126dea7c040df493ad84f
 
 | Type       | Contract                                                                                         | Desc                         |
 |------------|--------------------------------------------------------------------------------------------------|------------------------------|
- | CCM        | B: 0x7c842f3900ceba5bcdeeeec05c9b41ba63ad6cd2  </br> L: d26cad63ba419b5cc0eeeecd5bbace00392f847c | Cross Chain Manager contract |
- | Lock Proxy | B: 0x5376f41082a84fb000c944b6d44ba85b14e20fe5 </br> L: e50fe2145ba84bd4b644c900b04fa88210f47653  | Asset Proxy contract         |
+ | CCM        | B: 0x7c842f3900ceba5bcdeeeec05c9b41ba63ad6cd2  <br/> L: d26cad63ba419b5cc0eeeecd5bbace00392f847c | Cross Chain Manager contract |
+ | Lock Proxy | B: 0x5376f41082a84fb000c944b6d44ba85b14e20fe5 <br/> L: e50fe2145ba84bd4b644c900b04fa88210f47653  | Asset Proxy contract         |
 
 Receiver: 
 A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba 

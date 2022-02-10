@@ -47,24 +47,24 @@ Here are cross chain contracts ONLY working in <strong>MAINNET</strong> mode, wh
 
 | Type        | Contract                                                                                      | Desc                                          |
 |-------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------|
-| Lock Proxy  | B: 86b4ab5d99037113867247a1e68f70e348c07597 </br> L: 9775c048e3708fe6a1477286137103995dabb486 | ONT with 9 decimal contract                   |
-| Wrapper     | B: c93837e82178d406af8c84e1841c6960af251cb5 </br> L: b51c25af60691c84e1848caf06d47821e83738c9 | WrapperV1 that takes transferred asset as fee | 
+| Lock Proxy  | B: 86b4ab5d99037113867247a1e68f70e348c07597 <br/> L: 9775c048e3708fe6a1477286137103995dabb486 | ONT with 9 decimal contract                   |
+| Wrapper     | B: c93837e82178d406af8c84e1841c6960af251cb5 <br/> L: b51c25af60691c84e1848caf06d47821e83738c9 | WrapperV1 that takes transferred asset as fee | 
 
 
 ###### [Back to top](MainNet.md#menu)
 ## Neo <a id="Neo"></a>
 | Type       | Contract                                                                                        | Desc                             |
 |------------|-------------------------------------------------------------------------------------------------|----------------------------------|
-| CCM        | B: 0x82a3401fb9a60db42c6fa2ea2b6d62e872d6257f </br> L: 7f25d672e8626d2beaa26f2cb40da6b91f40a382 | Neo Cross Chain Manager contract |
-| Lock Proxy | B: 0xe7fb2e1d937e71dbbb512e6375746181127282e7 </br> L: e782721281617475632e51bbdb717e931d2efbe7 | Neo Asset Proxy contract         |
+| CCM        | B: 0x82a3401fb9a60db42c6fa2ea2b6d62e872d6257f <br/> L: 7f25d672e8626d2beaa26f2cb40da6b91f40a382 | Neo Cross Chain Manager contract |
+| Lock Proxy | B: 0xe7fb2e1d937e71dbbb512e6375746181127282e7 <br/> L: e782721281617475632e51bbdb717e931d2efbe7 | Neo Asset Proxy contract         |
 
 
 ###### [Back to top](MainNet.md#menu)
 ## Neo N3 <a id="Neo-N3"></a>
 | Type        | Contract                                                                                        | Desc                                |
 |-------------|-------------------------------------------------------------------------------------------------|-------------------------------------|
-| CCM         | B: 0x5ba6c543c5a86a85e9ab3f028a4ad849b924fab9 </br> L: b9fa24b949d84a8a023fabe9856aa8c543c5a65b | Neo N3 Cross Chain Manager contract |
-| Nep17 Proxy | B: 0x385501cb0288b2953db767b0dc971478539456cb </br> L: cb569453781497dcb067b73d95b28802cb015538 | Neo N3 Asset Proxy contract         |
+| CCM         | B: 0x5ba6c543c5a86a85e9ab3f028a4ad849b924fab9 <br/> L: b9fa24b949d84a8a023fabe9856aa8c543c5a65b | Neo N3 Cross Chain Manager contract |
+| Nep17 Proxy | B: 0x385501cb0288b2953db767b0dc971478539456cb <br/> L: cb569453781497dcb067b73d95b28802cb015538 | Neo N3 Asset Proxy contract         |
 
 ###### [Back to top](MainNet.md#menu)
 ## Note
