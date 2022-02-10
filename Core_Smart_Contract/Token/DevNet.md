@@ -38,15 +38,15 @@ BTCx Redeem Key:
 ## Ontology  <a id="Ontology"></a>
 
 
-| Name   | Token                                                                                         | Desc                                  |
-|--------|-----------------------------------------------------------------------------------------------|---------------------------------------|
-| ERC20x | B: 2bd086d90c282a26d021d01039b84a968ed57444 <br/> L: 4474d58e964ab83910d021d0262a280cd986d02b |
-| OEP4   | B: d6967fa9b11b0836ec9dc8572f4bab6f65d710f9 <br/> L: f910d7656fab4b2f57c89dec36081bb1a97f96d6 |
-| ONG    | B: 0200000000000000000000000000000000000000 <br/> L: 0000000000000000000000000000000000000002 |
-| ONT    | B: 0100000000000000000000000000000000000000 <br/> L: 0000000000000000000000000000000000000001 |
-| ETHx   | B: d6b4cd930377e7e81d1ace85bbb9ce59f4dd9410 <br/> L: 1094ddf459ceb9bb85ce1a1de8e7770393cdb4d6 |
-| BTCx   | B: d177d904456479dd592d4ce368e5d97ec8ffbcee <br/> L: eebcffc87ed9e568e34c2d59dd79644504d977d1 |
-| NEOx   | B:  <br/> L:                                                                                  | not included in the testing framework |
+| Name   | Token                                                                                          | Desc                                  |
+|--------|------------------------------------------------------------------------------------------------|---------------------------------------|
+| ERC20x | B: 2bd086d90c282a26d021d01039b84a968ed57444 <br> L: 4474d58e964ab83910d021d0262a280cd986d02b   |
+| OEP4   | B: d6967fa9b11b0836ec9dc8572f4bab6f65d710f9 <br> L: f910d7656fab4b2f57c89dec36081bb1a97f96d6   |
+| ONG    | B: 0200000000000000000000000000000000000000 <br> L: 0000000000000000000000000000000000000002   |
+| ONT    | B: 0100000000000000000000000000000000000000 <br> L: 0000000000000000000000000000000000000001   |
+| ETHx   | B: d6b4cd930377e7e81d1ace85bbb9ce59f4dd9410 <br> L: 1094ddf459ceb9bb85ce1a1de8e7770393cdb4d6   |
+| BTCx   | B: d177d904456479dd592d4ce368e5d97ec8ffbcee <br> L: eebcffc87ed9e568e34c2d59dd79644504d977d1   |
+| NEOx   | B:  <br> L:                                                                                    | not included in the testing framework |
 ###### [Back to top](DevNet.md#menu)
 
 ## Neo Legacy  <a id="Neo-Legacy"></a>
@@ -54,26 +54,20 @@ BTCx Redeem Key:
 
 | Name   | Token                                                                                           | Desc  |
 |--------|-------------------------------------------------------------------------------------------------|-------|
-| pnUSDT | B:  0x20bc5bbb4dde06e5ca02bef761a9fdca6a05fd77 <br/>L: 77fd056acafda961f7be02cae506de4dbb5bbc20 |
+| pnUSDT | B:  0x20bc5bbb4dde06e5ca02bef761a9fdca6a05fd77 <br>L: 77fd056acafda961f7be02cae506de4dbb5bbc20  |
 
-Receiver:
-A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 
-B: 0x4fd83a49df40c0a7de2671da20c2a8dfe495b6c2 
-L: c2b695e4dfa8c220da7126dea7c040df493ad84f
+Receiver:A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 <br>B: 0x4fd83a49df40c0a7de2671da20c2a8dfe495b6c2 <br>L: c2b695e4dfa8c220da7126dea7c040df493ad84f
 ###### [Back to top](DevNet.md#menu)
 
 
 ## Neo N3  <a id="Neo-N3"></a>
 
 
-| Name   | Token                                                                                           | Desc  |
-|--------|-------------------------------------------------------------------------------------------------|-------|
-| pnUSDT | B:  0xc9505566e11660d239d987b5522a2232665bd0a8 <br/>L: a8d05b6632222a52b587d939d26016e1665550c9 |
+| Name   | Token                                                                                            | Desc  |
+|--------|--------------------------------------------------------------------------------------------------|-------|
+| pnUSDT | B:  0xc9505566e11660d239d987b5522a2232665bd0a8 <br>L: a8d05b6632222a52b587d939d26016e1665550c9   |
 
-Receiver: 
-A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba
-B: 0x67ce818168a75d3bedb7d295bf11c060d1c38204 
-L: 0482c3d160c011bf95d2b7ed3b5da7688181ce67
+Receiver: A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba <br>B: 0x67ce818168a75d3bedb7d295bf11c060d1c38204 <br>L: 0482c3d160c011bf95d2b7ed3b5da7688181ce67
 ###### [Back to top](DevNet.md#menu)
 ## Note
 `B` means big-endian, we can search the contract transaction history in corresponding explorer.
