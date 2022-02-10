@@ -28,25 +28,25 @@ Here are cross chain tokens ONLY working in <strong>TESTNET</strong> mode, which
 | USDC         | 0x0d9c8723b343a8368bebe0b5e89273ff8d712e3c   | USDC                                                                     |
 | WBTC         | 0x557563dc4ed3fd256eBA55B9622f53331ab97c2f   | WBTC                                                                     |
 | DAI          | 0x8Cad2301F7348DFc10C65778197028F432d51e76   | DAI                                                                      |
-| ECNEO        | 0x7E269f2f33A97C64192e9889FAeEC72A6fcdB397   |
-| RENBTC       | 0x239100e629a9Ca8e0BF45C7892b0fc72d78AA97A   |
+| ECNEO        | 0x7E269f2f33A97C64192e9889FAeEC72A6fcdB397   |                                                                          |
+| RENBTC       | 0x239100e629a9Ca8e0BF45C7892b0fc72d78AA97A   |                                                                          |
 | pWING        | 0xB60e03E6973B1d0b90a763f5B64C48ca7cB8c2d1   | WING on ethereum                                                         |
-| pPAX         | 0x825c227B07153eA450a6607E35c2BF70a9B2fe47   |
+| pPAX         | 0x825c227B07153eA450a6607E35c2BF70a9B2fe47   |                                                                          |
 | sUSD         | 0x21718C0FbD10900565fa57C76e1862cd3F6a4d8E   | [How to get sUSD](https://developer.synthetix.io/integrations/testnets/) |
-| pOKB         | 0x776C8DB09367615BC741Be6e13Dec8EAbD2bD8bd   |
-| pUNI         | 0x1269d9940a2bfc5aC13c759E7ef1E35FEc7278f6   |
-| pBNB         | 0x09c6a1B0B32a8B2c327532518C68F9B0C54255b8   |
+| pOKB         | 0x776C8DB09367615BC741Be6e13Dec8EAbD2bD8bd   |                                                                          |
+| pUNI         | 0x1269d9940a2bfc5aC13c759E7ef1E35FEc7278f6   |                                                                          |
+| pBNB         | 0x09c6a1B0B32a8B2c327532518C68F9B0C54255b8   |                                                                          |
 | pHT          |                                              | 0x930B81bDdCd7A793D3541E41D85475a20E169092                               |
-| pHRC20       | 0x3FDd17AbFbB43D29e32746C273085C05d58e2e80   |
-| pFLM         | 0xc4e419CC0945dC9860A73B3A2cAcAA12aD7CF3B8   |
-| xWETH        | 0xd38fc89febb12e5d32faa72e07d486a268b9c63a   |
-| xWBTC        | 0x447b931cc604a30dc16c49002f35a7aab7888b78   |
-| xUSDT        | 0xf15b5430321f4e51f5f534cedada7fbb78fa6680   |
+| pHRC20       | 0x3FDd17AbFbB43D29e32746C273085C05d58e2e80   |                                                                          |
+| pFLM         | 0xc4e419CC0945dC9860A73B3A2cAcAA12aD7CF3B8   |                                                                          |
+| xWETH        | 0xd38fc89febb12e5d32faa72e07d486a268b9c63a   |                                                                          |
+| xWBTC        | 0x447b931cc604a30dc16c49002f35a7aab7888b78   |                                                                          |
+| xUSDT        | 0xf15b5430321f4e51f5f534cedada7fbb78fa6680   |                                                                          |
 | Cash         | 0x6678C7f809c699c9B1F7da6F263b5cF407b8EB1d   | Cash                                                                     |
 | Share        | 0x61ADf6f0D936C8602893228bbB83d1AC08eB60FB   | Share                                                                    |
-| CVT          | 0xe6DF8136171FA8C3D4eA450C4A86bA707AECFBba   |
-| REVO         | 0x155040625D7ae3e9caDA9a73E3E44f76D3Ed1409   |
-| Essentia     | 0xdD5B6056744F7ECa6784cA09C2590004Ec67729D   |
+| CVT          | 0xe6DF8136171FA8C3D4eA450C4A86bA707AECFBba   |                                                                          |
+| REVO         | 0x155040625D7ae3e9caDA9a73E3E44f76D3Ed1409   |                                                                          |
+| Essentia     | 0xdD5B6056744F7ECa6784cA09C2590004Ec67729D   |                                                                          |
 | NFT cat1     | 0xa85c9FC8F2c9060d674E0CA97F703a0A30619305   | NFT collection of `digitalCat1` contract                                 |
 ###### [Back to top](TestNet.md#menu)
 
@@ -77,22 +77,22 @@ Here are cross chain tokens ONLY working in <strong>TESTNET</strong> mode, which
 ###### [Back to top](TestNet.md#menu)
 
 ## Heco <a id="Heco"></a>
-| Name         | Token                                      | Desc                                         |
-|--------------|--------------------------------------------|----------------------------------------------|
-| HT           | 0x0000000000000000000000000000000000000000 | Native Huobi token on huobi eco chain        |
-| HRC20        | 0xFAddf0cfb08F92779560db57BE6b2C7303aaD266 | simple HRC20 token same as ERC20 in Ethereum |
-| pNEO         | 0x6ef070cB10fC9F66D04A4c387928B268f55b9198 | related to nNEO asset on Neo chain           |
-| pONTd        | 0x01FaA7b4157f3a3672892c0ec2773f5400Dd2DCF |
-| pFLM         | 0xb1203bDC2C60521DCbf73DCfc82eDBdA101EA0A2 |
-| pBNB         | 0x33B89F811E8986C5b9D32114a21Cc1fd5FEB6C78 |
-| pWING        | 0xb8033859be7553cf9c7657f664FC2243BA5f02Ef |
-| pWBTC        | 0xB0FcB90b85Eab741ba28a132044E93344136cA36 |
-| pDAI         | 0x6965731AfED27AdD95BE4b0D88AC895Ea3eaC7EF |
-| pUSDC        | 0x63B79D3C4d1F7CBEFb80E4b0Ab7E8d1545Ba10c3 |
-| pETH         | 0x0BC413bBde7855Ba8114596B6Dc53eD8A5c10774 |
-| pUSDT        | 0x7698Da475B3132F37E40DE8C222d7D74d3A4172d |
-| pSUSD        | 0x83e906D9fa217D4210DC339133812054eB8d5629 |
-| NFT cat1     | 0x0C3C33dA088ABeeE376418d3E384528c5AaDBA11 | NFT collection of `digitalCat1` contract     |
+| Name     | Token                                      | Desc                                         |
+|----------|--------------------------------------------|----------------------------------------------|
+| HT       | 0x0000000000000000000000000000000000000000 | Native Huobi token on huobi eco chain        |
+| HRC20    | 0xFAddf0cfb08F92779560db57BE6b2C7303aaD266 | simple HRC20 token same as ERC20 in Ethereum |
+| pNEO     | 0x6ef070cB10fC9F66D04A4c387928B268f55b9198 | related to nNEO asset on Neo chain           |
+| pONTd    | 0x01FaA7b4157f3a3672892c0ec2773f5400Dd2DCF |                                              |
+| pFLM     | 0xb1203bDC2C60521DCbf73DCfc82eDBdA101EA0A2 |                                              |
+| pBNB     | 0x33B89F811E8986C5b9D32114a21Cc1fd5FEB6C78 |                                              |
+| pWING    | 0xb8033859be7553cf9c7657f664FC2243BA5f02Ef |                                              |
+| pWBTC    | 0xB0FcB90b85Eab741ba28a132044E93344136cA36 |                                              |
+| pDAI     | 0x6965731AfED27AdD95BE4b0D88AC895Ea3eaC7EF |                                              |
+| pUSDC    | 0x63B79D3C4d1F7CBEFb80E4b0Ab7E8d1545Ba10c3 |                                              |
+| pETH     | 0x0BC413bBde7855Ba8114596B6Dc53eD8A5c10774 |                                              |
+| pUSDT    | 0x7698Da475B3132F37E40DE8C222d7D74d3A4172d |                                              |
+| pSUSD    | 0x83e906D9fa217D4210DC339133812054eB8d5629 |                                              |
+| NFT cat1 | 0x0C3C33dA088ABeeE376418d3E384528c5AaDBA11 | NFT collection of `digitalCat1` contract     |
 ###### [Back to top](TestNet.md#menu)
 
 ## Ontology <a id="Ontology"></a>
@@ -104,19 +104,19 @@ Here are cross chain tokens ONLY working in <strong>TESTNET</strong> mode, which
 | OEP4    | B: 969850e009b5e2a061694f3479ec8e44bc68bcd3 <br> L: d3bc68bc448eec79344f6961a0e2b509e0509896    | OEP4 template contract hash in Ontology chain                    |
 | ONG     | B: 0200000000000000000000000000000000000000 <br> L: 0000000000000000000000000000000000000002    | ONG asset hash in Ontology chain                                 |
 | ONT     | B: 0100000000000000000000000000000000000000 <br> L: 0000000000000000000000000000000000000001    | ONT asset hash in Ontology chain                                 |
-| OUSDC   | B:07a12c0a6bdce4df04ef4b2045d1b0fd63a56e25<br> L:256ea563fdb0d145204bef04dfe4dc6b0a2ca107       |
+| OUSDC   | B:07a12c0a6bdce4df04ef4b2045d1b0fd63a56e25<br> L:256ea563fdb0d145204bef04dfe4dc6b0a2ca107       |                                                                  |
 | ONTd    | B:869951e3397550e800d5faf579857cdb637a0051<br> L:51007a63db7c8579f5fad500e8507539e3519986       | ONT with 9 decimal contract hash                                 |
 | oUSDT   | B: c6f91c11d740d39943b99a6b1c6fd2b5f476e2a3 <br>L: a3e276f4b5d26f1c6b9ab94399d340d7111cf9c6     | Ontology wrapped USDT (Ethereum) Cross Chain asset contract hash |
 | OWBTC   | B: aede525f05065306423a5522bfcd31b5847ffa52<br> L: 52fa7f84b531cdbf22553a42065306055f52deae     | Ontology wrapped WBTC (Ethereum) Cross Chain asset contract hash |
-| ODAI    | B: 96cf88356123592835a2fa75068a242260be1791<br> L: 9117be6022248a0675faa235285923613588cf96     |
-| OETH    | B: 7009a2f7c8a2e45fa386a6078c7bfeaf518be487<br> L: 87e48b51affe7b8c07a686a35fe4a2c8f7a20970     |
-| ONEO    | B: 13eef3e184d878038317d806796b3af2d9f9b36d<br> L: 6db3f9d9f23a6b7906d817830378d884e1f3ee13     |
-| ORENBTC | B: ec547bc4486dea97cb659f1fe73407922f9e63c8<br> L: c8639e2f920734e71f9f65cb97ea6d48c47b54ec     |
-| WING    | B: ff31ec74d01f7b7d45ed2add930f5d2239f7de33<br> L: 33def739225d0f93dd2aed457d7b1fd074ec31ff     |
-| pPAX    | B: 5cb420480614fc635f7bfa7f3bd2cd5484004545<br> L: 4545008454cdd23b7ffa7b5f63fc14064820b45c     |
-| pSUSD   | B: 37f4497b6f5f511e73843a0bda1042777666f7ec<br> L:ecf76676774210da0b3a84731e515f6f7b49f437      |
-| pOKB    | B: 0191f134a3ef0e1eb4f557b6aa0b8bdfd0a5db21<br> L: 21dba5d0df8b0baab657f5b41e0eefa334f19101     |
-| pUNI    | B: b79d2064947f61070cb68ef26cbc12cbf3b98d9e<br> L: 9e8db9f3cb12bc6cf28eb60c07617f9464209db7     |
+| ODAI    | B: 96cf88356123592835a2fa75068a242260be1791<br> L: 9117be6022248a0675faa235285923613588cf96     |                                                                  |
+| OETH    | B: 7009a2f7c8a2e45fa386a6078c7bfeaf518be487<br> L: 87e48b51affe7b8c07a686a35fe4a2c8f7a20970     |                                                                  |
+| ONEO    | B: 13eef3e184d878038317d806796b3af2d9f9b36d<br> L: 6db3f9d9f23a6b7906d817830378d884e1f3ee13     |                                                                  |
+| ORENBTC | B: ec547bc4486dea97cb659f1fe73407922f9e63c8<br> L: c8639e2f920734e71f9f65cb97ea6d48c47b54ec     |                                                                  |
+| WING    | B: ff31ec74d01f7b7d45ed2add930f5d2239f7de33<br> L: 33def739225d0f93dd2aed457d7b1fd074ec31ff     |                                                                  |
+| pPAX    | B: 5cb420480614fc635f7bfa7f3bd2cd5484004545<br> L: 4545008454cdd23b7ffa7b5f63fc14064820b45c     |                                                                  |
+| pSUSD   | B: 37f4497b6f5f511e73843a0bda1042777666f7ec<br> L:ecf76676774210da0b3a84731e515f6f7b49f437      |                                                                  |
+| pOKB    | B: 0191f134a3ef0e1eb4f557b6aa0b8bdfd0a5db21<br> L: 21dba5d0df8b0baab657f5b41e0eefa334f19101     |                                                                  |
+| pUNI    | B: b79d2064947f61070cb68ef26cbc12cbf3b98d9e<br> L: 9e8db9f3cb12bc6cf28eb60c07617f9464209db7     |                                                                  |
 ###### [Back to top](TestNet.md#menu)
 
 ## Neo N2 <a id="Neo-N2"></a>
