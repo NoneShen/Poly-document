@@ -94,8 +94,8 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 | Type        | Contract                                                                                      | Desc                                          |
 |-------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------|
-| Wrapper     | B:a5c101afa9e04e9dd2c912983795005a49e02efa <br/>L: fa2ee0495a0095379812c9d29d4ee0a9af01c1a5   | WrapperV1 that takes transferred asset as fee |
-| Lock Proxy  | B: 33c439c502cb4b6ac5a1e8057a65fe1fa7c300e2 <br/> L: e200c3a71ffe657a05e8a1c56a4bcb02c539c433 | Asset Proxy contract                          |
+| Wrapper     | B:a5c101afa9e04e9dd2c912983795005a49e02efa <br>L: fa2ee0495a0095379812c9d29d4ee0a9af01c1a5    | WrapperV1 that takes transferred asset as fee |
+| Lock Proxy  | B: 33c439c502cb4b6ac5a1e8057a65fe1fa7c300e2 <br> L: e200c3a71ffe657a05e8a1c56a4bcb02c539c433  | Asset Proxy contract                          |
 
 ###### [Back to top](TestNet.md#menu)
 ## Note  <a id="Note"></a>

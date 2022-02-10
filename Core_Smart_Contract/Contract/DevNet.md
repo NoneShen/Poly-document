@@ -37,39 +37,33 @@ BTCx Redeem Key:
 ## Ontology  <a id="Ontology"></a>
 
 
-| Type        | Contract                                                                                      | Desc                   |
-|-------------|-----------------------------------------------------------------------------------------------|------------------------|
-|  Lock Proxy | B: ebad45b887c6bf7cc4c1df8f72da156bc91b04b7 <br/> L: b7041bc96b15da728fdfc1c47cbfc687b845adeb | Asset Proxy contract   |
+| Type        | Contract                                                                                       | Desc                   |
+|-------------|------------------------------------------------------------------------------------------------|------------------------|
+|  Lock Proxy | B: ebad45b887c6bf7cc4c1df8f72da156bc91b04b7 <br> L: b7041bc96b15da728fdfc1c47cbfc687b845adeb   | Asset Proxy contract   |
 
 ###### [Back to top](DevNet.md#menu)
 
 ## Neo Legacy  <a id="Neo-Legacy"></a>
 
 
-| Type       | Contract                                                                                         | Desc                         |
-|------------|--------------------------------------------------------------------------------------------------|------------------------------|
- | CCM        | B: 0x3135a1a4668688a3e15b004af3a718f2d67141ca  <br/> L: ca4171d6f218a7f34a005be1a3888666a4a13531 | Cross Chain Manager contract |
- | Lock Proxy | B: 0x3fef7ac6598ad83f5e4d4338e65530eba2173294 <br/> L: 943217a2eb3055e638434d5e3fd88a59c67aef3f  | Asset Proxy contract         |
+| Type       | Contract                                                                                          | Desc                         |
+|------------|---------------------------------------------------------------------------------------------------|------------------------------|
+ | CCM        | B: 0x3135a1a4668688a3e15b004af3a718f2d67141ca  <br> L: ca4171d6f218a7f34a005be1a3888666a4a13531   | Cross Chain Manager contract |
+ | Lock Proxy | B: 0x3fef7ac6598ad83f5e4d4338e65530eba2173294 <br> L: 943217a2eb3055e638434d5e3fd88a59c67aef3f    | Asset Proxy contract         |
 
-Receiver:
-A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 
-B: 0x4fd83a49df40c0a7de2671da20c2a8dfe495b6c2 
-L: c2b695e4dfa8c220da7126dea7c040df493ad84f
+Receiver:A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 <br>B: 0x4fd83a49df40c0a7de2671da20c2a8dfe495b6c2 <br>L: c2b695e4dfa8c220da7126dea7c040df493ad84f
 ###### [Back to top](DevNet.md#menu)
 
 
 ## Neo N3  <a id="Neo-N3"></a>
 
 
-| Type       | Contract                                                                                         | Desc                         |
-|------------|--------------------------------------------------------------------------------------------------|------------------------------|
- | CCM        | B: 0x7c842f3900ceba5bcdeeeec05c9b41ba63ad6cd2  <br/> L: d26cad63ba419b5cc0eeeecd5bbace00392f847c | Cross Chain Manager contract |
- | Lock Proxy | B: 0x5376f41082a84fb000c944b6d44ba85b14e20fe5 <br/> L: e50fe2145ba84bd4b644c900b04fa88210f47653  | Asset Proxy contract         |
+| Type       | Contract                                                                                          | Desc                         |
+|------------|---------------------------------------------------------------------------------------------------|------------------------------|
+ | CCM        | B: 0x7c842f3900ceba5bcdeeeec05c9b41ba63ad6cd2  <br> L: d26cad63ba419b5cc0eeeecd5bbace00392f847c   | Cross Chain Manager contract |
+ | Lock Proxy | B: 0x5376f41082a84fb000c944b6d44ba85b14e20fe5 <br> L: e50fe2145ba84bd4b644c900b04fa88210f47653    | Asset Proxy contract         |
 
-Receiver: 
-A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba 
-B: 0x67ce818168a75d3bedb7d295bf11c060d1c38204 
-L: 0482c3d160c011bf95d2b7ed3b5da7688181ce67
+Receiver: A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba <br>B: 0x67ce818168a75d3bedb7d295bf11c060d1c38204 <br>L: 0482c3d160c011bf95d2b7ed3b5da7688181ce67
 ###### [Back to top](DevNet.md#menu)
 ## Note
 `B` means big-endian, we can search the contract transaction history in corresponding explorer.
