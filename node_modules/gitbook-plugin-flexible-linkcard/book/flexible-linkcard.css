@@ -1,4 +1,4 @@
-.markdown-section .linkcard{position:relative;width:400px;margin:20px auto;background-color:#88d9ff;border-radius:15px;overflow:hidden}
+.markdown-section .linkcard{position:relative;width:400px;background-color:#88d9ff;border-radius:15px;overflow:hidden}
 .markdown-section .linkcard .linkcard-backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background-image:url('./logo.png');background-repeat:no-repeat;-webkit-filter:blur(20px);filter:blur(20px);background-size:cover;background-position:50%}
 .markdown-section .linkcard .linkcard-content{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:space-around;padding:12px;background-color:hsla(0,0%,96.5%,.88);box-sizing:border-box}
 .markdown-section .linkcard .linkcard-content,.markdown-section .linkcard .linkcard-content:hover {text-decoration: none;border: none!important;color: inherit!important;}

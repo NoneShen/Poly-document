@@ -29,7 +29,7 @@
     "style": "callout",
     "comment": {
       "label": "Comment",
-      "icon": "fa fa-comments",
+      "icon": "fab fa-comments",
       "className": "info"
     }
   },
@@ -65,11 +65,11 @@
       "mode": "float",
       "showGoTop": true,
       "float": {
-        "floatIcon": "fa fa-anchor",
+        "floatIcon": "fab fa-anchor",
         "showLevelIcon": false,
-        "level1Icon": "fa fa-hand-o-right",
-        "level2Icon": "fa fa-hand-o-right",
-        "level3Icon": "fa fa-hand-o-right"
+        "level1Icon": "fab fa-hand-o-right",
+        "level2Icon": "fab fa-hand-o-right",
+        "level3Icon": "fab fa-hand-o-right"
       }
     },
     "github": {

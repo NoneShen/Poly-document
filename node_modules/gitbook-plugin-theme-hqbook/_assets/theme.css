@@ -14,7 +14,7 @@ body{font-family:"Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F
 .book-summary ul.summary li a:hover{text-decoration:none}
 .page-inner{max-width:none;padding:20px 270px 40px 40px}
 .header-inner #book-search-input{float:right;width:300px;margin:10px 0;padding:0;border:none;user-select:none}
-.header-inner #book-search-input input[type="text"]{width:80%;background:#e4e4e4}
+.header-inner #book-search-input input[type="text"]{width:100%;background:#e4e4e4}
 .header-inner #book-search-input #searchBtn{color:#ffffff;margin-left:10px;cursor:pointer}
 .header-inner #book-search-input #searchBtn:hover{color:#eae8e8}
 .header-inner{width:100%;padding:10px 30px;border-bottom:1px solid #dededede;margin:auto;*zoom:1;height:80px}
@@ -62,7 +62,7 @@ body{font-family:"Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F
 .divider-content-summary:hover{color:#444}
 .divider-content-summary__icon{display:table-cell;vertical-align:middle;text-align:center}
 /* flexible-linkcard */
-.markdown-section .linkcard{position:relative;width:400px;margin:20px auto;background-color:#88d9ff;border-radius:15px;overflow:hidden}
+.markdown-section .linkcard{position:relative;width:400px;background-color:#88d9ff;border-radius:15px;overflow:hidden}
 .markdown-section .linkcard .linkcard-backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background-image:url('./logo.png');background-repeat:no-repeat;-webkit-filter:blur(20px);filter:blur(20px);background-size:cover;background-position:50%}
 .markdown-section .linkcard .linkcard-content{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:space-around;padding:12px;background-color:hsla(0,0%,96.5%,.88);box-sizing:border-box}
 .markdown-section .linkcard .linkcard-content,.markdown-section .linkcard .linkcard-content:hover {text-decoration: none;border: none!important;color: inherit!important;}
