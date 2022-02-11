@@ -14,13 +14,15 @@ Here are cross chain contracts ONLY working in <strong>MAINNET</strong> mode, wh
 
 ### Quick Index
 | **[Router And Chain ID](MainNet.md#Router-And-Chain-ID)** |
-|:----------------------------------------------------------|
+|-----------------------------------------------------------|
  
 
 
 ## BTC <a id="BTC"></a>
-| Type | Contract    | Desc  |
-|------|-------------|-------|
+| Type | Contract | Desc |
+|------|----------|------|
+|      |          |      |
+
 
 ###### [Back to top](MainNet.md#menu)
 ## Ethereum <a id="Ethereum"></a>

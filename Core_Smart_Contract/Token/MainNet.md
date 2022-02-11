@@ -7,14 +7,14 @@ Here are cross chain tokens ONLY working in <strong>MAINNET</strong> mode, which
 ### Token Index (Chain-Chain ID)
 
 | **[Bitcoin-1](MainNet.md#BTC)**    | **[Ethereum-2](MainNet.md#Ethereum)** | **[Ontology-3](MainNet.md#Ontology)** | **[Neo Legacy-4](MainNet.md#Neo)**     | **[Switcheo-5](MainNet.md#Switcheo)**    |
-|:-----------------------------------|:--------------------------------------|:--------------------------------------|:---------------------------------------|:-----------------------------------------|
+|------------------------------------|---------------------------------------|---------------------------------------|----------------------------------------|------------------------------------------|
 | **[BSC-6](MainNet.md#BSC)**        | **[Heco-7](MainNet.md#HECO)**         | **[Palette-8](MainNet.md#Palette)**   | **[Curve-10](MainNet.md#Curve)**       | **[OKEx-12](MainNet.md#OKEx)**           |
 | **[Neo N3-14](MainNet.md#Neo-N3)** | **Heimdall-15**                       | **[Polygon-17](MainNet.md#Polygon)**  | **[Arbitrum-19](MainNet.md#Arbitrum)** | **[Avalanche-21](MainNet.md#Avalanche)** |
-| **[Metis-24](MainNet.md#Metis)**   |                                       | 
+| **[Metis-24](MainNet.md#Metis)**   |                                       |                                       |                                        |                                          |
 
 
 ## BTC <a id="BTC"></a>
-| Name | Token | Desc | 
+| Name | Token | Desc |
 |------|-------|------|
 
 ###### [Back to top](MainNet.md#menu)
