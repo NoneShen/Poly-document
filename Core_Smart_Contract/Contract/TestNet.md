@@ -7,7 +7,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 ### Contract Index (Chain-Chain ID)
 
 | **Bitcoin-1**                             | **[Ethereum-2](TestNet.md#Ethereum)** | **[Ontology-3](TestNet.md#Ontology)**       | **[Neo N2-5](TestNet.md#Neo-N2)**       | **Switcheo-**                       |
-|:------------------------------------------|:--------------------------------------|:--------------------------------------------|:----------------------------------------|:------------------------------------|
+|-------------------------------------------|---------------------------------------|---------------------------------------------|-----------------------------------------|-------------------------------------|
 | **[BSC-79](TestNet.md#BSC)**              | **[HECO-7](TestNet.md#HECO)**         | **[Palette-107](TestNet.md#Palette)**       | **[OK-200](TestNet.md#OK)**             | **Curve-82**                        |
 | **[Neo N3-88](TestNet.md#Neo-N3)**        | **[Polygon-202](TestNet.md#Polygon)** | **[Zilliqa-111](TestNet.md#Zilliqa)**       | **[Arbitrum-205](TestNet.md#Arbitrum)** | **[xDAI-206](TestNet.md#xDAI)**     |
 | **[Avalanche-209](TestNet.md#Avalanche)** | **[Fantom-208](TestNet.md#Fantom)**   | **[Optimistic-207](TestNet.md#Optimistic)** | **[Metis-300](TestNet.md#Metis)**       | **[Goerli-502](TestNet.md#Goerli)** |
@@ -16,7 +16,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 ### Quick Index
 
 | **[Router And Chain ID](TestNet.md#Router-And-Chain-ID)** |
-|:----------------------------------------------------------|
+|-----------------------------------------------------------|
 
 
 

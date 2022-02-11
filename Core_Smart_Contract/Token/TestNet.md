@@ -14,40 +14,40 @@ Here are cross chain tokens ONLY working in <strong>TESTNET</strong> mode, which
 
 ## Ethereum <a id="Ethereum"></a>
 
-| Name         | Token                                        | Desc                                                                     |
-|--------------|----------------------------------------------|--------------------------------------------------------------------------|
-| PLT Asset    | 0x1AC77d322e3347B8de181304B7c118a7e89c6Bc1   | The palette asset hash                                                   |
-| ERC20        | 0x276788aF4a803781267c84692416311DE1F761f9   | ERC20 template contract hash in Ethereum chain                           |
-| EOEP4        | 0x3105A14F7956D33a51F12eF3AE50A3f1eF161Dff   | OEP4x template contract hash in Ethereum chain                           |
-| EONG         | 0x42d9feF0Cbd9c3000CECe9764d99A4a6fE9E1B34   | ONGx contract hash in Ethereum chain                                     |
-| EONT         | 0x530aae4C0859894023906e28467f2a7F111B6ff3   | ONTx contract hash in Ethereum chain                                     |
-| EONTD        | 0x76130c293AA35bf7B3e5fED1E9aE1E5DF12C6A92   | ONTD ONT with decimals                                                   |
-| ETH          | 0x0000000000000000000000000000000000000000   | The asset hash that we treat as the Ether asset                          |
-| EBTC         | 0x92705a16815A3d1AEC3cE9Cc273C5aa302961FcC   | Btcx contract hash corresponding with unique btc redeem script           |
-| USDT         | 0xad3f96ae966ad60347f31845b7e4b333104c52fb   | USD Tether                                                               |
-| USDC         | 0x0d9c8723b343a8368bebe0b5e89273ff8d712e3c   | USDC                                                                     |
-| WBTC         | 0x557563dc4ed3fd256eBA55B9622f53331ab97c2f   | WBTC                                                                     |
-| DAI          | 0x8Cad2301F7348DFc10C65778197028F432d51e76   | DAI                                                                      |
-| ECNEO        | 0x7E269f2f33A97C64192e9889FAeEC72A6fcdB397   |                                                                          |
-| RENBTC       | 0x239100e629a9Ca8e0BF45C7892b0fc72d78AA97A   |                                                                          |
-| pWING        | 0xB60e03E6973B1d0b90a763f5B64C48ca7cB8c2d1   | WING on ethereum                                                         |
-| pPAX         | 0x825c227B07153eA450a6607E35c2BF70a9B2fe47   |                                                                          |
-| sUSD         | 0x21718C0FbD10900565fa57C76e1862cd3F6a4d8E   | [How to get sUSD](https://developer.synthetix.io/integrations/testnets/) |
-| pOKB         | 0x776C8DB09367615BC741Be6e13Dec8EAbD2bD8bd   |                                                                          |
-| pUNI         | 0x1269d9940a2bfc5aC13c759E7ef1E35FEc7278f6   |                                                                          |
-| pBNB         | 0x09c6a1B0B32a8B2c327532518C68F9B0C54255b8   |                                                                          |
-| pHT          |                                              | 0x930B81bDdCd7A793D3541E41D85475a20E169092                               |
-| pHRC20       | 0x3FDd17AbFbB43D29e32746C273085C05d58e2e80   |                                                                          |
-| pFLM         | 0xc4e419CC0945dC9860A73B3A2cAcAA12aD7CF3B8   |                                                                          |
-| xWETH        | 0xd38fc89febb12e5d32faa72e07d486a268b9c63a   |                                                                          |
-| xWBTC        | 0x447b931cc604a30dc16c49002f35a7aab7888b78   |                                                                          |
-| xUSDT        | 0xf15b5430321f4e51f5f534cedada7fbb78fa6680   |                                                                          |
-| Cash         | 0x6678C7f809c699c9B1F7da6F263b5cF407b8EB1d   | Cash                                                                     |
-| Share        | 0x61ADf6f0D936C8602893228bbB83d1AC08eB60FB   | Share                                                                    |
-| CVT          | 0xe6DF8136171FA8C3D4eA450C4A86bA707AECFBba   |                                                                          |
-| REVO         | 0x155040625D7ae3e9caDA9a73E3E44f76D3Ed1409   |                                                                          |
-| Essentia     | 0xdD5B6056744F7ECa6784cA09C2590004Ec67729D   |                                                                          |
-| NFT cat1     | 0xa85c9FC8F2c9060d674E0CA97F703a0A30619305   | NFT collection of `digitalCat1` contract                                 |
+| Name      | Token                                       | Desc                                                                     |
+|-----------|---------------------------------------------|--------------------------------------------------------------------------|
+| PLT Asset | 0x1AC77d322e3347B8de181304B7c118a7e89c6Bc1  | The palette asset hash                                                   |
+| ERC20     | 0x276788aF4a803781267c84692416311DE1F761f9  | ERC20 template contract hash in Ethereum chain                           |
+| EOEP4     | 0x3105A14F7956D33a51F12eF3AE50A3f1eF161Dff  | OEP4x template contract hash in Ethereum chain                           |
+| EONG      | 0x42d9feF0Cbd9c3000CECe9764d99A4a6fE9E1B34  | ONGx contract hash in Ethereum chain                                     |
+| EONT      | 0x530aae4C0859894023906e28467f2a7F111B6ff3  | ONTx contract hash in Ethereum chain                                     |
+| EONTD     | 0x76130c293AA35bf7B3e5fED1E9aE1E5DF12C6A92  | ONTD ONT with decimals                                                   |
+| ETH       | 0x0000000000000000000000000000000000000000  | The asset hash that we treat as the Ether asset                          |
+| EBTC      | 0x92705a16815A3d1AEC3cE9Cc273C5aa302961FcC  | Btcx contract hash corresponding with unique btc redeem script           |
+| USDT      | 0xad3f96ae966ad60347f31845b7e4b333104c52fb  | USD Tether                                                               |
+| USDC      | 0x0d9c8723b343a8368bebe0b5e89273ff8d712e3c  | USDC                                                                     |
+| WBTC      | 0x557563dc4ed3fd256eBA55B9622f53331ab97c2f  | WBTC                                                                     |
+| DAI       | 0x8Cad2301F7348DFc10C65778197028F432d51e76  | DAI                                                                      |
+| ECNEO     | 0x7E269f2f33A97C64192e9889FAeEC72A6fcdB397  |                                                                          |
+| RENBTC    | 0x239100e629a9Ca8e0BF45C7892b0fc72d78AA97A  |                                                                          |
+| pWING     | 0xB60e03E6973B1d0b90a763f5B64C48ca7cB8c2d1  | WING on ethereum                                                         |
+| pPAX      | 0x825c227B07153eA450a6607E35c2BF70a9B2fe47  |                                                                          |
+| sUSD      | 0x21718C0FbD10900565fa57C76e1862cd3F6a4d8E  | [How to get sUSD](https://developer.synthetix.io/integrations/testnets/) |
+| pOKB      | 0x776C8DB09367615BC741Be6e13Dec8EAbD2bD8bd  |                                                                          |
+| pUNI      | 0x1269d9940a2bfc5aC13c759E7ef1E35FEc7278f6  |                                                                          |
+| pBNB      | 0x09c6a1B0B32a8B2c327532518C68F9B0C54255b8  |                                                                          |
+| pHT       | 0x930B81bDdCd7A793D3541E41D85475a20E169092  |                                                                          |
+| pHRC20    | 0x3FDd17AbFbB43D29e32746C273085C05d58e2e80  |                                                                          |
+| pFLM      | 0xc4e419CC0945dC9860A73B3A2cAcAA12aD7CF3B8  |                                                                          |
+| xWETH     | 0xd38fc89febb12e5d32faa72e07d486a268b9c63a  |                                                                          |
+| xWBTC     | 0x447b931cc604a30dc16c49002f35a7aab7888b78  |                                                                          |
+| xUSDT     | 0xf15b5430321f4e51f5f534cedada7fbb78fa6680  |                                                                          |
+| Cash      | 0x6678C7f809c699c9B1F7da6F263b5cF407b8EB1d  | Cash                                                                     |
+| Share     | 0x61ADf6f0D936C8602893228bbB83d1AC08eB60FB  | Share                                                                    |
+| CVT       | 0xe6DF8136171FA8C3D4eA450C4A86bA707AECFBba  |                                                                          |
+| REVO      | 0x155040625D7ae3e9caDA9a73E3E44f76D3Ed1409  |                                                                          |
+| Essentia  | 0xdD5B6056744F7ECa6784cA09C2590004Ec67729D  |                                                                          |
+| NFT cat1  | 0xa85c9FC8F2c9060d674E0CA97F703a0A30619305  | NFT collection of `digitalCat1` contract                                 |
 ###### [Back to top](TestNet.md#menu)
 
 ## BSC <a id="BSC"></a>
