@@ -1,5 +1,7 @@
 <h1 align="center">Launch Poly Bridge</h1>
 
+[!NOTE] For now, Poly Bridge is deployed by the poly team.
+
 ## 1. Environmental Requirements
 
 - The computer where poly bridge is deployed needs to have access to the Internet;

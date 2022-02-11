@@ -1,33 +1,33 @@
-<h1 align="center">Integrate with Poly Bridge</h1>
+<h1 align="center">API</h1>
 
-When a chain uses `PolyNetwork` protocol to implement asset cross-chain function, it can choose to integrate into the `Poly Bridge` or use the [Poly Bridge API](#Poly-Bridge-API) to realize the cross-chain bridge.
-
-This reference documents all the APIs provided by `Poly Bridge` and explains in detail how these api work.
-
-## Poly Bridge API
-
-* [POST getfee](#getfee)
-* [POST transactionofhash](#transactionofhash)
-* [POST transactionsofaddress](#transactionsofaddress)
+> [!Note|style:flat|label:Notice]
+>The following APIs are used by developers who need to implement the bridge function themselves. If you want to integrate into the poly bridge, please get in touch with the poly team via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://t.me/polynetworkgroup for more support.
 
 
-### getfee
+## Poly Bridge APIs
 
-Get the cross-chain fee, the amount of assets that needs to be charged on the source chain when crossing to the target chain. When the user performs a cross-chain operation, the user's fee is charged on the source chain transaction.If SwapTokenHash is specified, the available balance is returned.
+* [Get cross chain fee API](#getfee)
+* [Get cross chain transaction status API](#transactionofhash)
+* [Get history transactions of address API](#transactionsofaddress)
 
-Request
+
+### Get cross chain fee API
+
+This API returns the amount of assets as cross-chain fee that needs to be charged on the source chain when crossing to the target chain.  
+When the user performs a cross-chain operation, the user's fee is charged on the source chain transaction.If SwapTokenHash is specified, the available balance is returned.
+
+API
 ```
 https://bridge.poly.network/v1/getfee
 ```
 
-BODY raw
-```json
-{
-    "SrcChainId": 3,
-    "SwapTokenHash": "ac654837a90eee8fccabd87a2d4fc7637484f01a", 
-    "Hash": "ac654837a90eee8fccabd87a2d4fc7637484f01a",
-    "DstChainId": 2
-}
+Parameter
+```
+/* @SrcChainId:    source chian id
+ * @SwapTokenHash: the hahs of the cross-chain token on the source chain
+ * @Hash: The token hash used to charge fees
+ * @DstChainId: destination chain id
+*/
 ```
 Example Request
 ```bash
@@ -54,18 +54,21 @@ Example Response
     "BalanceWithPrecision": "9.621970793238e+12"
 }
 ```
-### transactionofhash
-Get the cross-chain transaction details of the specified hash, and you can view the current cross-chain progress through the returned TransactionState.
-Request
+### Get the cross chain transaction status
+This API returns the details of the specified hash, you can view the cross-chain progress through the `TransactionState` in the response.  
+
+API
 ```
 https://bridge.poly.network/v1/transactionofhash
 ```
 
-BODY raw
-```json
-{
-    "Hash": "4496cdb2905c148c06039a83d4130f04ddae498aa1065b06430ccd2766b08f78"
-}
+Parameter
+```
+/*
+ * @Hash: the cross chain transaction hash
+*/
+
+
 ```
 Example Request
 ```bash
@@ -146,24 +149,21 @@ Example Response
     ]
 }
 ```
-### transactionsofaddress
+### Get history transactions of address
 
-Get historical cross-chain transactions at the specified address.
+This api returns the cross-chain history of the specified address
 
-Request
+API
 ```
 https://bridge.poly.network/v1/transactionsofaddress
 ```
 
-BODY raw
-```json
-{
-    "Addresses": [
-        "6ac449ade24174238df325749bd5ea87b02bf7f6"
-    ],
-    "PageNo": 0,
-    "PageSize": 10
-}
+Parameter
+```
+/* @Addresses: wallet address
+ * @PageNo: start page
+ * @PageSize: size of displays per page
+*/
 ```
 Example Request
 ```bash
