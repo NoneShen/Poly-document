@@ -16,7 +16,7 @@ If the chain integrated to Poly Network supports EVM, developers could freely us
 
 To guarantee the safety of CCM contract, we keep whitelists of contract addresses and methods to prevent invalid call. Meanwhile, we also set `whiteLister` to manage these whitelists of CCM contract. We highly encourage developers to develop the similar features of authority management in personal projects.
 
-### Step1. Initializing Genesis Block
+### Step1. Synchronizing Genesis Block Header
 
 #### Example:
 
