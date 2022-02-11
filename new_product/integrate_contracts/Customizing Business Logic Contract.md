@@ -157,19 +157,4 @@ function unlock(bytes memory argsBs, bytes memory fromContractAddr, uint64 fromC
 - `verifyHeaderAndExecuteTx()` in CCM contract determines the legitimacy of the cross chain transaction information and resolve the parameters of transaction data from the Poly chain transaction merkle proof and `crossStateRoot` contained in the block header. After verification through Poly, the packed transaction data could be executed on target chain.
 - Then call the function `unlock()` to deserialize the transaction data and unlock (transfer) the certain amount of token to the target address on target chain and completes the cross chain contract invocation.
 
-## 2. Deploying Contracts
-
-To realize implementation of cross chain features, developers need to make sure that:
-
-- The customized business logic contracts are deployed both on source chain and target chain
-- The cross chain methods in your business logic contracts should allow our Cross Chain Manager Contract to call
-- The mapping assets need to be bound before any cross chain transactions
-
-## 3. Testing Your Contracts
-
-We highly encourage project developers to test the business logic contract on testnet before launching on mainnet. If you want to test your contract on mainnet directly, you need to provide us with the business logic contract addresses and cross-chain methods both on source chain and target chain, so that we could maintain the whitelist of CCM contract, which is meant to guarantee the safety of cross chain process. 
-
-Following are the tests required to be done before launching project:
-
-- 
 

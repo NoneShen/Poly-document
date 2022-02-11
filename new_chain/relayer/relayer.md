@@ -51,8 +51,8 @@ type IChainSubmitter interface {
 The `poly-relayer` project depends on the `bridge-common` library. Listed steps can be followed to register a new chain.
 
 - Add chain ID in the `bridge-common` project.
-- Add chain client SDK here for common usage.
-- Add chain wallet SDK here for common usage.
+- Add chain client SDK [here](https://github.com/polynetwork/bridge-common/tree/main/chains) for common usage.
+- Add chain wallet [here](https://github.com/polynetwork/bridge-common/tree/main/wallet) for common usage.
 - Implement interface `IChainListener` and `IChainSubmitter` for the new chain.
 - Register `ChainListener` and `ChainSubmitter` in [selectors](https://github.com/polynetwork/poly-relayer/blob/main/relayer/relayer.go#L73) located in the `relayer.go` file.
 
