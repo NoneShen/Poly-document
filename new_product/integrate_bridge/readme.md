@@ -23,8 +23,9 @@ Refresh the cross-chain transaction fee of the target chain in order to provide 
 Refresh the price of the token from the market in order to conversion to the cross-chain transaction fee when user initiates a cross-chain transaction.
 
 
-## 2. Using `Poly Bridge` [APIs](bridge.md) to realize the cross-chain bridge.
-Developers can use the [Poly Bridge APIs](bridge.md) provided by `Poly Bridge` to realize the cross-chain bridge.
+## 2. Using `Poly Bridge` APIs to realize the cross-chain bridge.
+If developers want to implement their own cross-chain bridge, they need to implement the main functions of the poly bridge above.  
+`Poly Bridge`  also opens up some APIs for developers to use to integrate into their cross-chain bridge, APIs can be found [here](bridge.md).
 
 
 
