@@ -8,7 +8,7 @@ Here are cross chain contracts ONLY working in <strong>MAINNET</strong> mode, wh
 
 | **[Bitcoin-1](MainNet.md#BTC)**    | **[Ethereum-2](MainNet.md#Ethereum)**    | **[Ontology-3](MainNet.md#Ontology)** | **[Neo Legacy-4](MainNet.md#Neo)**         | **[Switcheo-5](MainNet.md#Switcheo)**  |
 |:-----------------------------------|:-----------------------------------------|:--------------------------------------|:-------------------------------------------|:---------------------------------------|
-| **[Bsc-6](MainNet.md#BSC)**        | **[Heco-7](MainNet.md#HECO)**            | **[Palette-8](MainNet.md#Palette)**   | **[Curve-10](MainNet.md#Curve)**           | **[OKEx-12](MainNet.md#OKEx)**         | 
+| **[BSC-6](MainNet.md#BSC)**        | **[Heco-7](MainNet.md#HECO)**            | **[Palette-8](MainNet.md#Palette)**   | **[Curve-10](MainNet.md#Curve)**           | **[OKEx-12](MainNet.md#OKEx)**         | 
 | **[Neo N3-14](MainNet.md#Neo-N3)** | **Heimdall-15**                          | **[Polygon-17](MainNet.md#Polygon)**  | **[Zilliqa-18](MainNet.md#Zilliqa)**       | **[Arbitrum-19](MainNet.md#Arbitrum)** |
 | **[xDAI-20](MainNet.md#xDAI)**     | **[Avalanche-21](MainNet.md#Avalanche)** | **[Fantom-22](MainNet.md#Fantom)**    | **[Optimistic-23](MainNet.md#Optimistic)** | **[Metis-24](MainNet.md#Metis)**       | 
 
@@ -18,7 +18,7 @@ Here are cross chain contracts ONLY working in <strong>MAINNET</strong> mode, wh
  
 
 
-## Btc <a id="Btc"></a>
+## BTC <a id="BTC"></a>
 | Type | Contract    | Desc  |
 |------|-------------|-------|
 

@@ -8,7 +8,7 @@ Here are cross chain tokens ONLY working in <strong>TESTNET</strong> mode, which
 
 | **Bitcoin-1**                       | **[Ethereum-2](TestNet.md#Ethereum)**     | **[Ontology-3](TestNet.md#Ontology)** | **[Neo N2-5](TestNet.md#Neo-N2)**           | **Switcheo-**                         |
 |:------------------------------------|:------------------------------------------|:--------------------------------------|:--------------------------------------------|:--------------------------------------|
-| **[Bsc-79](TestNet.md#BSC)**        | **[Heco-7](TestNet.md#HECO)**             | **Curve-82**                          | **[Neo N3-88](TestNet.md#Neo-N3)**          | **[Zilliqa-111](TestNet.md#Zilliqa)** |
+| **[BSC-79](TestNet.md#BSC)**        | **[HECO-7](TestNet.md#HECO)**             | **Curve-82**                          | **[Neo N3-88](TestNet.md#Neo-N3)**          | **[Zilliqa-111](TestNet.md#Zilliqa)** |
 | **[xDAI-206](TestNet.md#xDAI)**     | **[Avalanche-209](TestNet.md#Avalanche)** | **[Fantom-208](TestNet.md#Fantom)**   | **[Optimistic-207](TestNet.md#Optimistic)** | **[Metis-300](TestNet.md#Metis)**     |
 | **[Goerli-502](TestNet.md#Goerli)** | **[Rinkeby-402](TestNet.md#Rinkeby)**     | **[Kovan-302](TestNet.md#Kovan)**     | **[Boba-400](TestNet.md#Boba)**             |                                       |
 
@@ -50,7 +50,7 @@ Here are cross chain tokens ONLY working in <strong>TESTNET</strong> mode, which
 | NFT cat1     | 0xa85c9FC8F2c9060d674E0CA97F703a0A30619305   | NFT collection of `digitalCat1` contract                                 |
 ###### [Back to top](TestNet.md#menu)
 
-## Bsc <a id="Bsc"></a>
+## BSC <a id="BSC"></a>
 
 | Name          | Token                                      | Desc                                          |
 |---------------|--------------------------------------------|-----------------------------------------------|
@@ -76,7 +76,7 @@ Here are cross chain tokens ONLY working in <strong>TESTNET</strong> mode, which
 | NFT cat1      | 0x455B51D882571E244d03668f1a458ca74E70d196 | NFT collection of `digitalCat1` contract      | 
 ###### [Back to top](TestNet.md#menu)
 
-## Heco <a id="Heco"></a>
+## HECO <a id="HECO"></a>
 | Name     | Token                                      | Desc                                         |
 |----------|--------------------------------------------|----------------------------------------------|
 | HT       | 0x0000000000000000000000000000000000000000 | Native Huobi token on huobi eco chain        |
@@ -191,7 +191,7 @@ Here are cross chain tokens ONLY working in <strong>TESTNET</strong> mode, which
 | zDai  | 0x8f79cd968f0968565a157975f4fe406ea22d0571 | Zilliqa-bridged Dai Stablecoin |
 ###### [Back to top](TestNet.md#menu)
 
-## Xdai <a id="Xdai"></a>
+## xDAI <a id="xDAI"></a>
 
 | Name  | Token                                      | Desc           |
 |-------|--------------------------------------------|----------------|
