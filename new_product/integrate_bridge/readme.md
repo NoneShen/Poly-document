@@ -1,7 +1,9 @@
 <h1 align="center">Poly Bridge</h1>
 
 > [!Note|style:flat|label:Notice]
-> When a chain uses `PolyNetwork` protocol to implement asset cross-chain function, it can choose to integrate into the `Poly Bridge` or use the [APIs](bridge.md) provided by `Poly Bridge` to realize the cross-chain bridge.
+> When a chain uses `PolyNetwork` protocol to implement asset cross-chain function, 
+> it can choose to integrate into the `Poly Bridge` 
+> or  implement their own cross-chain bridge and integrate the [APIs](bridge.md) provided by `Poly Bridge`.
 
 ## 1. Main functions of `Poly Bridge`:
 [!NOTE] For now, Poly Bridge is deployed by the poly team.
