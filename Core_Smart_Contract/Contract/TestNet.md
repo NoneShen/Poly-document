@@ -107,23 +107,23 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 ###### [Back to top](TestNet.md#menu)
 ## Neo N2 <a id="Neo-N2"></a>
 
-| Type       | Contract                                    |                                          | Desc                                          |
-|------------|---------------------------------------------|------------------------------------------|-----------------------------------------------|
-| Wrapper    | 0x0f4fad9ae3830585a9264e6ec0b1eff3e89c6558  | 58659ce8f3efb1c06e4e26a9850583e39aad4f0f | WrapperV1 that takes transferred asset as fee |
-| Nep5Proxy  | 0xedd2862dceb90b945210372d229f453f2b705f4f  | 4f5f702b3f459f222d371052940bb9ce2d86d2ed | Asset Proxy contract                          |
-| CCM        | 0xe1695b1314a1331e3935481620417ed835669407  | 07946635d87e4120164835391e33a114135b69e1 | Cross Chain Manager contract                  |
+| Type       | Contract                                                                                       | Desc                                          | 
+|------------|------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| Wrapper    | B: 58659ce8f3efb1c06e4e26a9850583e39aad4f0f <br> L: 0x0f4fad9ae3830585a9264e6ec0b1eff3e89c6558 | WrapperV1 that takes transferred asset as fee |
+| Nep5Proxy  | B: 4f5f702b3f459f222d371052940bb9ce2d86d2ed <br> L: 0xedd2862dceb90b945210372d229f453f2b705f4f | Asset Proxy contract                          |
+| CCM        | B: 07946635d87e4120164835391e33a114135b69e1 <br> L: 0xe1695b1314a1331e3935481620417ed835669407 | Cross Chain Manager contract                  |
 
 ###### [Back to top](TestNet.md#menu)
 
 ## Neo N3 <a id="Neo-N3"></a>
 
 
-| Type           | Contract                                   |                                          | Desc                                          |
-|----------------|--------------------------------------------|------------------------------------------|-----------------------------------------------|
-| Wrapper        |                                            |                                          | WrapperV1 that takes transferred asset as fee |
-| Nep17Proxy     | 0x4487494dac2f7eb68bdae009cacd6de88243e542 | 42e54382e86dcdca09e0da8bb67e2fac4d498744 | Asset Proxy contract                          |
-| CCM            | 0x618d44dc3af16c6120dbf65402024f40a04f772a | 2a774fa0404f020254f6db20616cf13adc448d61 | Cross Chain Manager contract                  |
-| NFT Lock Proxy | 0x7acd03102216db84993710cafb924e48a2259e1a | 1a9e25a2484e92fbca10379984db16221003cd7a | NFT Lock Proxy contract                       |
+| Type             | Contract                                                                                      | Desc                                          |
+|------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------|
+| Wrapper          |                                                                                               | WrapperV1 that takes transferred asset as fee |
+| Nep17Proxy       | B: 42e54382e86dcdca09e0da8bb67e2fac4d498744<br> L: 0x4487494dac2f7eb68bdae009cacd6de88243e542 | Asset Proxy contract                          |
+| CCM              | B: 2a774fa0404f020254f6db20616cf13adc448d61<br> L: 0x618d44dc3af16c6120dbf65402024f40a04f772a | Cross Chain Manager contract                  |
+| NFT Lock Proxy   | B: 1a9e25a2484e92fbca10379984db16221003cd7a<br> L: 0x7acd03102216db84993710cafb924e48a2259e1a | NFT Lock Proxy contract                       |
 
 
 ###### [Back to top](TestNet.md#menu)
