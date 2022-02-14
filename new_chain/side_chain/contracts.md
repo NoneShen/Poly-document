@@ -11,7 +11,8 @@
   - [Cross Chain Manager Proxy Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol): It serves as a proxy of CCM contract. When there is any need to upgrade the CCM contract, it would pause old CCM contract and set new CCM contract to CCD contract.
   - Business Logic Contract: It executes the business logic of cross chain projects. It interacts with users and CCM contract both on source chain and target chain. We also offer the [guidelines](http://81.69.45.203/new_product/integrate_contracts/Customizing%20Business%20Logic%20Contract.html) of developing business logic contract.
 - Interactions between contracts
-<div align=center><img src="new_chain/resources/contracts_interaction.png" alt=""/></div>
+
+<div align=center><img src="resources/contracts_interaction.png" alt=""/></div>
 
 > [!Note|style:flat|label:Notice]
 > In this guidelines, we realize the upgradable contracts through split the Cross chain contracts into data contract, logic contract and proxy contract. You could follow this method or choose the most suitable way for your project.
