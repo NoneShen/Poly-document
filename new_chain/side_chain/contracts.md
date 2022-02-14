@@ -258,5 +258,3 @@ function _executeCrossChainTx(address _toContract, bytes memory _method, bytes m
   - Then we construct a method call on target business logic contract: first we need to `encodePacked` the `_method` and the format of input data `"(bytes,bytes,uint64)"`. 
   - Then it would `keccak256` the encoded string, use `bytes4` to take the first four bytes of the call data for a function call specifies the function to be called. Parameter `_method`  is from the `toMerkleValue` , which is parsed from `proof`. And the input parameters format is restricted as (bytes `_args`, bytes `_fromContractAddr`, uint64 `_fromChainId`). These two parts are encodePacked as a method call.  
   - After calling the method, we need to check the return value. Only if the return value is true, will the whole cross chain transaction be executed successfully. 
-  
-Except for the methods mentioned above, we highly encourage you to develop interfaces for contracts updating. 
