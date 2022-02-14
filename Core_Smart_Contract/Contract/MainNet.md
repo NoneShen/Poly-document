@@ -8,38 +8,38 @@ Here are cross chain contracts ONLY working in <strong>MAINNET</strong> mode, wh
 
 | **[Bitcoin-1](MainNet.md#BTC)**    | **[Ethereum-2](MainNet.md#Ethereum)**    | **[Ontology-3](MainNet.md#Ontology)** | **[Neo Legacy-4](MainNet.md#Neo)**         | **[Switcheo-5](MainNet.md#Switcheo)**  |
 |:-----------------------------------|:-----------------------------------------|:--------------------------------------|:-------------------------------------------|:---------------------------------------|
-| **[Bsc-6](MainNet.md#BSC)**        | **[Heco-7](MainNet.md#HECO)**            | **[Palette-8](MainNet.md#Palette)**   | **[Curve-10](MainNet.md#Curve)**           | **[OKEx-12](MainNet.md#OKEx)**         | 
+| **[BSC-6](MainNet.md#BSC)**        | **[Heco-7](MainNet.md#HECO)**            | **[Palette-8](MainNet.md#Palette)**   | **[Curve-10](MainNet.md#Curve)**           | **[OKEx-12](MainNet.md#OKEx)**         | 
 | **[Neo N3-14](MainNet.md#Neo-N3)** | **Heimdall-15**                          | **[Polygon-17](MainNet.md#Polygon)**  | **[Zilliqa-18](MainNet.md#Zilliqa)**       | **[Arbitrum-19](MainNet.md#Arbitrum)** |
 | **[xDAI-20](MainNet.md#xDAI)**     | **[Avalanche-21](MainNet.md#Avalanche)** | **[Fantom-22](MainNet.md#Fantom)**    | **[Optimistic-23](MainNet.md#Optimistic)** | **[Metis-24](MainNet.md#Metis)**       | 
 
 ### Quick Index
 | **[Router And Chain ID](MainNet.md#Router-And-Chain-ID)** |
-|:----------------------------------------------------------|
- 
+|-----------------------------------------------------------|
 
+## BTC <a id="BTC"></a>
+| Type | Contract | Desc |
+|------|----------|------|
+|      |          |      |
 
-## Btc <a id="Btc"></a>
-| Type | Contract    | Desc  |
-|------|-------------|-------|
 
 ###### [Back to top](MainNet.md#menu)
 ## Ethereum <a id="Ethereum"></a>
 
-| Type                          | Contract                                   | Desc                                                   |
-|-------------------------------|--------------------------------------------|--------------------------------------------------------|
-| CCMP                          | 0x5a51e2ebf8d136926b9ca7b59b60464e7c44d2eb | Ethereum Cross Chain Manager Proxy contract            |
-| CCD                           | 0xcf2afe102057ba5c16f899271045a0a37fcb10f2 | Ethereum Cross Chain Data contract                     |
-| CCM                           | 0x14413419452Aaf089762A0c5e95eD2A13bBC488C | Ethereum Cross Chain Manager contract                  |
- | Lock Proxy                    | 0x250e76987d838a75310c34bf422ea9f1AC4Cc906 | Ethereum Asset Proxy contract                          |
- | Wrapper                       | 0x2aA63cd0b28FB4C31fA8e4E95Ec11815Be07b9Ac | WrapperV1 that takes transferred asset as fee          |
-| WrapperV2                     | 0xd380450e9e373bDC389951C54616edb2EE653524 | WrapperV2 that takes native asset as fee               |
-| Swapper                       | 0xaf83ce8d461e8834de03a3803c968615013c6b3d | Curve entrance for auto cross chain tx with fee        |
-| NFT Lock Proxy                | 0x2cdfc90250EF967036838DA601099656e74bCfc5 | NFT Lock Proxy contract                                |
-| NFT Wrapper                   | 0xe5204d62361A353C665668C858Ea213070CA159c | NFT Wrapper contract                                   |
-| NFT Query                     | 0xB2265A122814dA516318F727183a5D8FeCA8BaCE | NFT profile query contract                             |
- | PLT NFT Lock Proxy            | 0xD33e44F6E4fE37C4dF23c7171657721B9A725417 | Contract  of dedicated Palette NFT Lock Proxy          |
-| PLT NFT Wrapper               | 0xD728e9844af285fA116806c273aa413686aE65e8 | Contract  of dedicated Palette NFT Wrapper             |
-| PLT NFT Wrapper Fee collecotr | 0x0E860F44d73F9FDbaF5E9B19aFC554Bf3C8E8A57 | Fee collector address of dedicated Palette NFT wrapper |
+| Type                          | Contract                                     | Desc                                                   |
+|-------------------------------|----------------------------------------------|--------------------------------------------------------|
+| CCMP                          | 0x5a51e2ebf8d136926b9ca7b59b60464e7c44d2eb   | Ethereum Cross Chain Manager Proxy contract            |
+| CCD                           | 0xcf2afe102057ba5c16f899271045a0a37fcb10f2   | Ethereum Cross Chain Data contract                     |
+| CCM                           | 0x14413419452Aaf089762A0c5e95eD2A13bBC488C   | Ethereum Cross Chain Manager contract                  |
+| Lock Proxy                    | 0x250e76987d838a75310c34bf422ea9f1AC4Cc906   | Ethereum Asset Proxy contract                          |
+| Wrapper                       | 0x2aA63cd0b28FB4C31fA8e4E95Ec11815Be07b9Ac   | WrapperV1 that takes transferred asset as fee          |
+| WrapperV2                     | 0xd380450e9e373bDC389951C54616edb2EE653524   | WrapperV2 that takes native asset as fee               |
+| Swapper                       | 0xaf83ce8d461e8834de03a3803c968615013c6b3d   | Curve entrance for auto cross chain tx with fee        |
+| NFT Lock Proxy                | 0x2cdfc90250EF967036838DA601099656e74bCfc5   | NFT Lock Proxy contract                                |
+| NFT Wrapper                   | 0xe5204d62361A353C665668C858Ea213070CA159c   | NFT Wrapper contract                                   |
+| NFT Query                     | 0xB2265A122814dA516318F727183a5D8FeCA8BaCE   | NFT profile query contract                             |
+| PLT NFT Lock Proxy            | 0xD33e44F6E4fE37C4dF23c7171657721B9A725417   | Contract  of dedicated Palette NFT Lock Proxy          |
+| PLT NFT Wrapper               | 0xD728e9844af285fA116806c273aa413686aE65e8   | Contract  of dedicated Palette NFT Wrapper             |
+| PLT NFT Wrapper Fee collecotr | 0x0E860F44d73F9FDbaF5E9B19aFC554Bf3C8E8A57   | Fee collector address of dedicated Palette NFT wrapper |
 
 
 ###### [Back to top](MainNet.md#menu)

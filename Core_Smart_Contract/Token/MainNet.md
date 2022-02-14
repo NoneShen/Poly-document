@@ -7,14 +7,14 @@ Here are cross chain tokens ONLY working in <strong>MAINNET</strong> mode, which
 ### Token Index (Chain-Chain ID)
 
 | **[Bitcoin-1](MainNet.md#BTC)**    | **[Ethereum-2](MainNet.md#Ethereum)** | **[Ontology-3](MainNet.md#Ontology)** | **[Neo Legacy-4](MainNet.md#Neo)**     | **[Switcheo-5](MainNet.md#Switcheo)**    |
-|:-----------------------------------|:--------------------------------------|:--------------------------------------|:---------------------------------------|:-----------------------------------------|
-| **[Bsc-6](MainNet.md#BSC)**        | **[Heco-7](MainNet.md#HECO)**         | **[Palette-8](MainNet.md#Palette)**   | **[Curve-10](MainNet.md#Curve)**       | **[OKEx-12](MainNet.md#OKEx)**           |
+|------------------------------------|---------------------------------------|---------------------------------------|----------------------------------------|------------------------------------------|
+| **[BSC-6](MainNet.md#BSC)**        | **[Heco-7](MainNet.md#HECO)**         | **[Palette-8](MainNet.md#Palette)**   | **[Curve-10](MainNet.md#Curve)**       | **[OKEx-12](MainNet.md#OKEx)**           |
 | **[Neo N3-14](MainNet.md#Neo-N3)** | **Heimdall-15**                       | **[Polygon-17](MainNet.md#Polygon)**  | **[Arbitrum-19](MainNet.md#Arbitrum)** | **[Avalanche-21](MainNet.md#Avalanche)** |
-| **[Metis-24](MainNet.md#Metis)**   |                                       | 
+| **[Metis-24](MainNet.md#Metis)**   |                                       |                                       |                                        |                                          |
 
 
-## Btc <a id="Btc"></a>
-| Name | Token | Desc | 
+## BTC <a id="BTC"></a>
+| Name | Token | Desc |
 |------|-------|------|
 
 ###### [Back to top](MainNet.md#menu)
@@ -317,22 +317,22 @@ Here are cross chain tokens ONLY working in <strong>MAINNET</strong> mode, which
 | HUSD          | 0x0926B2DB9D053E0022419093CCd57b92301fB736 | HUSD mapping asset in pool-1, Curve             |
 | Pool-2-LP     | 0x0C1EE7a93bd92437f0528aDcf4a8607244A946DE | LP token of pool-2                              |
 | WETH          | 0x83f28703A5761Fe96e4c68Ea5861519f59928DDA | Eth WETH mapping asset in pool-2, Curve         |
-| BETH          | 0xdCb4775d6F7AA96B2E850b9ee6674FC6A47b85F6 | Bsc ETH mapping asset in pool-2, Curve          |
+| BETH          | 0xdCb4775d6F7AA96B2E850b9ee6674FC6A47b85F6 | BSC ETH mapping asset in pool-2, Curve          |
 | HETH          | 0xF554231385f15C89A5A5Eb3f96C1A9dfaCA9678d | Heco ETH mapping asset in pool-2, Curve         |
 | Pool-3-LP     | 0xc0Fa229d87cA58B80C3D4F1254df5214DdfE4fF7 | LP token of pool-3                              |
 | EBNB          | 0xB7a66a6007606c64bD3b2D771fFA793Ada28E7e4 | Eth BNB mapping asset in pool-3, Curve          |
-| WBNB          | 0x351a102B2c1a9121f7926E3f47c36Ee947786B3F | Bsc WBNB mapping asset in pool-3, Curve         |
+| WBNB          | 0x351a102B2c1a9121f7926E3f47c36Ee947786B3F | BSC WBNB mapping asset in pool-3, Curve         |
 | Pool-4-LP     | 0xCC0061012d49331Bf6Edf8d7a8cceC087F81E982 | LP token of pool-4                              |
 | WBTC          | 0x7648bDF3B4f26623570bE4DD387Ed034F2E95aad | Eth WBTC mapping asset in pool-4, Curve         |
-| BTCB          | 0x2367e9Cf3355EA714236e6719B91336D29D6D59D | Bsc BTC mapping asset in pool-4, Curve          |
+| BTCB          | 0x2367e9Cf3355EA714236e6719B91336D29D6D59D | BSC BTC mapping asset in pool-4, Curve          |
 | HBTC          | 0x285F30fD447598178d3B8adBdc0839B0c72C26eb | Heco BTC mapping asset in pool-4, Curve         |
 | Pool-5-LP     | 0x81241b49e73e79d920c6ea71ABc84409DE766055 | LP token of pool-5                              |
 | ETH-USDC      | 0xAed3E54b7229d7b8f3970f0a03D98708716de96b | Eth USDC mapping asset in pool-5, Curve         |
-| BSC-USDC      | 0xE4444f57b4Bd843EC065BdaF67a2e9b8c1ee4f5b | Bsc USDC mapping asset in pool-5, Curve         |
+| BSC-USDC      | 0xE4444f57b4Bd843EC065BdaF67a2e9b8c1ee4f5b | BSC USDC mapping asset in pool-5, Curve         |
 | MATIC-USDC    | 0xbc44977D9ad3CC55fd88fBe34616EBE8174f2c3f | MATIC USDC mapping asset in pool-5, Curve       |
 | Pool-7-LP     | 0xDB721696803539f30Bcb6FD2559c018a32BE9134 | LP token of pool-7                              |
 | ETH-USDT      | 0x061a87Aac7695b9cf9482043175fd3bE3374AB66 | Eth USDT mapping asset in pool-7, Curve         |
-| BSC-USDC      | 0x9AC8B67Febd3E53c8f08E5A481A9D94Ea51Fb07D | Bsc USDT mapping asset in pool-7, Curve         |
+| BSC-USDC      | 0x9AC8B67Febd3E53c8f08E5A481A9D94Ea51Fb07D | BSC USDT mapping asset in pool-7, Curve         |
 | MATIC-USDC    | 0x77b81bd926f9E047ae976B674Af1922b5f34aDD7 | MATIC USDT mapping asset in pool-7, Curve       |
 | Arbitrum-USDC | 0x72b70b41A59C9e849FF70de60CEbee4D49612A7F | Arbitrum USDT mapping asset in pool-7, Curve    |
 | Pool-8-LP     | 0xDB721696803539f30Bcb6FD2559c018a32BE9134 | LP token of pool-8                              |

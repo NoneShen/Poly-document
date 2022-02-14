@@ -1,50 +1,35 @@
 <h1 align="center">ADD TOKEN</h1>
 
-### Token Data
+在跨链之前,项目方已经有了token,并且该token需要跨的链poly已经支持.
+1. Use the *https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/assets/erc20_template/ERC20Template.sol* template to deploy a corresponding asset mapping contract on other chain, the total amount needs to be consistent with the amount on the source chain;
+    <div align=center><img src="resources/ERC20Template.jpg" alt=""/></div>
 
-|        Method           | Description                                                  |
-| ----------------------- | :----------------------------------------------------------- :|
-|     **AddTokens**       | Here is all the data information of the token. It includes the precision, type, and coinmarketcap data of the token|
+2. Transfer the initialized assets to the destination proxy contract. The testnet contract address:
+*https://github.com/polynetwork/docs/blob/master/config/README_TestNet.md*
 
-```
-    type TokenBasic struct {
-	TokenBasicName  string         // Token`s name (bridge's view token name)
-	Precision       uint64         // Token`s precision
-	IcoChainId      uint64         // If lockproxy:Token`s ico chainId;If pip4: 0
-	Property        int64          // ON: 1; OFF: 2
-	Standard        uint8          // Erc20: 0, erc721: 1
-	PriceMarkets    PriceMarket    // If erc20: cionmarketcap data, If erc721: nil
-	Tokens          []Token        // Every chain info
-    }
+3. Send the source chain and destination chain asset contract address to Poly Network staff operator, contact: *https://t.me/joinchat/Hjv5NBrfO1C2LyODQfxVDw*
 
-    type PriceMarket struct {
-	TokenBasicName string          // Token`s name
-	Name           string          // Token name on coinmarket
-	CoinMarketId   int             // Token`s id on coinMarket
-    }
-    
-    type Token struct {
-	Hash            string          // Token`s hash
-	ChainId         uint64          // Token`s chain
-	Name            string          // Token`s name
-	Precision       uint64          // Token`s precison on this chain
-	DstChainId      []uint64        // Cross-Chain dst chain list
-    }
-    
-```
-### Check Data
-
-Check if the token data is correct
-- Token hash and chain information
-- CoinMarket data
-
-### Bind Contract And Check
-
-Check whether the contract is bound to these tokens
-
-### Add Token To Bridge
-1. If tokenBasicName has been added to the bridge, delete it first and then add it
-2. If there are no records, insert directly
-
-### Token Map
-According to the DstChainId of each token, add a cross-chain map to it
+    Provide standards file according to the requirements above 
+   e.g:
+   ```
+	    {
+	    “Name”:”SCAPES”,
+	    “URI”:”",
+	    “Assets”:[
+	    {
+	    “ChainName”:”eth”,
+	    “Address”:”0x3680fb34F55030326659cd9AaEc522B6E355bdB6"
+	    },
+	    {
+	    “ChainName”:”bsc”,
+	    “Address”:”0x66638F4970C2ae63773946906922c07a583b6069"
+	    },
+	    {
+	    “ChainName”:”heco”,
+	    “Address”:”0xF9Dd424e64E9264632a564FBDcC87Ba8eA40B5Ba”
+     }
+     ]
+     }
+    ```
+4. Wait for the operator to add the contract address to the whitelist and bind asset to proxy contract then you can visit: *https://bridge.poly.network/testnet* to complete the cross-chain transfer from the source chain to destination chain.
+    <div align=center><img src="resources/polybridge.jpeg" alt=""/></div>

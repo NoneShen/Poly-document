@@ -7,7 +7,7 @@ Here are cross chain tokens ONLY working in <strong>DevNet</strong> mode, which 
 ### Token Index (Chain-Chain ID)
 
 | **[Bitcoin-1](DevNet.md#Btc)**     | **[Ethereum-2](DevNet.md#Ethereum)** | **[Ontology-3](DevNet.md#Ontology)**       | **[Neo Legacy-217](DevNet.md#Neo-Legacy)** | **Switcheo-182**   |
-|:-----------------------------------|:-------------------------------------|:-------------------------------------------|:-------------------------------------------|:-------------------|
+|------------------------------------|--------------------------------------|--------------------------------------------|--------------------------------------------|--------------------|
 | **[Neo N3-220](DevNet.md#Neo-N3)** | **[Pixie-321](DevNet.md#Pixie)**     | **[Cosmos-gaia-8](DevNet.md#Cosmos-Gaia)** |                                            |                    |
 
 
