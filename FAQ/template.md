@@ -28,8 +28,7 @@
 #### <img alt="img_7.png" height="35pcs" src="img_7.png" width="35pcs"/> When you first meet PolyBridge, you may concern:
 
 - Q: What is PolyBridge? What functions does it provide? Where is the website?
-- A: PolyBridge is a bridge through which you can transfer your asset (include tokens and NFTs) between different chains easily and quickly.
-
+<detail> A: PolyBridge is a bridge through which you can transfer your asset (include tokens and NFTs) between different chains easily and quickly. </detail>
 #### <img alt="img_4.png" height="35pcs" src="img_4.png" width="35pcs"/> If you are a developer, you may concern:
 
 - Q1: What kind of pairs are available on the PolyBridge?
