@@ -23,8 +23,9 @@
 - Q6: Is PolyNetwork a kind of open source?
 - A: 
 
-## About PolyBridge 
-#### <img alt="img_6.png" height="35pcs" src="img_6.png" width="75pcs"/> When you first meet PolyBridge, you may concern:
+## About PolyBridge
+
+####<img alt="img_7.png" height="35pcs" src="img_7.png" width="35pcs"/>When you first meet PolyBridge, you may concern:
 - Q: What is PolyBridge? What functions does it provide? Where is the website?
 - A: PolyBridge is a bridge through which you can transfer your asset (include tokens and NFTs) between different chains easily and quickly.
 
@@ -42,12 +43,12 @@
 - Q4: Where can I find the contract? 
 - A: Here is an appendix (Link) that includes basic contracts and some business contracts deployed and used by PolyNetwork, please go to check it. 
 
- #### <img alt="img_3.png" height="35pcs" src="img_3.png" width="35pcs"/>  If you are a user, you may concern:
+ #### <img alt="img_8.png" height="35pcs" src="img_8.png" width="35pcs"/> If you are a user, you may concern:
 
 - Q1: How to transfer my asset between two chains through PolyBridge?
 - A: Here are detailed manuals (Link) for users to transfer asset, please go to check.
 ####
-- Q2: How much PolyBridge will charge per transaction?
+- Q2: How much will PolyBridge charge for per transaction?
 - A: It depends upon the network you are sending from and to. The fee PolyBridge charges is just used for covering gas fee to target chain, no extra fee. The fee paid via PolyBridge is for covering gas fee charged by target chain. No extra fee charged by PolyBridge.
 ####
 - Q3: How long does it take for per transaction?
@@ -89,7 +90,7 @@
 - Q13:I encountered an error submitting an accelerated transaction, what can I do?
 - A: First, please do not submit the error accelerated transaction. This error means the transaction has been completed in target chain. Please turn back to your wallet to check the balance. If not receiving, please contact with us.
 ####
-Some critical concerned:
+#### <img alt="img_6.png" height="35pcs" src="img_6.png" width="105pcs"/> Some critical concerned:
 - Q1: Are PolyBridge's smart contracts audited?
 - A:
 ####
