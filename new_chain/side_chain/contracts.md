@@ -3,7 +3,7 @@
 > [!Note|style:flat|label:Notice]
 > Cross Chain Manager module can work as a set of smart contracts. In some cases, it can also work as a native module of blockchain. If the chain integrated to Poly Network supports EVM, developers could freely use our Cross-chain contracts as templates. On the opposite, you may need to develop your own contracts which contains the main features as shown in following guidelines. To help you develop it, here we offer the examples in `Solidity` for each main method. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager) of these contracts.
 
-## Introduction to Cross-chain Contracts
+## 1. Introduction to Cross-chain Contracts
 
 - List of contracts 
   - [Cross Chain Manager Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol): On source chain, it creates the cross chain transactions that are transferred to the Poly; On target chain, it verifies the legitimacy of transactions and executes the method on target business logic contract. In the following context, it may be referred to as CCM contract.
@@ -16,7 +16,7 @@
 > [!Note|style:flat|label:Notice]
 > In this guidelines, we realize the upgradable contracts through split the Cross chain contracts into data contract, logic contract and proxy contract. You could follow this method or choose the most suitable way for your project.
 
-## 1. Developing Cross Chain Manager Contracts
+## 2. Develop Cross Chain Manager Contracts
 
 To guarantee the safety of CCM contract, we keep whitelists of contract addresses and methods to prevent invalid call. Meanwhile, we also set `whiteLister` to manage these whitelists of CCM contract. We highly encourage developers to develop the similar features of authority management in personal projects.
 
