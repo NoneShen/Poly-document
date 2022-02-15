@@ -43,7 +43,9 @@ contract LockProxy is Ownable {
 ### Step2. Develop Method to Initiate a Cross-chain Request
 
 #### Interface:
+
 This interface creates cross chain transactions, invoked by business logic contracts when a cross chain function is carried out in the logic contract.
+
 ````solidity
 /*  
  *  @param toChainId              The target chain id
@@ -101,8 +103,10 @@ function lock(address fromAssetHash, uint64 toChainId, bytes memory toAddress, u
 - The serialized transaction data, along with the chain id and business logic contract address of target chain and the method needed to be called on target chain, will be sent through `crossChain()` in CCM contract.
 
 ### Step3. Develop Method to Verify and Execute Cross Chain Transaction
-This method is meant to be invoked by relayer, in some cases user could invoke this method by themselves if they get the valid block information from Poly.
+
 #### Interface:
+
+This method is meant to be invoked by relayer, in some cases user could invoke this method by themselves if they get the valid block information from Poly.
 
 ````solidity
 /*  
