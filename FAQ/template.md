@@ -1,80 +1,120 @@
 <h1 align="center">FAQ</h1>
 
 
-## About PolyNetwork Ecosystem
+## About Poly Network Ecosystem
 
-- Q: What is PolyNetwork? How does PolyNetwork work?
-- A: 
-- Q: How many kind of chains PolyNetwork support?
-- A: 
-- Q: How to integrate the chain to PolyNetwork ecosystem?
-- 
-- Q: How to establish the product on PolyNetwork ecosystem?
-- subQ: How to interact with PolyNetwork protocol?
-- Q: What feature PolyNetwork can provide?
-- Q: Is PolyNetwork open source?
-- A: 
+<!--sec data-title="Q1: What is Poly Network? How does Poly Network work?" data-id="section0" data-collapse=true ces-->
+A:
+<!--endsec-->
 
-## About PolyBridge 
-When you first meet PolyBridge, you may concern:
-- Q: What is PolyBridge? What function does it provide? Where is the website?
-- A: The PolyBridge is a bridge that you can transfer your asset(include tokens and nft) between the different chains easily and fast through this channel.
+<!--sec data-title="Q2: How many kinds of chains does Poly Network support?" data-id="section2" data-collapse=true ces-->
+A:
+<!--endsec-->
 
-If you are a developer,you may concern:
-- Q: What kind of pairs are available on the PolyBridge?
-- A: Here is an interface provided for querying pairs on PolyBridge
+<!--sec data-title="Q3: How to integrate the chain to Poly Network ecosystem?" data-id="section3" data-collapse=true ces-->
+A:
+<!--endsec-->
 
-- Q: How to integrate token onto PolyBridge？
-- A: Here is a tutorial for developers who want to integrate token onto PolyBridge.
+<!--sec data-title="Q4: How to establish the product on Poly Network ecosystem?" data-id="section4" data-collapse=true ces-->
+A:
+- subQ4: How to interact with Poly Network protocol?
+- subA4:
+<!--endsec-->
+<!--sec data-title="Q5: What features Poly Network can provide?" data-id="section5" data-collapse=true ces-->
+A:
+<!--endsec-->
+<!--sec data-title="Q6: Is Poly Network a kind of open source?" data-id="section6" data-collapse=true ces-->
+A:
+<!--endsec-->
+## About Poly Bridge
 
-- Q: Any kind
+####<img alt="img_7.png" height="25pcs" src="img_7.png" width="25pcs"/> When you first meet Poly Bridge, you may concern:
+<!--sec data-title="Q: What is Poly Bridge? What functions does it provide? Where is the website?" data-id="section7" data-collapse=true ces-->
+A: Poly Bridge is a bridge through which you can transfer your asset (include tokens and NFTs) between different chains easily and quickly.
+<!--endsec-->
 
-- Q: Where can I find the contract? 
-- A: Here is an appendix(Link) that includes basic contracts and some business contracts deployed and used by PolyNetwork, please go to check it. 
+####<img alt="img_4.png" height="25pcs" src="img_4.png" width="25pcs"/> If you are a developer, you may concern:
+<!--sec data-title="Q1: What kind of pairs are available on the Poly Bridge?" data-id="section8" data-collapse=true ces-->
+A: Here is an interface (Link) provided for querying pairs on Poly Bridge
+<!--endsec-->
+<!--sec data-title="Q2: How to integrate token onto Poly Bridge？" data-id="section9" data-collapse=true ces-->
+A: Here is a tutorial (Link) instructing developers to integrate token onto Poly Bridge.
+<!--endsec-->
+<!--sec data-title="Q3: Any kind" data-id="section1" data-collapse=true ces-->
+A:
+<!--endsec-->
+<!--sec data-title="Q4: Where can I find the contract?" data-id="section10" data-collapse=true ces-->
+A: Here is an appendix (Link) that includes basic contracts and some business contracts deployed and used by Poly Network, please go to check it.
+<!--endsec-->
 
-If you are a user, you may concern:
-- Q: How to transfer my asset between two chains through PolyBridge?
-- A: We have prepared detailed manuals(PC and mobile) for users to transfer asset,please go to check (token), (nft)
+####<img alt="img_8.png" height="25pcs" src="img_8.png" width="25pcs"/> If you are a user, you may concern:
+<!--sec data-title="Q1: How to transfer my assets between two chains through Poly Bridge?" data-id="section11" data-collapse=true ces-->
+A: Please refer to the manual (Link) below.
+<!--endsec-->
+<!--sec data-title="Q2: How much fee does Poly Bridge charge per transaction?" data-id="section12" data-collapse=true ces-->
+A: It depends on the network you are sending from and to. The fee paid via Poly Bridge is for covering gas fee charged by target chain. No extra fee will be charged by Poly Bridge.
+<!--endsec-->
+<!--sec data-title="Q3: How long does it take per transaction?" data-id="section13" data-collapse=true ces-->
+A: Average estimated time of arrival is 1-10 min. Irresistible factors such as network congestion might delay the transaction. If your transaction hasn’t been completed for a long time, please refer to Q7.
+<!--endsec-->
+<!--sec data-title="Q4: Where can I find my previous transaction?" data-id="section14" data-collapse=true ces-->
+A: You can check your previous transaction in "History".
+<!--endsec-->
+<!--sec data-title="Q5: Is the bridge rate 1:1?" data-id="section15" data-collapse=true ces-->
+A: Normally yes. Except deflationary tokens.
+<!--endsec-->
+<!--sec data-title="Q6：When I encounter an error in the wallet, what can I do?" data-id="section16" data-collapse=true ces-->
+A:
+- Firstly, make sure you have approved enough amount for Poly Bridge contract to use the token.
+- Then, make sure you have sufficient native tokens to pay the gas fee on the source chain. Please be noted that the amount of native tokens should be excluded from the fee you paid for Poly Bridge and the amount you plan to transfer. For example, if you want to transfer $Metis from Andromeda to BSC, you have to reserve two portions of tokens: one for target chain gas fee, the other for source chain gas fee. The rest are tokens you can transfer.
+- Besides, if you encounter other errors, please contact Poly Network team.
+<!--endsec-->
+<!--sec data-title="Q7: I have waited a long time and still didn't receive my asset, what can I do?" data-id="section17" data-collapse=true ces-->
+A: Please check which step your transaction has reached. Solutions vary from different steps, see below:
+- The transaction hasn't been completed on src chain：For safety reason, Poly Bridge will not confirm your transaction immediately until subsequent blocks have been confirmed (the number of subsequent blocks depending on different chains), please wait for block confirmation.
+- The transaction has been completed on src chain, but not completed in Poly: if the transaction has been stuck in this step for over 5 min, please do not hesitate to contact the Poly Network Team.
+- The transaction hasn't been completed on the target chain: it’s perhaps down to the transaction congestion of target chain, please wait for a while or refer to the accelerated transaction tutorial. If the accelerated tutorial doesn't work, please contact the Poly Network team.
+<!--endsec-->
+<!--sec data-title="Q8: How can I check the status of my transaction?" data-id="section18" data-collapse=true ces-->
+A: Click “History” in the Poly Bridge to find the transaction and then click “Status” to check the progress.
+<!--endsec-->
+<!--sec data-title="Q9: Why does it show “sufficient liquidity” on the target chain before sending a transaction and “insufficient liquidity on the target chain after sending a transaction?" data-id="section19" data-collapse=true ces-->
+A:
+- Firstly, the liquidity shown on Poly Bridge is shared for all users. If there are several users making large transactions simultaneously, insufficient liquidity will appear.
+- It happens when the amount you are transferring is close to the max available amount. Under this occasion, Poly Network will contact the relevant project to add liquidity as soon as possible. Please be patient.
+<!--endsec-->
+<!--sec data-title="Q10: Can I use Poly Bridge by mobile phone?" data-id="section20" data-collapse=true ces-->
+A: Of course, here is a manual (Link) for mobile users.
+<!--endsec-->
+<!--sec data-title="Q11: When encountering an “unknown wallet error”, what can I do?" data-id="section21" data-collapse=true ces-->
+-A: Please check whether the currently connected network is stable, which can be observed by switching nodes.
+<!--endsec-->
+<!--sec data-title="Q12: I encountered an error and submitted an accelerated transaction…what’s next?" data-id="section22" data-collapse=true ces-->
+A:
+- Firstly, please do not submit accelerated transactions when you encounter an error. This error means the transaction hasn't been completed on the target chain.
+- Then turn back to your wallet to check the balance. If you have not received it, please contact us.
+<!--endsec-->
+<!--sec data-title="Q13: Is Poly Network related to polygon, polymath, or Poly Chain capital?" data-id="section23" data-collapse=true ces-->
+A:
+<!--endsec-->
+<!--sec data-title="Q14: If my transaction is stuck on the bridge, can I cancel the transfer and receive a refund instead?" data-id="section24" data-collapse=true ces-->
+A:
+<!--endsec-->
+<!--sec data-title="Q15: When migrating funds to or from ETH, why is the fee so high?" data-id="section25" data-collapse=true ces-->
+A:
+<!--endsec-->
+<!--sec data-title="Q16: The transaction says that it's confirmed in my history, but why aren't the tokens showing in my Metamask?" data-id="section26" data-collapse=true ces-->
+A: You may have to manually add that specific asset to your Metamask. This can be achieved by selecting the "import tokens" option in your Metamask wallet and then copy and paste the token contract address for the asset you wish to add.
+<!--endsec-->
 
-- Q: How much PolyBridge will charge per transaction?
-- A: The fee ,you can 
-
-- Q: How long does it take for per transaction?
-- A: Estimated time of arrival is 0-10 min. But here are some irresistible factors will delay the transaction, such as congestion online. If you meet long transaction time, here is also a function provided for urgent transaction.
-- 
-- Q: Where can I find my transaction before?
-- A: You can click the "History" shown in Figure.
-- 
-- Q: Is the bridge rate is 1：1 ？
-- A: Yes, but except deflationary tokens, that due to the characteristics of the token, not PolyBridge.
-- 
-- Q：When I encounter an error in the wallet, like figure, What can I do?
-- A: Make sure you have sufficient native tokens to send this crosschain transaction to the source chain.
-- It should be noted that  the "sufficient" native token should be not included in the fee you paid for PolyBridge and the amount you plan to transfer.
-- Here is a tips that help you to understand the fee PolyBridge charge.
-
-- 
-- Q: I have waited a long time and didn't receive my asset, what can I do?
-- A: First, please check what step your transaction have completed(Here is the tutorial to check the process).Different step has different solution,see below.
-- Transaction have not completed in src chain：For safety, PolyBridge will not confirm your transaction immediately until sequence blocks have been confirmed（the number of blocks according to different chains）, please wait patiently for the block confirmation.
-- Transaction have been completed in src chain, but not completed in Poly: if the transaction stack in this situation over 1 min, please do not hesitate to contact PolyBridge team.
-- Transaction have been completed in src chain and Poly, but not completed in dst chain: The reason for this may be that the dst chain transaction is congested, please wait patiently, or refer to the accelerated transaction tutorial;
-if the accelerated tutorial doesn't work, please contact PolyBridge.
-
-- Q:Why the same token, the original chain and the target chain, other people's transactions have been received, but my transaction has not?
-- A:First, make sure you have paid the fee to PolyBridge.
-- 
-- Q:Why does the target chain have sufficient liquidity before sending the transaction, but after the transaction sent, it is told that the target chain has insufficient liquidity and needs to wait?
-- A:
-- 
-- Q:Can I use PolyBridge by mobile phone?
-- A:Of course, PolyBridge
-- 
-- Q:Why can it be used on the computer, but there will be problems on the mobile phone?
-
-Some critical concerned:
-- Q: Are PolyBridge's smart contracts audited?
-- Q: Is the bridge decentralized?
-- Q: Who or where can I ask for help when I crush a problem?
+#### <img alt="img_6.png" height="35pcs" src="img_6.png" width="105pcs"/> Some critical concerned:
+<!--sec data-title="Q1: Are Poly Bridge's smart contracts audited?" data-id="section27" data-collapse=true ces-->
+A:
+<!--endsec-->
+<!--sec data-title="Q2: Is the bridge decentralized?" data-id="section28" data-collapse=true ces-->
+A:
+<!--endsec-->
+<!--sec data-title="Q3: Who or where can I ask for help when I crush a problem?" data-id="section29" data-collapse=true ces-->
+A:
 
 
