@@ -67,9 +67,9 @@
 ####
 - Q7: I have waited a long time and still didn't receive my asset, what can I do?
 - A: First, please check what step your transaction have reached. Different steps have different solution,see below.
-- Transaction has not completed in src chain：For safety, Poly Bridge will not confirm your transaction immediately until subsequent blocks have been confirmed( the number of subsequent blocks according to different chains), please wait for blocks confirmation.
-- Transaction has been completed in src chain, but not completed in Poly: if the transaction is stuck in this way over 5 min, please do not hesitate to contact the PolyBridge Team.
-- Transaction has been completed in src chain and Poly, but not completed in target chain: the reason may be that the target chain transaction is congested, please wait, or refer to the accelerated transaction tutorial. If the accelerated tutorial doesn't work, please contact the PolyBridge team.
+  - Transaction has not completed in src chain：For safety, Poly Bridge will not confirm your transaction immediately until subsequent blocks have been confirmed( the number of subsequent blocks according to different chains), please wait for blocks confirmation.
+  - Transaction has been completed in src chain, but not completed in Poly: if the transaction is stuck in this way over 5 min, please do not hesitate to contact the PolyBridge Team.
+  - Transaction has been completed in src chain and Poly, but not completed in target chain: the reason may be that the target chain transaction is congested, please wait, or refer to the accelerated transaction tutorial. If the accelerated tutorial doesn't work, please contact the PolyBridge team.
 ####
 - Q8: How can I check what step my transaction goes?
 - A: Click “History” in the PolyBridge to find the transaction and then click “Status” to check the progress.
