@@ -30,7 +30,6 @@
 - A: PolyBridge is a bridge through which you can transfer your asset (include tokens and NFTs) between different chains easily and quickly.
 
 #### <img alt="img_4.png" height="35pcs" src="img_4.png" width="35pcs"/> If you are a developer, you may concern:
-
 - Q1: What kind of pairs are available on the PolyBridge?
 - A: Here is an interface (Link) provided for querying pairs on PolyBridge
 ####
@@ -45,50 +44,63 @@
 
  #### <img alt="img_8.png" height="35pcs" src="img_8.png" width="35pcs"/> If you are a user, you may concern:
 
-- Q1: How to transfer my asset between two chains through PolyBridge?
-- A: Here are detailed manuals (Link) for users to transfer asset, please go to check.
+- Q1: How to transfer my assets between two chains through PolyBridge?
+- A: Please refer to the manual (Link) below.
 ####
-- Q2: How much will PolyBridge charge for per transaction?
-- A: It depends upon the network you are sending from and to. The fee PolyBridge charges is just used for covering gas fee to target chain, no extra fee. The fee paid via PolyBridge is for covering gas fee charged by target chain. No extra fee charged by PolyBridge.
+- Q2: How much fee does PolyBridge charge per transaction?
+- A: It depends on the network you are sending from and to. The fee paid via PolyBridge is for covering gas fee charged by target chain. No extra fee will be charged by PolyBridge.
 ####
-- Q3: How long does it take for per transaction?
-- A: Average estimated time of arrival is 1-10 min. Irresistible factors might delay the transaction, such as network congestion. If your transaction hasn’t been competed for a long time, here is a solution provided for you, please see Q7.
+- Q3: How long does it take per transaction?
+- A: Average estimated time of arrival is 1-10 min. Irresistible factors such as network congestion might delay the transaction. If your transaction hasn’t been completed for a long time, please refer to Q7.
 ####
-- Q4: Where can I find my transaction before?
-- A: You can check your transaction in "History".
+- Q4: Where can I find my previous transaction?
+- A: You can check your previous transaction in "History".
 ####
-- Q5: Is the bridge rate 1:1 ?
-- A: Yes, but except for deflationary tokens, due to the characteristics of the token, not caused by PolyBridge.
+- Q5: Is the bridge rate 1:1?
+- A: Normally yes. Except deflationary tokens.
 ####
-- Q6：When I encounter an error in the wallet,what can I do?
-- A: First, make sure you have approved enough amount for PolyBridge contract to use the token;
-  Second, make sure you have sufficient native tokens to pay the gas fee on the source chain.It should be noted that the amount of native tokens should not be included in the fee you paid for PolyBridge and the amount you plan to transfer. For example, if you want to transfer $metis from metis chain to bsc chain, you may not transfer all $metis you own, you have to set aside two portion of the money, one to pay PolyBridge for target chain gas fee, the other to pay source chain gas fee. The rest is the money you can transfer.
-  Third, if not the problem mentioned above, please contact PolyBridge team.
+- Q6：When I encounter an error in the wallet, what can I do?
+- A: 
+  - Firstly, make sure you have approved enough amount for PolyBridge contract to use the token.
+  - Then, make sure you have sufficient native tokens to pay the gas fee on the source chain. Please be noted that the amount of native tokens should be excluded from the fee you paid for PolyBridge and the amount you plan to transfer. For example, if you want to transfer $Metis from Andromeda to BSC, you have to reserve two portions of tokens: one for target chain gas fee, the other for source chain gas fee. The rest are tokens you can transfer. 
+  - Besides, if you encounter other errors, please contact Poly Network team.
 ####
 - Q7: I have waited a long time and still didn't receive my asset, what can I do?
-- A: First, please check what step your transaction have reached. Different steps have different solution,see below.
-  - Transaction has not completed in src chain：For safety, Poly Bridge will not confirm your transaction immediately until subsequent blocks have been confirmed( the number of subsequent blocks according to different chains), please wait for blocks confirmation.
-  - Transaction has been completed in src chain, but not completed in Poly: if the transaction is stuck in this way over 5 min, please do not hesitate to contact the PolyBridge Team.
-  - Transaction has been completed in src chain and Poly, but not completed in target chain: the reason may be that the target chain transaction is congested, please wait, or refer to the accelerated transaction tutorial. If the accelerated tutorial doesn't work, please contact the PolyBridge team.
+- A: Please check which step your transaction has reached. Solutions vary from different steps, see below:
+  - The transaction hasn't been completed on src chain：For safety reason, Poly Bridge will not confirm your transaction immediately until subsequent blocks have been confirmed (the number of subsequent blocks depending on different chains), please wait for block confirmation.
+  - The transaction has been completed on src chain, but not completed in Poly: if the transaction has been stuck in this step for over 5 min, please do not hesitate to contact the Poly Network Team.
+  - The transaction hasn't been completed on the target chain: it’s perhaps down to the transaction congestion of target chain, please wait for a while or refer to the accelerated transaction tutorial. If the accelerated tutorial doesn't work, please contact the Poly Network team.
 ####
-- Q8: How can I check what step my transaction goes?
+- Q8: How can I check the status of my transaction?
 - A: Click “History” in the PolyBridge to find the transaction and then click “Status” to check the progress.
 ####
-- Q9: Why for the same token, src chain and the target chain, other people's transactions have arrived, but mine has not?
-- A: First, if you are not through PolyBridge page to process your transaction, please make sure you have paid enough fee to PolyBridge, you can check it by calling “check fee” api; if you do not pay enough, it is recommended that you use the acceleration function to process target chain transaction.
-  Second, if you have already paid or try to accelerate but fail, please contact the PolyBridge team.
+- Q9: Why does it show “sufficient liquidity” on the target chain before sending a transaction and “insufficient liquidity on the target chain after sending a transaction?
+- A:  
+  - Firstly, the liquidity shown on PolyBridge is shared for all users. If there are several users making large transactions simultaneously, insufficient liquidity will appear. 
+  - It happens when the amount you are transferring is close to the max available amount. Under this occasion, Poly Network will contact the relevant project to add liquidity as soon as possible. Please be patient.
 ####
-- Q10:Why does the target chain have sufficient liquidity before sending the transaction, but after the transaction beinb sent, I have been told that the target chain has insufficient liquidity and that I needto wait?
-- A:First, the liquidity shown on PolyBridge is shared for all users. This means that if there are serveral users making large transactions at the same time, there will be liquidity competition leading to insufficient liquidity. Thismay happens when the amount you are transferring is close to the max available amount. Under this occasion, PolyBridge will contact the relevent project for liquidity replenishment as soon as possible, please be patient.
+- Q10: Can I use PolyBridge by mobile phone?
+- A: Of course, here is a manual (Link) for mobile users.
 ####
-- Q11:Can I use PolyBridge by mobile phone?
-- A:Of course, here is a manual for mobile users.
+- Q11: When encountering an “unknown wallet error”, what can I do?
+  -A: Please check whether the currently connected network is stable, which can be observed by switching nodes.
 ####
-- Q12: When here encounters an “unknow wallet error”,what can I do?
-- A: First, check whether the currently connected network is stable, which can be observed by switching nodes.
+- Q12: I encountered an error and submitted an accelerated transaction…what’s next?
+- A: 
+  - Firstly, please do not submit accelerated transactions when you encounter an error. This error means the transaction hasn't been completed on the target chain. 
+  - Then turn back to your wallet to check the balance. If you have not received it, please contact us.
 ####
-- Q13:I encountered an error submitting an accelerated transaction, what can I do?
-- A: First, please do not submit the error accelerated transaction. This error means the transaction has been completed in target chain. Please turn back to your wallet to check the balance. If not receiving, please contact with us.
+- Q13: Is Poly Network related to polygon, polymath, or Poly Chain capital?
+- A:
+####
+- Q14: If my transaction is stuck on the bridge, can I cancel the transfer and receive a refund instead?
+- A:
+####
+- Q15: When migrating funds to or from ETH, why is the fee so high?
+- A:
+####
+- Q16: The transaction says that it's confirmed in my history, but why aren't the tokens showing in my Metamask?
+- A: You may have to manually add that specific asset to your Metamask. This can be achieved by selecting the "import tokens" option in your Metamask wallet and then copy and paste the token contract address for the asset you wish to add.
 ####
 #### <img alt="img_6.png" height="35pcs" src="img_6.png" width="105pcs"/> Some critical concerned:
 - Q1: Are PolyBridge's smart contracts audited?
