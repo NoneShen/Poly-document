@@ -1,4 +1,4 @@
-<h1 align="center">Launch and Testing</h1>
+<h1 align="center">Launch and Test</h1>
 
 <div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
 
@@ -10,7 +10,7 @@ To realize implementation of cross chain features, developers need to make sure 
 - The cross chain methods in your business logic contracts should allow our Cross Chain Manager Contract to call
 - The mapping assets need to be bound before any cross chain transactions
 
-## 2. Testing Your Contracts
+## 2. Test Your Contracts
 
 We highly encourage project developers to test the business logic contract on testnet before launching on mainnet. If you want to test your contract on mainnet directly, you need to provide us with the business logic contract addresses and cross-chain methods both on source chain and target chain, so that we could maintain the whitelist of CCM contract, which is meant to guarantee the safety of cross chain process.
 

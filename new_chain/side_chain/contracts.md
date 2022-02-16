@@ -1,4 +1,4 @@
-<h1 align="center">Develop for Side Chain</h1>
+<h1 align="center">Develop for New Chain</h1>
 
 > [!Note|style:flat|label:Notice]
 > Cross Chain Manager module can work as a set of smart contracts. In some cases, it can also work as a native module of blockchain. If the chain integrated to Poly Network supports EVM, developers could freely use our Cross-chain contracts as templates. On the opposite, you may need to develop your own contracts which contains the main features as shown in following guidelines. To help you develop it, here we offer the examples in `Solidity` for each main method. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager) of these contracts.

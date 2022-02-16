@@ -1,8 +1,8 @@
-<h1 align="center">Develop for Relay Chain</h1>
+<h1 align="center">Develop for Poly Chain</h1>
 
 ## Requirements
 
-### 1. Make sure the side chain support Light Client Verification
+### 1. Make sure the new chain support Light Client Verification
 
 The block header must contain the following information：
 - Hash of the previous block header
@@ -34,27 +34,27 @@ The block header must contain the following information：
 
 #### Block Header Synchronization Methods
 
-| Method                | Description                                                                                                                                                                                                                                                                                                                                                                          |
-| --------------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **SyncGenesisHeader** | It stores and handles the initial block header so that the subsequent block headers of blocks that contain cross-chain events can be verified and synchronized. The method will only be called onec for initializing the side chain; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61) for more details. |
-| **SyncBlockHeader**   | Consistently synchronizes block cycle change and cross-chain transaction block headers from the side chain to the relay chain; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L99) for more details.                                                                                                       |
+| Method                | Description                                                                                                                                                                                                                                                                                                                                                                         |
+| --------------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **SyncGenesisHeader** | It stores and handles the initial block header so that the subsequent block headers of blocks that contain cross-chain events can be verified and synchronized. The method will only be called once for initializing the new chain; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61) for more details. |
+| **SyncBlockHeader**   | Consistently synchronizes block cycle change and cross-chain transaction block headers from the new chain to the poly chain; please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L99) for more details.                                                                                                        |
 
 
 #### Block Header Synchronization Entrance Method
 
-| Method                         | Description                                                  |
-| ------------------------------ | ------------------------------------------------------------ |
-| **SyncSideChainGenesisHeader** | It is the entrance method for synchronizing the genesis block header of the side chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the side chain; please refer to the [code](https://github.com/polynetwork/poly-io-test/blob/master/cmd/tools/run.go#L607) for more details. |
+| Method                         | Description                                                                                                                                                                                                                                                                                                              |
+| ------------------------------ |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **SyncSideChainGenesisHeader** | It is the entrance method for synchronizing the genesis block header of the new chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the new chain; please refer to the [code](https://github.com/polynetwork/poly-io-test/blob/master/cmd/tools/run.go#L607) for more details. |
 
 The Key information for this method(submitted by .config):
 
-- Service provider(endpoint) Url of side chain
+- Service provider(endpoint) Url of the new chain
 
 - Selected genesis block height
 
 - Essential information for verifying genesis headers may exist in header information already or need to be fetched from block headers from other block height
 
-- Information required for the side chain block header verification
+- Information required for the new chain block header verification
 
 
 ### 2. Implement methods of cross-chain transaction verification
@@ -63,7 +63,7 @@ The Key information for this method(submitted by .config):
 
 | Method                  | Description                                                  |
 | ----------------------- | :----------------------------------------------------------- |
-| **MakeDepositProposal** | Acts as the entrance of verifyFromTx, verifying, storing, and returning MakeTxParam for processing cross-chain steps. Verifies cross-chain transactions and store legitimate transactions to relay chain.  Please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/cross_chain_manager/eth/eth_handler.go#L34) for details. |
+| **MakeDepositProposal** | Acts as the entrance of verifyFromTx, verifying, storing, and returning MakeTxParam for processing cross-chain steps. Verifies cross-chain transactions and store legitimate transactions to poly chain.  Please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/cross_chain_manager/eth/eth_handler.go#L34) for details. |
 
 ```go
 MakeDepositProposal:
@@ -98,7 +98,7 @@ txParam               *scom.MakeTxParam
 ```
 | Method                | Description                                                  |
 | --------------------- | :----------------------------------------------------------- |
-| **verifyMerkleProof** | Verify the Merkle proof obtained by the relayer generated from the source chain to ensure that all transactions included in this block header have been created and have occurred on the relay chain. Please refer to the [code](https://github.com/polynetwork/poly/blob/4323af5cfcd2a3277653d5bdc4db015cd9755fee/native/service/cross_chain_manager/eth/utils.go#L88) for details. |
+| **verifyMerkleProof** | Verify the Merkle proof obtained by the relayer generated from the source chain to ensure that all transactions included in this block header have been created and have occurred on the poly chain. Please refer to the [code](https://github.com/polynetwork/poly/blob/4323af5cfcd2a3277653d5bdc4db015cd9755fee/native/service/cross_chain_manager/eth/utils.go#L88) for details. |
 
 ```go
 verifyMerkleProof:

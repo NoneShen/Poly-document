@@ -6,19 +6,19 @@
 
 ### Development
 * [Connect New Chains](new_chain/readme.md)
-  * [Develop for Relay Chain](new_chain/relay_chain/relay_chain_development.md)
-  * [Develop for Side Chain](new_chain/side_chain/contracts.md)
+  * [Develop for Poly Chain](new_chain/relay_chain/relay_chain_development.md)
+  * [Develop for New Chain](new_chain/side_chain/contracts.md)
   * [Develop for Relayer](new_chain/relayer/relayer.md)
-  * [Launch and Testing](new_chain/launch_and_test/launch.md)
+  * [Launch and Test](new_chain/launch_and_test/launch.md)
 * [Build New Bridges](new_product/integrate_bridge/readme.md)
   * [Guidelines for Developing](new_product/integrate_bridge/bridge.md)
-  * [Launch and Testing](new_product/integrate_bridge/launch.md)
+  * [Launch and Test](new_product/integrate_bridge/launch.md)
 * [Register New Tokens](new_product/integrate_tokens/readme.md)
   * [Tokens Integration](new_product/integrate_tokens/tokens.md)
-  * [Launch and Testing](new_product/integrate_tokens/launch.md)
+  * [Launch and Test](new_product/integrate_tokens/launch.md)
 * [Customize Business Logic Contracts](new_product/integrate_contracts/readme.md)
   * [Guidelines for Developing](new_product/integrate_contracts/Customizing Business Logic Contract.md)
-  * [Launch and Testing](new_product/integrate_contracts/launch.md)
+  * [Launch and Test](new_product/integrate_contracts/launch.md)
 
 ----
 ### Appendix
