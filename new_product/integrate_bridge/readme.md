@@ -1,4 +1,4 @@
-<h1 align="center">Poly Bridge</h1>
+<h1 align="center">Poly Docs</h1>
 
 > [!Note|style:flat|label:Notice]
 > When a chain uses `PolyNetwork` protocol to implement asset cross-chain function, 
