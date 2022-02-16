@@ -11,6 +11,11 @@ Registration is the basis for monitoring and processing block information and ch
 
 ## 2. Deploy Contracts
 
+Choosing to use our templates as your Cross Chain Manager module, you need to deploy the three contracts as following steps:
+1. Deploy [Cross Chain Data contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/data/EthCrossChainData.sol) and get the address of it.
+2. Deploy [Cross Chain Manager contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol) and input the address of Cross Chain Data contract.
+3. Deploy [Cross Chain Manager Proxy contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol) and input the address of Cross Chain Manager contract.
+
 ## 3. Deploy Relayers
 
 ### Step 1. Build
