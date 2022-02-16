@@ -1,15 +1,17 @@
 {
   "title": "",
   "author": "PolyNetwork",
-  "structure":{
-    "readme":"introduction.md",
-    "summary":"SUMMARY.md",
-    "glossary":"GLOSSARY.md"
+  "structure": {
+    "readme": "introduction.md",
+    "summary": "SUMMARY.md",
+    "glossary": "GLOSSARY.md"
   },
   "theme-default": {
     "showLevel": true
   },
   "plugins": [
+    "accordion",
+    "sectionx",
     "-sharing",
     "sharing-plus",
     "theme-hqbook",
@@ -30,7 +32,6 @@
     "-highlight",
     "prism",
     "prism-themes"
-
   ],
   "flexible-alerts": {
     "style": "callout",
@@ -49,8 +50,8 @@
     }
   },
   "variables": {
-    "themeHqbook":{
-      "nav":[
+    "themeHqbook": {
+      "nav": [
         {
           "url": "https://poly.network/",
           "target": "_blank",
@@ -70,9 +71,12 @@
     }
   },
   "pluginsConfig": {
-    "theme-hqbook":{
-      "logo":"/resources/logo.png",
-      "search-placeholder":"Search...",
+    "sectionx": {
+      "tag": "b"
+    },
+    "theme-hqbook": {
+      "logo": "/resources/logo.png",
+      "search-placeholder": "Search...",
       "copyButtons": false,
       "copyLines": true,
       "dragSplitter": true,
@@ -117,7 +121,7 @@
       "medium": true,
       "telegram": true,
       "youtube": true,
-      "email" : true,
+      "email": true,
       "facebook": false,
       "google": false,
       "hatenaBookmark": false,
