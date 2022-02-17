@@ -10,7 +10,6 @@
     "showLevel": true
   },
   "plugins": [
-    "accordion",
     "sectionx",
     "-sharing",
     "sharing-plus",

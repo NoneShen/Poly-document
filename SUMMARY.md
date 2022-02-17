@@ -10,7 +10,7 @@
   * [Develop for Relayer](new_chain/relayer/relayer.md)
   * [Launch and Test](new_chain/launch_and_test/launch.md)
 * [Build New Bridges](new_product/integrate_bridge/readme.md)
-  * [Guidelines for Developing](new_product/integrate_bridge/bridge.md)
+  * [API](new_product/integrate_bridge/bridge.md)
   * [Launch and Test](new_product/integrate_bridge/launch.md)
 * [Register New Tokens](new_product/integrate_tokens/readme.md)
   * [Tokens Integration](new_product/integrate_tokens/tokens.md)
