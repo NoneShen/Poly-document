@@ -5,7 +5,7 @@
 
 ## 1. Introduction to Cross-chain Contracts
 
-- List of contracts 
+- List of contracts: 
   - [Cross Chain Manager Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol): On source chain, it creates the cross chain transactions that are transferred to the Poly; On target chain, it verifies the legitimacy of transactions and executes the method on target business logic contract. In the following context, it may be referred to as CCM contract.
   - [Cross Chain Data Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/data/EthCrossChainData.sol): It serves as a database of cross chain transactions. In the following context, it may be referred to as CCD contract.
   - [Cross Chain Manager Proxy Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol): It serves as a proxy of CCM contract. When there is any need to upgrade the CCM contract, it would pause old CCM contract and set new CCM contract to CCD contract.
@@ -21,7 +21,7 @@
 
 To guarantee the safety of CCM contract, we keep whitelists of contract addresses and methods to prevent invalid call. Meanwhile, we also set `whiteLister` to manage these whitelists of CCM contract. We highly encourage developers to develop the similar features of authority management in personal projects.
 
-### Step1. Develop Method to synchronize Genesis Block Header
+### Step1. Implement methods of synchronizing genesis block header
 
 #### Example:
 
@@ -58,7 +58,7 @@ function initGenesisBlock(bytes memory rawHeader, bytes memory pubKeyList) whenN
 - Then we will parse the raw header to get the `header.nextBookKeeper`. Comparing it with the `nextBookKeeper` which is converted from `pubKeyList`, we could verify the validity of signature.
 - After verifying the signature, we could record current epoch start height and the public keys by storing them in address format. And then emit the event `InitGenesisBlockEvent`.   
 
-### Step2. Develop Method to Change Consensus Validator
+### Step2. Implement methods of changing consensus validator
 
 #### Example:
 
@@ -106,7 +106,7 @@ function changeBookKeeper(bytes memory rawHeader, bytes memory pubKeyList, bytes
 - Analogous to `initGenesisBlock()`, we also need to parse the raw header to get the `header.nextBookKeeper`. Comparing it with the `nextBookKeeper` which is converted from `pubKeyList`, we could verify the validity of signature.
 - After verifying the signature, we could record current epoch start height and current epoch consensus peers book keepers by storing them in address format. And then emit the event `ChangeBookKeeperEvent`.   
 
-### Step3. Develop Method to Push Cross-chain Transactions to Poly Chain
+### Step3. Implement methods of pushing cross-chain transactions to Poly chain
 
 #### Example:
 
@@ -155,7 +155,7 @@ function crossChain(uint64 toChainId, bytes calldata toContract, bytes calldata 
 - This method constructs the `rawParam`, which contains transaction hash, `msg.sender`, target chain id, business logic contract to be invoked on target chain, the target method to be invoked and the serialized transaction data which has been already constructed in business logic contract. 
 - Then put the hash of `rawParam` into storage, proving the existence of transaction .
 
-### Step4. Develop Method to Verify & Execute Transaction
+### Step4. Implement methods of verifying & executing Transaction
 
 #### Example:
 
