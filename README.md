@@ -13,7 +13,7 @@
 * [Build New Bridges](new_product/integrate_bridge/readme.md)
   * [Guidelines for Developing](new_product/integrate_bridge/bridge.md)
   * [Launch and Test](new_product/integrate_bridge/launch.md)
-* [Register New Tokens](new_product/integrate_tokens/readme.md)
+* [Import New Tokens](new_product/integrate_tokens/readme.md)
   * [Tokens Integration](new_product/integrate_tokens/tokens.md)
   * [Launch and Test](new_product/integrate_tokens/launch.md)
 * [Customize Business Logic Contracts](new_product/integrate_contracts/readme.md)
