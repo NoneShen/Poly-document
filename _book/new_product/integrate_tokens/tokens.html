@@ -17,6 +17,18 @@
     
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sharing-plus/all.css">
                 
             
@@ -209,7 +221,7 @@
                 <a href="../../new_chain/relay_chain/relay_chain_development.html">
             
                     
-                    Develop for Relay Chain
+                    Develop for Poly Chain
             
                 </a>
             
@@ -222,7 +234,7 @@
                 <a href="../../new_chain/side_chain/contracts.html">
             
                     
-                    Develop for Side Chain
+                    Develop for New Chain
             
                 </a>
             
@@ -248,7 +260,7 @@
                 <a href="../../new_chain/launch_and_test/launch.html">
             
                     
-                    Launch and Testing
+                    Launch and Test
             
                 </a>
             
@@ -293,7 +305,7 @@
                 <a href="../integrate_bridge/launch.html">
             
                     
-                    Launch and Testing
+                    Launch and Test
             
                 </a>
             
@@ -338,7 +350,7 @@
                 <a href="launch.html">
             
                     
-                    Launch and Testing
+                    Launch and Test
             
                 </a>
             
@@ -383,7 +395,7 @@
                 <a href="../integrate_contracts/launch.html">
             
                     
-                    Launch and Testing
+                    Launch and Test
             
                 </a>
             
@@ -623,7 +635,7 @@
 <p>&#x5728;&#x8DE8;&#x94FE;&#x4E4B;&#x524D;,&#x9879;&#x76EE;&#x65B9;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;token,&#x5E76;&#x4E14;&#x8BE5;token&#x9700;&#x8981;&#x8DE8;&#x7684;&#x94FE;poly&#x5DF2;&#x7ECF;&#x652F;&#x6301;.</p>
 <ol>
 <li><p>Use the <em><a href="https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/assets/erc20_template/ERC20Template.sol" target="_blank">https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/assets/erc20_template/ERC20Template.sol</a></em> template to deploy a corresponding asset mapping contract on other chain, the total amount needs to be consistent with the amount on the <a href="../../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a>;</p>
- <div align="center"><a href="resources/ERC20Template.jpg" data-lightbox="b8325e91-f3cf-4dcb-8106-9d61faf56335" data-title=""><img src="resources/ERC20Template.jpg" alt=""></a></div>
+ <div align="center"><a href="resources/ERC20Template.jpg" data-lightbox="c694bed9-5112-4cc6-ba6f-6a7d7f5f530c" data-title=""><img src="resources/ERC20Template.jpg" alt=""></a></div>
 </li>
 <li><p>Transfer the initialized assets to the destination proxy contract. The testnet contract address:
 <em><a href="https://github.com/polynetwork/docs/blob/master/config/README_TestNet.md" target="_blank">https://github.com/polynetwork/docs/blob/master/config/README_TestNet.md</a></em></p>
@@ -650,7 +662,7 @@ e.g:</p>
   ]
   }
 </code></pre></li>
-<li>Wait for the operator to add the contract address to the whitelist and bind asset to proxy contract then you can visit: <em><a href="https://bridge.poly.network/testnet" target="_blank">https://bridge.poly.network/testnet</a></em> to complete the cross-chain transfer from the <a href="../../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a> to destination chain. <div align="center"><a href="resources/polybridge.jpeg" data-lightbox="c89e4ab4-2b17-4f47-a0d0-8f8c447a5236" data-title=""><img src="resources/polybridge.jpeg" alt=""></a></div> 
+<li>Wait for the operator to add the contract address to the whitelist and bind asset to proxy contract then you can visit: <em><a href="https://bridge.poly.network/testnet" target="_blank">https://bridge.poly.network/testnet</a></em> to complete the cross-chain transfer from the <a href="../../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a> to destination chain. <div align="center"><a href="resources/polybridge.jpeg" data-lightbox="165d6aa1-204c-42e9-b36b-d026de57bca9" data-title=""><img src="resources/polybridge.jpeg" alt=""></a></div> 
 
 </li>
 </ol>
@@ -692,7 +704,7 @@ e.g:</p>
         
         <a href="launch.html"
            class="navigation navigation-next "
-           aria-label="Next page: Launch and Testing">
+           aria-label="Next page: Launch and Test">
             <i class="fa fa-angle-right"></i>
         </a>
         
@@ -702,7 +714,7 @@ e.g:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tokens Integration","level":"2.3.1","depth":2,"next":{"title":"Launch and Testing","level":"2.3.2","depth":2,"path":"new_product/integrate_tokens/launch.md","ref":"new_product/integrate_tokens/launch.md","articles":[]},"previous":{"title":"Register New Tokens","level":"2.3","depth":1,"path":"new_product/integrate_tokens/readme.md","ref":"new_product/integrate_tokens/readme.md","articles":[{"title":"Tokens Integration","level":"2.3.1","depth":2,"path":"new_product/integrate_tokens/tokens.md","ref":"new_product/integrate_tokens/tokens.md","articles":[]},{"title":"Launch and Testing","level":"2.3.2","depth":2,"path":"new_product/integrate_tokens/launch.md","ref":"new_product/integrate_tokens/launch.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"https://poly.network/#/","imgClass":"rect","imgSrc":"/resources/logo.png","target":"_blank","title":"flexible-linkcard"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"links":{"sidebar":{"Blog":"https://blog.csdn.net/ming_97y","Github":"https://github.com/jiangminggithub"}},"sharing":{"qq":false,"telegram":true,"youtube":true,"github":true,"douban":false,"facebook":false,"weibo":false,"discord":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"medium":true,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"email":true,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"PolyNetwork","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"new_product/integrate_tokens/tokens.md","mtime":"2022-02-11T07:00:13.001Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-14T10:02:31.661Z"},"basePath":"../..","book":{"language":""}})
+            gitbook.page.hasChanged({"page":{"title":"Tokens Integration","level":"2.3.1","depth":2,"next":{"title":"Launch and Test","level":"2.3.2","depth":2,"path":"new_product/integrate_tokens/launch.md","ref":"new_product/integrate_tokens/launch.md","articles":[]},"previous":{"title":"Register New Tokens","level":"2.3","depth":1,"path":"new_product/integrate_tokens/readme.md","ref":"new_product/integrate_tokens/readme.md","articles":[{"title":"Tokens Integration","level":"2.3.1","depth":2,"path":"new_product/integrate_tokens/tokens.md","ref":"new_product/integrate_tokens/tokens.md","articles":[]},{"title":"Launch and Test","level":"2.3.2","depth":2,"path":"new_product/integrate_tokens/launch.md","ref":"new_product/integrate_tokens/launch.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["accordion","sectionx","-sharing","sharing-plus","theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"livereload":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"https://poly.network/#/","imgClass":"rect","imgSrc":"/resources/logo.png","target":"_blank","title":"flexible-linkcard"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"links":{"sidebar":{"Blog":"https://blog.csdn.net/ming_97y","Github":"https://github.com/jiangminggithub"}},"sharing":{"qq":false,"telegram":true,"youtube":true,"github":true,"douban":false,"facebook":false,"weibo":false,"discord":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"medium":true,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"email":true,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"PolyNetwork","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"new_product/integrate_tokens/tokens.md","mtime":"2022-02-11T07:00:13.001Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-16T10:23:37.112Z"},"basePath":"../..","book":{"language":""}})
         });
     </script>
 </div>
@@ -710,6 +722,18 @@ e.g:</p>
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>

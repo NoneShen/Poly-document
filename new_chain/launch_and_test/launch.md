@@ -1,4 +1,4 @@
-<h1 align="center">Launch and Testing</h1>
+<h1 align="center">Launch and Test</h1>
 
 <div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
 
@@ -59,7 +59,7 @@ For Poly public nodes, contract addresses, please check [here](Core_Smart_Contra
 > `PolyCommit` consumes the message queue, and submit the cross chain transaction to the destination chain.
 
 
-## 4. Testing
+## 4. Test
 
 #### Cross-chain using Lock proxy
 

@@ -1,4 +1,4 @@
-<h1 align="center">Poly Bridge</h1>
+<h1 align="center">Poly Docs</h1>
 
 > [!Note|style:flat|label:Notice]
 > When a chain uses `PolyNetwork` protocol to implement asset cross-chain function, 
@@ -14,7 +14,7 @@ Monitor the lock event (source chain) and unlock event (target chain) emitted by
 
 
 * Link cross-chain events  
-Link the events monitored from source chain, relay chain and target chain according to the transaction key, and update the status of the cross-chain transaction.
+Link the events monitored from source chain, poly chain and target chain according to the transaction key, and update the status of the cross-chain transaction.
 
 
 * Refresh cross-chain fee  
