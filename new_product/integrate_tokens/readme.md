@@ -3,5 +3,5 @@ Poly Network welcomes all token's parties to join in providing interoperability 
 
 
 
-[Download](http://localhost:4000/book.xlsx)
+[Download](http://81.69.45.203/new_product/integrate_tokens/resources/book.xlsx)
 
