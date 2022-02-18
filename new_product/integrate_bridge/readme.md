@@ -1,12 +1,14 @@
 <h1 align="center">Poly Docs</h1>
 
 > [!Note|style:flat|label:Notice]
-> When a chain uses `PolyNetwork` protocol to implement asset cross-chain function, 
+> When a chain uses `Poly Network` protocol to implement asset cross-chain function, 
 > it can choose to integrate into the `Poly Bridge` 
 > or  implement their own cross-chain bridge and integrate the [APIs](bridge.md) provided by `Poly Bridge`.
 
 ## 1. Main functions of `Poly Bridge`:
-[!NOTE] For now, Poly Bridge is deployed by the poly team.
+
+> [!NOTE]
+> For now, Poly Bridge is deployed by the poly team.
 
 * Monitor cross-chain event  
 Monitor the wrapper events emitted by the wrapper contract on the source chain
