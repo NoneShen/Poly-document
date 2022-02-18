@@ -1,6 +1,7 @@
 <h1 align="center">Launch and Test</h1>
 
-[!NOTE] For now, Poly Bridge is deployed by the poly team.
+> [!NOTE]
+> For now, Poly Bridge is deployed by the poly team.
 
 ## 1. Environmental Requirements:
 
