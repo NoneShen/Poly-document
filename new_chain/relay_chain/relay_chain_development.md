@@ -10,7 +10,7 @@ The block header must contain the following information：
 - Necessary information to prove the legitimacy of the block header varies from different consensus mechanisms.
 
 > [!Note|style:flat|label:Notice]
-> If your chain doesn't support techniques like Simple Payment Verification (SPV) protocol in Bitcoin or Light Ethereum Subprotocol (LES) in Ethereum, please get in touch with the 'poly team' via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://t.me/polynetworkgroup for more support.
+> If your chain doesn't support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://t.me/polynetworkgroup for more support.
 
 ### 2. Understand the consensus algorithm
 
@@ -30,7 +30,7 @@ The block header must contain the following information：
 
 <div align=center><img src="resources/relay_chain_development.png" alt=""/></div>
 
-### 1. Implement the methods of block data verification
+### 1. Implement methods of block data verification
 
 #### Block Header Synchronization Methods
 
