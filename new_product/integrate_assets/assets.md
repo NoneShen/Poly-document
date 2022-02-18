@@ -1,5 +1,5 @@
 ### Step1. Download Asset Template 
-- [Download](resources/ImportAssetTemplate.xlsx) the asset template of Poly Network.
+- [Download](http://81.69.45.203/new_product/integrate_assets/resources/import_asset_template.xlsx) the asset template of Poly Network.
 
 ### Step2. Fill in the Asset Information
 - Fill in the asset information according to eg in excel
