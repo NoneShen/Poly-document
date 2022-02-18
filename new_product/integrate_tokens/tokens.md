@@ -2,7 +2,7 @@
 
 在跨链之前,项目方已经有了token,并且该token需要跨的链poly已经支持.
 1. Use the *https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/assets/erc20_template/ERC20Template.sol* template to deploy a corresponding asset mapping contract on other chain, the total amount needs to be consistent with the amount on the source chain;
-    <div align=center><img src="resources/ERC20Template.png" alt=""/></div>
+    <div align=center><img src="resources/ERC20Template.jpg" alt=""/></div>
 
 2. Transfer the initialized assets to the destination proxy contract. The testnet contract address:
 *https://github.com/polynetwork/docs/blob/master/config/README_TestNet.md*
@@ -32,4 +32,4 @@
      }
     ```
 4. Wait for the operator to add the contract address to the whitelist and bind asset to proxy contract then you can visit: *https://bridge.poly.network/testnet* to complete the cross-chain transfer from the source chain to destination chain.
-    <div align=center><img src="resources/polybridge.png" alt=""/></div>
+    <div align=center><img src="resources/polybridge.jpeg" alt=""/></div>
