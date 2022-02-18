@@ -47,15 +47,21 @@ For Poly public nodes, contract addresses, please check [here](Core_Smart_Contra
 > [!Note|style:flat|label:Notice]
 > About Roles 
 > * Header Sync
+> 
 > Some chains require `HeaderSync` process to run to submit chain headers to poly chain. 
 > 
 > * Source Chain -> Poly
+> 
 > `TxListen` observes cross chain transactions from source chain, and push them to message queue.
+> 
 > `TxCommit` consumes the message queue, and submit the cross chain transactions to poly.
 > 
 > * Poly -> Destination Chain
+> 
 > `PolyListen` observes cross chain transactions from poly chain and push them to message queue.
+> 
 > **ONLY ONE `PolyListen` PROCESS IS NEEDED FOR ALL CHAINS!**
+> 
 > `PolyCommit` consumes the message queue, and submit the cross chain transaction to the destination chain.
 
 
