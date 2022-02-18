@@ -1,6 +1,6 @@
 <h1 align="center">Poly Network</h1>
 
-Poly Network is a global cross-chain interoperability protocol for implementing blockchain interoperability and building the Web3.0 infrastructure. Poly Network has also integrated over 15 blockchains, including Ethereum, Polygon, Avalanche, Fantom, BSC, Arbitrum, Optimism, Heco, OEC, Neo, Ontology, Zilliqa, Elrond, xDai, etc. Since the launch, the protocol has enabled more than USD 15 billion to cross-chain asset transfer, and its TVL surpasses USD 1 billion.
+`Poly Network` is a global cross-chain interoperability protocol for implementing blockchain interoperability and building the Web3.0 infrastructure. Poly Network has also integrated over 15 blockchains, including Ethereum, Polygon, Avalanche, Fantom, BSC, Arbitrum, Optimism, Heco, OEC, Neo, Ontology, Zilliqa, Elrond, xDai, etc. Since the launch, the protocol has enabled more than USD 15 billion to cross-chain asset transfer, and its TVL surpasses USD 1 billion.
 
 ## We provide
 - Protocol for connecting new chains to the poly cross-chain ecosystem

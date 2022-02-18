@@ -13,7 +13,7 @@
   * [API](new_product/integrate_bridge/bridge.md)
   * [Launch and Test](new_product/integrate_bridge/launch.md)
 * [Import New Assets](new_product/integrate_assets/readme.md)
-  * [Assets Integration](new_product/integrate_assets/assets.md)
+  * [Steps for Importing](new_product/integrate_assets/assets.md)
   * [Launch and Test](new_product/integrate_assets/launch.md)
 * [Customize Business Logic Contracts](new_product/integrate_contracts/readme.md)
   * [Guidelines for Developing](new_product/integrate_contracts/Customizing Business Logic Contract.md)

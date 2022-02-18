@@ -6,7 +6,7 @@
 Registration is the basis for monitoring and processing block information and checking the execution of cross-chain transactions. The chain officially becomes a part of the cross-chain ecosystem after the registration process is complete and the Cross Chain Council approves the application.
 
 > [!NOTE]
-> For now, chain registration are usually completed by the poly team using the trusted account.
+> For now, chain registration are usually completed by the `poly team` using the trusted account.
 
 
 ## 2. Deploy Contracts
