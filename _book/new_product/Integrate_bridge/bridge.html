@@ -314,12 +314,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../integrate_tokens/readme.html">
+        <li class="chapter " data-level="2.3" data-path="../integrate_assets/readme.html">
             
-                <a href="../integrate_tokens/readme.html">
+                <a href="../integrate_assets/readme.html">
             
                     
-                    Register New Tokens
+                    Import New Assets
             
                 </a>
             
@@ -328,12 +328,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="../integrate_tokens/tokens.html">
+        <li class="chapter " data-level="2.3.1" data-path="../integrate_assets/assets.html">
             
-                <a href="../integrate_tokens/tokens.html">
+                <a href="../integrate_assets/assets.html">
             
                     
-                    Tokens Integration
+                    Steps for Importing
             
                 </a>
             
@@ -341,9 +341,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2" data-path="../integrate_tokens/launch.html">
+        <li class="chapter " data-level="2.3.2" data-path="../integrate_assets/launch.html">
             
-                <a href="../integrate_tokens/launch.html">
+                <a href="../integrate_assets/launch.html">
             
                     
                     Launch and Test
@@ -632,58 +632,63 @@
 <p>[!Note|style:flat|label:Notice]
 The following APIs are used by developers who need to implement the bridge function themselves. If you want to integrate into the poly bridge, please get in touch with the poly team via <a href="mailto:contact@poly.network" target="_blank">contact@poly.network</a> or <a href="https://t.me/polynetworkgroup" target="_blank">https://t.me/polynetworkgroup</a> for more support.</p>
 </blockquote>
-<h2 id="poly-bridge-apis">Poly Bridge APIs</h2>
+<h2 id="poly-bridge-apis">Poly Bridge APIs:</h2>
 <ul>
-<li><a href="#getfee">Get cross chain fee API</a></li>
-<li><a href="#transactionofhash">Get cross chain transaction status API</a></li>
-<li><a href="#transactionsofaddress">Get history transactions of address API</a></li>
+<li><a href="#Get-cross-chain-fee">Get cross chain fee</a></li>
+<li><a href="#Get-the-cross-chain-transaction-status">Get cross chain transaction status</a></li>
+<li><a href="#Get-history-transactions-of-address">Get history transactions of address</a></li>
+<li><a href="#Get-token-basics-information">Get token basics information</a></li>
+<li><a href="#Get-token-mapping-relationship-between-different-chains">Get token mapping relationship between different chains</a></li>
+<li><a href="#Get-the-expected-cross-chain-duration">Get the expected cross chain duration</a></li>
 </ul>
-<h3 id="get-cross-chain-fee-api">Get cross chain fee API</h3>
+<h3 id="get-cross-chain-fee">Get cross chain fee</h3>
 <p>This API returns the amount of assets as cross-chain fee that needs to be charged on the <a href="../../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a> when crossing to the <a href="../../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a>.<br>When the user performs a cross-chain operation, the user&apos;s fee is charged on the <a href="../../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a> transaction.If SwapTokenHash is specified, the available balance is returned.</p>
 <p>API</p>
-<pre class="language-"><code>https://bridge.poly.network/v1/getfee
+<pre class="language-"><code>Testnet: https://bridge.poly.network/testnet/v1/getfee
+Mainnet: https://bridge.poly.network/v1/getfee
 </code></pre><p>Parameter</p>
 <pre class="language-"><code>/* @SrcChainId:    source chian id
  * @SwapTokenHash: the hahs of the cross-chain token on the source chain
  * @Hash: The token hash used to charge fees
- * @DstChainId: destination chain id
+ * @DstChainId: target chain id
 */
 </code></pre><p>Example Request</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> POST <span class="token string">&apos;https://bridge.poly.network/v1/getfee&apos;</span> <span class="token punctuation">\</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> --location --request POST <span class="token string">&apos;https://bridge.poly.network/testnet/v1/getfee&apos;</span> <span class="token punctuation">\</span>
 --header <span class="token string">&apos;Content-Type: application/json&apos;</span> <span class="token punctuation">\</span>
 --data-raw <span class="token string">&apos;{
-    &quot;SrcChainId&quot;: 3,
-    &quot;SwapTokenHash&quot;: &quot;ac654837a90eee8fccabd87a2d4fc7637484f01a&quot;,
-    &quot;Hash&quot;: &quot;ac654837a90eee8fccabd87a2d4fc7637484f01a&quot;,
-    &quot;DstChainId&quot;: 2
+    &quot;SrcChainId&quot;: 2,
+    &quot;SwapTokenHash&quot;: &quot;0d9c8723b343a8368bebe0b5e89273ff8d712e3c&quot;,
+    &quot;Hash&quot;: &quot;0000000000000000000000000000000000000000&quot;,
+    &quot;DstChainId&quot;: 3
 }&apos;</span>
 </code></pre>
 <p>Example Response</p>
 <pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
-    <span class="token property">&quot;SrcChainId&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ac654837a90eee8fccabd87a2d4fc7637484f01a&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;DstChainId&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;UsdtAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;129.39344154493147826420255&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;TokenAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;129.29900284&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;TokenAmountWithPrecision&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.2929900284624261112346408e+08&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;SwapTokenHash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ac654837a90eee8fccabd87a2d4fc7637484f01a&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;Balance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;9.621970793238e+06&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;BalanceWithPrecision&quot;</span><span class="token operator">:</span> <span class="token string">&quot;9.621970793238e+12&quot;</span>
+  <span class="token property">&quot;SrcChainId&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000000000000000000000000000000000000000&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;DstChainId&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;UsdtAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.1874142096&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;TokenAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.00006131&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;TokenAmountWithPrecision&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6.1318011405463236515e+13&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;SwapTokenHash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0d9c8723b343a8368bebe0b5e89273ff8d712e3c&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;Balance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.9553450781056623353e+41&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;BalanceWithPrecision&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.9553450781056623352e+47&quot;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="get-the-cross-chain-transaction-status">Get the cross chain transaction status</h3>
 <p>This API returns the details of the specified hash, you can view the cross-chain progress through the <code>TransactionState</code> in the response.  </p>
 <p>API</p>
-<pre class="language-"><code>https://bridge.poly.network/v1/transactionofhash
+<pre class="language-"><code>Testnet: https://bridge.poly.network/testnet/v1//transactionofhash
+Mainnet: https://bridge.poly.network/v1/transactionofhash
 </code></pre><p>Parameter</p>
 <pre class="language-"><code>/*
  * @Hash: the cross chain transaction hash
 */
 </code></pre><p>Example Request</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> POST <span class="token string">&apos;https://bridge.poly.network/v1/transactionofhash&apos;</span> <span class="token punctuation">\</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> --location --request POST <span class="token string">&apos;https://bridge.poly.network/testnet/v1//transactionofhash&apos;</span> <span class="token punctuation">\</span>
 --header <span class="token string">&apos;Content-Type: application/json&apos;</span> <span class="token punctuation">\</span>
 --data-raw <span class="token string">&apos;{
-    &quot;Hash&quot;: &quot;4496cdb2905c148c06039a83d4130f04ddae498aa1065b06430ccd2766b08f78&quot;
+    &quot;Hash&quot;: &quot;0b2c42b35e811b973c1d9258214cc68e63059271256bfb89239198cd1a7bda98&quot;
 }&apos;</span>
 </code></pre>
 <p>Example Response</p>
@@ -759,18 +764,19 @@ The following APIs are used by developers who need to implement the bridge funct
 <h3 id="get-history-transactions-of-address">Get history transactions of address</h3>
 <p>This api returns the cross-chain history of the specified address</p>
 <p>API</p>
-<pre class="language-"><code>https://bridge.poly.network/v1/transactionsofaddress
+<pre class="language-"><code>Testnet: https://bridge.poly.network/testnet/v1/transactionsofaddress
+Mainnet: https://bridge.poly.network/v1/transactionsofaddress
 </code></pre><p>Parameter</p>
 <pre class="language-"><code>/* @Addresses: wallet address
  * @PageNo: start page
  * @PageSize: size of displays per page
 */
 </code></pre><p>Example Request</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> POST <span class="token string">&apos;https://bridge.poly.network/v1/transactionsofaddress&apos;</span> <span class="token punctuation">\</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> --location --request POST <span class="token string">&apos;https://bridge.poly.network/testnet/v1/transactionsofaddress&apos;</span> <span class="token punctuation">\</span>
 --header <span class="token string">&apos;Content-Type: application/json&apos;</span> <span class="token punctuation">\</span>
 --data-raw <span class="token string">&apos;{
     &quot;Addresses&quot;: [
-        &quot;6ac449ade24174238df325749bd5ea87b02bf7f6&quot;
+        &quot;93aea6537acd6c10ed76ea8eb367c2ae4cfa2282&quot;
     ],
     &quot;PageNo&quot;: 0,
     &quot;PageSize&quot;: 10
@@ -778,84 +784,237 @@ The following APIs are used by developers who need to implement the bridge funct
 </code></pre>
 <p>Example Response</p>
 <pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
-    <span class="token property">&quot;PageSize&quot;</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;PageNo&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;TotalPage&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;TotalCount&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;Transactions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token property">&quot;PageSize&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;PageNo&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;TotalPage&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;TotalCount&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;Transactions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0b2c42b35e811b973c1d9258214cc68e63059271256bfb89239198cd1a7bda98&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;User&quot;</span><span class="token operator">:</span> <span class="token string">&quot;aecb8dff86f198ad3a812a00035438e553b230bd&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;SrcChainId&quot;</span><span class="token operator">:</span> <span class="token number">88</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;BlockHeight&quot;</span><span class="token operator">:</span> <span class="token number">1163947</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1644997356</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;DstChainId&quot;</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;FeeAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.00023409&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;TransferAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.23&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;DstUser&quot;</span><span class="token operator">:</span> <span class="token string">&quot;93aea6537acd6c10ed76ea8eb367c2ae4cfa2282&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;ServerId&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;State&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Token&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;d2a4cff31913016155e38e474a2c06d08be276cf&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">88</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;GAS&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;GAS&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;39455668193977&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;GAS&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Price&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5.50686187&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Ind&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1645095305</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Meta&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;PriceMarkets&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Tokens&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;FeeToken&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;d2a4cff31913016155e38e474a2c06d08be276cf&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">88</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;GAS&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;GAS&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;39455668193977&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;TransactionState&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token punctuation">{</span>
-            <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5cc2f4d6d1636ede5e9755326e160f9519a85d7dc86d110f8f86ae2ce6d71763&quot;</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;User&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6ac449ade24174238df325749bd5ea87b02bf7f6&quot;</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;SrcChainId&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;BlockHeight&quot;</span><span class="token operator">:</span> <span class="token number">14518413</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1642647015</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;DstChainId&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;FeeAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.00000428&quot;</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;TransferAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;10&quot;</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;DstUser&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6ac449ade24174238df325749bd5ea87b02bf7f6&quot;</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;ServerId&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;State&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;Token&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-                <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;34ba3af693d6c776d73c7fa67e2b2e79be8ef4ed&quot;</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BALA&quot;</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BALA&quot;</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;312652822265190520569813011927&quot;</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-                    <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BALA&quot;</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Price&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.2e-07&quot;</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Ind&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1644508861</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Meta&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://app.ont.io/poly/BALA.jpg&quot;</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;PriceMarkets&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Tokens&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
-                <span class="token punctuation">}</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;FeeToken&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-                <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000000000000000000000000000000000000000&quot;</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BNB&quot;</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BNB&quot;</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8418401211022837352345&quot;</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-                <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;TransactionState&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-                <span class="token punctuation">{</span>
-                    <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5cc2f4d6d1636ede5e9755326e160f9519a85d7dc86d110f8f86ae2ce6d71763&quot;</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Blocks&quot;</span><span class="token operator">:</span> <span class="token number">21</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;NeedBlocks&quot;</span><span class="token operator">:</span> <span class="token number">21</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1642647015</span>
-                <span class="token punctuation">}</span><span class="token punctuation">,</span>
-                <span class="token punctuation">{</span>
-                    <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;14260d677eea57af0afc20b27dd417616b8b8d5a58fc173100244edfe6752b34&quot;</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Blocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;NeedBlocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1642647093</span>
-                <span class="token punctuation">}</span><span class="token punctuation">,</span>
-                <span class="token punctuation">{</span>
-                    <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5602281b697bf3d8064aa01cc82184d5fff56b732932d0cfc509c3deb6c95230&quot;</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Blocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;NeedBlocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-                    <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1642647140</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">]</span>
+          <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0b2c42b35e811b973c1d9258214cc68e63059271256bfb89239198cd1a7bda98&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">88</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Blocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;NeedBlocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1644997356</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;331287ddc15029faa160dcf3846a57471d21b7b817fabbcd87e3fe4b80d89130&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Blocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;NeedBlocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1644997377</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;42e45d1bdddc9bd3b63979676fd99f928fa741ea28a806cf385c001ac36ba101&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Blocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;NeedBlocks&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">1644997384</span>
         <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="get-token-basics-information">Get token basics information</h3>
+<p>This api returns the basic information of the token, including price, precision, meta data and the token information mapped on each chain.</p>
+<p>API</p>
+<pre class="language-"><code>Testnet: https://bridge.poly.network/testnet/v1/tokenbasics
+Mainnet: https://bridge.poly.network/v1/tokenbasics
+</code></pre><p>Parameter</p>
+<pre class="language-"><code>none
+</code></pre><p>Example Request</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> --location --request POST <span class="token string">&apos;https://bridge.poly.network/testnet/v1/tokenbasics&apos;</span>
+</code></pre>
+<p>Example Response</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;TotalCount&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;TokenBasics&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8PAY&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Price&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Ind&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Time&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Meta&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://app.ont.io/poly/8pay.jpg&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;PriceMarkets&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Tokens&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;48abb7954b5bc46be41cc444e731f9d03aa33feb&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">79</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8pay&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8PAY&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;28254867780000000000&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;aa00fbcface6ff4913cc8322b12f63e2ad45d448&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8pay&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8PAY&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;71745132220000000000&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="get-token-mapping-relationship-between-different-chains">Get token mapping relationship between different chains</h3>
+<p>This api returns the <a href="../../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a> mapping relationship of the token on the <a href="../../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a>.
+API</p>
+<pre class="language-"><code>Testnet: https://bridge.poly.network/testnet/v1/tokenmap
+Mainnet&#xFF1A;https://bridge.poly.network/v1/tokenmap
+</code></pre><p>Parameter</p>
+<pre class="language-"><code>/* @ChainId: source chain id
+ * @Hash: source token hash
+*/
+</code></pre><p>Example Request</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> --location --request POST <span class="token string">&apos;https://bridge.poly.network/testnet/v1/tokenmap&apos;</span> <span class="token punctuation">\</span>
+--header <span class="token string">&apos;Content-Type: application/json&apos;</span> <span class="token punctuation">\</span>
+--data-raw <span class="token string">&apos;{
+    &quot;ChainId&quot;: 79,
+    &quot;Hash&quot;: &quot;48abb7954b5bc46be41cc444e731f9d03aa33feb&quot;
+}&apos;</span>
+</code></pre>
+<p>Example Response</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;TotalCount&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;SrcTokenHash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;48abb7954b5bc46be41cc444e731f9d03aa33feb&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;SrcToken&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;48abb7954b5bc46be41cc444e731f9d03aa33feb&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">79</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8pay&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8PAY&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;28254867780000000000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;DstTokenHash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;aa00fbcface6ff4913cc8322b12f63e2ad45d448&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;DstToken&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;aa00fbcface6ff4913cc8322b12f63e2ad45d448&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8pay&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8PAY&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;71745132220000000000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="get-the-expected-cross-chain-duration">Get the expected cross chain duration</h3>
+<p>This api returns the expected duration from the <a href="../../GLOSSARY.html#source-chain" class="glossary-term" title="A public chain corresponds to the target chain where a particular asset firstly appears.">source chain</a> to the <a href="../../GLOSSARY.html#target-chain" class="glossary-term" title="A public chain corresponds to the source chain on which we want to cross an asset and issue a new token.">target chain</a></p>
+<p>API</p>
+<pre class="language-"><code>Testnet: https://bridge.poly.network/testnet/v1/expecttime
+Mainnet&#xFF1A;https://bridge.poly.network/v1/expecttime
+</code></pre><p>Parameter</p>
+<pre class="language-"><code>/* @SrcChainId: source chain id
+ * @DstChainId: target token hash
+*/
+</code></pre><p>Example Request</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> --location --request POST <span class="token string">&apos;https://bridge.poly.network/testnet/v1/expecttime&apos;</span> <span class="token punctuation">\</span>
+--header <span class="token string">&apos;Content-Type: application/json&apos;</span> <span class="token punctuation">\</span>
+--data-raw <span class="token string">&apos;{
+    &quot;SrcChainId&quot;: 79,
+    &quot;DstChainId&quot;: 2
+}&apos;</span>
+</code></pre>
+<p>Example Response</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;TotalCount&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;SrcTokenHash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;48abb7954b5bc46be41cc444e731f9d03aa33feb&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;SrcToken&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;48abb7954b5bc46be41cc444e731f9d03aa33feb&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">79</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8pay&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8PAY&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;28254867780000000000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;DstTokenHash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;aa00fbcface6ff4913cc8322b12f63e2ad45d448&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;DstToken&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;Hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;aa00fbcface6ff4913cc8322b12f63e2ad45d448&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;ChainId&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8pay&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasicName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8PAY&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Precision&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;AvailableAmount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;71745132220000000000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenBasic&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;TokenMaps&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;Property&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2022 PolyNetwork. All right reserved.</span><span class="footer-modification">Last modification date&#xFF1A;
-2022-02-11 14:57:10
+2022-02-18 10:22:49
 </span></footer>
                         
                     </section>
@@ -902,7 +1061,7 @@ The following APIs are used by developers who need to implement the bridge funct
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"API","level":"2.2.1","depth":2,"next":{"title":"Launch and Test","level":"2.2.2","depth":2,"path":"new_product/integrate_bridge/launch.md","ref":"new_product/integrate_bridge/launch.md","articles":[]},"previous":{"title":"Build New Bridges","level":"2.2","depth":1,"path":"new_product/integrate_bridge/readme.md","ref":"new_product/integrate_bridge/readme.md","articles":[{"title":"API","level":"2.2.1","depth":2,"path":"new_product/integrate_bridge/bridge.md","ref":"new_product/integrate_bridge/bridge.md","articles":[]},{"title":"Launch and Test","level":"2.2.2","depth":2,"path":"new_product/integrate_bridge/launch.md","ref":"new_product/integrate_bridge/launch.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["sectionx","-sharing","sharing-plus","theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"https://poly.network/#/","imgClass":"rect","imgSrc":"/resources/logo.png","target":"_blank","title":"flexible-linkcard"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"links":{"sidebar":{"Blog":"https://blog.csdn.net/ming_97y","Github":"https://github.com/jiangminggithub"}},"sharing":{"qq":false,"telegram":true,"youtube":true,"github":true,"douban":false,"facebook":false,"weibo":false,"discord":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"medium":true,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"email":true,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"PolyNetwork","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"new_product/integrate_bridge/bridge.md","mtime":"2022-02-11T06:57:10.993Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-17T09:38:05.430Z"},"basePath":"../..","book":{"language":""}})
+            gitbook.page.hasChanged({"page":{"title":"API","level":"2.2.1","depth":2,"next":{"title":"Launch and Test","level":"2.2.2","depth":2,"path":"new_product/integrate_bridge/launch.md","ref":"new_product/integrate_bridge/launch.md","articles":[]},"previous":{"title":"Build New Bridges","level":"2.2","depth":1,"path":"new_product/integrate_bridge/readme.md","ref":"new_product/integrate_bridge/readme.md","articles":[{"title":"API","level":"2.2.1","depth":2,"path":"new_product/integrate_bridge/bridge.md","ref":"new_product/integrate_bridge/bridge.md","articles":[]},{"title":"Launch and Test","level":"2.2.2","depth":2,"path":"new_product/integrate_bridge/launch.md","ref":"new_product/integrate_bridge/launch.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["sectionx","-sharing","sharing-plus","theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"https://poly.network/#/","imgClass":"rect","imgSrc":"/resources/logo.png","target":"_blank","title":"flexible-linkcard"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"links":{"sidebar":{"Blog":"https://blog.csdn.net/ming_97y","Github":"https://github.com/jiangminggithub"}},"sharing":{"qq":false,"telegram":true,"youtube":true,"github":true,"douban":false,"facebook":false,"weibo":false,"discord":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"medium":true,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"email":true,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"PolyNetwork","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"new_product/integrate_bridge/bridge.md","mtime":"2022-02-18T02:22:49.819Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-18T03:35:48.130Z"},"basePath":"../..","book":{"language":""}})
         });
     </script>
 </div>

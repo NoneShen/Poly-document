@@ -1,8 +1,9 @@
-<h1 align="center">Launch Poly Bridge</h1>
+<h1 align="center">Launch and Test</h1>
 
-[!NOTE] For now, Poly Bridge is deployed by the poly team.
+> [!NOTE]
+> For now, Poly Bridge is deployed by the poly team.
 
-## 1. Environmental Requirements
+## 1. Environmental Requirements:
 
 - The computer where poly bridge is deployed needs to have access to the Internet;
 - The computer where poly bridge is deployed needs to have the following software installed: golang>=1.17 and git.
@@ -25,7 +26,7 @@ go build -o bridge_http -tags testnet/mainnet ./
 ```
 
 ### Step 3. Configuration 
-* Make sure necessary configuration is specifed in `config.json` [Sample](https://github.com/polynetwork/poly-bridge/blob/master/conf/config_testnet.json)
+* Make sure necessary configuration is specifed in `config.json`
 1. DBConfig
 2. RedisConfig
 3. ChainNodes
@@ -33,10 +34,118 @@ go build -o bridge_http -tags testnet/mainnet ./
 5. FeeListenConfig
 6. CoinPriceListenConfig
 
+Configuration example, for more details, please refer to [here](https://github.com/polynetwork/poly-bridge/blob/master/conf/config_testnet.json)
+```json
+{
+  "DBConfig": {
+    "Debug": true,
+    "URL": "localhost:3306",
+    "Scheme": "poly",
+    "User": "root",
+    "Password": "123"
+  },
+  "RedisConfig": {
+    "addr": "redis:6379",
+    "password": "123",
+    "proto": "tcp",
+    "pool_size": 50,
+    "min_idle_conns": 10,
+    "dial_timeout": 2,
+    "read_timeout": 2,
+    "write_timeout": 2,
+    "idle_timeout": 10,
+    "expiration": 600
+  },
+  "ChainNodes": [
+    {
+      "ChainName": "Poly",
+      "ChainId": 0,
+      "Nodes": [
+        {
+          "Url": "http://124.156.226.204:20336"
+        }
+      ]
+    },
+    {
+      "ChainName": "Ethereum",
+      "ChainId": 2,
+      "Nodes": [
+        {
+          "Url": "https://ropsten.infura.io/v3/xxx"
+        }
+      ]
+    }
+  ],
+  "ChainListenConfig": [
+    {
+      "ChainName": "Poly",
+      "ChainId": 0,
+      "ListenSlot": 1,
+      "Defer": 1,
+      "BatchSize": 5,
+      "CCMContract": "0300000000000000000000000000000000000000"
+    },
+    {
+      "ChainName": "Ethereum",
+      "ChainId": 2,
+      "ListenSlot": 5,
+      "Defer": 1,
+      "BatchSize": 5,
+      "WrapperContract": [
+        "e498fb7D00468a67A79dE5D4Ca264d3350165280",
+        "Dc37471Af6a8aB7f45F444c5a3Ef4758281bE32C"
+      ],
+      "CCMContract": "f989E80AAd477cB6059f366C0170a498909C4a55",
+      "ProxyContract": [
+        "D8aE73e06552E270340b63A8bcAbf9277a1aac99"
+      ],
+      "SwapContract": "1E7A3e54494F300dC66181621E23eE657E22D725",
+      "NFTWrapperContract": [
+        "940300dc3Fc26e3A330a300be766184C0b5Fe019"
+      ],
+      "NFTProxyContract": [
+        "9bEF1AE7304D3d2F344ea00e796ADa18cE1beb03"
+      ],
+      "NFTQueryContract": "500674D603331C43ed2288834BAb284BF65fc076"
+    }
+  ],
+  "FeeListenConfig": [
+    {
+      "ChainId": 2,
+      "ChainName": "Ethereum",
+      "GasLimit": 120000,
+      "ProxyFee": 120,
+      "MinFee": 80
+    }
+  ],
+  "CoinPriceListenConfig": [
+    {
+      "MarketName": "coinmarketcap",
+      "Nodes": [
+        {
+          "Url": "https://pro-api.coinmarketcap.com/v1/cryptocurrency/",
+          "Key": "xxx"
+        }
+      ]
+    },
+    {
+      "MarketName": "binance",
+      "Nodes": [
+        {
+          "Url": "https://api1.binance.com/"
+        }
+      ]
+    }
+  ]
+}
+```
+
 ### Step 4. Run
 ```bash
 ./bridge_server --config config.json
 ./bridge_http --config config.json
 ```
 
-
+### Step 5. Test
+There are detailed unit tests in the code repository, which can be tested as needed before the service is started.
+After the service is started, you need to check the log for errors, such as program panic, node connection failure, etc., and you need to pay attention to whether the monitoring height of the chain increases normally.

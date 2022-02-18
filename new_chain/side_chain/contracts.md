@@ -19,6 +19,9 @@
 
 ## 2. Develop Cross Chain Manager Contracts
 
+> [!Note|style:flat|label:Notice]
+> In this part, we offer the four main features required to be implemented in the Cross-chain modules, which are all in the CCM contract. As for CCD and CCMP contract, you could choose the suitable way to realize contracts upgrading features.
+
 To guarantee the safety of CCM contract, we keep whitelists of contract addresses and methods to prevent invalid call. Meanwhile, we also set `whiteLister` to manage these whitelists of CCM contract. We highly encourage developers to develop the similar features of authority management in personal projects.
 
 ### Step1. Implement methods of synchronizing genesis block header

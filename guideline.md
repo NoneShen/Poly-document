@@ -10,9 +10,9 @@ Please read this section if you want to connect your chain to poly
 Please read this section if you want to build a bridge using poly bridge sdk
 - [Build New Bridges](new_product/integrate_bridge/readme.md)
 
-## Register New Tokens
-Please read this section if for want to register tokens to the poly cross-chain ecosystem
-- [Register new tokens](new_product/integrate_tokens/readme.md)
+## Import New Assets
+Please read this section if for want to import assets to the poly cross-chain ecosystem
+- [Import New Assets](new_product/integrate_assets/readme.md)
 
 ## Customize Business Logic Contracts
 
