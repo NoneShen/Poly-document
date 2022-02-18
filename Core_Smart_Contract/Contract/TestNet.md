@@ -1,4 +1,4 @@
- <div id="menu"></div>
+ <a id="menu"></a>
 
 # [MainNet](MainNet.md) | TestNet | [DevNet](DevNet.md) 
 
@@ -7,8 +7,8 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 ### Contract Index (Chain-Chain ID)
 
 | **Bitcoin-1**                             | **[Ethereum-2](TestNet.md#Ethereum)** | **[Ontology-3](TestNet.md#Ontology)**       | **[Neo N2-5](TestNet.md#Neo-N2)**       | **Switcheo-**                       |
-|:------------------------------------------|:--------------------------------------|:--------------------------------------------|:----------------------------------------|:------------------------------------|
-| **[Bsc-79](TestNet.md#BSC)**              | **[Heco-7](TestNet.md#HECO)**         | **[Palette-107](TestNet.md#Palette)**       | **[Ok-200](TestNet.md#Ok)**             | **Curve-82**                        |
+|-------------------------------------------|---------------------------------------|---------------------------------------------|-----------------------------------------|-------------------------------------|
+| **[BSC-79](TestNet.md#BSC)**              | **[HECO-7](TestNet.md#HECO)**         | **[Palette-107](TestNet.md#Palette)**       | **[OK-200](TestNet.md#OK)**             | **Curve-82**                        |
 | **[Neo N3-88](TestNet.md#Neo-N3)**        | **[Polygon-202](TestNet.md#Polygon)** | **[Zilliqa-111](TestNet.md#Zilliqa)**       | **[Arbitrum-205](TestNet.md#Arbitrum)** | **[xDAI-206](TestNet.md#xDAI)**     |
 | **[Avalanche-209](TestNet.md#Avalanche)** | **[Fantom-208](TestNet.md#Fantom)**   | **[Optimistic-207](TestNet.md#Optimistic)** | **[Metis-300](TestNet.md#Metis)**       | **[Goerli-502](TestNet.md#Goerli)** |
 | **[Rinkeby-402](TestNet.md#Rinkeby)**     | **[Kovan-302](TestNet.md#Kovan)**     | **[Pixie-316](TestNet.md#Pixie)**           | **[Boba-400](TestNet.md#Boba)**         |                                     |
@@ -16,11 +16,11 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 ### Quick Index
 
 | **[Router And Chain ID](TestNet.md#Router-And-Chain-ID)** |
-|:----------------------------------------------------------|
+|-----------------------------------------------------------|
 
 
 
-## Ethereum <div id="Ethereum"></div>
+## Ethereum <a id="Ethereum"></a>
 
 
 | Type           | Contract                                   | Desc                                          |
@@ -34,13 +34,13 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | NFT Wrapper    | 0x940300dc3Fc26e3A330a300be766184C0b5Fe019 | NFT Wrapper contract                          |
 | NFT Query      | 0x500674D603331C43ed2288834BAb284BF65fc076 | NFT profile query contract                    |
 | NFT SEASCAPE   | 0x3680fb34F55030326659cd9AaEc522B6E355bdB6 | SEASCAPE NFT contracct hash                   |
-| NFT cat1       | 0xa85c9FC8F2c9060d674E0CA97F703a0A30619305 | NFT collection of `digitalCat1` contract      |
+
 
 
 
 ###### [Back to top](TestNet.md#menu)
 
-## Bsc <div id="Bsc"></div>
+## BSC <a id="BSC"></a>
 
 
 | Type            | Contract                                   | Desc                                          |
@@ -56,12 +56,11 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | NFT Wrapper     | 0x61E289D43C1FEA7598786557A2F309979ad144D3 | NFT Wrapper contract                          |
 | NFT Query       | 0xAB3e1F13127bE931A71Fdc8940bd31506EFC6A70 | NFT profile query contract                    |
 | NFT SEASCAPE    | 0x66638F4970C2ae63773946906922c07a583b6069 | The seascape NFT contract                     |
-| NFT cat1        | 0x455B51D882571E244d03668f1a458ca74E70d196 | NFT collection of `digitalCat1` contract      |
 | NFT Nobel Boss  | 0x301294a9c7c218d439edd6d5ab16f9663fc10f3e | NFT Nobel Boss Mint contract                  |
 
 ###### [Back to top](TestNet.md#menu)
 
-## OK <div id="OK"></div>
+## OK <a id="OK"></a>
 
 
 | Type       | Contract                                   | Desc                               |
@@ -72,7 +71,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | Lock Proxy | 0x74cE7D56cd1b5AEe9A3345A490b5Ed768134C7D4 | Asset Proxy contract               |
 ###### [Back to top](TestNet.md#menu)
 
-## Heco <div id="Heco"></div>
+## HECO <a id="HECO"></a>
 
 | Type           | Contract                                   | Desc                                     |
 |----------------|--------------------------------------------|------------------------------------------|
@@ -85,53 +84,53 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | NFT Wrapper    | 0xbaBaAF5CF7f63437755aAAFE7a4106463c5cD540 | NFT Wrapper contract                     |
 | NFT Query      | 0xE1488842b15E0f084b254588f46e4C570065d6A0 | NFT profile query contract               |
 | NFT SEASCAPE   | 0xF9Dd424e64E9264632a564FBDcC87Ba8eA40B5Ba | SEASCAPE NFT contract                    |
-| NFT cat1       | 0x0C3C33dA088ABeeE376418d3E384528c5AaDBA11 | NFT collection of `digitalCat1` contract |
+
 
 ###### [Back to top](TestNet.md#menu)
 
-## Ontology <div id="Ontology"></div>
+## Ontology <a id="Ontology"></a>
 
-#### Please donot send from or to Ontology network during upgrade of Ontology testnet
+#### Don't conduct data transmission on Ontology network during its testnet upgrading.  
 
 | Type        | Contract                                                                                      | Desc                                          |
 |-------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------|
-| Wrapper     | B:a5c101afa9e04e9dd2c912983795005a49e02efa <br/>L: fa2ee0495a0095379812c9d29d4ee0a9af01c1a5   | WrapperV1 that takes transferred asset as fee |
-| Lock Proxy  | B: 33c439c502cb4b6ac5a1e8057a65fe1fa7c300e2 </br> L: e200c3a71ffe657a05e8a1c56a4bcb02c539c433 | Asset Proxy contract                          |
+| Wrapper     | B:a5c101afa9e04e9dd2c912983795005a49e02efa <br>L: fa2ee0495a0095379812c9d29d4ee0a9af01c1a5    | WrapperV1 that takes transferred asset as fee |
+| Lock Proxy  | B: 33c439c502cb4b6ac5a1e8057a65fe1fa7c300e2 <br> L: e200c3a71ffe657a05e8a1c56a4bcb02c539c433  | Asset Proxy contract                          |
 
 ###### [Back to top](TestNet.md#menu)
-## Note  <div id="Note"></div>
+## Note  <a id="Note"></a>
 
 `B` means big-endian, we can search the contract transaction history in corresponding explorer.
 
 `L` means little-endian, we usually use it as the asset hash input when we do binding asset hash operation.
 
 ###### [Back to top](TestNet.md#menu)
-## Neo N2 <div id="Neo-N2"></div>
+## Neo N2 <a id="Neo-N2"></a>
 
-| Type       | Contract                                    |                                          | Desc                                          |
-|------------|---------------------------------------------|------------------------------------------|-----------------------------------------------|
-| Wrapper    | 0x0f4fad9ae3830585a9264e6ec0b1eff3e89c6558  | 58659ce8f3efb1c06e4e26a9850583e39aad4f0f | WrapperV1 that takes transferred asset as fee |
-| Nep5Proxy  | 0xedd2862dceb90b945210372d229f453f2b705f4f  | 4f5f702b3f459f222d371052940bb9ce2d86d2ed | Asset Proxy contract                          |
-| CCM        | 0xe1695b1314a1331e3935481620417ed835669407  | 07946635d87e4120164835391e33a114135b69e1 | Cross Chain Manager contract                  |
-
-###### [Back to top](TestNet.md#menu)
-
-## Neo N3 <div id="Neo-N3"></div>
-
-
-| Type           | Contract                                   |                                          | Desc                                          |
-|----------------|--------------------------------------------|------------------------------------------|-----------------------------------------------|
-| Wrapper        |                                            |                                          | WrapperV1 that takes transferred asset as fee |
-| Nep17Proxy     | 0x4487494dac2f7eb68bdae009cacd6de88243e542 | 42e54382e86dcdca09e0da8bb67e2fac4d498744 | Asset Proxy contract                          |
-| CCM            | 0x618d44dc3af16c6120dbf65402024f40a04f772a | 2a774fa0404f020254f6db20616cf13adc448d61 | Cross Chain Manager contract                  |
-| NFT Lock Proxy | 0x7acd03102216db84993710cafb924e48a2259e1a | 1a9e25a2484e92fbca10379984db16221003cd7a | NFT Lock Proxy contract                       |
-| NFT cat1       | 0xd74d35311c2a20ba78cd12056d3017da5bd352a6 | a652d35bda17306d0512cd78ba202a1c31354dd7 | NFT collection of digitalCat1 contract        |
+| Type       | Contract                                                                                       | Desc                                          | 
+|------------|------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| Wrapper    | B: 58659ce8f3efb1c06e4e26a9850583e39aad4f0f <br> L: 0x0f4fad9ae3830585a9264e6ec0b1eff3e89c6558 | WrapperV1 that takes transferred asset as fee |
+| Nep5Proxy  | B: 4f5f702b3f459f222d371052940bb9ce2d86d2ed <br> L: 0xedd2862dceb90b945210372d229f453f2b705f4f | Asset Proxy contract                          |
+| CCM        | B: 07946635d87e4120164835391e33a114135b69e1 <br> L: 0xe1695b1314a1331e3935481620417ed835669407 | Cross Chain Manager contract                  |
 
 ###### [Back to top](TestNet.md#menu)
 
+## Neo N3 <a id="Neo-N3"></a>
 
 
-## Cosmos <div id="Cosmos"></div>
+| Type             | Contract                                                                                      | Desc                                          |
+|------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------|
+| Wrapper          |                                                                                               | WrapperV1 that takes transferred asset as fee |
+| Nep17Proxy       | B: 42e54382e86dcdca09e0da8bb67e2fac4d498744<br> L: 0x4487494dac2f7eb68bdae009cacd6de88243e542 | Asset Proxy contract                          |
+| CCM              | B: 2a774fa0404f020254f6db20616cf13adc448d61<br> L: 0x618d44dc3af16c6120dbf65402024f40a04f772a | Cross Chain Manager contract                  |
+| NFT Lock Proxy   | B: 1a9e25a2484e92fbca10379984db16221003cd7a<br> L: 0x7acd03102216db84993710cafb924e48a2259e1a | NFT Lock Proxy contract                       |
+
+
+###### [Back to top](TestNet.md#menu)
+
+
+
+## Cosmos <a id="Cosmos"></a>
 
 
 | Type       | Denom (coin name)  | Asset/Contract                            | Desc                   |
@@ -141,7 +140,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Polygon <div id="Polygon"></div>
+## Polygon <a id="Polygon"></a>
 
 
 | Type           | Contract                                   | Desc                                            |
@@ -159,7 +158,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Palette <div id="Palette"></div>
+## Palette <a id="Palette"></a>
 
 | Type           | Contract                                      | Desc                               |
 |----------------|-----------------------------------------------|------------------------------------|
@@ -172,7 +171,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | NFT Query      | 0x34B5B0cC2b57d96d3930Ddc66084029170fE6BFD    | NFT profile query contract         |  
 ###### [Back to top](TestNet.md#menu)
 
-## Zilliqa <div id="Zilliqa"></div>
+## Zilliqa <a id="Zilliqa"></a>
 
 | Type       | Contract                                   | Desc                               |
 |------------|--------------------------------------------|------------------------------------|
@@ -182,7 +181,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Arbitrum <div id="Arbitrum"></div>
+## Arbitrum <a id="Arbitrum"></a>
 
 
 | Type       | Contract                                   | Desc                                           |
@@ -194,7 +193,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | Wrapper    | 0x27eb74B4Db37517F1dC6dE67364e19782624402F | WrapperV1 that takes transferred asset as fee  |
 ###### [Back to top](TestNet.md#menu)
 
-## Xdai <div id="Xdai"></div>
+## xDAI <a id="xDAI"></a>
 
 
 | Type       | Contract                                   | Desc                                           |
@@ -207,7 +206,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Optimistic <div id="Optimistic"></div>
+## Optimistic <a id="Optimistic"></a>
 
 
 | Type       | Contract                                   | Desc                                           |
@@ -220,7 +219,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Fantom <div id="Fantom"></div>
+## Fantom <a id="Fantom"></a>
 
 
 | Type       | Contract                                   | Desc                                           |
@@ -233,7 +232,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Avalanche <div id="Avalanche"></div>
+## Avalanche <a id="Avalanche"></a>
 
 
 | Type       | Contract                                   | Desc                                          |
@@ -246,7 +245,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Metis <div id="Metis"></div>
+## Metis <a id="Metis"></a>
 
 
 | Type            | Contract                                   | Desc                                          |
@@ -263,7 +262,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Goerli <div id="Goerli"></div>
+## Goerli <a id="Goerli"></a>
 
 | Type       | Contract                                   | Desc                                      |
 |------------|--------------------------------------------|-------------------------------------------|
@@ -275,7 +274,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Rinkeby <div id="Rinkeby"></div>
+## Rinkeby <a id="Rinkeby"></a>
 
 | Type            | Contract                                   | Desc                                      |
 |-----------------|--------------------------------------------|-------------------------------------------|
@@ -292,7 +291,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Kovan <div id="Kovan"></div>
+## Kovan <a id="Kovan"></a>
 
 | Type       | Contract                                   | Desc                                      |
 |------------|--------------------------------------------|-------------------------------------------|
@@ -304,7 +303,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Pixie <div id="Pixie"></div>
+## Pixie <a id="Pixie"></a>
 
 | Type        | Contract                                   | Desc                                     |
 |-------------|--------------------------------------------|------------------------------------------|
@@ -318,7 +317,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 | NFT Wrapper | 0x06e3d8Eeb9DC4732e474c26674e08213c6e11921 | NFT Wrapper contract                     |
 ###### [Back to top](TestNet.md#menu)
 
-## Boba <div id="Boba"></div>
+## Boba <a id="Boba"></a>
 
 | Type            | Contract                                   | Desc                                      |
 |-----------------|--------------------------------------------|-------------------------------------------|
@@ -330,9 +329,9 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 
 ###### [Back to top](TestNet.md#menu)
 
-## Router And Chain ID <div id="Router-And-Chain-ID"></div>
+## Router And Chain ID <a id="Router-And-Chain-ID"></a>
 
-|  Type      | Router Number  | Chain ID |
+|    Type    | Router Number  | Chain ID |
 |:----------:|:--------------:|:--------:|
 |  Bitcoin   |       1        |    1     |
 |  Ethereum  |       2        |    2     |
@@ -340,7 +339,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 |  NEO(N2)   |       4        |    5     |
 |  Switcheo  |       5        |    -     |
 |    BSC     |       6        |    79    |
-|    Heco    |       7        |    7     |
+|    HECO    |       7        |    7     |
 |  Palette   |       8        |   107    |
 |  Zilliqa   |      111       |   111    |
 |     OK     |       12       |   200    |
@@ -349,7 +348,7 @@ Here are cross chain contracts ONLY working in <strong>TESTNET</strong> mode, wh
 |  Polygon   |       16       |   202    |
 |  NEO(N3)   |       88       |    88    |
 |  Arbitrum  |       0        |   205    |
-|    Xdai    |       0        |   206    |
+|    xDAI    |       0        |   206    |
 | Optimistic |       0        |   207    |
 |   Fantom   |       0        |   208    |
 | Avalanche  |       0        |   209    |
