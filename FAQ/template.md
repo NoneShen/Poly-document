@@ -1,5 +1,17 @@
 <h1 align="center">FAQ</h1>
 
+Though not exhaustive, these FAQs will help you get started and troubleshoot some of the most common user problems when using Poly Bridge.
+
+## Stay Tuned with Us:
+- Official site：https://www.poly.network/
+- Poly Bridge: https://bridge.poly.network
+- Twitter: https://twitter.com/PolyNetwork2
+- Medium: https://medium.com/@polynetwork
+- Telegram: https://t.me/polynetworkgroup
+- Discord: https://discord.gg/xXxJa3sm
+- Github: https://github.com/polynetwork
+- User Guides and Tutorials: https://medium.com/poly-network/tagged/tutorial
+
 ## About Poly Network Ecosystem
 
   <div class="card">
