@@ -59,4 +59,36 @@ The `poly-relayer` project depends on the `bridge-common` library. Listed steps 
 - Register `ChainListener` and `ChainSubmitter` in [selectors](https://github.com/polynetwork/poly-relayer/blob/main/relayer/relayer.go#L73) located in the `relayer.go` file.
 
 
+## Subcommands
+- `settxblock` set the scan initial height.
+  ```bash
+  ./relayer_main settxblock --height 100210 --chain 7
+  ```
+- `setheaderblock` set the header sync height.
+  ```bash
+  ./relayer_main setheaderblock --height 100210 --chain 7
+  ```
+- `status` shows the current relayer status.
+  ```bash
+  ./relayer_main status
+  ```
+  Sample output:
+  ```
+  Status Bsc:
+  Latest node height: 16656699
+  Latest sync height: 16656696
+  Header sync height: 16656696
+  Header mark height: 16656696
+  tx listen height  : 16656682
+  header sync height diff: 3
+  tx listen height diff  : 17
+  src tx queue size : 0
+  poly tx queue size: 0
+  ```
+
+## Other Notes
+- Please follow guide [here](new_chain/launch_and_test/launch.md#3-deploy-relayers) for deployment.
+- Wallet balance should be checked regularly to avoid out of fee balance issue.
+- Mulitple wallet accounts can be created to increase message relay throughout.
+- Poly chain wallet signer address is permission controlled, so before run the relayer, the poly chain wallet should be requested.
 
