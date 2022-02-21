@@ -18,34 +18,8 @@ Choosing to use our templates as your Cross Chain Manager module, you need to de
 
 ## 3. Deploy Relayers
 
-### Step 1. Build
+### About Relayer Roles to run
 
-To build the binary, switch to the right branch [Branch Select](https://github.com/polynetwork/poly-relayer/blob/main/README.md#supported-chains), then run:
-
-
-```bash
-./build.sh devnet/testnet/mainnet
-```
-
-
-### Step 2. Configure
-
-* Make sure necessory configuration is specifed in `config.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json).
-
-* Specify roles to enable in `roles.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json)
-
-For Poly public nodes, contract addresses, please check [here](Core_Smart_Contract/Contract/MainNet.md).
-
-### Step 3. Run
-
-
-```
-./server --config ./config.json --roles ./roles.json
-```
-
-
-> [!Note|style:flat|label:Notice]
-> About Roles 
 > * Header Sync
 > 
 > Some chains require `HeaderSync` process to run to submit chain headers to poly chain. 
@@ -63,6 +37,68 @@ For Poly public nodes, contract addresses, please check [here](Core_Smart_Contra
 > **ONLY ONE `PolyListen` PROCESS IS NEEDED FOR ALL CHAINS!**
 > 
 > `PolyCommit` consumes the message queue, and submit the cross chain transaction to the destination chain.
+
+### Relayer Subcommands
+
+- `settxblock` set the scan initial height.
+  ```bash
+  ./relayer_main settxblock --height 100210 --chain 7
+  ```
+- `setheaderblock` set the header sync height.
+  ```bash
+  ./relayer_main setheaderblock --height 100210 --chain 7
+  ```
+- `status` shows the current relayer status.
+  ```bash
+  ./relayer_main status
+  ```
+  Sample output:
+  ```
+  Status Bsc:
+  Latest node height: 16656699
+  Latest sync height: 16656696
+  Header sync height: 16656696
+  Header mark height: 16656696
+  tx listen height  : 16656682
+  header sync height diff: 3
+  tx listen height diff  : 17
+  src tx queue size : 0
+  poly tx queue size: 0
+  ```
+
+Deployment steps:
+
+### Step 1. Build the Binary
+
+To build the binary, switch to the right branch [Branch Select](https://github.com/polynetwork/poly-relayer/blob/main/README.md#supported-chains), then run:
+
+
+```bash
+./build.sh devnet/testnet/mainnet
+```
+
+
+### Step 2. Write the Configuration
+
+* Make sure necessory configuration is specifed in `config.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json).
+
+* Specify roles to enable in `roles.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json)
+
+For Poly public nodes, contract addresses, please check [here](Core_Smart_Contract/Contract/MainNet.md).
+
+### Step 3. Run the Relayer Process
+
+```
+./server --config ./config.json --roles ./roles.json
+```
+
+> [!Note|style:flat|label:Notice]
+> - Wallet balance should be checked regularly to avoid out of fee balance issue.
+> 
+> - Mulitple wallet accounts can be created to increase message relay throughout.
+> 
+> - Poly chain wallet signer address is permission controlled, so before run the relayer, the poly chain wallet should be requested.
+
 
 
 ## 4. Test
