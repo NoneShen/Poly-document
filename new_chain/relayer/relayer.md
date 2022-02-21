@@ -84,7 +84,7 @@ The `poly-relayer` project depends on the `bridge-common` library. Listed steps 
   ```
 
 ## Other Notes
-- Please follow [here](https://github.com/polynetwork/poly-relayer/tree/main/docs) for deployment guide.
+- Please follow guide [here](new_chain/launch_and_test/launch.md#3-deploy-relayers) for deployment.
 - Wallet balance should be checked regularly to avoid out of fee balance issue.
 - Mulitple wallet accounts can be created to increase message relay throughout.
 - Poly chain wallet signer address is permission controlled, so before run the relayer, the poly chain wallet should be requested.
