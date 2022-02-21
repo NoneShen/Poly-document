@@ -4,6 +4,9 @@
 
 To implement cross chain features for any chain, cross chain management contract is needed to be deployed. Every chain can have no more than one management contract. All the business logic contracts need to interact with the CCM contract. Following is the detailed description of two interfaces offered by CCM contract. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol) of CCM contract. 
 
+> [!Note|style:flat|label:Notice]
+> To realize implementation of cross chain features, developers need to make sure that the cross chain methods in your business logic contracts should allow our Cross Chain Manager Contract to call.
+
 ### Step1. Implement methods of inputting the mapping relationship
 
 Except for verifying the existence of transaction through CCM contract, business logic contract needs to make sure the accuracy of the assets relationship in the transaction. Therefore, the business contract should maintain both the asset mapping and business logic contract mapping. Asset hash is mapped from the source chain to the target chain, and target chain Id is mapped to the business logic contract address on target chain.

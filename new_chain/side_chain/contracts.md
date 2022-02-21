@@ -1,7 +1,9 @@
 <h1 align="center">Develop for New Chain</h1>
 
+The development of a new chain is mainly to develop cross-chain modules. In this document, cross-chain module works as a set of smart contracts. In some cases, it can also work as a native module of blockchain. To help you develop it, here we offer the examples in `Solidity` for each main method. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager) of these contracts.
+
 > [!Note|style:flat|label:Notice]
-> Cross Chain Manager module can work as a set of smart contracts. In some cases, it can also work as a native module of blockchain. If the chain integrated to Poly Network supports EVM, developers could freely use our Cross-chain contracts as templates. On the opposite, you may need to develop your own contracts which contains the main features as shown in following guidelines. To help you develop it, here we offer the examples in `Solidity` for each main method. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager) of these contracts.
+> If the chain integrated to Poly Network supports EVM, developers could freely use our cross-chain contracts as templates. If not, you may need to develop your own contracts which contains the main features as shown in following guidelines. 
 
 ## 1. Introduction to Cross-chain Contracts
 
@@ -22,9 +24,9 @@
 > [!Note|style:flat|label:Notice]
 > In this part, we offer the four main features required to be implemented in the Cross-chain modules, which are all in the CCM contract. As for CCD and CCMP contract, you could choose the suitable way to realize contracts upgrading features.
 
-To guarantee the safety of CCM contract, we keep whitelists of contract addresses and methods to prevent invalid call. Meanwhile, we also set `whiteLister` to manage these whitelists of CCM contract. We highly encourage developers to develop the similar features of authority management in personal projects.
-
 ### Step1. Implement methods of synchronizing genesis block header
+
+This step is meant to implement the methods of synchronizing genesis block header of Poly chain to the Cross Chain Manager contract. 
 
 #### Example:
 
@@ -56,12 +58,14 @@ function initGenesisBlock(bytes memory rawHeader, bytes memory pubKeyList) whenN
 }
 ```
 
-- This function is meant to sync Poly chain genesis block header to CCM contract. This method should be called at the very beginning and can only be called once. For the input data `rawHeader`, the nextbookkeeper can not be empty.
+- This method should be called at the very beginning and can only be called once. For the input data `rawHeader`, the nextbookkeeper can not be empty.
 - First this function needs to make sure that the CCM contract has not been initialized through checking the public key of the current epoch. 
 - Then we will parse the raw header to get the `header.nextBookKeeper`. Comparing it with the `nextBookKeeper` which is converted from `pubKeyList`, we could verify the validity of signature.
 - After verifying the signature, we could record current epoch start height and the public keys by storing them in address format. And then emit the event `InitGenesisBlockEvent`.   
 
 ### Step2. Implement methods of changing consensus validator
+
+This step is meant to implement the methods of changing Poly Chain consensus validator, which is called as book keeper in the code. 
 
 #### Example:
 
@@ -104,12 +108,13 @@ function changeBookKeeper(bytes memory rawHeader, bytes memory pubKeyList, bytes
 }
 ```
 
-- This function is meant to change Poly Chain consensus book keeper. 
 - First we need to make sure the `rawHeader.height` is higher than recorded current epoch start height. Then we need to ensure that the rawHeader is the key header including info of switching consensus peers by containing non-empty `nextBookKeeper` field.
 - Analogous to `initGenesisBlock()`, we also need to parse the raw header to get the `header.nextBookKeeper`. Comparing it with the `nextBookKeeper` which is converted from `pubKeyList`, we could verify the validity of signature.
 - After verifying the signature, we could record current epoch start height and current epoch consensus peers book keepers by storing them in address format. And then emit the event `ChangeBookKeeperEvent`.   
 
 ### Step3. Implement methods of pushing cross-chain transactions to Poly chain
+
+This step is meant to implement the methods of pushing the serialized cross-chain transaction information to Poly chain.
 
 #### Example:
 
@@ -154,11 +159,13 @@ function crossChain(uint64 toChainId, bytes calldata toContract, bytes calldata 
 ````
 
 - This method can only be called by the contracts in whitelist.
-- This method creates cross chain transactions, invoked by service contracts when a cross chain function is carried out in the logic contract.
+- It creates cross chain transactions, invoked by service contracts when a cross chain function is carried out in the logic contract.
 - This method constructs the `rawParam`, which contains transaction hash, `msg.sender`, target chain id, business logic contract to be invoked on target chain, the target method to be invoked and the serialized transaction data which has been already constructed in business logic contract. 
 - Then put the hash of `rawParam` into storage, proving the existence of transaction .
 
 ### Step4. Implement methods of verifying & executing Transaction
+
+This step is meant to implement the methods of verifying the block header and merkle proof. If passing the verification, the transaction could be executed on target chain.
 
 #### Example:
 
@@ -254,7 +261,7 @@ function _executeCrossChainTx(address _toContract, bytes memory _method, bytes m
 }
 ````
 
-- This method is meant to be invoked by relayer. In some cases, users could invoke this method by themselves if they get the valid block information from Poly. 
+- This method should be invoked by relayer. In some cases, users could invoke this method by themselves if they get the valid block information from Poly. 
 - This method fetches and processes cross chain transactions, finds the merkle root of a transaction based on the block height (in the block header), verifies the legitimacy of transaction using the transaction parameters.
 - After verifying Poly chain block header and proof, we still need to check if the parameters `toContract` and `toMerkleValue.makeTxParam.method` have been pre listed in whitelists.
 - Then it will invoke the business logic contract deployed on the target chain. Invoking will be processed through the internal method `_executeCrossChainTx()`: 
@@ -262,3 +269,6 @@ function _executeCrossChainTx(address _toContract, bytes memory _method, bytes m
   - Then we construct a method call on target business logic contract: first we need to `encodePacked` the `_method` and the format of input data `"(bytes,bytes,uint64)"`. 
   - Then it would `keccak256` the encoded string, use `bytes4` to take the first four bytes of the call data for a function call specifies the function to be called. Parameter `_method`  is from the `toMerkleValue` , which is parsed from `proof`. And the input parameters format is restricted as (bytes `_args`, bytes `_fromContractAddr`, uint64 `_fromChainId`). These two parts are encodePacked as a method call.  
   - After calling the method, we need to check the return value. Only if the return value is true, will the whole cross chain transaction be executed successfully. 
+
+
+To guarantee the safety of CCM contract, we keep whitelists of contract addresses and methods to prevent invalid call. Meanwhile, we also set `whiteLister` to manage these whitelists of CCM contract. Here is the [template](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol#41) of adding whitelist. We highly encourage developers to develop the similar features of authority management in personal projects. 
