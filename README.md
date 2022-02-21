@@ -30,7 +30,7 @@
   * [MainNet](Core_Smart_Contract/Token/MainNet.md)
   * [TestNet](Core_Smart_Contract/Token/TestNet.md)
   * [DevNet](Core_Smart_Contract/Token/DevNet.md)
-* [Relayer and Nodes](Core_Smart_Contract/Relayer and Nodes/Poly-Relayer-Nodes.md)
+* [Relayer and Nodes](Core_Smart_Contract/Nodes/Nodes.md)
 ### Glossary
 * [Glossary](GLOSSARY.md)
 
