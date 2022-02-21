@@ -2,26 +2,22 @@
 
 ## Requirements
 
-### 1. Make sure the new chain support Light Client Verification
+### 1. Make sure the new chain supports Light Client Verification
 
 The block header must contain the following information：
 - Hash of the previous block header
 - Merkle state root hash
-- Necessary information to prove the legitimacy of the block header varies from different consensus mechanisms.
+- Necessary information to prove the legitimacy of the block header varying from different consensus mechanisms.
 
 > [!Note|style:flat|label:Notice]
 > If your chain doesn't support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://t.me/polynetworkgroup for more support.
 
-### 2. Understand the consensus algorithm
-
-- How does the chain select consensus validators, voters, and block producers for minting new blocks and bookkeeping block transactions. 
-
-### 3. Offer the block header structure and verification methods
+### 2. Offer the block header structure and verification methods
 - Block header structure
 - Serialization and Deserilization methods
 - Block header verification mehtods
 
-### 4. Offer the merkle tree structure, generation and verification methods
+### 3. Offer the merkle tree structure, generation and verification methods
 
 - Merkle tree structure
 - State root generation, and verification methods
@@ -46,9 +42,9 @@ The block header must contain the following information：
 | ------------------------------ |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **SyncSideChainGenesisHeader** | It is the entrance method for synchronizing the genesis block header of the new chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the new chain; please refer to the [code](https://github.com/polynetwork/poly-io-test/blob/master/cmd/tools/run.go#L607) for more details. |
 
-The Key information for this method(submitted by .config):
+The Key information for this method (submitted by .config):
 
-- Service provider(endpoint) Url of the new chain
+- Service provider (endpoint) Url of the new chain
 
 - Selected genesis block height
 
