@@ -6,7 +6,7 @@ Poly relayer plays the role to relay cross chains messages and interact with cro
 <div align=center><img src="resources/develop_for_relayer.png" alt=""/></div>
 
 
-### Step1. Implement Chain Listener
+### Implement Chain Listener
 Chain listener is used to fetch data from the chain (as source chain), including block headers, cross chain events emitted from cross chain manager contract and merkle proofs when it's used to verify the cross chain message in the `Poly` chain.
 
 ```go
@@ -32,7 +32,7 @@ type IChainListener interface {
 }
 ```
 
-### Step2. Implement Chain Submitter
+### Implement Chain Submitter
 Chain submitter is used to submit messages/transactions to the chain, including  bookkeeper changes of the poly chain and cross chain message to finalize as the last step.
 
 ```go
@@ -48,13 +48,16 @@ type IChainSubmitter interface {
 }
 ```
 
-The `poly-relayer` project depends on the `bridge-common` library. Listed steps can be followed to register a new chain.
+The `poly-relayer` project depends on the `bridge-common` library. Listed steps can be followed to develop the relayer for a new chain.
+
+### Development Steps
 
 - Add chain ID in the `bridge-common` project [here](https://github.com/polynetwork/bridge-common/base).
 - Add chain client SDK [here](https://github.com/polynetwork/bridge-common/tree/main/chains) for common usage.
 - Add chain wallet [here](https://github.com/polynetwork/bridge-common/tree/main/wallet) for common usage.
 - Implement interface `IChainListener` and `IChainSubmitter` for the new chain.
 - Register `ChainListener` and `ChainSubmitter` in [selectors](https://github.com/polynetwork/poly-relayer/blob/main/relayer/relayer.go#L73) located in the `relayer.go` file.
+
 
 ## Subcommands
 - `settxblock` set the scan initial height.
@@ -84,10 +87,8 @@ The `poly-relayer` project depends on the `bridge-common` library. Listed steps 
   ```
 
 ## Other Notes
-- Please follow [here](https://github.com/polynetwork/poly-relayer/tree/main/docs) for deployment guide.
+- Please follow guide [here](new_chain/launch_and_test/launch.md#3-deploy-relayers) for deployment.
 - Wallet balance should be checked regularly to avoid out of fee balance issue.
 - Mulitple wallet accounts can be created to increase message relay throughout.
 - Poly chain wallet signer address is permission controlled, so before run the relayer, the poly chain wallet should be requested.
-
-
 
