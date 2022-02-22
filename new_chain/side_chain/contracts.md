@@ -1,6 +1,6 @@
 <h1 align="center">Develop for New Chain</h1>
 
-The development of a new chain is mainly to develop cross-chain modules. Here, cross-chain module works as a set of smart contracts. In some cases, it can also work as a native module of blockchain. To help you develop it, here we offer the examples in `Solidity` for each main method. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager) of these contracts.
+The development of a new chain mainly involves developing cross-chain modules. Here, cross-chain module works as a set of smart contracts. In some cases, it can also work as a native module of blockchain. To help you develop it, here we offer the examples in `Solidity` for each main method. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager) of these contracts.
 
 > [!Note|style:flat|label:Notice]
 > If the chain integrated to Poly Network supports EVM, developers could freely use our cross-chain contracts as templates. If not, you may need to develop your own contracts which contains the main features as shown in following guidelines. 
@@ -59,7 +59,7 @@ function initGenesisBlock(bytes memory rawHeader, bytes memory pubKeyList) whenN
 ```
 
 - This method should be called at the very beginning and can only be called once. For the input data `rawHeader`, the nextbookkeeper can not be empty.
-- Firstly, this function needs to make sure that the CCM contract has not been initialized through checking the public key of the current epoch. 
+- Firstly, this function is required to check the  public key of the current epoch to make sure that the CCM contract is uninitialized.  
 - Then we will parse the raw header to get the `header.nextBookKeeper`. Comparing it with the `nextBookKeeper` which is converted from `pubKeyList`, we could verify the validity of signature.
 - After verifying the signature, we could record current epoch start height and the public keys by storing them in address format. And then emit the event `InitGenesisBlockEvent`.   
 

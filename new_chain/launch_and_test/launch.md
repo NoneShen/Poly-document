@@ -3,15 +3,15 @@
 <div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
 
 ## 1. Register Chain
-Registration is the basis for monitoring and processing block information and checking the execution of cross-chain transactions. The chain officially becomes a part of the cross-chain ecosystem after the registration process is complete and the Cross Chain Council approves the application.
+Registration is the prerequisite of monitoring and processing block information and checking the execution of cross-chain transactions. The chain will be officially involved into the cross-chain ecosystem after completing registration and being approved by the Cross Chain Council.
 
 > [!NOTE]
-> For now, chain registration are usually completed by the `poly team` using the trusted account.
+> Chain registration is currently completed by `poly team`  via the trusted account.
 
 
 ## 2. Deploy Contracts
 
-Choosing to use our templates as your Cross Chain Manager module, you need to deploy the three contracts as following steps:
+If you want to take templates provided by Poly as your CCM module, you need to deploy three contracts listed below:
 1. Deploy [Cross Chain Data contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/data/EthCrossChainData.sol) and get the address of it.
 2. Deploy [Cross Chain Manager contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol) and input the address of Cross Chain Data contract.
 3. Deploy [Cross Chain Manager Proxy contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol) and input the address of Cross Chain Manager contract.
