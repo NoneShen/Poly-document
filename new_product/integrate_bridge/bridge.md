@@ -3,7 +3,6 @@
 > [!Note|style:flat|label:Notice]
 >The following APIs are used by developers who need to implement the bridge function themselves. If you want to integrate into the poly bridge, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://t.me/polynetworkgroup for more support.
 
-
 ## Poly Bridge APIs:
 
 - [Get cross chain fee](#Get-cross-chain-fee)
@@ -12,7 +11,6 @@
 - [Get token basics information](#Get-token-basics-information)
 - [Get token mapping relationship between different chains](#Get-token-mapping-relationship-between-different-chains)
 - [Get the expected cross chain duration](#Get-the-expected-cross-chain-duration)
-
 
 ### Get cross chain fee
 
