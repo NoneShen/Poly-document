@@ -89,6 +89,6 @@ The `poly-relayer` project depends on the `bridge-common` library. Follow the li
 ## 3. Other Notes
 - Please follow guide [here](new_chain/launch_and_test/launch.md#3-deploy-relayers) for deployment.
 - Check your wallet balance regularly to avoid problems caused by insufficient balance.
-- Mulitple wallet accounts could be created to increase message relay in the whole procedure.
-- Request a poly chain wallet before run the relayer, as signature in poly chain wallet is permission-controlled.
+- Creating multiple wallet accounts can speed up cross chain transaction.
+- Request a poly chain wallet before run the relayer, as signature in poly chain wallet is permitted by assigned accounts.
 
