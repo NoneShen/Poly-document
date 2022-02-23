@@ -1,8 +1,8 @@
 <h1 align="center">API</h1>
 
 > [!Note|style:flat|label:Notice]
->The following APIs are used by developers who need to implement the bridge function themselves. If you want to integrate into the poly bridge, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
 
+>The following APIs are provided for developers who need to implement the bridge function. If you want to integrate into the poly bridge, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
 
 ## Poly Bridge APIs:
 
@@ -13,11 +13,10 @@
 - [Get token mapping relationship between different chains](#Get-token-mapping-relationship-between-different-chains)
 - [Get the expected cross chain duration](#Get-the-expected-cross-chain-duration)
 
-
 ### Get cross chain fee
 
-This API returns the amount of assets as cross-chain fee that needs to be charged on the source chain when crossing to the target chain.  
-When the user performs a cross-chain operation, the user's fee is charged on the source chain transaction.If SwapTokenHash is specified, the available balance is returned.
+This API returns transaction fee which will be charged on the source chain in cross-chain transaction.
+And if SwapTokenHash is specified, the transferable amount will be returned.
 
 API
 ```
@@ -59,7 +58,7 @@ Example Response
 }
 ```
 ### Get the cross chain transaction status
-This API returns the details of the specified hash, you can view the cross-chain progress through the `TransactionState` in the response.  
+This API returns the details of the specified hash, and you can view the cross-chain procedure through the `TransactionState` in the response.  
 
 API
 ```
@@ -156,7 +155,7 @@ Example Response
 ```
 ### Get history transactions of address
 
-This api returns the cross-chain history of the specified address
+This API returns the cross-chain history of the specified address.
 
 API
 ```
@@ -264,7 +263,7 @@ Example Response
 ```
 ### Get token basics information
 
-This api returns the basic information of the token, including price, precision, meta data and the token information mapped on each chain.
+This API returns the basic information of the token, including price, precision, meta data and the token information mapped on each chain.
 
 API
 ```
@@ -325,7 +324,8 @@ Example Response
 
 ### Get token mapping relationship between different chains
 
-This api returns the target chain mapping relationship of the token on the source chain.
+This API returns mapping relations between source chain and target chain of assigned token.
+
 API
 ```
 Testnet: https://bridge.poly.network/testnet/v1/tokenmap
@@ -386,7 +386,8 @@ Example Response
 
 ### Get the expected cross chain duration
 
-This api returns the expected duration from the source chain to the target chain
+This API returns the expected elapsed time for token to transfer from source chain to target chain.
+
 
 API
 ```
