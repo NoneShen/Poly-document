@@ -10,17 +10,17 @@ The block header must contain the following information：
 - Necessary information to prove the legitimacy of the block header varying from different consensus mechanisms.
 
 > [!Note|style:flat|label:Notice]
-> If your chain doesn't support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://t.me/polynetworkgroup for more support.
+> If your chain doesn't support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
 
 ### 2. Offer the block header structure and verification methods
 - Block header structure
 - Serialization and Deserilization methods
 - Block header verification mehtods
 
-### 3. Offer the merkle tree structure, generation and verification methods
+### 3. Offer the merkle tree structure and verification methods
 
 - Merkle tree structure
-- State root generation, and verification methods
+- State root verification methods
 
 ## Development Specifications
 
