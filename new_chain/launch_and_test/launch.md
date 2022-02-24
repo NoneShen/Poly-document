@@ -31,7 +31,7 @@ Genesis block header synchronization is the prerequisite of synchronizing and pr
 
 
 ## 4. Deploy Relayers
-Deployment of relayer involves two critical procedure: execute relayer subcommands below and deploy relayer. You can follow the listed commands and steps to complete your deployment. 
+Deployment of relayer involves two critical procedures: execute relayer subcommands below and deploy relayer. You can follow the listed commands and steps to complete your deployment. 
 ### 4.1 Relayer Subcommands
 
 - Execute `settxblock` to set the scan initial height.
