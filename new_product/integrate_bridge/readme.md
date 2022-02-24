@@ -1,14 +1,14 @@
 <h1 align="center">Poly Docs</h1>
 
-> [!Note|style:flat|label:Notice]
-> When a chain uses `Poly Network` protocol to implement asset cross-chain function, 
-> it can choose to integrate into the `Poly Bridge` 
-> or  implement their own cross-chain bridge and integrate the [APIs](bridge.md) provided by `Poly Bridge`.
+Except for building a new chain, you may want to join 
+poly cross-chain ecosystem via just connecting with `Poly Bridge` or  
+integrating the [APIs](bridge.md) provided by `Poly Bridge` into your own cross-chain bridge.
+Then, the listed information will be helpful for you. 
 
-## 1. Main functions of `Poly Bridge`:
+## 1. Main Functions of `Poly Bridge`:
 
 > [!NOTE]
-> For now, Poly Bridge is deployed by the poly team.
+> For now, `Poly Bridge` is deployed by the poly team.
 
 * Monitor cross-chain event  
 Monitor the wrapper events emitted by the wrapper contract on the source chain
@@ -27,7 +27,7 @@ Refresh the cross-chain transaction fee of the target chain in order to provide 
 Refresh the price of the token from the market in order to conversion to the cross-chain transaction fee when user initiates a cross-chain transaction.
 
 
-## 2. Integrate `Poly Bridge` APIs to your own cross-chain bridge.
+## 2. Integrate `Poly Bridge` APIs into Other Cross-chain Bridge.
 If developers want to implement their own cross-chain bridge, they need to implement the main functions of the poly bridge above.  
 `Poly Bridge`  also opens up some APIs for developers to use to integrate into their cross-chain bridge, APIs can be found [here](bridge.md).
 
