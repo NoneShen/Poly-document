@@ -1,8 +1,10 @@
 <h1 align="center">Develop for Poly Chain</h1>
 
-## Requirements
+## 1. Requirements
 
-### 1. Make sure the new chain supports Light Client Verification
+Before developing poly chain, you have to be well prepared with the listed three prerequisites.
+
+### 1.1 Make sure the new chain supports Light Client Verification
 
 The block header must contain the following information：
 - Hash of the previous block header
@@ -12,21 +14,23 @@ The block header must contain the following information：
 > [!Note|style:flat|label:Notice]
 > If your chain doesn't support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://t.me/polynetworkgroup for more support.
 
-### 2. Offer the block header structure and verification methods
+### 1.2 Offer the block header structure and verification methods
 - Block header structure
 - Serialization and Deserilization methods
 - Block header verification mehtods
 
-### 3. Offer the merkle tree structure, generation and verification methods
+### 1.3 Offer the merkle tree structure, generation and verification methods
 
 - Merkle tree structure
 - State root generation, and verification methods
 
-## Development Specifications
+## 2. Development Specifications
+
+With the prerequisites mentioned above, you can start developing poly chain following the guideline below from the perspective you need. 
 
 <div align=center><img src="resources/relay_chain_development.png" alt=""/></div>
 
-### 1. Implement methods of block data verification
+### 1.1 Implement methods of block data verification
 
 #### Block Header Synchronization Methods
 
@@ -53,7 +57,7 @@ The Key information for this method (submitted by .config):
 - Information required for the new chain block header verification
 
 
-### 2. Implement methods of cross-chain transaction verification
+### 1.2 Implement methods of cross-chain transaction verification
 
 #### Cross Chain Management
 

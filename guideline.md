@@ -1,5 +1,7 @@
 <h1 align="center">Guidelines for Reading</h1>
 
+Similar to any other cross-chain service, the accession to Poly cross-chain ecosystem will vary from section to section depending on your specific needs. Here we presuppose four major goals and provide corresponding tutorials for you to realize your goals. You can either click the quick guide below directly or follow the menu on the left navigation. 
+
 <div align=center><img src="resources/reading_guideline.png" alt=""/></div>
 
 ## Add New Chains
