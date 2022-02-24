@@ -3,6 +3,7 @@
 
 
 <div align=center></div>
+Till now, you may have completed the above three parts and waiting to run your module. Then you can execute launch and test by following the listed steps according to the needs of your project.  
 
 <div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
 
@@ -21,7 +22,7 @@ Registration is the prerequisite of monitoring and processing block information 
 > [!NOTE]
 > Chain registration is currently completed by `poly team`  via the trusted account.
 
-## 2. Synchronize genesis block header
+## 3. Synchronize genesis block header
 Genesis block header synchronization is the prerequisite of synchronizing and processing the subsequent block header information. It involves Synchronizing the genesis block header of the new chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the new chain.
 - Call entry function `SyncSideChainGenesisHeader` 
 
@@ -29,19 +30,19 @@ Genesis block header synchronization is the prerequisite of synchronizing and pr
 > Synchronization is currently completed by `poly team`  via the trusted account.
 
 
-## 3. Deploy Relayers
+## 4. Deploy Relayers
+Deployment of relayer involves two critical procedure: execute relayer subcommands below and deploy relayer. You can follow the listed commands and steps to complete your deployment. 
+### 4.1 Relayer Subcommands
 
-### Relayer Subcommands
-
-- `settxblock` set the scan initial height.
+- Execute `settxblock` to set the scan initial height.
   ```bash
   ./relayer_main settxblock --height 100210 --chain 7
   ```
-- `setheaderblock` set the header sync height.
+- Execute`setheaderblock` to set the header sync height.
   ```bash
   ./relayer_main setheaderblock --height 100210 --chain 7
   ```
-- `status` shows the current relayer status.
+- Execute`status` to show the current relayer status.
   ```bash
   ./relayer_main status
   ```
@@ -59,9 +60,9 @@ Genesis block header synchronization is the prerequisite of synchronizing and pr
   poly tx queue size: 0
   ```
 
-Deployment steps:
-
-### Step 1. Build the Binary
+### 4.2 Deployment steps:
+Now you can actually deploy your relayer with the following three steps:
+#### Step 1. Build the Binary
 
 To build the binary, switch to the right branch [Branch Select](https://github.com/polynetwork/poly-relayer/blob/main/README.md#supported-chains), then run:
 
@@ -71,15 +72,15 @@ To build the binary, switch to the right branch [Branch Select](https://github.c
 ```
 
 
-### Step 2. Write the Configuration
+#### Step 2. Write the Configuration
 
 * Make sure necessory configuration is specifed in `config.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json).
 
 * Specify roles to enable in `roles.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json)
 
 
-| Roles      | Quantity demand                | Description                             |
-| ---------- | ------------------------------ | --------------------------------------- |
+| Roles      | Quantity Demand                | Description                             |
+| ---------- |--------------------------------| --------------------------------------- |
 | HeaderSync | One or multiple for each chain | It submits chain headers to poly chain. |
 | TxListen | Only one for each chain        | It observes cross chain transactions from source chain, and push them to message queue. |
 | TxCommit | One or multiple for each chain | It consumes the message queue, and submit the cross chain transactions to poly. |
@@ -88,7 +89,7 @@ To build the binary, switch to the right branch [Branch Select](https://github.c
 
 For Poly public nodes, contract addresses, please check [here](Core_Smart_Contract/Contract/MainNet.md).
 
-### Step 3. Run the Relayer Process
+#### Step 3. Run the Relayer Process
 
 ```
 ./server --config ./config.json --roles ./roles.json
@@ -103,9 +104,9 @@ For Poly public nodes, contract addresses, please check [here](Core_Smart_Contra
 
 
 
-## 4. Test
+## 5. Test
 
-#### Cross-chain using Lock proxy
+### Cross-chain using Lock proxy
 
-#### Cross-chain using Wrapper
+### Cross-chain using Wrapper
 
