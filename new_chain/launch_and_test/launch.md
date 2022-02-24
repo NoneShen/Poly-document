@@ -4,41 +4,30 @@
 
 <div align=center></div>
 
-## 1. Register Chain
+## 1. Deploy Contracts
+
+If you want to take templates provided by Poly as your CCM module, you need to deploy three contracts listed below:
+- Deploy [Cross Chain Data contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/data/EthCrossChainData.sol) and get the address of it.
+- Deploy [Cross Chain Manager contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol) and input the address of Cross Chain Data contract.
+- Deploy [Cross Chain Manager Proxy contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol) and input the address of Cross Chain Manager contract.
+
+## 2. Register Chain
 Registration is the prerequisite of monitoring and processing block information and checking the execution of cross-chain transactions. The chain will be officially involved into the cross-chain ecosystem after completing registration and being approved by the Cross Chain Council.
+- Call entry function `RegisterSideChain`
+- Call entry function `ApproveRegisterSideChain`
 
 > [!NOTE]
 > Chain registration is currently completed by `poly team`  via the trusted account.
 
+## 2. Synchronize genesis block header
+Genesis block header synchronization is the prerequisite of synchronizing and processing the subsequent block header information. It involves Synchronizing the genesis block header of the new chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the new chain.
+- Call entry function `SyncSideChainGenesisHeader` 
 
-## 2. Deploy Contracts
+> [!NOTE]
+> Synchronization is currently completed by `poly team`  via the trusted account.
 
-If you want to take templates provided by Poly as your CCM module, you need to deploy three contracts listed below:
-1. Deploy [Cross Chain Data contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/data/EthCrossChainData.sol) and get the address of it.
-2. Deploy [Cross Chain Manager contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol) and input the address of Cross Chain Data contract.
-3. Deploy [Cross Chain Manager Proxy contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol) and input the address of Cross Chain Manager contract.
 
 ## 3. Deploy Relayers
-
-### About Relayer Roles to run
-
-> * Header Sync
-> 
-> Some chains require `HeaderSync` process to run to submit chain headers to poly chain. 
-> 
-> * Source Chain -> Poly
-> 
-> `TxListen` observes cross chain transactions from source chain, and push them to message queue.
-> 
-> `TxCommit` consumes the message queue, and submit the cross chain transactions to poly.
-> 
-> * Poly -> Destination Chain
-> 
-> `PolyListen` observes cross chain transactions from poly chain and push them to message queue.
-> 
-> **ONLY ONE `PolyListen` PROCESS IS NEEDED FOR ALL CHAINS!**
-> 
-> `PolyCommit` consumes the message queue, and submit the cross chain transaction to the destination chain.
 
 ### Relayer Subcommands
 
@@ -86,6 +75,15 @@ To build the binary, switch to the right branch [Branch Select](https://github.c
 
 * Specify roles to enable in `roles.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json)
 
+
+| Roles      | Quantity demand                | Description                             |
+| ---------- | ------------------------------ | --------------------------------------- |
+| HeaderSync | One or multiple for each chain | It submits chain headers to poly chain. |
+| TxListen | Only one for each chain        | It observes cross chain transactions from source chain, and push them to message queue. |
+| TxCommit | One or multiple for each chain | It consumes the message queue, and submit the cross chain transactions to poly. |
+| PolyListen | Only One for poly chain        | It observes cross chain transactions from poly chain and push them to message queue. |
+| PolyCommit | One or multiple for poly chain | It consumes the message queue, and submit the cross chain transaction to the destination chain. |
+
 For Poly public nodes, contract addresses, please check [here](Core_Smart_Contract/Contract/MainNet.md).
 
 ### Step 3. Run the Relayer Process
@@ -94,7 +92,7 @@ For Poly public nodes, contract addresses, please check [here](Core_Smart_Contra
 ./server --config ./config.json --roles ./roles.json
 ```
 
-> [!Note|style:flat|label:Notice]
+> [!Note]
 > - Wallet balance should be checked regularly to avoid out of fee balance issue.
 > 
 > - Mulitple wallet accounts can be created to increase message relay throughout.
