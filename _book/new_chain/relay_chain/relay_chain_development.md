@@ -30,7 +30,7 @@ With the prerequisites mentioned above, you can start developing poly chain foll
 
 <div align=center><img src="resources/relay_chain_development.png" alt=""/></div>
 
-### 2.1 Implement methods of block data verification
+### 1.1 Implement methods of block data verification
 
 #### Block Header Synchronization Methods
 
@@ -57,7 +57,7 @@ The Key information for this method (submitted by .config):
 - Information required for the new chain block header verification
 
 
-### 2.2 Implement methods of cross-chain transaction verification
+### 1.2 Implement methods of cross-chain transaction verification
 
 #### Cross Chain Management
 
