@@ -11,25 +11,24 @@ Then, the listed information will be helpful for you.
 > For now, `Poly Bridge` is deployed by the poly team.
 
 * Monitor cross-chain event  
-Monitor the wrapper events emitted by the wrapper contract on the source chain
-Monitor the lock event (source chain) and unlock event (target chain) emitted by the CCM contracts of the source chain and the target chain
+During transaction, `Poly Bridge` will monitor the wrapper events emitted by the wrapper contract on the source chain, the lock event (on source chain) and unlock event (on target chain) emitted by CCM contracts.
 
 
 * Link cross-chain events  
-Link the events monitored from source chain, poly chain and target chain according to the transaction key, and update the status of the cross-chain transaction.
+`Poly Bridge` links the events monitored from source chain, poly chain and target chain depending on the transaction key, and update the status of the cross-chain transaction simultaneously.
 
 
-* Refresh cross-chain fee  
-Refresh the cross-chain transaction fee of the target chain in order to provide cross-chain transaction fee when user initiates a cross-chain transaction.
+* Synchronize cross-chain fee  
+`Poly Bridge` will synchronize the transaction fee of target chain to facilitate users when they initiate a cross-chain transaction. 
 
 
-* Refresh cross-chain token price  
-Refresh the price of the token from the market in order to conversion to the cross-chain transaction fee when user initiates a cross-chain transaction.
-
+* Synchronize cross-chain token price  
+`Poly Bridge` also synchronizes the price of tokens both on source chain and target chain from the market, making users be informed about the exchange rate and accurately calculate transaction fee.
 
 ## 2. Integrate `Poly Bridge` APIs into Other Cross-chain Bridge.
-If developers want to implement their own cross-chain bridge, they need to implement the main functions of the poly bridge above.  
-`Poly Bridge`  also opens up some APIs for developers to use to integrate into their cross-chain bridge, APIs can be found [here](bridge.md).
+Even if you want to implement your own cross-chain bridge, you need to realize the four main functions mentioned above.  
+And for your convenience, `Poly Bridge`  also provides some API for you to integrate into your own cross-chain bridge.
+You can find them in [here](bridge.md).
 
 
 

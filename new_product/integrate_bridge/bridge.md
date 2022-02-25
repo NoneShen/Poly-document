@@ -56,7 +56,7 @@ Example Response
 }
 ```
 ### Get the cross chain transaction status
-This API returns the details of the specified hash, and you can view the cross-chain procedure through the `TransactionState` in the response.  
+This API returns the details of the assigned hash, and you can view the cross-chain procedure through the `TransactionState` in the response.  
 
 API
 ```
@@ -153,7 +153,7 @@ Example Response
 ```
 ### Get history transactions of address
 
-This API returns the cross-chain history of the specified address.
+This API returns the cross-chain history of the assigned address.
 
 API
 ```

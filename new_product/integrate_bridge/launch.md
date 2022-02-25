@@ -1,22 +1,24 @@
 <h1 align="center">Launch and Test</h1>
 
 > [!NOTE]
-> For now, Poly Bridge is deployed by the poly team.
+> For now, `Poly Bridge` is deployed by the poly team.
 
 ## 1. Environmental Requirements:
 
-- The computer where poly bridge is deployed needs to have access to the Internet;
-- The computer where poly bridge is deployed needs to have the following software installed: golang>=1.17 and git.
+- Make sure your device has got access to the Internet; 
+- Make sure your device has installed and launched: golang>=1.17 and git.
 
 ## 2. Deploy Bridge Server and Bridge Http
-The poly bridge backend consists of two parts, bridge server and bridge http, which are deployed independently.
+Under the required environment, you can deploy bridge server and bridge http separately to launch your `Poly Bridge`.
 
 ### Step 1. Clone code
+Firstly, you have to clone the core code from the remote repository of polynetwork. Run `git bash` in your assigned file and to do so:
 ```bash
 git clone https://github.com/polynetwork/poly-bridge.git
 ```
 
 ### Step 2. Build binaries
+Then build bridge server and bridge http binaries separately via:
 ```bash
 # Compile the bridge server
 go build -o bridge_server -tags testnet/mainnet ./cmd/
@@ -25,8 +27,8 @@ go build -o bridge_server -tags testnet/mainnet ./cmd/
 go build -o bridge_http -tags testnet/mainnet ./
 ```
 
-### Step 3. Configuration 
-* Make sure necessary configuration is specifed in `config.json`
+### Step 3. Configuration
+Make sure necessary configurations are specified in `config.json`
 1. DBConfig
 2. RedisConfig
 3. ChainNodes
@@ -34,7 +36,7 @@ go build -o bridge_http -tags testnet/mainnet ./
 5. FeeListenConfig
 6. CoinPriceListenConfig
 
-Configuration example, for more details, please refer to [here](https://github.com/polynetwork/poly-bridge/blob/master/conf/config_testnet.json)
+Here we provide a configuration example, and for more details, please refer to [here](https://github.com/polynetwork/poly-bridge/blob/master/conf/config_testnet.json)
 ```json
 {
   "DBConfig": {
@@ -141,11 +143,13 @@ Configuration example, for more details, please refer to [here](https://github.c
 ```
 
 ### Step 4. Run
+Now you can launch and run the two functions:
 ```bash
 ./bridge_server --config config.json
 ./bridge_http --config config.json
 ```
 
 ### Step 5. Test
-There are detailed unit tests in the code repository, which can be tested as needed before the service is started.
-After the service is started, you need to check the log for errors, such as program panic, node connection failure, etc., and you need to pay attention to whether the monitoring height of the chain increases normally.
+There are detailed unit tests in the code repository, which can be tested as needed before the service starts.
+And after the service starts, you need to check the log for errors, such as program panic, node connection failure, etc. 
+Additionally you need to pay attention to whether the monitoring height of the chain increases normally. 
