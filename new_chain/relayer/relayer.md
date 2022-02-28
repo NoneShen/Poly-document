@@ -33,7 +33,7 @@ type IChainListener interface {
 ```
 
 ### 1.2 Implement Chain Submitter
-Chain Submitter is used to submit messages/transactions to the target chain, including  bookkeeper changes of poly chain and cross chain messages. You can call the command with the following codes.
+Chain Submitter is used to submit messages/transactions to the target chain, including  validator changes of poly chain and cross chain messages. You can call the command with the following codes.
 
 ```go
 type IChainSubmitter interface {
