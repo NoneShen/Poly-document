@@ -450,7 +450,7 @@ A: You may have to manually add that specific asset to your Metamask. This can b
 
 
 
-#### <img alt="img_6.png" height="35pcs" src="img_6.png" width="105pcs"/> Some critical concerned:
+#### Some critical concerned:
 <div class="card">
     <div class="card-header" id="heading28">
       <h5 class="mb-0">
