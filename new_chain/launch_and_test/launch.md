@@ -3,13 +3,13 @@
 Till now, you may have completed the above three parts and waiting to run your module. Then you can execute launch and test by following the listed steps according to the needs of your project.  
 
 > [!NOTE]
-> Typically, deployment and testing will always happen on test, dev, and mainnet in that order.
+> Deployment and test are carried on test-net, dev-net, and main-net successively.
 
 <div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
 
 ## 1. Deploy Contracts
 
-If you want to take templates provided by Poly as your CCM module, you need to deploy three contracts listed below:
+If you want to take templates provided by Poly as your CCM module, deploy three contracts listed below:
 - Deploy [Cross Chain Data contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/data/EthCrossChainData.sol) and get the address of it.
 - Deploy [Cross Chain Manager contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol) and input the address of Cross Chain Data contract.
 - Deploy [Cross Chain Manager Proxy contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol) and input the address of Cross Chain Manager contract.

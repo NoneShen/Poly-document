@@ -2,7 +2,7 @@
 
 ## 1. Development Specifications for Relayer
 
-If you have successfully deployed the poly chain and new chain, the next step is to develop a poly relayer in your chain. Poly relayer plays the role to relay cross chains messages and interact with CCM contracts, helping you further join into the cross-chain ecosystem. Two components are required in the implementation: Chain LIstener and Chain Submitter. 
+If you have successfully deployed the poly chain and new chain, the next step is to develop a poly relayer in your chain. Poly relayer plays the role to relay cross chains messages and interact with CCM contracts, helping you further join into the cross-chain ecosystem. Two components are required in the implementation: Chain Listener and Chain Submitter. 
 <div align=center><img src="resources/develop_for_relayer.png" alt=""/></div>
 
 
