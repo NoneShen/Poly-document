@@ -469,70 +469,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" >
-            
-                <span>
-            
-                    
-                    Token
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="3.2.1" data-path="../../Core_Smart_Contract/Token/MainNet.md">
-            
-                <span>
-            
-                    
-                    MainNet
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2.2" data-path="../../Core_Smart_Contract/Token/TestNet.md">
-            
-                <span>
-            
-                    
-                    TestNet
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2.3" data-path="../../Core_Smart_Contract/Token/DevNet.md">
-            
-                <span>
-            
-                    
-                    DevNet
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="../../Core_Smart_Contract/Nodes/Nodes.html">
+        <li class="chapter " data-level="3.2" data-path="../../Core_Smart_Contract/Nodes/Nodes.html">
             
                 <a href="../../Core_Smart_Contract/Nodes/Nodes.html">
             
                     
-                    Relayer and Nodes
+                    Nodes
             
                 </a>
             
@@ -540,7 +482,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="../../GLOSSARY.html">
+        <li class="chapter " data-level="3.3" data-path="../../GLOSSARY.html">
             
                 <a href="../../GLOSSARY.html">
             
@@ -631,8 +573,9 @@
 
 
 <div align="center"></div>
+Till now, you may have completed the above three parts and waiting to run your module. Then you can execute launch and test by following the listed steps according to the needs of your project.  
 
-<div align="center"><a href="resources/launch_and_testing.png" data-lightbox="9cf98aba-42f1-419e-a875-161b5b427e45" data-title=""><img src="resources/launch_and_testing.png" alt=""></a></div>
+<div align="center"><a href="resources/launch_and_testing.png" data-lightbox="5d684257-ef07-476c-84bd-e6e04aa7c141" data-title=""><img src="resources/launch_and_testing.png" alt=""></a></div>
 
 <h2 id="1-deploy-contracts">1. Deploy Contracts</h2>
 <p>If you want to take templates provided by Poly as your CCM module, you need to deploy three contracts listed below:</p>
@@ -651,7 +594,7 @@
 <p>[!NOTE]
 Chain registration is currently completed by <code>poly team</code>  via the trusted account.</p>
 </blockquote>
-<h2 id="2-synchronize-genesis-block-header">2. Synchronize genesis block header</h2>
+<h2 id="3-synchronize-genesis-block-header">3. Synchronize genesis block header</h2>
 <p>Genesis block header synchronization is the prerequisite of synchronizing and processing the subsequent block header information. It involves Synchronizing the genesis block header of the new chain to <a href="../../GLOSSARY.html#poly-chain" class="glossary-term" title="The relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The poly chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">poly chain</a> and synchronizing the genesis header of the <a href="../../GLOSSARY.html#poly-chain" class="glossary-term" title="The relay chain in the cross-chain ecosystem. One of the crucial components of the cross-chain ecosystem. Each type of node is deployed and maintained by other individuals or organizations and has its unique governance and trust mechanism. The poly chain is responsible for connecting them, standardizing cross-chain data flow and interfaces, verifying the legitimacy of cross-chain data, etc.">poly chain</a> to ccm contract of the new chain.</p>
 <ul>
 <li>Call entry function <code>SyncSideChainGenesisHeader</code> </li>
@@ -660,16 +603,17 @@ Chain registration is currently completed by <code>poly team</code>  via the tru
 <p>[!NOTE]
 Synchronization is currently completed by <code>poly team</code>  via the trusted account.</p>
 </blockquote>
-<h2 id="3-deploy-relayers">3. Deploy Relayers</h2>
-<h3 id="relayer-subcommands">Relayer Subcommands</h3>
+<h2 id="4-deploy-relayers">4. Deploy Relayers</h2>
+<p>Deployment of <a href="../../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> involves two critical procedures: execute <a href="../../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> subcommands below and deploy <a href="../../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a>. You can follow the listed commands and steps to complete your deployment. </p>
+<h3 id="41-relayer-subcommands">4.1 Relayer Subcommands</h3>
 <ul>
-<li><code>settxblock</code> set the scan initial height.<pre class="language-"><code class="lang-bash">./relayer_main settxblock --height <span class="token number">100210</span> --chain <span class="token number">7</span>
+<li>Execute <code>settxblock</code> to set the scan initial height.<pre class="language-"><code class="lang-bash">./relayer_main settxblock --height <span class="token number">100210</span> --chain <span class="token number">7</span>
 </code></pre>
 </li>
-<li><code>setheaderblock</code> set the header sync height.<pre class="language-"><code class="lang-bash">./relayer_main setheaderblock --height <span class="token number">100210</span> --chain <span class="token number">7</span>
+<li>Execute<code>setheaderblock</code> to set the header sync height.<pre class="language-"><code class="lang-bash">./relayer_main setheaderblock --height <span class="token number">100210</span> --chain <span class="token number">7</span>
 </code></pre>
 </li>
-<li><code>status</code> shows the current <a href="../../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> status.<pre class="language-"><code class="lang-bash">./relayer_main status
+<li>Execute<code>status</code> to show the current <a href="../../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> status.<pre class="language-"><code class="lang-bash">./relayer_main status
 </code></pre>
 Sample output:<pre class="language-"><code>Status Bsc:
 Latest node height: 16656699
@@ -683,12 +627,13 @@ src tx queue size : 0
 poly tx queue size: 0
 </code></pre></li>
 </ul>
-<p>Deployment steps:</p>
-<h3 id="step-1-build-the-binary">Step 1. Build the Binary</h3>
+<h3 id="42-deployment-steps">4.2 Deployment steps:</h3>
+<p>Now you can actually deploy your <a href="../../GLOSSARY.html#relayer" class="glossary-term" title="A cross-chain information porter performs some of the most critical operations within the cross-chain. It acts as the medium of interaction between the side chain and the outside world.">relayer</a> with the following three steps:</p>
+<h4 id="step-1-build-the-binary">Step 1. Build the Binary</h4>
 <p>To build the binary, switch to the right branch <a href="https://github.com/polynetwork/poly-relayer/blob/main/README.md#supported-chains" target="_blank">Branch Select</a>, then run:</p>
 <pre class="language-"><code class="lang-bash">./build.sh devnet/testnet/mainnet
 </code></pre>
-<h3 id="step-2-write-the-configuration">Step 2. Write the Configuration</h3>
+<h4 id="step-2-write-the-configuration">Step 2. Write the Configuration</h4>
 <ul>
 <li><p>Make sure necessory configuration is specifed in <code>config.json</code> <a href="https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json" target="_blank">Sample</a>.</p>
 </li>
@@ -699,7 +644,7 @@ poly tx queue size: 0
 <thead>
 <tr>
 <th>Roles</th>
-<th>Quantity demand</th>
+<th>Quantity Demand</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -732,7 +677,7 @@ poly tx queue size: 0
 </tbody>
 </table>
 <p>For Poly public nodes, contract addresses, please check <a href="Core_Smart_Contract/Contract/MainNet.md">here</a>.</p>
-<h3 id="step-3-run-the-relayer-process">Step 3. Run the Relayer Process</h3>
+<h4 id="step-3-run-the-relayer-process">Step 3. Run the Relayer Process</h4>
 <pre class="language-"><code>./server --config ./config.json --roles ./roles.json
 </code></pre><blockquote>
 <p>[!Note]</p>
@@ -745,11 +690,11 @@ poly tx queue size: 0
 </li>
 </ul>
 </blockquote>
-<h2 id="4-test">4. Test</h2>
-<h4 id="cross-chain-using-lock-proxy">Cross-chain using Lock proxy</h4>
-<h4 id="cross-chain-using-wrapper">Cross-chain using Wrapper</h4>
+<h2 id="5-test">5. Test</h2>
+<h3 id="cross-chain-using-lock-proxy">Cross-chain using Lock proxy</h3>
+<h3 id="cross-chain-using-wrapper">Cross-chain using Wrapper</h3>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2022 PolyNetwork. All right reserved.</span><span class="footer-modification">Last modification date&#xFF1A;
-2022-02-24 16:46:56
+2022-02-24 17:51:21
 </span></footer>
                         
                     </section>
@@ -796,7 +741,7 @@ poly tx queue size: 0
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Launch and Test","level":"2.1.4","depth":2,"next":{"title":"Build New Bridges","level":"2.2","depth":1,"path":"new_product/integrate_bridge/readme.md","ref":"new_product/integrate_bridge/readme.md","articles":[{"title":"API","level":"2.2.1","depth":2,"path":"new_product/integrate_bridge/bridge.md","ref":"new_product/integrate_bridge/bridge.md","articles":[]},{"title":"Launch and Test","level":"2.2.2","depth":2,"path":"new_product/integrate_bridge/launch.md","ref":"new_product/integrate_bridge/launch.md","articles":[]}]},"previous":{"title":"Develop for Relayer","level":"2.1.3","depth":2,"path":"new_chain/relayer/relayer.md","ref":"new_chain/relayer/relayer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sectionx","-sharing","sharing-plus","theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"https://poly.network/#/","imgClass":"rect","imgSrc":"/resources/logo.png","target":"_blank","title":"flexible-linkcard"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"links":{"sidebar":{"Blog":"https://blog.csdn.net/ming_97y","Github":"https://github.com/jiangminggithub"}},"sharing":{"qq":false,"telegram":true,"youtube":true,"github":true,"douban":false,"facebook":false,"weibo":false,"discord":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"medium":true,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"email":true,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"PolyNetwork","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"new_chain/launch_and_test/launch.md","mtime":"2022-02-24T08:46:56.085Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-24T08:48:01.207Z"},"basePath":"../..","book":{"language":""}})
+            gitbook.page.hasChanged({"page":{"title":"Launch and Test","level":"2.1.4","depth":2,"next":{"title":"Build New Bridges","level":"2.2","depth":1,"path":"new_product/integrate_bridge/readme.md","ref":"new_product/integrate_bridge/readme.md","articles":[{"title":"API","level":"2.2.1","depth":2,"path":"new_product/integrate_bridge/bridge.md","ref":"new_product/integrate_bridge/bridge.md","articles":[]},{"title":"Launch and Test","level":"2.2.2","depth":2,"path":"new_product/integrate_bridge/launch.md","ref":"new_product/integrate_bridge/launch.md","articles":[]}]},"previous":{"title":"Develop for Relayer","level":"2.1.3","depth":2,"path":"new_chain/relayer/relayer.md","ref":"new_chain/relayer/relayer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sectionx","-sharing","sharing-plus","theme-hqbook","flexible-linkcard","emphasize","flexible-alerts","lightbox","alerts","expandable-chapters","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","search-pro","code","heading-anchors","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2022 PolyNetwork.","modify_label":"Last modification date：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"emphasize":{},"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"flexible-linkcard":{"hrefUrl":"../../demo/demo.html","imgClass":"","imgSrc":"../../images/home/logo.png","target":"_blank","title":"Converts blockquotes into beautiful linkcard, custom nice links"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"favicon":"resources/favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"prism-themes":{},"theme-hqbook":{"copyButtons":false,"copyLines":true,"dragSplitter":true,"favicon":"./favicon.ico","flexible-linkcard":{"hrefUrl":"https://poly.network/#/","imgClass":"rect","imgSrc":"/resources/logo.png","target":"_blank","title":"flexible-linkcard"},"logo":"/resources/logo.png","search-placeholder":"Search...","hide-elements":[".summary .gitbook-link"]},"alerts":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"links":{"sidebar":{"Blog":"https://blog.csdn.net/ming_97y","Github":"https://github.com/jiangminggithub"}},"sharing":{"qq":false,"telegram":true,"youtube":true,"github":true,"douban":false,"facebook":false,"weibo":false,"discord":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"medium":true,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"email":true,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"PolyNetwork","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"variables":{"themeHqbook":{"nav":[{"url":"https://poly.network/","target":"_blank","name":"Home"},{"url":"https://bridge.poly.network/","target":"_blank","name":"Poly Bridge"},{"url":"https://explorer.poly.network/","target":"_blank","name":"Poly Explorer"}]}},"title":"","flexible-alerts":{"style":"callout","comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"new_chain/launch_and_test/launch.md","mtime":"2022-02-24T09:51:21.922Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-25T09:21:54.797Z"},"basePath":"../..","book":{"language":""}})
         });
     </script>
 </div>

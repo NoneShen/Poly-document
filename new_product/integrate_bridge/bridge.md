@@ -1,8 +1,6 @@
 <h1 align="center">API</h1>
 
-> [!Note|style:flat|label:Notice]
-
->The following APIs are provided for developers who need to implement the bridge function. If you want to integrate into the poly bridge, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
+The following APIs are provided for developers who need to implement the bridge function. If you want to integrate into the poly bridge, please get in touch with the `poly team` via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
 
 ## Poly Bridge APIs:
 
@@ -58,7 +56,7 @@ Example Response
 }
 ```
 ### Get the cross chain transaction status
-This API returns the details of the specified hash, and you can view the cross-chain procedure through the `TransactionState` in the response.  
+This API returns the details of the assigned hash, and you can view the cross-chain procedure through the `TransactionState` in the response.  
 
 API
 ```
@@ -155,7 +153,7 @@ Example Response
 ```
 ### Get history transactions of address
 
-This API returns the cross-chain history of the specified address.
+This API returns the cross-chain history of the assigned address.
 
 API
 ```

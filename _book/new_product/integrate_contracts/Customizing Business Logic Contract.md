@@ -2,10 +2,9 @@
 
 ## Develop Customized Business Logic Contracts
 
-To implement cross chain features for any chain, cross chain management contract is needed to be deployed. Every chain can have no more than one management contract. All the business logic contracts need to interact with the CCM contract. Following is the detailed description of two interfaces offered by CCM contract. You may refer to the full [code](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol) of CCM contract. 
-
+Chains must and only must be deployed with one CCM contract so as to implement cross-chain features. And for normal running, all the business logic contracts have to interconnect with CCM contract via the interfaces offered by CCM contract. See the following for detailed description or refer to the full code of CCM contract.
 > [!Note|style:flat|label:Notice]
-> To realize implementation of cross chain features, developers need to make sure that the cross chain methods in your business logic contracts should allow our Cross Chain Manager Contract to call.
+> To implement cross-chain features, you need to make sure that the cross chain methods in your business logic contracts have authorized our Cross Chain Manager Contract to call.
 
 ### Step1. Implement methods of inputting the mapping relationship
 
@@ -47,7 +46,7 @@ contract LockProxy is Ownable {
 
 #### Interface:
 
-This interface creates cross chain transactions, invoked by business logic contracts when a cross chain function is carried out in the logic contract.
+This interface creates cross-chain transactions, invoked by business logic contracts when a cross chain function is carried out in the logic contract.
 
 ````solidity
 /*  
@@ -60,8 +59,8 @@ This interface creates cross chain transactions, invoked by business logic contr
 function crossChain(uint64 toChainId, bytes calldata toContract, bytes calldata method, bytes calldata txData) whenNotPaused external returns (bool)
 ````
 
-- This method constructs the `rawParam`, which contains transaction hash, `msg.sender`, target chain id, business logic contract to be invoked on target chain, the target method to be invoked and the serialized transaction data which has been already constructed in business logic contract. 
-- Then put the hash of `rawParam` into storage, to help provide proof of transaction existence.
+- This method constructs the `rawParam`, which contains transaction hash, `msg.sender`, target chain ID, business logic contract to be invoked on target chain, the target method to be invoked, and the serialized transaction data which has been already constructed in business logic contract. 
+- Then put the hash of `rawParam` into storage, to prove cross-chain transaction.
 
 #### Example:
 
@@ -101,15 +100,15 @@ function lock(address fromAssetHash, uint64 toChainId, bytes memory toAddress, u
 }
 ```
 
-- This function is meant to be invoked by users. The user requests an asset token cross chain transaction through the dApp which works in source chain, business logic contract gets the transaction information which contains the asset contract address on source chain, the target chain id, the target address and amount of token to be transfered. By calling this method, business logic contract will lock the certain amount to asset contract;
+- This function is invoked by users. Users can request a cross-chain transaction through the dApp which works in source chain, and then business logic contract will get the transaction information involving asset contract address on source chain, target chain ID, target address and amount of token to be transferred. By calling this method, business logic contract will lock the certain amount to asset contract;
 - Then the transaction data will be packed, which then in turn invokes the CCM contract. The management contract transfers the parameters of transaction data to the target chain and a cross chain transaction is created by management contract which is sent to the target chain based on block generation on source chain;
-- The serialized transaction data, along with the chain id and business logic contract address of target chain and the method needed to be called on target chain, will be sent through `crossChain()` in CCM contract.
+- The serialized transaction data, along with chain ID, business logic contract address of target chain and the method needing to be called on target chain, will be sent through `crossChain()` in CCM contract.
 
 ### Step3. Implement methods of verifying and executing cross-chain transactions
 
 #### Interface:
 
-This method is meant to be invoked by relayer, in some cases user could invoke this method by themselves if they get the valid block information from Poly.
+This method is invoked by relayer, but in some cases users could also invoke this method by themselves if they get the valid block information from Poly.
 
 ````solidity
 /*  
@@ -158,7 +157,7 @@ function unlock(bytes memory argsBs, bytes memory fromContractAddr, uint64 fromC
 }
 ```
 
-- This functions is meant to be invoked by CCM contract. It deserializes the transaction data and invokes the asset contract to release the tokens to target address.
+- This function is invoked by CCM contract. It deserializes the transaction data and invokes the asset contract to release the tokens to target address.
 - `verifyHeaderAndExecuteTx()` in CCM contract determines the legitimacy of the cross chain transaction information and resolve the parameters of transaction data from the Poly chain transaction merkle proof and `crossStateRoot` contained in the block header. After verification through Poly, the packed transaction data could be executed on target chain.
 - Then call the function `unlock()` to deserialize the transaction data and unlock (transfer) the certain amount of token to the target address on target chain and completes the cross chain contract invocation.
 
