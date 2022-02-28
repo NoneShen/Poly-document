@@ -16,6 +16,8 @@ If you want to take templates provided by Poly as your CCM module, you need to d
 
 ## 2. Register Chain
 
+For chain registration, you need to complete the following two functions: 
+
 ### Step 1. Call chain registration functions
 Registration is the prerequisite of monitoring and processing block information and checking the execution of cross-chain transactions. The chain will be officially involved into the cross-chain ecosystem after completing registration and being approved by the Cross Chain Council.
 
@@ -34,9 +36,9 @@ Genesis block header synchronization is the prerequisite of synchronizing and pr
 > Synchronization is currently completed by `poly team`  with the trusted account.
 
 
-## 4. Deploy Relayers
+## 3. Deploy Relayers
 Deployment of relayer involves two critical procedures: execute relayer subcommands below and deploy relayer. You can follow the listed commands and steps to complete your deployment. 
-### Relayer Subcommands
+### 3.1 Relayer Subcommands
 
 - Execute `settxblock` to set the scan initial height.
   ```bash
@@ -64,7 +66,7 @@ Deployment of relayer involves two critical procedures: execute relayer subcomma
   poly tx queue size: 0
   ```
 
-### Deployment steps:
+### 3.2 Deployment steps:
 Now you can actually deploy your relayer with the following three steps:
 #### Step 1. Build the Binary
 
@@ -83,13 +85,13 @@ To build the binary, switch to the right branch [Branch Select](https://github.c
 * Specify roles to enable in `roles.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json)
 
 
-| Roles      | Quantity Demand                | Description                             |
-| ---------- |--------------------------------| --------------------------------------- |
-| HeaderSync | One or multiple for each chain | It submits chain headers to poly chain. |
-| TxListen | Only one for each chain        | It observes cross chain transactions from source chain, and push them to message queue. |
-| TxCommit | One or multiple for each chain | It consumes the message queue, and submit the cross chain transactions to poly. |
-| PolyListen | Only One for poly chain        | It observes cross chain transactions from poly chain and push them to message queue. |
-| PolyCommit | One or multiple for poly chain | It consumes the message queue, and submit the cross chain transaction to the destination chain. |
+| Roles      | Quantity Demand                 | Description                                                                                     |
+|------------|---------------------------------|-------------------------------------------------------------------------------------------------|
+| HeaderSync | One or multiple for each chain  | It submits chain headers to poly chain.                                                         |
+| TxListen   | Only one for each chain         | It observes cross chain transactions from source chain, and push them to message queue.         |
+| TxCommit   | One or multiple for each chain  | It consumes the message queue, and submit the cross chain transactions to poly.                 |
+| PolyListen | Only One for poly chain         | It observes cross chain transactions from poly chain and push them to message queue.            |
+| PolyCommit | One or multiple for poly chain  | It consumes the message queue, and submit the cross chain transaction to the destination chain. |
 
 For Poly public nodes and contract addresses, check [here](Core_Smart_Contract/Contract/MainNet.md).
 
@@ -102,11 +104,11 @@ Now call the command:
 ```
 
 > [!Note]
-> - Check the wallet balance regularly to avoid problems caused by insufficient fee.
+> - Check your wallet balance regularly to avoid problems caused by insufficient balance.
+>
+> - Creating multiple wallet accounts can speed up cross chain transaction.
 > 
-> - You can create multiple accounts to accelerate message relay.
-> 
-> - Register a Poly chain wallet before run the relayer because the users are required to access with permission. 
+> - Register a poly chain wallet before run the relayer, as signature in poly chain wallet is permitted by assigned accounts.
 
 
 ## 5. Test
