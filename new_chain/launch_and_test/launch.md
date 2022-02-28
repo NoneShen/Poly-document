@@ -16,7 +16,7 @@ If you want to take templates provided by Poly as your CCM module, you need to d
 
 ## 2. Register Chain
 
-### Call chain registration functions
+### Step 1. Call chain registration functions
 Registration is the prerequisite of monitoring and processing block information and checking the execution of cross-chain transactions. The chain will be officially involved into the cross-chain ecosystem after completing registration and being approved by the Cross Chain Council.
 
 - Call entry function `RegisterSideChain`
@@ -25,11 +25,8 @@ Registration is the prerequisite of monitoring and processing block information 
 > [!NOTE]
 > Chain registration is currently completed by `poly team`  via the trusted account.
 
-<<<<<<< HEAD
-### Call  genesis block header synchronize functions
-=======
-## 3. Synchronize genesis block header
->>>>>>> 7ad051eb3506a79d404942a30bb5715881d5acd0
+### Step 2. Call the genesis block header synchronize functions
+
 Genesis block header synchronization is the prerequisite of synchronizing and processing the subsequent block header information. It involves Synchronizing the genesis block header of the new chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the new chain.
 - Call entry function `SyncSideChainGenesisHeader` 
 
@@ -39,7 +36,7 @@ Genesis block header synchronization is the prerequisite of synchronizing and pr
 
 ## 4. Deploy Relayers
 Deployment of relayer involves two critical procedures: execute relayer subcommands below and deploy relayer. You can follow the listed commands and steps to complete your deployment. 
-### 4.1 Relayer Subcommands
+### Relayer Subcommands
 
 - Execute `settxblock` to set the scan initial height.
   ```bash
@@ -67,7 +64,7 @@ Deployment of relayer involves two critical procedures: execute relayer subcomma
   poly tx queue size: 0
   ```
 
-### 4.2 Deployment steps:
+### Deployment steps:
 Now you can actually deploy your relayer with the following three steps:
 #### Step 1. Build the Binary
 
