@@ -10,14 +10,17 @@ If you want to take templates provided by Poly as your CCM module, you need to d
 - Deploy [Cross Chain Manager Proxy contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol) and input the address of Cross Chain Manager contract.
 
 ## 2. Register Chain
+
+### Call chain registration functions
 Registration is the prerequisite of monitoring and processing block information and checking the execution of cross-chain transactions. The chain will be officially involved into the cross-chain ecosystem after completing registration and being approved by the Cross Chain Council.
+
 - Call entry function `RegisterSideChain`
 - Call entry function `ApproveRegisterSideChain`
 
 > [!NOTE]
 > Chain registration is currently completed by `poly team`  via the trusted account.
 
-## 2. Synchronize genesis block header
+### Call  genesis block header synchronize functions
 Genesis block header synchronization is the prerequisite of synchronizing and processing the subsequent block header information. It involves Synchronizing the genesis block header of the new chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the new chain.
 - Call entry function `SyncSideChainGenesisHeader` 
 
