@@ -1,9 +1,9 @@
 <h1 align="center">Launch and Test</h1>
 
-
-
-<div align=center></div>
 Till now, you may have completed the above three parts and waiting to run your module. Then you can execute launch and test by following the listed steps according to the needs of your project.  
+
+> [!NOTE]
+> Typically, deployment and testing will always happen on test, dev, and mainnet in that order.
 
 <div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
 
@@ -15,14 +15,18 @@ If you want to take templates provided by Poly as your CCM module, you need to d
 - Deploy [Cross Chain Manager Proxy contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/upgrade/EthCrossChainManagerProxy.sol) and input the address of Cross Chain Manager contract.
 
 ## 2. Register Chain
+
+### Step 1. Call chain registration functions
 Registration is the prerequisite of monitoring and processing block information and checking the execution of cross-chain transactions. The chain will be officially involved into the cross-chain ecosystem after completing registration and being approved by the Cross Chain Council.
+
 - Call entry function `RegisterSideChain`
 - Call entry function `ApproveRegisterSideChain`
 
 > [!NOTE]
 > Chain registration is currently completed by `poly team`  with the trusted account.
 
-## 3. Synchronize genesis block header
+### Step 2. Call the genesis block header synchronize functions
+
 Genesis block header synchronization is the prerequisite of synchronizing and processing the subsequent block header information. It involves Synchronizing the genesis block header of the new chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the new chain.
 - Call entry function `SyncSideChainGenesisHeader` 
 
@@ -32,7 +36,7 @@ Genesis block header synchronization is the prerequisite of synchronizing and pr
 
 ## 4. Deploy Relayers
 Deployment of relayer involves two critical procedures: execute relayer subcommands below and deploy relayer. You can follow the listed commands and steps to complete your deployment. 
-### 4.1 Relayer Subcommands
+### Relayer Subcommands
 
 - Execute `settxblock` to set the scan initial height.
   ```bash
@@ -60,7 +64,7 @@ Deployment of relayer involves two critical procedures: execute relayer subcomma
   poly tx queue size: 0
   ```
 
-### 4.2 Deployment steps:
+### Deployment steps:
 Now you can actually deploy your relayer with the following three steps:
 #### Step 1. Build the Binary
 
@@ -98,12 +102,11 @@ Now call the command:
 ```
 
 > [!Note]
-> - Wallet balance should be checked regularly to avoid out of fee balance issue.
+> - Check the wallet balance regularly to avoid problems caused by insufficient fee.
 > 
-> - Multiple wallet accounts can be created to increase message relay throughout.
+> - You can create multiple accounts to accelerate message relay.
 > 
-> - Poly chain wallet signer address is permission controlled, so before run the relayer, the poly chain wallet should be requested.
-
+> - Register a Poly chain wallet before run the relayer because the users are required to access with permission. 
 
 
 ## 5. Test

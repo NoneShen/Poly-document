@@ -2,11 +2,11 @@
 
 ## 1. Development Specifications for Relayer
 
-If you have successfully deployed the poly chain and new chain, the next step is to develop a poly relayer in your chain. Poly relayer plays the role to relay cross chains messages and interact with CCM contracts, helping you further join into the cross-chain ecosystem. Two components are required in the implementation: Chain LIstener and Chain Submitter. 
+Poly relayer plays the role to relay cross chains messages and interact with cross chain manager contracts. Two components are required in the implementation:
 <div align=center><img src="resources/develop_for_relayer.png" alt=""/></div>
 
 
-### 1.1 Implement Chain Listener
+### Implement Chain Listener
 Chain Listener is used to fetch data from the source chain, including block headers, cross chain events emitted from CCM and merkle proofs when it's used to verify the cross chain message in the `Poly` chain. 
 
 ```go
@@ -32,8 +32,13 @@ type IChainListener interface {
 }
 ```
 
+<<<<<<< HEAD
 ### 1.2 Implement Chain Submitter
 Chain Submitter is used to submit messages/transactions to the target chain, including  bookkeeper changes of poly chain and cross chain messages. You can call the command with the following codes.
+=======
+### Implement Chain Submitter
+Chain Submitter is used to submit messages/transactions to the target chain, including  bookkeeper changes of poly chain and cross chain messages to finalize as the last step.
+>>>>>>> 73f73d689e28244d89139a14dbc2bc17cdc5f23a
 
 ```go
 type IChainSubmitter interface {
@@ -48,9 +53,9 @@ type IChainSubmitter interface {
 }
 ```
 
-### 1.3 Development steps
-
 The `poly-relayer` project depends on the `bridge-common` library. Follow the listed steps to develop the relayer for a new chain.
+
+### Development steps
 
 - Add chain ID in the `bridge-common` project [here](https://github.com/polynetwork/bridge-common/base).
 - Add chain client SDK [here](https://github.com/polynetwork/bridge-common/tree/main/chains) for common usage.

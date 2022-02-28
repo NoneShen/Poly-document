@@ -6,7 +6,7 @@ The development of a new chain mainly involves developing cross-chain modules. H
 > If the chain integrated to Poly Network supports EVM, developers could freely use our cross-chain contracts as templates. If not, you may need to develop your own contracts which contains the main features as shown in following guidelines. 
 
 ## 1. Introduction to Cross-chain Contracts
-In this part, we sort the contracts into data contract, logic contract and proxy contract to complete the cross-chain contracts. You could either follow the methods listed below or choose other ways for your project.
+
 - List of contracts: 
   - [Cross Chain Manager Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/logic/EthCrossChainManager.sol): On source chain, it creates the cross chain transactions that are transferred to the Poly. On target chain, it verifies the legitimacy of transactions and executes the method on target business logic contract. In the following context, it may be referred to as CCM contract.
   - [Cross Chain Data Contract](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/cross_chain_manager/data/EthCrossChainData.sol): It serves as a database of cross chain transactions. In the following context, it may be referred to as CCD contract.
@@ -16,9 +16,13 @@ In this part, we sort the contracts into data contract, logic contract and proxy
 
 <div align=center><img src="resources/contracts_interaction.png" alt=""/></div>
 
+> [!Note|style:flat|label:Notice]
+> In this guidelines, we realize the upgradable contracts through split the Cross chain contracts into data contract, logic contract and proxy contract. You could follow this method or choose the most suitable way for your project.
+
 ## 2. Develop Cross Chain Manager Contracts
 
-Now it comes to develop cross-chain contracts. Before actually customizing your CCM, you need to implement the listed four main features. 
+> [!Note|style:flat|label:Notice]
+> In this part, we offer the four main features required to be implemented in the Cross-chain modules, which are included in the CCM contract. As for CCD and CCMP contract, you could choose the suitable way to realize contracts upgrading features.
 
 ### Step1. Implement methods of synchronizing genesis block header
 

@@ -4,10 +4,10 @@
 
 ## 1. Deploying Contracts
 
-To implement cross chain features, you need to make sure that:
+To realize implementation of cross chain features, developers need to make sure that:
 
 - The customized business logic contracts are deployed both on source chain and target chain
-- The cross chain methods in your business logic contracts have authorized our Cross Chain Manager Contract to call. 
+- The cross chain methods in your business logic contracts should allow our Cross Chain Manager Contract to call
 - The mapping assets need to be bound before any cross chain transactions
 
 ## 2. Test Your Contracts

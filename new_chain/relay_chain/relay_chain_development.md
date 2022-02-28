@@ -1,10 +1,8 @@
 <h1 align="center">Develop for Poly Chain</h1>
 
-## 1. Requirements
+## Requirements
 
-Before developing poly chain, you have to be well prepared with the listed three prerequisites.
-
-### 1.1 Make sure the new chain supports Light Client Verification
+### 1. Make sure the new chain supports Light Client Verification
 
 The block header must contain the following information：
 - Hash of the previous block header
@@ -14,23 +12,21 @@ The block header must contain the following information：
 > [!Note|style:flat|label:Notice]
 > If your chain doesn't support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, get in touch with the `poly team` through <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
 
-### 1.2 Offer the block header structure and verification methods
+### 2. Offer the block header structure and verification methods
 - Block header structure
 - Serialization and Deserilization methods
 - Block header verification mehtods
 
-### 1.3 Offer the merkle tree structure and verification methods
+### 3. Offer the merkle tree structure and verification methods
 
 - Merkle tree structure
 - State root verification methods
 
-## 2. Development Specifications
-
-With the prerequisites mentioned above, you can start developing poly chain following the guideline below from the perspective you need. 
+## Development Specifications
 
 <div align=center><img src="resources/relay_chain_development.png" alt=""/></div>
 
-### 2.1 Implement methods of block data verification
+### 1. Implement methods of block data verification
 
 #### Block Header Synchronization Methods
 
@@ -57,7 +53,7 @@ The Key information for this method (submitted by .config):
 - Information required for the new chain block header verification
 
 
-### 2.2 Implement methods of cross-chain transaction verification
+### 2. Implement methods of cross-chain transaction verification
 
 #### Cross Chain Management
 
