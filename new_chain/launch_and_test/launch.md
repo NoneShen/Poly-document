@@ -1,9 +1,9 @@
 <h1 align="center">Launch and Test</h1>
 
-
-
-<div align=center></div>
 Till now, you may have completed the above three parts and waiting to run your module. Then you can execute launch and test by following the listed steps according to the needs of your project.  
+
+> [!NOTE]
+> Typically, deployment and testing will always happen on test, dev, and mainnet in that order.
 
 <div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
 
