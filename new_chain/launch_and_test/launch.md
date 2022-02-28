@@ -20,14 +20,14 @@ Registration is the prerequisite of monitoring and processing block information 
 - Call entry function `ApproveRegisterSideChain`
 
 > [!NOTE]
-> Chain registration is currently completed by `poly team`  via the trusted account.
+> Chain registration is currently completed by `poly team`  with the trusted account.
 
 ## 3. Synchronize genesis block header
 Genesis block header synchronization is the prerequisite of synchronizing and processing the subsequent block header information. It involves Synchronizing the genesis block header of the new chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the new chain.
 - Call entry function `SyncSideChainGenesisHeader` 
 
 > [!NOTE]
-> Synchronization is currently completed by `poly team`  via the trusted account.
+> Synchronization is currently completed by `poly team`  with the trusted account.
 
 
 ## 4. Deploy Relayers
@@ -74,7 +74,7 @@ To build the binary, switch to the right branch [Branch Select](https://github.c
 
 #### Step 2. Write the Configuration
 
-* Make sure necessory configuration is specifed in `config.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json).
+* Make sure necessary configuration is specified in `config.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json).
 
 * Specify roles to enable in `roles.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json)
 
@@ -87,9 +87,11 @@ To build the binary, switch to the right branch [Branch Select](https://github.c
 | PolyListen | Only One for poly chain        | It observes cross chain transactions from poly chain and push them to message queue. |
 | PolyCommit | One or multiple for poly chain | It consumes the message queue, and submit the cross chain transaction to the destination chain. |
 
-For Poly public nodes, contract addresses, please check [here](Core_Smart_Contract/Contract/MainNet.md).
+For Poly public nodes and contract addresses, check [here](Core_Smart_Contract/Contract/MainNet.md).
 
 #### Step 3. Run the Relayer Process
+
+Now call the command:
 
 ```
 ./server --config ./config.json --roles ./roles.json
@@ -98,7 +100,7 @@ For Poly public nodes, contract addresses, please check [here](Core_Smart_Contra
 > [!Note]
 > - Wallet balance should be checked regularly to avoid out of fee balance issue.
 > 
-> - Mulitple wallet accounts can be created to increase message relay throughout.
+> - Multiple wallet accounts can be created to increase message relay throughout.
 > 
 > - Poly chain wallet signer address is permission controlled, so before run the relayer, the poly chain wallet should be requested.
 

@@ -2,7 +2,7 @@
 
 # [MainNet](MainNet.md) | [TestNet](TestNet.md) | DevNet 
 
-Here are cross chain contracts ONLY working in <strong>DevNet</strong> mode, which are used to bind asset mapping in different chains. It refers to that the asset is mapping if the name ends with (s).
+Here are cross chain contracts ONLY working in <strong>DevNet</strong> node, which are used to bind asset mapping in different chains. It refers to that the asset is mapping if the name ends with (s).
 
 
 ### Contract Index (Chain-Chain ID)
