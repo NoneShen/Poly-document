@@ -24,12 +24,7 @@
 * [Contract]()
   * [MainNet](Core_Smart_Contract/Contract/MainNet.md)
   * [TestNet](Core_Smart_Contract/Contract/TestNet.md)
-  * [DevNet](Core_Smart_Contract/Contract/DevNet.md)
-* [Token]()
-  * [MainNet](Core_Smart_Contract/Token/MainNet.md)
-  * [TestNet](Core_Smart_Contract/Token/TestNet.md)
-  * [DevNet](Core_Smart_Contract/Token/DevNet.md)
-* [Relayer and Nodes](Core_Smart_Contract/Nodes/Nodes.md)
+  * [DevNet](Core_Smart_Contract/Contract/DevNet.md)* [Nodes](Core_Smart_Contract/Nodes/Nodes.md)
 ### Glossary
 * [Glossary](GLOSSARY.md)
 
