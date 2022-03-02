@@ -290,8 +290,8 @@ Q4: Is the bridge rate 1:1?
    </div>
    <div id="collapse15" class="collapse" aria-labelledby="heading15">
     <div class="card-body">
-A:Normally yes, except for deflationary tokens.
-      </div>
+A: Normally yes, except for deflationary tokens.
+    </div>
     </div>
   </div>
 
@@ -322,10 +322,11 @@ Q6：I have waited a long time and still haven’t received my asset. What can I
    <div id="collapse17" class="collapse" aria-labelledby="heading17">
     <div class="card-body">
 A: Please check which step your transaction has reached. Solutions vary from different steps：
-
-- The transaction hasn’t been completed on the source chain：For safety reasons, Poly Bridge will not confirm your transaction immediately until subsequent blocks have been confirmed (the number of subsequent blocks is different for different chains), please wait for block confirmation.
-- The transaction has been completed on the source chain, but not completed on Poly: if the transaction has been stuck in this step for over 5 min, please do not hesitate to contact the Poly Network Team.
-- The transaction hasn’t been completed on the target chain: it’s perhaps down to the transaction congestion of the target chain, please wait for a while or refer to the accelerated transaction <a href="https://medium.com/poly-network/poly-bridge-new-acceleration-function-pc-user-manual-cd0b6cacceea">tutorial</a>. If the accelerated tutorial doesn't work, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.
+<ul>
+ <li>The transaction hasn't been completed on the source chain：For safety reasons, Poly Bridge will not confirm your transaction immediately until subsequent blocks have been confirmed (the number of subsequent blocks is different for different chains), please wait for block confirmation.</li>
+ <li>The transaction has been completed on the source chain, but not completed on Poly: if the transaction has been stuck in this step for over 5 min, please do not hesitate to contact the Poly Network Team.</li>
+ <li>The transaction hasn't been completed on the target chain: it’s perhaps down to the transaction congestion of the target chain, please wait for a while or refer to the accelerated transaction <a href="https://medium.com/poly-network/poly-bridge-new-acceleration-function-pc-user-manual-cd0b6cacceea">tutorial</a>. If the accelerated tutorial doesn't work, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.</li>
+</ul>
 </div>
     </div>
   </div>
@@ -371,19 +372,19 @@ Q9: When an error is shown on my wallet page, what shall I do?
    </div>
    <div id="collapse20" class="collapse" aria-labelledby="heading20">
     <div class="card-body">
-
-A:
-- Firstly, make sure you have approved enough amount for Poly Bridge contract to use the token;
-- Secondly, make sure you have sufficient native tokens to cover the gas fee charged both by source chain and target chain and the amount you want to transfer.
+A: <li>Firstly, make sure you have approved enough amount for Poly Bridge contract to use the token;</li>
+   <li>Secondly, make sure you have sufficient native tokens to cover the gas fee charged both by source chain and target chain and the amount you want to transfer.
 If you transfer native tokens: $amount in your wallet ≥ transfer amount + src chain gas fee + target chain gas fee.
 If you transfer non-native tokens: $native token amount in your wallet ≥ src chain gas fee + target chain gas fee.
 For example, if you want to transfer $Metis from Andromeda to BSC, you have to reserve tokens both for source chain gas fee and for target chain gas fee. The rest are the amount of tokens you can transfer.
 For your better use, Poly Bridge set as follows:
-
-   1. If $native token amount in your wallet < transfer token amount + src chain gas fee + target chain gas fee, you’ll be informed that the transferable token amount is ZERO and see a WARNING of “insufficient funs” after clicking MAX;
-   2. If $native token amount in your wallet > transfer token amount + src chain gas fee + target chain gas fee, the max amount of transferable token = $native token amount in your wallet -target chain gas fee -estimated src chain gas fee. To guarantee the sufficient transaction fee on src chain, the estimated src chain gas fee could be slightly higher than the actual fee, so that some native tokens will remain in your account after transaction (i.e., native token won’t be totally transferred);
-- Thirdly, if you encounter other types of error, please contact <a herf="https://discord.com/invite/y6MuEnq">Poly Network team</a>. 
-      </div>
+<ol>
+   <li>If $native token amount in your wallet < transfer token amount + src chain gas fee + target chain gas fee, you’ll be informed that the transferable token amount is ZERO and see a WARNING of “insufficient funs” after clicking MAX;</li>
+   <li>If $native token amount in your wallet > transfer token amount + src chain gas fee + target chain gas fee, the max amount of transferable token = $native token amount in your wallet -target chain gas fee -estimated src chain gas fee. To guarantee the sufficient transaction fee on src chain, the estimated src chain gas fee could be slightly higher than the actual fee, so that some native tokens will remain in your account after transaction (i.e., native token won’t be totally transferred);</li>
+</ol>
+   </li>
+<li>Thirdly, if you encounter other types of error, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.</li>
+     </div>
     </div>
   </div>
 
@@ -398,10 +399,11 @@ Q10: When I click MAX, why is the amount of transferable token less than my over
    <div id="collapse21" class="collapse" aria-labelledby="heading21">
     <div class="card-body">
 A: Here are three conditions:
-
-1. Poly bridge will reserve transaction fee of both src chain and target chain for users (Tips: the fee will be reserved only when the transferred token is native token). So, the transferable token amount doesn’t equal to your account balance.
-2. Some tokens may have their own characteristics that limit the amount of transfer, so you may not be able to transfer all your assets in one time (but you can break it into several times).
-3.  When the liquidity of target chain is lower than your account balance, you cannot transfer all your assets in one time. Please contact <a herf="https://discord.com/invite/y6MuEnq">Poly Network team</a> under this condition.
+<ol>
+<li>Poly bridge will reserve transaction fee of both src chain and target chain for users (Tips: the fee will be reserved only when the transferred token is native token). So, the transferable token amount doesn't equal to your account balance.</li>
+<li>Some tokens may have their own characteristics that limit the amount of transfer, so you may not be able to transfer all your assets in one time (but you can break it into several times).</li>
+<li>When the liquidity of target chain is lower than your account balance, you cannot transfer all your assets in one time. Please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a> under this condition.</li>
+</ol>
       </div>
     </div>
   </div>
@@ -411,13 +413,15 @@ A: Here are three conditions:
     <div class="card-header" id="heading22">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
-Q11: Why is the liquidity of the target chain shown sufficient in “Max available amount” before sending a transaction and then after the transaction on the source chain is completed, the transaction on the target chain fails because of insufficient liquidity?
+Q11: Why is the liquidity of the target chain shown sufficient in “Max available amount” before sending a transaction and then<br>
+after the transaction on the source chain is completed, the transaction on the target chain fails because of insufficient liquidity?
 </button>
       </h5>
    </div>
    <div id="collapse22" class="collapse" aria-labelledby="heading22">
     <div class="card-body">
-A: The liquidity shown in “Max available amount” refers to liquidity for all users, not your share of the liquidity. If there are several users initiating large transactions at the same time, the liquidity might be insufficient for all transactions. It happens mostly when the amount you transfer is close to the max available amount. Under this occasion, Poly Network will contact the relevant project to add liquidity as soon as possible.
+A: <li>The liquidity shown in “Max available amount” refers to liquidity for all users, not your share of the liquidity. If there are several users initiating large transactions at the same time, the liquidity might be insufficient for all transactions.</li>
+<li>It happens mostly when the amount you transfer is close to the max available amount. Under this occasion, Poly Network will contact the relevant project to add liquidity as soon as possible.</li>
       </div>
     </div>
   </div>
@@ -433,7 +437,7 @@ Q12: Can I use Poly Bridge via mobile devices?
    </div>
    <div id="collapse23" class="collapse" aria-labelledby="heading23">
     <div class="card-body">
-A: Sure you can! Here is the <a herf="https://medium.com/poly-network/poly-bridge-mobile-version-is-officially-launched-95f24ecc93d6">manual</a> for mobile users.
+A: Sure you can! Here is the <a href="https://medium.com/poly-network/poly-bridge-mobile-version-is-officially-launched-95f24ecc93d6">manual</a> for mobile users.
     </div>
     </div>
   </div>
@@ -464,9 +468,8 @@ Q14: When I encounter an error submitting an accelerated transaction, what shall
    </div>
    <div id="collapse25" class="collapse" aria-labelledby="heading25">
     <div class="card-body">
-A: First of all, please do not submit the accelerated transaction when you encounter an error. Because when the error is shown, the transaction has already been completed on the target chain.
-
-Please check the balance in your wallet to see whether you have received your assets. If you have not, please contact <a herf="https://discord.com/invite/y6MuEnq">Poly Network team</a>.
+A: <li>First of all, please do not submit the accelerated transaction when you encounter an error. Because when the error is shown, the transaction has already been completed on the target chain.</li>
+<li>Please check the balance in your wallet to see whether you have received your assets. If you have not, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.</li>
       </div>
     </div>
   </div>
@@ -500,10 +503,10 @@ Q16: If I have not applied Poly Bridge frontend to process my transaction and ca
    </div>
    <div id="collapse27" class="collapse" aria-labelledby="heading27">
     <div class="card-body">
-
-A: 
-- Firstly, please make sure you have paid enough fee to Poly Bridge, and you can check it by calling the “get fee” api. If you haven’t paid enough fee, it is recommended that you use the acceleration function to speed up the target chain transaction.
-- Secondly, if you have already paid enough fee or tried to accelerate but the transaction still fails, please contact <a herf="https://discord.com/invite/y6MuEnq">Poly Network team</a>. 
+A: <ul>
+<li>Firstly, please make sure you have paid enough fee to Poly Bridge, and you can check it by calling the “get fee” api. If you haven’t paid enough fee, it is recommended that you use the acceleration function to speed up the target chain transaction.</li>
+<li>Secondly, if you have already paid enough fee or tried to accelerate but the transaction still fails, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>. </li>
+</ul>
       </div>
     </div>
   </div>
