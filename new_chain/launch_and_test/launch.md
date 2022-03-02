@@ -111,7 +111,7 @@ Now call the command:
 > - Register a poly chain wallet before run the relayer, as signature in poly chain wallet is permitted by assigned accounts.
 
 
-## 5. Test
+## 4. Test
 
 ### Cross-chain using Lock proxy
 
