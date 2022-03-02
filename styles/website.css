@@ -1,0 +1,28 @@
+/*h1, h2 {*/
+/*    border-bottom: 1px solid #EFEAEA;*/
+/*}*/
+
+
+.book-summary ul.summary li.active {
+    border-right: 3px solid #3884ff;
+    background: #f3f1f1
+}
+
+.book.color-theme-2 .book-summary ul.summary li.active {
+    border-right: 3px solid #3884ff;
+    background: #1d1f2b
+}
+
+/*.book.color-theme-2 .book-summary ul.summary li a:hover {*/
+/*    color: #f4f4f5;*/
+/*    background: #f3f1f1;*/
+/*    font-weight: 600;*/
+/*}*/
+
+.book-anchor a {
+    color: #656565;
+}
+
+.book.color-theme-2 .book-anchor a {
+    color: #a4b1c0;
+}
