@@ -12,7 +12,7 @@ body{font-family:"Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F
 .book-summary ul.summary li.active{border-right:3px solid #3884ff;background:#f3f1f1}
 .book-summary ul.summary li.active > a{color:#3884ff;text-decoration:none}
 .book-summary ul.summary li a:hover{text-decoration:none}
-.page-inner{max-width:none;padding:20px 270px 40px 40px}
+.page-inner{max-width:none;padding:20px 320px 40px 40px}
 .header-inner #book-search-input{float:right;width:300px;margin:10px 0;padding:0;border:none;user-select:none}
 .header-inner #book-search-input input[type="text"]{width:100%;background:#e4e4e4}
 .header-inner #book-search-input #searchBtn{color:#ffffff;margin-left:10px;cursor:pointer}
@@ -35,9 +35,9 @@ body{font-family:"Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F
 /*Book inner page end*/
 
 /* Book  anchor*/
-.book-anchor{width:200px;height:85%;position:absolute;top:130px;right:15px;padding:0 10px 10px 5px;z-index:3;user-select:none;border-left:2px solid #ececec;overflow-y:auto}
+.book-anchor{width:250px;height:85%;position:absolute;top:130px;right:15px;padding:0 10px 10px 5px;z-index:3;user-select:none;border-left:2px solid #ececec;overflow-y:auto}
 .book-anchor-title{line-height:38px;font-weight:400;cursor:pointer}
-.book-anchor a{display:block;line-height:25px;color:#656565;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.book-anchor a{display:block;line-height:1.3;color:#656565;font-size:.875rem;overflow:hidden;text-overflow:ellipsis;white-space:unset;margin: 4px 0;padding: 2px 0}
 .book-anchor a:hover{color:#3884ff;text-decoration:none}
 .book-anchor .selected{color:#3884ff;text-decoration:none;font-weight:bold}
 .book-anchor .anchor-h1{}
