@@ -73,11 +73,17 @@
     }
   },
   "pluginsConfig": {
+    "fontsettings": {
+      "theme": "night",
+      "family": "serif",
+      "size": 2
+    },
     "sectionx": {
       "tag": "b"
     },
     "theme-hqbook": {
       "logo": "/resources/logo.png",
+      "favicon": "/resources/favicon.ico",
       "search-placeholder": "Search...",
       "copyButtons": false,
       "copyLines": true,
