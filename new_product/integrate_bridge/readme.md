@@ -1,4 +1,4 @@
-<h1 align="center">Poly Docs</h1>
+<h1 align="center">Build New Bridges</h1>
 
 Except for building a new chain, you may want to join 
 poly cross-chain ecosystem via just connecting with `Poly Bridge` or integrating the [APIs](bridge.md) provided by `Poly Bridge` into your own cross-chain bridge.

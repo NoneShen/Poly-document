@@ -376,7 +376,7 @@ A: <li>Firstly, make sure you have approved enough amount for Poly Bridge contra
    <li>Secondly, make sure you have sufficient native tokens to cover the gas fee charged both by source chain and target chain and the amount you want to transfer.
 If you transfer native tokens: $amount in your wallet ≥ transfer amount + src chain gas fee + target chain gas fee.
 If you transfer non-native tokens: $native token amount in your wallet ≥ src chain gas fee + target chain gas fee.
-For example, if you want to transfer $Metis from Andromeda to BSC, you have to reserve tokens both for source chain gas fee and for target chain gas fee. The rest are the amount of tokens you can transfer.
+For example, if you want to transfer `METIS` from Andromeda to BSC, you have to reserve tokens both for source chain gas fee and for target chain gas fee. The rest are the amount of tokens you can transfer.
 For your better use, Poly Bridge set as follows:
 <ol>
    <li>If $native token amount in your wallet < transfer token amount + src chain gas fee + target chain gas fee, you’ll be informed that the transferable token amount is ZERO and see a WARNING of “insufficient funs” after clicking MAX;</li>
