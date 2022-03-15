@@ -2,7 +2,7 @@
 
 ## 1. Requirements
 
-Before developing poly chain, you have to be well prepared with the listed three prerequisites.
+Before developing poly chain, you have to be prepared with the listed three **prerequisites**.
 
 ### 1.1 Make sure the new chain supports Light Client Verification
 
@@ -12,7 +12,7 @@ The block header must contain the following information：
 - Necessary information to prove the legitimacy of the block header varying from different consensus mechanisms.
 
 > [!Note|style:flat|label:Notice]
-> If your chain doesn't support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, get in touch with the `poly team` through <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
+> If your chain **doesn't** support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, get in touch with the `poly team` through <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
 
 ### 1.2 Offer the block header structure and verification methods
 - Block header structure
@@ -34,10 +34,10 @@ With the prerequisites mentioned earlier, you can start developing poly chain fo
 
 #### Block Header Synchronization Methods
 
-| Method                | Description                                                                                                                                                                                                                                                                                                                                                                          |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **SyncGenesisHeader** | It stores and handles the initial block header so that the subsequent block headers of blocks that contain cross-chain events can be verified and synchronized. This method will only be called once for initializing the new chain. Please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61) for more details. |
-| **SyncBlockHeader**   | It consistently synchronizes block cycle change and cross-chain transaction block headers from the new chain to the poly chain. Please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L99) for more details.                                                                                                      |
+| Method                | Description                                                                                                                                                                                                                                                                                                                                                                                 |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **SyncGenesisHeader** | It stores and handles the initial block header so that the subsequent block headers of blocks that contain cross-chain events can be verified and synchronized. This method will only be called for **once** in initializing the new chain. Please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L61) for more details. |
+| **SyncBlockHeader**   | It consistently synchronizes block cycle change and cross-chain transaction block headers from the new chain to the poly chain. Please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/header_sync/eth/header_sync.go#L99) for more details.                                                                                                             |
 
 
 #### Block Header Synchronization Entrance Method
@@ -61,9 +61,9 @@ The Key information for this method (submitted by .config):
 
 #### Cross Chain Management
 
-| Method                    | Description                                                                                                                                                                                                                                                                                                                                                             |
-|---------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **MakeDepositProposal**   | It acts as the entrance of verifyFromTx, verifying, storing and returning MakeTxParam for processing cross-chain steps, and verifies cross-chain transactions and store legitimate transactions to poly chain.  Please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/cross_chain_manager/eth/eth_handler.go#L34) for more details. |
+| Method                    | Description                                                                                                                                                                                                                                                                                                                                                                         |
+|---------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **MakeDepositProposal**   | It acts as the entrance of verifyFromTx, **verifying**, **storing** and **returning** MakeTxParam for processing cross-chain steps, and verifies cross-chain transactions and store legitimate transactions to poly chain.  Please refer to the [code](https://github.com/polynetwork/poly/blob/master/native/service/cross_chain_manager/eth/eth_handler.go#L34) for more details. |
 
 ```go
 MakeDepositProposal:

@@ -19,7 +19,7 @@ If you want to take templates provided by Poly as your CCM module, deploy three 
 For chain registration, you need to complete the following two functions: 
 
 ### Step 1. Call chain registration functions
-Registration is the prerequisite of monitoring and processing block information and checking the execution of cross-chain transactions. The chain will be officially involved into the cross-chain ecosystem after completing registration and being approved by the Cross Chain Council.
+Registration is the prerequisite of monitoring and processing block information and checking the execution of cross-chain transactions. The chain will be officially involved into the cross-chain ecosystem after completing **registration** and being **approved** by the Cross Chain Council.
 
 - Call entry function `RegisterSideChain`
 - Call entry function `ApproveRegisterSideChain`

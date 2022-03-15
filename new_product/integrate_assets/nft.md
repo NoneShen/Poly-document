@@ -12,7 +12,7 @@ The source NFT contract must support the [EIP-721 standard](https://eips.ethereu
 - Firstly, you should provide a contract address with the NFT [template](https://github.com/polynetwork/nft-contracts/tree/main/contracts/erc721_template) provided by Poly Network.
 - This contract implements minting interface using the Poly Network standard:
   `function mintWithURI(address to, uint256 tokenId, string memory uri) external`
-  - This method will be called in Poly Network’s PolyNFTLockProxy contract.
+- This method will be called in Poly Network’s PolyNFTLockProxy contract.
 
 > [!Note]
 >If you want to deploy the NFT contract on the target chain by yourself, please implement the above interface and ensure that the method name, parameters, and order are strictly consistent.

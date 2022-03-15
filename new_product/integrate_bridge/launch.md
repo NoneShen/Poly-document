@@ -1,8 +1,5 @@
 <h1 align="center">Launch and Test</h1>
 
-> [!NOTE]
-> For now, `Poly Bridge` is deployed by poly team.
-
 ## 1. Environmental Requirements:
 
 - Make sure your device has got access to the Internet; 
@@ -151,5 +148,5 @@ Now you can launch and run the two functions:
 
 ### Step 5. Test
 There are detailed unit tests in the code repository, which can be tested as needed before the service starts.
-And after the service starts, you need to check the log for errors, such as program panic, node connection failure, etc. 
-Additionally you need to pay attention to whether the monitoring height of the chain increases normally. 
+And after the service starts, you need to check the **log for errors**, such as **program panic**, **node connection failure**, etc. 
+Additionally you need to pay attention to whether the **monitoring height** of the chain increases normally. 
