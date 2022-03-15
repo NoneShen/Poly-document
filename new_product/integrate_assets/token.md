@@ -1,65 +1,85 @@
-<h1 align="center">Import token</h1>
+<h1 align="center">Importing Tokens</h1>
 
-##1. Import Token Steps
+Here the tutorial provides the importing methods and user manual to help you successfully import tokens. 
+
+##1. Importing Steps
+Follow the listed four steps to import your token into Poly Network. 
+
 ### Step1. Deploy a corresponding asset
-- Use the *https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/assets/erc20_template/ERC20Template.sol* template to deploy a corresponding asset mapping contract on target chain, the total amount needs to be consistent with the amount on the source chain.
+- Deploy mapping contracts of corresponding asset on target chain using the [template](https://github.com/polynetwork/eth-contracts/blob/master/contracts/core/assets/erc20_template/ERC20Template.sol). 
+- Make sure the total amount of contracts keeps consistent with the amount on the source chain.
 
 ### Step2. Transfer assets
-- Transfer the initialized assets to the target chain proxy [contract](../../Core_Smart_Contract/Contract/TestNet.md).
+- Then transfer the initialized assets to the target chain proxy [contract](../../Core_Smart_Contract/Contract/TestNet.md).
 
-### Step3. Download template excel
-- [Download](http://81.69.45.203/new_product/integrate_assets/resources/import_asset_template.xlsx) the asset template of Poly Network.
-- Fill in the asset information according to eg in excel.
+### Step3. Download the template Excel
+- Now you should [download](http://81.69.45.203/new_product/integrate_assets/resources/import_asset_template.xlsx) the asset template provided by Poly Network.
+- Fill in the asset information according to given example in the Excel.
 
-### Step4. Connect Poly Network
-- Contact the poly administrator at TG: *https://t.me/joinchat/Hjv5NBrfO1C2LyODQfxVDw*
-- Send asset excel.
+### Step4. Connect to Poly Network
+- Next contact Poly Network team at [TG](https://t.me/joinchat/Hjv5NBrfO1C2LyODQfxVDw) to send your asset Excel.
 
 ### Step5. Wait to import
-   - Wait for the operator to add the contract address to the whitelist, then you can visit: https://bridge.poly.network/testnet to complete the cross-chain transfer from the source chain to target chain.
+- Now, just wait until the operators successfully add your contract address to the whitelist.
+- And then you can click [here](https://bridge.poly.network/testnet) to complete the cross-chain transfer from source chain to target chain.
 
-##2. Poly Bridge Personal Computer User Manual
+##2. Poly Bridge User Manual for Personal Computer
+
+You can follow the manual to check whether your token is successfully deployed.
+
 > [!NOTE]
-> the token $METIS will be taken as the example in this document.
+> Here we take the token $METIS as an example.
+
 ### Step1. Select asset
-- Firstly, you need to select the token you want to transfer. As shown in Figure 1, click “Asset”, then you can choose the token in the pop-window.
+- Firstly, you need to select the token you want to transfer. Click “Asset”, then you can choose the token in the pop-window, as shown in the following three figures.
 <div align=center><img src="resources/token_selectassect_step1.png" alt=""/></div>
 <div align=center><img src="resources/token_selectassect_step2.png" alt=""/></div>
 <div align=center><img src="resources/token_selectassect_step3.png" alt=""/></div>
 
 ### Step2. Select network
-- After asset selection, click “From Network”, choose the source network which the chosen token located in the pop window. Select the target network in the same way.
+- After asset selection, click “From Network” and select the source network in which the chosen token locates in the pop-window. Select the target network in the same way.
   > [!NOTE]
-  > the optional network shown in the picture is the network type supported by $METIS. The network should be switched according to different assets. Please choose it according to the situation.
+  > The optional networks shown in the picture are the network types supporting $METIS. The network should be switched according to different assets. Please choose the assigned network according to the corresponding asset.
+
 <div align=center><img src="resources/token_selectnetwork_step1.png" alt=""/></div>
 
-- The example that $METIS be sent from Andromeda to the target network BSC is shown in picture.
+- Here the picture indicates that $METIS is transferred from Metis to the target network BSC.
 <div align=center><img src="resources/token_selectnetwork_step2.png" alt=""/></div>
 
 ### Step3. Connect wallet
-- Next, you can connect your wallet by clicking the button “Connect Wallet”at the bottom of the page or up right in the corner. After clicking, you can choose which wallet to be connected to the source or the target network.
+- Next, you can connect your wallet by clicking “Connect Wallet” at the bottom of the page or up right the corner. 
+- After that, you can choose a wallet to connect with the source or the target network according to your needs. 
+- The interface should be shown as the following figures.
 <div align=center><img src="resources/token_connectwallet_step1.png" alt=""/></div>
 <div align=center><img src="resources/token_connectwallet_step2.png" alt=""/></div>
 
   > [!NOTE]
-  > different networks support different wallet, the current support status is shown in table.
+  > Each network supports specific wallet, and the current status is shown in the table.
+
 <div align=center><img src="resources/token_connectwallet_step3.png" alt=""/></div>
 
   > [!NOTE]
-  > when there is a red alert “Please switch network”, you need to switch the network of wallet to keep consistent with the source network.
+  > When the red warning “Please switch network” appears, you should switch the network of wallet to keep consistent with the source network.
+
 <div align=center><img src="resources/token_connectwallet_step4.png" alt=""/></div>
 
 ### Step4. Submit transaction
-- Enter input token value, then click “Next”. A pop window will appear to show the details of the transaction. Please check carefully. If you make sure the transaction information is correct, then click “Confirm”button to submit the transaction and confirm it in wallet again.
+- Now you can enter the value of input token, then click “Next”. 
+- A pop-window will appear to show the details of the transaction. Please check it carefully. 
+- After carefully checking, click “Confirm” to submit the transaction and confirm it in wallet again.
   > [!NOTE]
-  > if you are the first time to swap, an approval operation is required before you submit transaction, (Approve Infinity or not according to your actual situation).
+  > If you are the first time to Swap, an approval operation is required before you submit transaction (approve Infinity or not according to your actual situation).
+
 <div align=center><img src="resources/token_connectwallet_step5.png" alt=""/></div>
 
-### Step5. View the results
-- After the submission, you can view the transaction result through “History”. When the transaction details are displayed, it means that the transaction is completed.
+### Step5. Check the results
+- After the submission, you can view the transaction result through “History”. 
+- The transaction is completed when the transaction details are displayed.
 <div align=center><img src="resources/token_connectwallet_step6.png" alt=""/></div>
  
   > [!NOTE]
-  > The processing time of Poly Network Swaps are determined by the amount of the transaction fee. In order to avoid network congestion, Poly Network defaults to the maximum gas fee which will be used as the transaction fee on the source chain. Poly Network itself does not charge any gas fee.
+  > The processing time of Poly Network Swaps are limited by the amount of the transaction fee. 
+  > In order to avoid network congestion, Poly Network defaults to the maximum gas fee which will be used as the transaction fee on the source chain. 
+  > ATTENTION: Poly Network does NOT charge any gas fee.
 
 

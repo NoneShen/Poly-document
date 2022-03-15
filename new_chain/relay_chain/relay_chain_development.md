@@ -17,7 +17,7 @@ The block header must contain the following information：
 ### 1.2 Offer the block header structure and verification methods
 - Block header structure
 - Serialization and Deserilization methods
-- Block header verification mehtods
+- Block header verification methods
 
 ### 1.3 Offer the merkle tree structure and verification methods
 
@@ -26,7 +26,7 @@ The block header must contain the following information：
 
 ## 2. Development Specifications
 
-With the prerequisites mentioned ealier, you can start developing poly chain following the guideline below from the perspective you need. 
+With the prerequisites mentioned earlier, you can start developing poly chain following the guideline below from the perspective you need. 
 
 <div align=center><img src="resources/relay_chain_development.png" alt=""/></div>
 

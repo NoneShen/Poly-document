@@ -13,15 +13,15 @@
   * [API](new_product/integrate_bridge/bridge.md)
   * [Launch and Test](new_product/integrate_bridge/launch.md)
 * [Import New Assets](new_product/integrate_assets/readme.md)
-  * [Steps for Importing](new_product/integrate_assets/token.md)
-  * [Launch and Test](new_product/integrate_assets/nft.md)
+  * [Importing Tokens](new_product/integrate_assets/token.md)
+  * [Importing NFT](new_product/integrate_assets/nft.md)
 * [Customize Business Logic Contracts](new_product/integrate_contracts/readme.md)
   * [Guidelines for Developing](new_product/integrate_contracts/Customizing Business Logic Contract.md)
   * [Launch and Test](new_product/integrate_contracts/launch.md)
 
 ----
 ### Appendix
-* [Contract]()
+* [Contracts]()
   * [MainNet](Core_Smart_Contract/Contract/MainNet.md)
   * [TestNet](Core_Smart_Contract/Contract/TestNet.md)
   * [DevNet](Core_Smart_Contract/Contract/DevNet.md)
