@@ -6,3 +6,4 @@ Considering that Poly Network has already included most mainstream chains, check
 existing [chains](../../Core_Smart_Contract/Contract/MainNet.md#contract-index-chain-chain-id) . If not, please import your chain first. 
 
 
+<div align=center><img src="resources/import_assets.png" alt=""/></div>

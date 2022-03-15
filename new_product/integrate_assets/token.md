@@ -51,6 +51,7 @@ You can follow the manual to check whether your token is successfully deployed.
 - After that, you can choose a wallet to connect with the source or the target network according to your needs. 
 - The interface should be shown as the following figures.
 <div align=center><img src="resources/token_connectwallet_step1.png" alt=""/></div>
+
 <div align=center><img src="resources/token_connectwallet_step2.png" alt=""/></div>
 
   > [!NOTE]
