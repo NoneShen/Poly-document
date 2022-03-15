@@ -2,7 +2,7 @@
 
 Here the tutorial provides the importing methods and user manual to help you successfully import tokens. 
 
-##1. Importing Steps
+##1. Import Steps
 Follow the listed four steps to import your token into Poly Network. 
 
 ### Step1. Deploy a corresponding asset

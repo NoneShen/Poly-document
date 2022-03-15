@@ -1,7 +1,7 @@
 <h1 align="center">Import NFT</h1>
 Here the tutorial provides the importing methods and user manual to help you successfully import NFT. 
 
-##1. Importing Steps
+##1. Import Steps
 In most cases you only needs to deploy a version of the NFT contract on the source chain, and Poly Network will deploy the NFT proxy contract on the target chain.
 
 The source NFT contract must support the [EIP-721 standard](https://eips.ethereum.org/EIPS/eip-721). It should be noted here that the [EIP-721 standard](https://eips.ethereum.org/EIPS/eip-721) excludes the mint method.
