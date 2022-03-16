@@ -4,12 +4,12 @@ The following APIs are provided for developers who need to implement the bridge 
 
 ## Poly Bridge APIs:
 
-- [Get cross chain fee](#Get-cross-chain-fee)
-- [Get cross chain transaction status](#Get-the-cross-chain-transaction-status)
-- [Get history transactions of address](#Get-history-transactions-of-address)
-- [Get token basics information](#Get-token-basics-information)
-- [Get token mapping relationship between different chains](#Get-token-mapping-relationship-between-different-chains)
-- [Get the expected cross chain duration](#Get-the-expected-cross-chain-duration)
+- Get cross chain fee
+- Get cross chain transaction status
+- Get history transactions of address
+- Get token basics information
+- Get token mapping relationship between different chains
+- Get the expected cross chain duration
 
 ### Get cross chain fee
 
@@ -109,11 +109,8 @@ Example Response
             "Ind": 1,
             "Time": 1644508861,
             "Property": 1,
-            "Meta": "https://app.ont.io/poly/mdx.svg",
-            "PriceMarkets": null,
-            "Tokens": null
-        },
-        "TokenMaps": null
+            "Meta": "https://app.ont.io/poly/mdx.svg"
+        }
     },
     "FeeToken": {
         "Hash": "25d2e80cb6b86881fd7e07dd263fb79f4abe033c",
@@ -122,9 +119,7 @@ Example Response
         "Property": 1,
         "TokenBasicName": "MDX",
         "Precision": 18,
-        "AvailableAmount": "21578714598525328008311694",
-        "TokenBasic": null,
-        "TokenMaps": null
+        "AvailableAmount": "21578714598525328008311694"
     },
     "TransactionState": [
         {
@@ -215,11 +210,8 @@ Example Response
           "Ind": 1,
           "Time": 1645095305,
           "Property": 1,
-          "Meta": "",
-          "PriceMarkets": null,
-          "Tokens": null
-        },
-        "TokenMaps": null
+          "Meta": ""
+        }
       },
       "FeeToken": {
         "Hash": "d2a4cff31913016155e38e474a2c06d08be276cf",
@@ -228,9 +220,7 @@ Example Response
         "Property": 1,
         "TokenBasicName": "GAS",
         "Precision": 8,
-        "AvailableAmount": "39455668193977",
-        "TokenBasic": null,
-        "TokenMaps": null
+        "AvailableAmount": "39455668193977"
       },
       "TransactionState": [
         {
@@ -290,7 +280,6 @@ Example Response
       "Time": 0,
       "Property": 1,
       "Meta": "https://app.ont.io/poly/8pay.jpg",
-      "PriceMarkets": null,
       "Tokens": [
         {
           "Hash": "48abb7954b5bc46be41cc444e731f9d03aa33feb",
@@ -299,9 +288,7 @@ Example Response
           "Property": 1,
           "TokenBasicName": "8PAY",
           "Precision": 18,
-          "AvailableAmount": "28254867780000000000",
-          "TokenBasic": null,
-          "TokenMaps": null
+          "AvailableAmount": "28254867780000000000"
         },
         {
           "Hash": "aa00fbcface6ff4913cc8322b12f63e2ad45d448",
@@ -310,9 +297,7 @@ Example Response
           "Property": 1,
           "TokenBasicName": "8PAY",
           "Precision": 18,
-          "AvailableAmount": "71745132220000000000",
-          "TokenBasic": null,
-          "TokenMaps": null
+          "AvailableAmount": "71745132220000000000"
         }
       ]
     }
@@ -359,9 +344,7 @@ Example Response
         "Property": 1,
         "TokenBasicName": "8PAY",
         "Precision": 18,
-        "AvailableAmount": "28254867780000000000",
-        "TokenBasic": null,
-        "TokenMaps": null
+        "AvailableAmount": "28254867780000000000"
       },
       "DstTokenHash": "aa00fbcface6ff4913cc8322b12f63e2ad45d448",
       "DstToken": {
@@ -371,9 +354,7 @@ Example Response
         "Property": 1,
         "TokenBasicName": "8PAY",
         "Precision": 18,
-        "AvailableAmount": "71745132220000000000",
-        "TokenBasic": null,
-        "TokenMaps": null
+        "AvailableAmount": "71745132220000000000"
       },
       "Property": 1
     }
@@ -422,9 +403,7 @@ Example Response
         "Property": 1,
         "TokenBasicName": "8PAY",
         "Precision": 18,
-        "AvailableAmount": "28254867780000000000",
-        "TokenBasic": null,
-        "TokenMaps": null
+        "AvailableAmount": "28254867780000000000"
       },
       "DstTokenHash": "aa00fbcface6ff4913cc8322b12f63e2ad45d448",
       "DstToken": {
@@ -434,9 +413,7 @@ Example Response
         "Property": 1,
         "TokenBasicName": "8PAY",
         "Precision": 18,
-        "AvailableAmount": "71745132220000000000",
-        "TokenBasic": null,
-        "TokenMaps": null
+        "AvailableAmount": "71745132220000000000"
       },
       "Property": 1
     }
