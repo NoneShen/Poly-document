@@ -7,15 +7,18 @@ Here are cross chain contracts ONLY working in <strong>DevNet</strong> node, whi
 
 ### Contract Index (Chain-Chain ID)
 
-| **[Bitcoin-1](DevNet.md#Btc)**     | **[Ethereum-2](DevNet.md#Ethereum)** | **[Ontology-3](DevNet.md#Ontology)**       | **[Neo Legacy-217](DevNet.md#Neo-Legacy)** | **Switcheo-182**   |
-|------------------------------------|--------------------------------------|--------------------------------------------|--------------------------------------------|--------------------|
-| **[Neo N3-220](DevNet.md#Neo-N3)** | **[Pixie-321](DevNet.md#Pixie)**     | **[Cosmos-gaia-8](DevNet.md#Cosmos-Gaia)** |                                            |                    |
+
+| **[Bitcoin-1](DevNet.md#Btc)**     | **[Ethereum-2](DevNet.md#Ethereum)** | **[Ontology-3](DevNet.md#Ontology)**       | **[Neo Legacy-217](DevNet.md#Neo-Legacy)** | **Switcheo-182** |
+|------------------------------------|--------------------------------------|--------------------------------------------|--------------------------------------------|------------------|
+| **[Neo N3-220](DevNet.md#Neo-N3)** | **[Pixie-321](DevNet.md#Pixie)**     | **[Cosmos-gaia-8](DevNet.md#Cosmos-Gaia)** |                                            |                  |
+
 
 ### Quick Index
-| **[Router And Chain ID](DevNet.md#Router-And-Chain-ID)** |
-|----------------------------------------------------------|
-## Btc  <a id="Btc"></a>
+| **[Router And Chain ID](DevNet.md#Router-And-Chain-ID)**  |
+|-----------------------------------------------------------|
 
+
+## Btc  <a id="Btc"></a>
 
 BTCx Redeem Script: 
 - 522103c4564b837674de2482961a8d5f2a24a7e11e8a97aac5e92ac2e64500219144512102ccc07d3df7da58bb6fa5cfe5d7be415ff9463171b2600c93c080fcd0d49576a721036ec6299c1b14e57b45f1ad85eecbc48ad5447a05158a1bfb2ffb689ad69490d353ae

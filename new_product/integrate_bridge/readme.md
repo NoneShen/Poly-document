@@ -6,9 +6,6 @@ Then, the listed information will be helpful for you.
 
 ## 1. Main Functions of `Poly Bridge`:
 
-> [!NOTE]
-> For now, `Poly Bridge` is deployed by the poly team.
-
 * Monitor cross-chain event  
 During transaction, `Poly Bridge` will monitor the wrapper events emitted by the wrapper contract on the source chain, the lock event (on source chain) and unlock event (on target chain) emitted by CCM contracts.
 
@@ -23,6 +20,9 @@ During transaction, `Poly Bridge` will monitor the wrapper events emitted by the
 
 * Synchronize cross-chain token price  
 `Poly Bridge` also synchronizes the price of tokens both on source chain and target chain from the market, making users be informed about the exchange rate and accurately calculate transaction fee.
+
+> [!NOTE]
+> For now, `Poly Bridge` is deployed by the poly team.
 
 ## 2. Integrate `Poly Bridge` APIs into Other Cross-chain Bridge.
 Even if you want to implement your own cross-chain bridge, you need to realize the four main functions mentioned above.  

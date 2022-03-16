@@ -2,7 +2,9 @@
 
 ## 1. Development Specifications for Relayer
 
-If you have successfully deployed the poly chain and new chain, the next step is to develop a poly relayer in your chain. Poly relayer plays the role to relay cross chains messages and interact with CCM contracts, helping you further join into the cross-chain ecosystem. Two components are required in the implementation: Chain Listener and Chain Submitter. 
+If you have successfully deployed the poly chain and new chain, the next step is to develop a poly relayer in your chain. Poly relayer plays the role to relay cross chains messages and interact with CCM contracts, helping you further join into the cross-chain ecosystem. 
+
+Two components are required in the implementation: **Chain Listener** and **Chain Submitter**. 
 <div align=center><img src="resources/develop_for_relayer.png" alt=""/></div>
 
 
@@ -33,7 +35,7 @@ type IChainListener interface {
 ```
 
 ### 1.2 Implement Chain Submitter
-Chain Submitter is used to submit messages/transactions to the target chain, including  validator changes of poly chain and cross chain messages. You can call the command with the following codes.
+Chain Submitter is used to submit messages/transactions to the target chain, including  **validator changes** of poly chain and **cross chain messages**. You can call the command with the following codes.
 
 ```go
 type IChainSubmitter interface {
