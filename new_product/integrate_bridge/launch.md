@@ -1,4 +1,4 @@
-<h1 align="center">Launch and Test</h1>
+<h1 align="center">Test and Launch</h1>
 
 ## 1. Environmental Requirements:
 
