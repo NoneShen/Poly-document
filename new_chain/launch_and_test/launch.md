@@ -115,7 +115,7 @@ Now call the command:
 There are three steps for you to test the interaction between your chain and poly chain.
 
 ### Step 1. Debug on DevNet 	
-Here is [DevNet](Core_Smart_Contract/Contract/DevNet.md) provided for developers to debug and test their codes.The access steps are as follows:
+Here is [DevNet](../../Core_Smart_Contract/Contract/DevNet.md) provided for developers to debug and test their codes.The access steps are as follows:
 
 - Propose a request to submit code developed for poly chain to [github](https://github.com/polynetwork/poly.git ), wait for code review.
 - Propose a request to submit code developed for new chain to [github](https://github.com/polynetwork/eth-contracts), wait for code review.
@@ -139,10 +139,10 @@ Here is [DevNet](Core_Smart_Contract/Contract/DevNet.md) provided for developers
 > Here you are recommended to interact with your own chain on dev-net, that means when you call the cross-chain function,the "toChainId" (the input parameter of cross chain function,)is your chain ID registered in Poly Chain.
 
 ### Step 2. Test on TestNet
-Here is [TestNet](Core_Smart_Contract/Contract/TestNet.md) provided for developers to test for interacting with other chain.The access to TestNet is almost the same as that of DevNet,
+Here is [TestNet](../../Core_Smart_Contract/Contract/TestNet.md) provided for developers to test for interacting with other chain.The access to TestNet is almost the same as that of DevNet,
 - Propose a request to submit code developed for poly chain to [github](https://github.com/polynetwork/poly.git ), wait for code review.
 - Propose a request to submit code developed for new chain to [github](https://github.com/polynetwork/eth-contracts.git), wait for code review.
-- Submit the cross-chain contract hash ,rpc,chain name to [docs](https://github.com/polynetwork/docs.git)
+- Submit the cross-chain contract hash , rpc, chain name to [docs](https://github.com/polynetwork/docs.git).
 - Register to Poly Chain and sync genesis block header on Poly TestNet. The detail is consistent with DevNet, and is also completed by Poly Network.
 - Deploy a business contract on the chain you want to interact and provide the function called by target chain to Poly Network.
 - Launch your relayer.
@@ -157,7 +157,7 @@ Here is [TestNet](Core_Smart_Contract/Contract/TestNet.md) provided for develope
    2) Can "txData" (the input parameter of cross chain function) can be parsed correctly by "method" on target chain？
 
 ### Step 3. Launch on MainNet
-Now you can follow the processes to launch your project on MainNet：
+Now you can follow the processes to launch your project on [MainNet](../../Core_Smart_Contract/Contract/MainNet.md)：
 - Notify Poly Network to merge the final code (include contract and poly code)into the MainNet, which takes about a week in advance.
 - Submit the cross-chain contract hash deployed on MainNet ,MainNet rpc,chain name to [docs](https://github.com/polynetwork/docs.git). Please verify your contract code on scan.
 - Register to Poly Chain and sync genesis block header on Poly MainNet. The detail is consistent with TestNet and DevNet, and is also completed by Poly Network.
@@ -165,5 +165,5 @@ Now you can follow the processes to launch your project on MainNet：
 
 
 Congratulations! You have integrated your chain in Poly Network.If you want to depoly some products ,please refer to other guide we provide:
-- [Build New Bridges](new_product/integrate_bridge/readme.md)
-- [Customize Business Logic Contract](new_product/integrate_contracts/readme.md)
+- [Build New Bridges](../../new_product/integrate_bridge/readme.md)
+- [Customize Business Logic Contract](../../new_product/integrate_contracts/readme.md)

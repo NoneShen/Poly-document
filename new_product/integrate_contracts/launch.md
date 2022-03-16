@@ -58,7 +58,7 @@ After preparation, you can try to call the cross chain function in your contract
     - Congratulations! You have completed the cross chain transaction.
 
 > [!Note]
-> During the test, you will find that you have to send the target transactions manually. It may not be a good idea for projects. If you want to realize the automatic process, a relayer is needed. There is a [relayer solution](new_chain/relayer/relayer.md) for you.
+> During the test, you will find that you have to send the target transactions manually. It may not be a good idea for projects. If you want to realize the automatic process, a relayer is needed. There is a [relayer solution](../../new_chain/relayer/relayer.md) for you.
 
 ### Step 3. Launch on Mainnet
 After all tests are completed on the Testnet, you are ready to launch on the Mainnet. The steps are as follows:
