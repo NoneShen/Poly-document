@@ -32,8 +32,8 @@ BTCx Redeem Key:
 
 | Type       | Contract                                    | Desc                                |
 |------------|---------------------------------------------|-------------------------------------|
- | CCMP       | 0x7087E66D6874899A331b926C261fa5059328d95F  | Cross Chain Manager Proxy contract  |
-| Lock Proxy | 0x46DE64740cf839374afB264970f8D437732649cA  | Asset Proxy contract                |
+ | CCMP       |   | Cross Chain Manager Proxy contract  |
+| Lock Proxy |   | Asset Proxy contract                |
 
 ###### [Back to top](DevNet.md#menu)
 
@@ -42,7 +42,7 @@ BTCx Redeem Key:
 
 | Type        | Contract                                                                                       | Desc                   |
 |-------------|------------------------------------------------------------------------------------------------|------------------------|
-|  Lock Proxy | B: ebad45b887c6bf7cc4c1df8f72da156bc91b04b7 <br> L: b7041bc96b15da728fdfc1c47cbfc687b845adeb   | Asset Proxy contract   |
+|  Lock Proxy |   | Asset Proxy contract   |
 
 ###### [Back to top](DevNet.md#menu)
 
@@ -51,8 +51,8 @@ BTCx Redeem Key:
 
 | Type       | Contract                                                                                          | Desc                         |
 |------------|---------------------------------------------------------------------------------------------------|------------------------------|
- | CCM        | B: 0x3135a1a4668688a3e15b004af3a718f2d67141ca  <br> L: ca4171d6f218a7f34a005be1a3888666a4a13531   | Cross Chain Manager contract |
- | Lock Proxy | B: 0x3fef7ac6598ad83f5e4d4338e65530eba2173294 <br> L: 943217a2eb3055e638434d5e3fd88a59c67aef3f    | Asset Proxy contract         |
+ | CCM        || Cross Chain Manager contract |
+ | Lock Proxy |    | Asset Proxy contract         |
 
 Receiver:A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 <br>B: 0x4fd83a49df40c0a7de2671da20c2a8dfe495b6c2 <br>L: c2b695e4dfa8c220da7126dea7c040df493ad84f
 ###### [Back to top](DevNet.md#menu)
@@ -63,8 +63,8 @@ Receiver:A: AZXRTygHgRbPu9o16K6en4BaZD11tXCmN1 <br>B: 0x4fd83a49df40c0a7de2671da
 
 | Type       | Contract                                                                                          | Desc                         |
 |------------|---------------------------------------------------------------------------------------------------|------------------------------|
- | CCM        | B: 0x7c842f3900ceba5bcdeeeec05c9b41ba63ad6cd2  <br> L: d26cad63ba419b5cc0eeeecd5bbace00392f847c   | Cross Chain Manager contract |
- | Lock Proxy | B: 0x5376f41082a84fb000c944b6d44ba85b14e20fe5 <br> L: e50fe2145ba84bd4b644c900b04fa88210f47653    | Asset Proxy contract         |
+ | CCM        |    | Cross Chain Manager contract |
+ | Lock Proxy |     | Asset Proxy contract         |
 
 Receiver: A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba <br>B: 0x67ce818168a75d3bedb7d295bf11c060d1c38204 <br>L: 0482c3d160c011bf95d2b7ed3b5da7688181ce67
 ###### [Back to top](DevNet.md#menu)
@@ -79,7 +79,7 @@ Receiver: A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba <br>B: 0x67ce818168a75d3bedb7d29
 
 | Type       | Denom (coin name) | Asset/Contract                           | Desc                     |
 |------------|-------------------|------------------------------------------|--------------------------|
- | Lock Proxy |                   | f71b55ef55cedc91fd007f7a9ba386ec978f3aa8 | Asset Proxy contract     |
+ | Lock Proxy |                   |  | Asset Proxy contract     |
 
 
 
@@ -90,12 +90,12 @@ Receiver: A: NLKpYEDmyGMWQVeqcoyZr9Lyo8P5Mrozba <br>B: 0x67ce818168a75d3bedb7d29
 
 | Type           | Contract                                   | Desc                                     |
 |----------------|--------------------------------------------|------------------------------------------|
-| CCD            | 0x25BB8E9C0Cc03B30d09769735208a47d389Ff36c | Cross Chain Data contract                |
- | CCM            | 0x6fd13dd4181dDb0f7463e19caC659FD3e9FB8a82 | Cross Chain Manager contract             |
- | CCMP           | 0x9bEF1AE7304D3d2F344ea00e796ADa18cE1beb03 | Cross Chain Manager Proxy contract       |
- | Lock Proxy     | 0xa85c9FC8F2c9060d674E0CA97F703a0A30619305 | Asset Proxy contract                     |   
+| CCD            |  | Cross Chain Data contract                |
+ | CCM            |  | Cross Chain Manager contract             |
+ | CCMP           |  | Cross Chain Manager Proxy contract       |
+ | Lock Proxy     |  | Asset Proxy contract                     |   
  | WrapperV2      | 0x455B51D882571E244d03668f1a458ca74E70d196 | WrapperV2 that takes native asset as fee | 
- | NFT Lock Proxy | 0x6Bc728a0ce7e189CBfb8AD932fb57928106D2674 | NFT Lock Proxy contract                  |
+ | NFT Lock Proxy |  | NFT Lock Proxy contract                  |
  | NFT Wrapper    | 0x3237b7BC8283B4E07bAC017EAe52eBC34B278cE9 | NFT Wrapper contract                     |
 | NFT Query      | 0x35EFCE8D79D6Cae30B38F6dAC3fc55C62c146b4c | NFT profile query contract               |
 
