@@ -21,11 +21,11 @@
 
 
 ## BSC <a id="BSC"></a>
-| Node    | Contract                                    |
-|---------|---------------------------------------------|
-| MainNet | 0x11e2A718d46EBe97645b87F2363AFE1BF28c2672  |
-| TestNet | 0xE815E5B52A659d78c91B747f7A3b358cc4F04794  |
-| DevNet  |                                             |
+| Node    | Contract                                   |
+|---------|--------------------------------------------|
+| MainNet | 0x11e2A718d46EBe97645b87F2363AFE1BF28c2672 |
+| TestNet | 0xE815E5B52A659d78c91B747f7A3b358cc4F04794 |
+| DevNet  |                                            |
 ###### [Back to top](CCD.md#menu)
 
 ## Heco <a id="HECO"></a>
