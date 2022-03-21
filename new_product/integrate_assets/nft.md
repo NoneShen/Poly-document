@@ -26,6 +26,7 @@ The source NFT contract must support the [EIP-721 standard](https://eips.ethereu
   _setTokenURI(tokenId, uri);
   }
   ```
+
 ### Step2. Provide baseUri
 - Next you should provide the baseUri and see [here](https://api.seascape.network/nft/metadata/) for detailed requirements.
 

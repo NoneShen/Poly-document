@@ -45,14 +45,16 @@ After preparation, you can try to call the cross chain function in your contract
       "dst_ccm":""}
 ```
 
-    - Get the “data” as the input data to send transaction to “dst_ccm” on target chain.
+    - Get the "data" as the input data to send transaction to “dst_ccm” on target chain.
 
 > [!Note]
 > Actually, this step is to call "verifyHeaderAndExecuteTx" function of CCM on target chain. While The calling process is encapsulated in "data", so all you need to do is to send transaction with "data" to CCM on target chain.
 
-    - If you encounter an error submitting this transaction, which means there are something wrong with your contract on the target chain. Consider the following problems:
-       - Make sure the “method” (the function of your contract called by target chain) is allowed to be called by CCM contract on target chain.
-       - Check the “txData”(one of input parameter of cross chain function) can be parsed correctly by “method” on target chain.
+
+- If you encounter an error submitting this transaction, which means there are something wrong with your contract on the target chain. Consider the following problems:
+  - Make sure the “method” (the function of your contract called by target chain) is allowed to be called by CCM contract on target chain.
+  - Check the “txData”(one of input parameter of cross chain function) can be parsed correctly by “method” on target chain.
+
 
 - The transaction has been completed on the target chain:
     - Congratulations! You have completed the cross chain transaction.

@@ -14,7 +14,7 @@
   * [Test and Launch](new_product/integrate_bridge/launch.md)
 * [Import New Assets](new_product/integrate_assets/readme.md)
   * [Import Token](new_product/integrate_assets/token.md)
-  * [Import Nft](new_product/integrate_assets/nft.md)
+  * [Import NFT](new_product/integrate_assets/nft.md)
 * [Customize Business Logic Contracts](new_product/integrate_contracts/readme.md)
   * [Guidelines for Developing](new_product/integrate_contracts/Customizing Business Logic Contract.md)
   * [Test and Launch](new_product/integrate_contracts/launch.md)
@@ -22,10 +22,13 @@
 ----
 ### Appendix
 * [Contracts]()
-  * [MainNet](Core_Smart_Contract/Contract/MainNet.md)
-  * [TestNet](Core_Smart_Contract/Contract/TestNet.md)
-  * [DevNet](Core_Smart_Contract/Contract/DevNet.md)
+  * [CCD](Core_Smart_Contract/Contract/CCD.md)
+  * [CCM](Core_Smart_Contract/Contract/CCM.md)
+  * [CCMP](Core_Smart_Contract/Contract/CCMP.md)
+  * [LockProxy](Core_Smart_Contract/Contract/LockProxy.md)
+  * [NFTLockProxy](Core_Smart_Contract/Contract/NFTLockProxy.md)
 * [Nodes](Core_Smart_Contract/Nodes/Nodes.md)
+* [Chain ID](Core_Smart_Contract/Chain_ID/Chain_ID.md)
 ### Glossary
 * [Glossary](GLOSSARY.md)
 
