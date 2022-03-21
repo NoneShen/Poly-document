@@ -2,7 +2,7 @@
 
 Till now, you may have completed the above three parts and waiting to run your module. Then you can execute launch and test by following the listed steps according to the needs of your project.  
 
-> [!NOTE]
+> [!Note|style:flat|label:Notice]
 > Deployment and test are carried on test-net, dev-net, and main-net successively.
 
 <div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
@@ -24,7 +24,7 @@ Registration is the prerequisite of monitoring and processing block information 
 - Call entry function `RegisterSideChain`
 - Call entry function `ApproveRegisterSideChain`
 
-> [!NOTE]
+> [!Note|style:flat|label:Notice]
 > Chain registration is currently completed by `poly team`  with the trusted account.
 
 ### Step 2. Call the genesis block header synchronize functions
@@ -32,7 +32,7 @@ Registration is the prerequisite of monitoring and processing block information 
 Genesis block header synchronization is the prerequisite of synchronizing and processing the subsequent block header information. It involves Synchronizing the genesis block header of the new chain to poly chain and synchronizing the genesis header of the poly chain to ccm contract of the new chain.
 - Call entry function `SyncSideChainGenesisHeader` 
 
-> [!NOTE]
+> [!Note|style:flat|label:Notice]
 > Synchronization is currently completed by `poly team`  with the trusted account.
 
 
@@ -103,7 +103,7 @@ Now call the command:
 ./server --config ./config.json --roles ./roles.json
 ```
 
-> [!Note]
+> [!Note|style:flat|label:Notice]
 > - Check your wallet balance regularly to avoid problems caused by insufficient balance.
 >
 > - Creating multiple wallet accounts can speed up cross chain transaction.
@@ -127,7 +127,7 @@ Here is [DevNet](../../Core_Smart_Contract/Contract/DevNet.md) provided for deve
   Sync genesis block header
   - Call entry function `SyncSideChainGenesisHeader`
 
-> [!Note]
+> [!Note|style:flat|label:Notice]
 > This step is currently completed by `poly team`  with the trusted account.
 
 - Launch your relayer.
@@ -135,7 +135,7 @@ Here is [DevNet](../../Core_Smart_Contract/Contract/DevNet.md) provided for deve
   - Make sure relayer can work correctly, based on whether the block header can be correctly and continuously synchronized in both poly chain and your chain. Synchronization is the prerequisite of processing the cross-chain information.
   - Check the cross-chain transaction can be verified correctly. Here suggest  to depoly a simple business logic contract logic to call the cross-chain function and test if the three parts(poly chain,your contract and relayer) work well together.
 
-> [!Note]
+> [!Note|style:flat|label:Notice]
 > Here you are recommended to interact with your own chain on dev-net, that means when you call the cross-chain function,the "toChainId" (the input parameter of cross chain function,)is your chain ID registered in Poly Chain.
 
 ### Step 2. Test on TestNet

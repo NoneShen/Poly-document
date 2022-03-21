@@ -11,7 +11,6 @@
   * [Test and Launch](new_chain/launch_and_test/launch.md)
 * [Build New Bridges](new_product/integrate_bridge/readme.md)
   * [API](new_product/integrate_bridge/bridge.md)
-  * [Test and Launch](new_product/integrate_bridge/launch.md)
 * [Import New Assets](new_product/integrate_assets/readme.md)
   * [Import Token](new_product/integrate_assets/token.md)
   * [Import Nft](new_product/integrate_assets/nft.md)

@@ -4,7 +4,7 @@
 
 Before developing poly chain, you have to be prepared with the listed three **prerequisites**.
 
-### 1.1 Make sure the new chain supports Light Client Verification
+### 1.1 Support light client verification
 
 The block header must contain the following information：
 - Hash of the previous block header
@@ -12,25 +12,26 @@ The block header must contain the following information：
 - Necessary information to prove the legitimacy of the block header varying from different consensus mechanisms.
 
 > [!Note|style:flat|label:Notice]
-> If your chain **doesn't** support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, get in touch with the `poly team` through <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
+> If your chain **doesn't** support techniques like `Simple Payment Verification` (SPV) protocol in Bitcoin or `Light Ethereum Subprotocol` (LES) in Ethereum, get in touch with the `poly team` through <a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a> for more support.
 
-### 1.2 Offer the block header structure and verification methods
+### 1.2 The block header structure and verification methods
+
+The following information is necessary：
 - Block header structure
-- Serialization and Deserilization methods
+- Serialization and Deserialization methods
 - Block header verification methods
 
-### 1.3 Offer the merkle tree structure and verification methods
+### 1.3 Verifiable state root
 
+The following information is necessary：
 - Merkle tree structure
 - State root verification methods
 
 ## 2. Development Specifications
 
-With the prerequisites mentioned earlier, you can start developing poly chain following the guideline below from the perspective you need. 
+With the prerequisites mentioned earlier, you can start developing methods for poly chain following the guideline below from the perspective you need. 
 
-<div align=center><img src="resources/relay_chain_development.png" alt=""/></div>
-
-### 2.1 Implement methods of block data verification
+### 2.1 Synchronize block headers
 
 #### Block Header Synchronization Methods
 
@@ -57,7 +58,7 @@ The Key information for this method (submitted by .config):
 - Information required for the new chain block header verification
 
 
-### 2.2 Implement methods of cross-chain transaction verification
+### 2.2 Verify cross-chain transactions
 
 #### Cross Chain Management
 
