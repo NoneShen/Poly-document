@@ -185,4 +185,10 @@
 | DevNet  | N/A                                        |
 ###### [Back to top](CCM.md#menu)
 
+## Note  <a id="Note"></a>
+
+`B` means big-endian, we can search the contract transaction history in corresponding explorer.
+
+`L` means little-endian, we usually use it as the asset hash input when we do binding asset hash operation.
+
 

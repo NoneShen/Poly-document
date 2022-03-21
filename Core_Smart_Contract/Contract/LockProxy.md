@@ -184,3 +184,9 @@
 | TestNet | N/A                                      |
 | DevNet  | f71b55ef55cedc91fd007f7a9ba386ec978f3aa8 |
 ###### [Back to top](LockProxy.md#menu)
+
+## Note  <a id="Note"></a>
+
+`B` means big-endian, we can search the contract transaction history in corresponding explorer.
+
+`L` means little-endian, we usually use it as the asset hash input when we do binding asset hash operation.

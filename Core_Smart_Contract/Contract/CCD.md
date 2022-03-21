@@ -5,10 +5,10 @@
 ## Chain Index
 
 | **[Ethereum](CCD.md#Ethereum)** | **[BSC](CCD.md#BSC)**                 | **[Heco](CCD.md#HECO)**         | **[Palette](CCD.md#Palette)** | **[Curve](CCD.md#Curve)**         |
-|---------------------------------|---------------------------------------|---------------------------------|-------------------------------|-----------------------------------|
-| **[OKEx](CCD.md#OKEx)**         | **[Polygon](CCD.md#Polygon)**         | **[Arbitrum](CCD.md#Arbitrum)** | **[xDAI](CCD.md#xDAI)**       | **[Avalanche](CCD.md#Avalanche)** | 
-| **[Fantom-22](CCD.md#Fantom)**  | **[Optimistic](CCD.md#Optimistic)**   | **[Metis](CCD.md#Metis)**       | **[Goerli](CCD.md#Goerli)**   | **[Rinkeby](CCD.md#Rinkeby)**     |
-| **[Kovan](CCD.md#Kovan)**       | **[Pixie](CCD.md#Pixie)**             | **[Boba](CCD.md#Boba)**         | N/A                           | N/A                               |
+|------------------------------|---------------------------------------|---------------------------------|-------------------------------|-----------------------------------|
+| **[OKEx](CCD.md#OKEx)**      | **[Polygon](CCD.md#Polygon)**         | **[Arbitrum](CCD.md#Arbitrum)** | **[xDAI](CCD.md#xDAI)**       | **[Avalanche](CCD.md#Avalanche)** | 
+| **[Fantom](CCD.md#Fantom)**  | **[Optimistic](CCD.md#Optimistic)**   | **[Metis](CCD.md#Metis)**       | **[Goerli](CCD.md#Goerli)**   | **[Rinkeby](CCD.md#Rinkeby)**     |
+| **[Kovan](CCD.md#Kovan)**    | **[Pixie](CCD.md#Pixie)**             | **[Boba](CCD.md#Boba)**         | N/A                           | N/A                               |
 
 
 ## Ethereum <a id="Ethereum"></a>
