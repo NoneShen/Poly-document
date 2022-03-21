@@ -28,6 +28,7 @@
   * [LockProxy](Core_Smart_Contract/Contract/LockProxy.md)
   * [NFTLockProxy](Core_Smart_Contract/Contract/NFTLockProxy.md)
 * [Nodes](Core_Smart_Contract/Nodes/Nodes.md)
+* [Chain ID](Core_Smart_Contract/Chain_ID/Chain_ID.md)
 ### Glossary
 * [Glossary](GLOSSARY.md)
 
