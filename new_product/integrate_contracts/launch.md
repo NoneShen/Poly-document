@@ -2,18 +2,7 @@
 
 <div align=center><img src="resources/launch_and_testing.png" alt=""/></div>
 
-## 1. Deploying Contracts
-
-To implement cross chain features, you need to make sure that:
-
-- The customized business logic contracts are deployed both on source chain and target chain
-- The cross chain methods in your business logic contracts have authorized our Cross Chain Manager Contract to call. 
-- The mapping assets need to be bound before any cross chain transactions
-
-## 2. Test Your Contracts on Poly Network
-
-We highly encourage project developers to test the business logic contract on Testnet before launching on Mainnet. 
-If you want to test your contract on Mainnet directly, you need to provide us with the **business logic contract addresses** and **cross-chain methods** both on source chain and target chain, so that we could maintain the whitelist of CCM contract, which is meant to guarantee the safety of cross chain process.
+## 1. Test Your Contracts on Poly Network
 
 There are three steps help you to test and launch your contract.
 
@@ -35,17 +24,36 @@ After preparation, you can try to call the cross chain function in your contract
 
 - The transaction hasn't been completed on the target chain:
     - Call the API getmanualtxdata with poly chain hash (the second transaction hash).
-```   
-      POST
-      https://bridge.poly.network/testnet/v1/getmanualtxdata
-      Payload
-      {"polyhash":""}
-      Response
-      {"data":"",
-      "dst_ccm":""}
-```
-
-    - Get the “data” as the input data to send transaction to “dst_ccm” on target chain.
+    
+   API
+    ```
+    Testnet: https://bridge.poly.network/testnet/v1/getmanualtxdata
+    Mainnet: https://bridge.poly.network/v1/getmanualtxdata
+    ```
+   Parameter
+   ```
+  /* @SrcChainId:    source chian id
+   * @SwapTokenHash: the hahs of the cross-chain token on the source chain
+   * @Hash: The token hash used to charge fees
+   * @DstChainId: target chain id
+   */
+     ```
+  Example Request
+  ```bash
+  curl --location --request POST 'https://bridge.poly.network/testnet/v1/getmanualtxdata' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+    "polyhash": "",
+  }'
+  ```
+  Example Response
+  ```json
+  {
+    "data": "",
+    "dst_ccm": "0x"
+  }
+  ```
+    - Get the response “data” as the input data to send transaction to “dst_ccm” on target chain.
 
 > [!Note]
 > Actually, this step is to call "verifyHeaderAndExecuteTx" function of CCM on target chain. While The calling process is encapsulated in "data", so all you need to do is to send transaction with "data" to CCM on target chain.
