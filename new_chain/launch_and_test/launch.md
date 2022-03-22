@@ -21,10 +21,10 @@ Here is [DevNet](../../Core_Smart_Contract/Contract/DevNet.md) provided for deve
 
 - Launch your relayer. 
 
-  If you choose to develop based on poly-relayer,please propose a request to submit code developed  to [github](https://github.com/polynetwork/poly-relayer) ,and execute the subcommands follows:
+  If you choose to develop based on poly-relayer,please propose a request to submit code developed to [github](https://github.com/polynetwork/poly-relayer) ,and execute the subcommands follows:
 > [!Note]
-> If you develop relayer apart from poly-relaye, just complete the corresponding actions.
-  - Generate a poly chain wallet,and 
+> If you develop relayer apart from poly-relayer, just complete the corresponding actions.
+  - Generate a poly chain wallet,and turn to Poly Network to add  whitelist.
   - Compile the branch you developed.
   ```bash
    ./build.sh devnet/testnet/mainnet
