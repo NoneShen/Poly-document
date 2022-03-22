@@ -4,5 +4,5 @@ You can write your own business logic contract both on source chain and target c
 
 CCM contract remains two interfaces for direct interconnection with customized business logic contracts. 
 
-Here, this section introduces you the process of cross-chain interconnection, and how to build your own business logic contract and join into the vast cross-chain ecosystem.
+This section introduces you the process of cross-chain interconnection, and how to build your own business logic contract and join into the vast cross-chain ecosystem.
 
