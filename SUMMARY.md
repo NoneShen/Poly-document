@@ -17,14 +17,11 @@
 * [Customize Business Logic Contracts](new_product/integrate_contracts/readme.md)
   * [Guidelines for Developing](new_product/integrate_contracts/Customizing Business Logic Contract.md)
   * [Test and Launch](new_product/integrate_contracts/launch.md)
-
-### User Manual
-* 
-
+  
 ----
 ### User Manuals
 * [Token Transaction](Core_Smart_Contract/User_Manuals/Token_Transaction.md)
-* [MFT Transaction](Core_Smart_Contract/User_Manuals/NFT_Transaction.md)
+* [NFT Transaction](Core_Smart_Contract/User_Manuals/NFT_Transaction.md)
 * [Transaction Acceleration](Core_Smart_Contract/User_Manuals/Transaction_Acceleration.md)
 ----
 ### Appendix

@@ -4,7 +4,7 @@ This is the user manual for token transaction on personal computer.
 Here are five steps listed for you to complete the cross-chain transaction on [Poly Bridge](https://bridge.poly.network/).
 For your better understand, we take the token transaction between **Metis** and **BSC** on [Poly Bridge](https://bridge.poly.network/) as an example.
 
-At the very first beginning, make sure you have entered [Token Asset](https://bridge.poly.network/testnet/) of Poly Bridge.
+At the very beginning, make sure you have entered [Token Asset](https://bridge.poly.network/testnet/) of Poly Bridge.
 
 ### Step 1. Asset selection
 
@@ -15,7 +15,7 @@ As shown in the figures, click Asset, then you can choose the token in the pop-w
 
 ### Step 2. Network selection
 
-After asset selection, click **From Network**, select the source network containing the chosen token in the pop window. 
+After asset selection, click **From Network**, and select the source network containing the chosen token in the pop window. 
 Select the target network in the same way. 
 <img alt="img_17.png" src="img_17.png"/>
 

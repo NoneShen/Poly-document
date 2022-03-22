@@ -3,16 +3,16 @@
 
 ## 1. Test Your Contracts
 
-There are two steps for you to test and launch your contract.
+There are two steps for you to test your contract.
 
 > [!Note|style:flat|label:Notice]
 > The premise of contract testing is that both the original chain and the target chain you want to test have been connected to the Poly Network, otherwise the test cannot be performed.
 
 ### Step 1. Preparation
 
-- Deploy your **contract** in the source chain and target chain (For safety, you are recommended to complete the test in TestNet. If you have to do on MainNet please contact Poly team via <a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>).
+- Deploy your **contract** in the source chain and target chain (For safety, you are recommended to complete the test in TestNet. If you have to do on MainNet, please contact Poly team via <a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>).
 - Please [submit](https://docs.google.com/forms/d/e/1FAIpQLSc7jYVZQVWtLRG8ERLkzH7RWSxfrNaJel3s5qwsvV7XbVWPtg/viewform) the "**method**" (the input parameter of cross chain function, i.e., the function of your contract called by target chain). 
-- Poly team will add this "method" to the whitelist of relayer in order to process transaction automatically, otherwise the transaction cannot process in poly chain. 
+- Poly team will add this "method" to the whitelist of relayer in order to process transaction automatically, otherwise the transaction cannot process in Poly chain. 
 
 ### Step 2. Test on Poly Network
 After preparation, you can try to call the cross-chain function in your contract, and then you can query the steps of cross-chain transaction through [here]( https://explorer.poly.network/testnet). 
@@ -27,7 +27,7 @@ Analyze contract issues based on the steps the transaction reached:
 > Please note that the IDs on the TestNet and the MainNet are different.
 
 - The transaction hasn't been completed on the target chain:
-    - Call the API getmanualtxdata with poly chain hash (the second transaction hash).
+    - Call the API `getmanualtxdata` with Poly chain hash (the second transaction hash).
 
    API
     ```
@@ -61,17 +61,17 @@ Analyze contract issues based on the steps the transaction reached:
 
 
 > [!Note|style:flat|label:Notice]
-> Actually, this step is to call "verifyHeaderAndExecuteTx" function of CCM on target chain. 
+> Actually, this step is to call `verifyHeaderAndExecuteTx` function of CCM on target chain. 
 > The calling process is encapsulated in "data", so all you need to do is to send transaction with "data" to CCM on target chain.
 
 
 - If you encounter an error submitting this transaction, which means there are something wrong with your contract on the target chain. Consider the following problems:
   - Make sure the "method" (the function of your contract called by target chain) is allowed to be called by CCM contract on target chain.
-  - Check the "txData" (one of input parameter of cross chain function) can be parsed correctly by "method" on target chain.
+  - Check the `txData` (one of input parameter of cross chain function) can be parsed correctly by "method" on target chain.
 
 
 - The transaction has been completed on the target chain:
-    - Congratulations! You have completed the cross chain transaction.
+    - Congratulations! You have completed the cross-chain transaction.
 
 > [!Note|style:flat|label:Notice]
 > During the test, you will find that you have to send the target transactions manually. It may not be a good idea for projects. If you want to realize the automatic process, a relayer is needed. There is a [relayer solution](../../new_chain/relayer/relayer.md) for you.
