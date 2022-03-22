@@ -24,7 +24,7 @@ Poly Bridge also synchronizes the price of tokens both on source chain and targe
 > [!Note|style:flat|label:Notice]
 > For now, Poly Bridge is deployed by Poly team.
 
-## 2. Integrate Poly Bridge APIs
+## 2. Integrating Poly Bridge APIs
 Even if you want to implement your own cross-chain bridge, you need to realize the four main functions mentioned above.  
 And for your convenience, Poly Bridge  also provides some API for you to integrate into your own cross-chain bridge.
 You can find them in [here](bridge.md).

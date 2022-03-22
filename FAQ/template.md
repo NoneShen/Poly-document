@@ -14,103 +14,11 @@ Though not exhaustive, these FAQs will help you get started and troubleshoot som
 
 ## About Poly Network Ecosystem
 
-  <div class="card">
-    <div class="card-header" id="heading1">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-          Q1: What is Poly Network? How does Poly Network work?
-        </button>
-           </h5>
-    </div>
-    <div id="collapse1" class="collapse" aria-labelledby="heading1">
-      <div class="card-body" >   
-        A:facts
-      </div>
-    </div>
-  </div>
-
-<div class="card">
-    <div class="card-header" id="heading2">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-          Q2: How many kinds of chains does Poly Network support?
-        </button>
-            </h5>
-    </div>
-    <div id="collapse2" class="collapse" aria-labelledby="heading2">
-      <div class="card-body" >
-        A:
-      </div>
-    </div>
-  </div>
-
-<div class="card">
-    <div class="card-header" id="heading3">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-Q3: How to integrate the chain to Poly Network ecosystem?
-</button>
-      </h5>
-   </div>
-   <div id="collapse3" class="collapse" aria-labelledby="heading3">
-    <div class="card-body">
-A:
-      </div>
-    </div>
-  </div>
-
-<div class="card">
-    <div class="card-header" id="heading4">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-Q4: How to establish the product on Poly Network ecosystem?
-</button>
-      </h5>
-   </div>
-   <div id="collapse4" class="collapse" aria-labelledby="heading4">
-    <div class="card-body">
-A:
-- subQ4: How to interact with Poly Network protocol?
-- subA4:
-      </div>
-    </div>
-  </div>
-
-<div class="card">
-    <div class="card-header" id="heading5">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-Q5: What features Poly Network can provide?
-</button>
-      </h5>
-   </div>
-   <div id="collapse5" class="collapse" aria-labelledby="heading5">
-    <div class="card-body">
-A:
-      </div>
-    </div>
-  </div>
-
-<div class="card">
-    <div class="card-header" id="heading6">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-Q6: Is Poly Network a kind of open source?
-</button>
-      </h5>
-   </div>
-   <div id="collapse6" class="collapse" aria-labelledby="heading6">
-    <div class="card-body">
-A:
-      </div>
-    </div>
-  </div>
-
 <div class="card">
     <div class="card-header" id="heading31">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
-Q7: What is Poly Network?
+Q1: What is Poly Network?
 </button>
       </h5>
    </div>
@@ -127,7 +35,7 @@ Poly Network has integrated over 18 blockchains, including Ethereum, BNB Chain, 
     <div class="card-header" id="heading33">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
-Q8: Is Poly Network related to Polygon, Polymath, or Polychain Capital?
+Q2: Is Poly Network related to Polygon, Polymath, or Poly chain Capital?
 </button>
       </h5>
    </div>
@@ -182,7 +90,7 @@ Q1: What kind of pairs are available on the Poly Bridge?
    </div>
    <div id="collapse8" class="collapse" aria-labelledby="heading8">
     <div class="card-body">
-A: Here is an interface (Link) provided for querying pairs on Poly Bridge
+A: Here is an interface provided for querying pairs on Poly Bridge.
       </div>
     </div>
   </div>
@@ -197,37 +105,23 @@ Q2: How to integrate token onto Poly Bridge?
    </div>
    <div id="collapse9" class="collapse" aria-labelledby="heading9">
     <div class="card-body">
-A: Here is a tutorial (Link) instructing developers to integrate token onto Poly Bridge.
+A: Here is a <a href="https://medium.com/poly-network/poly-bridge-personal-computer-user-manual-1d093350e9ac">manual</a> instructing developers to integrate token onto Poly Bridge.
       </div>
     </div>
   </div>
 
-<div class="card">
-    <div class="card-header" id="heading10">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-Q3: Any kind...
-</button>
-      </h5>
-   </div>
-   <div id="collapse10" class="collapse" aria-labelledby="heading10">
-    <div class="card-body">
-A:
-      </div>
-    </div>
-  </div>
 
 <div class="card">
     <div class="card-header" id="heading11">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-Q4: Where can I find the contract?
+Q3: Where can I find the contract?
 </button>
       </h5>
    </div>
    <div id="collapse11" class="collapse" aria-labelledby="heading11">
     <div class="card-body">
-A: Here is an appendix (Link) that includes basic contracts and some business contracts deployed and used by Poly Network, please go to check it.
+A: Here is an <a href="https://github.com/polynetwork/docs/tree/master/config">appendix</a> that includes basic contracts and some business contracts deployed and used by Poly Network, please go to check it.
       </div>
     </div>
   </div>
@@ -243,7 +137,7 @@ Q1: Does Poly Network issue any token?
    </div>
    <div id="collapse12" class="collapse" aria-labelledby="heading12">
     <div class="card-body">
-A: Poly Network hasn’t issued any token yet.
+A: Poly Network hasn't issued any token yet.
       </div>
     </div>
   </div>
@@ -325,7 +219,7 @@ A: Please check which step your transaction has reached. Solutions vary from dif
 <ul>
  <li>The transaction hasn't been completed on the source chain：For safety reasons, Poly Bridge will not confirm your transaction immediately until subsequent blocks have been confirmed (the number of subsequent blocks is different for different chains), please wait for block confirmation.</li>
  <li>The transaction has been completed on the source chain, but not completed on Poly: if the transaction has been stuck in this step for over 5 min, please do not hesitate to contact the Poly Network Team.</li>
- <li>The transaction hasn't been completed on the target chain: it’s perhaps down to the transaction congestion of the target chain, please wait for a while or refer to the accelerated transaction <a href="https://medium.com/poly-network/poly-bridge-new-acceleration-function-pc-user-manual-cd0b6cacceea">tutorial</a>. If the accelerated tutorial doesn't work, please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a>.</li>
+ <li>The transaction hasn't been completed on the target chain: it’s perhaps down to the transaction congestion of the target chain, please wait for a while or refer to the accelerated transaction <a href="https://medium.com/poly-network/poly-bridge-new-acceleration-function-pc-user-manual-cd0b6cacceea">tutorial</a>. If the accelerated tutorial doesn't work, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.</li>
 </ul>
 </div>
     </div>
@@ -383,7 +277,7 @@ For your better use, Poly Bridge set as follows:
    <li>If $native token amount in your wallet > transfer token amount + src chain gas fee + target chain gas fee, the max amount of transferable token = $native token amount in your wallet -target chain gas fee -estimated src chain gas fee. To guarantee the sufficient transaction fee on src chain, the estimated src chain gas fee could be slightly higher than the actual fee, so that some native tokens will remain in your account after transaction (i.e., native token won’t be totally transferred);</li>
 </ol>
    </li>
-<li>Thirdly, if you encounter other types of error, please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a>.</li>
+<li>Thirdly, if you encounter other types of error, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.</li>
      </div>
     </div>
   </div>
@@ -402,7 +296,7 @@ A: Here are three conditions:
 <ol>
 <li>Poly bridge will reserve transaction fee of both src chain and target chain for users (Tips: the fee will be reserved only when the transferred token is native token). So, the transferable token amount doesn't equal to your account balance.</li>
 <li>Some tokens may have their own characteristics that limit the amount of transfer, so you may not be able to transfer all your assets in one time (but you can break it into several times).</li>
-<li>When the liquidity of target chain is lower than your account balance, you cannot transfer all your assets in one time. Please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a> under this condition.</li>
+<li>When the liquidity of target chain is lower than your account balance, you cannot transfer all your assets in one time. Please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a> under this condition.</li>
 </ol>
       </div>
     </div>
@@ -469,7 +363,7 @@ Q14: When I encounter an error submitting an accelerated transaction, what shall
    <div id="collapse25" class="collapse" aria-labelledby="heading25">
     <div class="card-body">
 A: <li>First of all, please do not submit the accelerated transaction when you encounter an error. Because when the error is shown, the transaction has already been completed on the target chain.</li>
-<li>Please check the balance in your wallet to see whether you have received your assets. If you have not, please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a>.</li>
+<li>Please check the balance in your wallet to see whether you have received your assets. If you have not, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.</li>
       </div>
     </div>
   </div>
@@ -505,7 +399,7 @@ Q16: If I have not applied Poly Bridge frontend to process my transaction and ca
     <div class="card-body">
 A: <ul>
 <li>Firstly, please make sure you have paid enough fee to Poly Bridge, and you can check it by calling the "get fee" api. If you haven’t paid enough fee, it is recommended that you use the acceleration function to speed up the target chain transaction.</li>
-<li>Secondly, if you have already paid enough fee or tried to accelerate but the transaction still fails, please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a>. </li>
+<li>Secondly, if you have already paid enough fee or tried to accelerate but the transaction still fails, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>. </li>
 </ul>
       </div>
     </div>
@@ -527,55 +421,3 @@ A: Ethereum’s high gas fee has been a concern for many, and is a key hurdle in
     </div>
   </div>
 
-
-
-
-
-#### Some critical concerned:
-<div class="card">
-    <div class="card-header" id="heading28">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
-Q1: Are Poly Bridge's smart contracts audited?
-</button>
-      </h5>
-   </div>
-   <div id="collapse28" class="collapse" aria-labelledby="heading28">
-    <div class="card-body">
-A:
-      </div>
-    </div>
-  </div>
-
-
-
-<div class="card">
-    <div class="card-header" id="heading29">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
-Q2: Is the bridge decentralized?
-</button>
-      </h5>
-   </div>
-   <div id="collapse29" class="collapse" aria-labelledby="heading29">
-    <div class="card-body">
-A:
-      </div>
-    </div>
-  </div>
-
-
-<div class="card">
-    <div class="card-header" id="heading30">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
-Q3: Who or where can I ask for help when I crush a problem?
-</button>
-      </h5>
-   </div>
-   <div id="collapse30" class="collapse" aria-labelledby="heading30">
-    <div class="card-body">
-A:
-      </div>
-    </div>
-  </div>

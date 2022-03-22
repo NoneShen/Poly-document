@@ -12,7 +12,7 @@ Poly Network has integrated over 18 blockchains, including Ethereum, BNB Chain, 
 - Protocol for building your bridges
 - Specification for customizing business logic contracts
 
-## Poly dapps
+## Poly dApps
 
 > @[Token assets Cross-chain transfer]{`https://bridge.poly.network/`}
 > `resources/asset.svg` "rect"
