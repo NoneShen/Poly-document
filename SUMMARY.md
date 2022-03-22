@@ -19,6 +19,11 @@
   * [Test and Launch](new_product/integrate_contracts/launch.md)
 
 ----
+### User Manuals
+* [Token Transaction](Core_Smart_Contract/User_Manuals/Token_Transaction.md)
+* [MFT Transaction](Core_Smart_Contract/User_Manuals/NFT_Transaction.md)
+* [Transaction Acceleration](Core_Smart_Contract/User_Manuals/Transaction_Acceleration.md)
+----
 ### Appendix
 * [Contracts]()
   * [CCD](Core_Smart_Contract/Contract/CCD.md)
@@ -26,10 +31,6 @@
   * [CCMP](Core_Smart_Contract/Contract/CCMP.md)
   * [LockProxy](Core_Smart_Contract/Contract/LockProxy.md)
   * [NFTLockProxy](Core_Smart_Contract/Contract/NFTLockProxy.md)
-* [User Manuals]()
-  * [Token Transaction](Core_Smart_Contract/User_Manuals/Token_Transaction.md)
-  * [MFT Transaction](Core_Smart_Contract/User_Manuals/NFT_Transaction.md)
-  * [Transaction Acceleration](Core_Smart_Contract/User_Manuals/Transaction_Acceleration.md)
 * [Nodes](Core_Smart_Contract/Nodes/Nodes.md)
 * [Chain ID](Core_Smart_Contract/Chain_ID/Chain_ID.md)
 * ### Glossary
