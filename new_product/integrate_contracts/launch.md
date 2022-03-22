@@ -74,6 +74,6 @@ After preparation, you can try to call the cross chain function in your contract
 After all tests are completed on the Testnet, you are ready to launch on the Mainnet. The steps are as follows:
 - Firstly, deploy your contract on Mainnet;
 - Secondly, tell us the "method" and the source contract hash you have deployed;
-- Thirdly, start your relayer.
+- Thirdly, launch your relayer (See [here](../../new_chain/launch_and_test/launch.md) for steps).
 
 When all is done, you can start your cross-chain journey.
