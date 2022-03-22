@@ -133,7 +133,7 @@ Q8: Is Poly Network related to Polygon, Polymath, or Polychain Capital?
    </div>
    <div id="collapse33" class="collapse" aria-labelledby="heading33">
     <div class="card-body">
-A: No, Poly Network is not related to them. It’s just a coincidence that we all have “POLY” in our names. However, Poly Bridge supports transactions from and to the Polygon chain.
+A: No, Poly Network is not related to them. It’s just a coincidence that we all have "POLY" in our names. However, Poly Bridge supports transactions from and to the Polygon chain.
 </div>
     </div>
   </div>
@@ -341,7 +341,7 @@ Q7: Where can I find my previous transaction or check the status of my transacti
    </div>
    <div id="collapse18" class="collapse" aria-labelledby="heading18">
     <div class="card-body">
-A: You can check your previous transaction in “History”. And then click “Status” to check the current progress.
+A: You can check your previous transaction in "History". And then click "Status" to check the current progress.
     </div>
     </div>
   </div>
@@ -356,7 +356,7 @@ Q8: The transaction is confirmed in my history but why aren’t the tokens showi
    </div>
    <div id="collapse19" class="collapse" aria-labelledby="heading19">
     <div class="card-body">
-A: You may have to manually add that specific token to your metamask. This can be achieved by selecting the “import tokens” option in your metamask wallet and then copy-paste the token contract address for the asset you wish to add. If properly executed, your tokens will appear in your wallet immediately.
+A: You may have to manually add that specific token to your metamask. This can be achieved by selecting the "import tokens" option in your metamask wallet and then copy-paste the token contract address for the asset you wish to add. If properly executed, your tokens will appear in your wallet immediately.
       </div>
     </div>
   </div>
@@ -379,7 +379,7 @@ If you transfer non-native tokens: $native token amount in your wallet ≥ src c
 For example, if you want to transfer `METIS` from Andromeda to BSC, you have to reserve tokens both for source chain gas fee and for target chain gas fee. The rest are the amount of tokens you can transfer.
 For your better use, Poly Bridge set as follows:
 <ol>
-   <li>If $native token amount in your wallet < transfer token amount + src chain gas fee + target chain gas fee, you’ll be informed that the transferable token amount is ZERO and see a WARNING of “insufficient funs” after clicking MAX;</li>
+   <li>If $native token amount in your wallet < transfer token amount + src chain gas fee + target chain gas fee, you’ll be informed that the transferable token amount is ZERO and see a WARNING of "insufficient funs" after clicking MAX;</li>
    <li>If $native token amount in your wallet > transfer token amount + src chain gas fee + target chain gas fee, the max amount of transferable token = $native token amount in your wallet -target chain gas fee -estimated src chain gas fee. To guarantee the sufficient transaction fee on src chain, the estimated src chain gas fee could be slightly higher than the actual fee, so that some native tokens will remain in your account after transaction (i.e., native token won’t be totally transferred);</li>
 </ol>
    </li>
@@ -413,14 +413,14 @@ A: Here are three conditions:
     <div class="card-header" id="heading22">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
-Q11: Why is the liquidity of the target chain shown sufficient in “Max available amount” before sending a transaction and then<br>
+Q11: Why is the liquidity of the target chain shown sufficient in "Max available amount" before sending a transaction and then<br>
 after the transaction on the source chain is completed, the transaction on the target chain fails because of insufficient liquidity?
 </button>
       </h5>
    </div>
    <div id="collapse22" class="collapse" aria-labelledby="heading22">
     <div class="card-body">
-A: <li>The liquidity shown in “Max available amount” refers to liquidity for all users, not your share of the liquidity. If there are several users initiating large transactions at the same time, the liquidity might be insufficient for all transactions.</li>
+A: <li>The liquidity shown in "Max available amount" refers to liquidity for all users, not your share of the liquidity. If there are several users initiating large transactions at the same time, the liquidity might be insufficient for all transactions.</li>
 <li>It happens mostly when the amount you transfer is close to the max available amount. Under this occasion, Poly Network will contact the relevant project to add liquidity as soon as possible.</li>
       </div>
     </div>
@@ -446,7 +446,7 @@ A: Sure you can! Here is the <a href="https://medium.com/poly-network/poly-bridg
     <div class="card-header" id="heading24">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
-Q13: When “unknown wallet error” pops up on the Poly Bridge page, what shall I do?
+Q13: When "unknown wallet error" pops up on the Poly Bridge page, what shall I do?
 </button>
       </h5>
    </div>
@@ -504,7 +504,7 @@ Q16: If I have not applied Poly Bridge frontend to process my transaction and ca
    <div id="collapse27" class="collapse" aria-labelledby="heading27">
     <div class="card-body">
 A: <ul>
-<li>Firstly, please make sure you have paid enough fee to Poly Bridge, and you can check it by calling the “get fee” api. If you haven’t paid enough fee, it is recommended that you use the acceleration function to speed up the target chain transaction.</li>
+<li>Firstly, please make sure you have paid enough fee to Poly Bridge, and you can check it by calling the "get fee" api. If you haven’t paid enough fee, it is recommended that you use the acceleration function to speed up the target chain transaction.</li>
 <li>Secondly, if you have already paid enough fee or tried to accelerate but the transaction still fails, please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a>. </li>
 </ul>
       </div>

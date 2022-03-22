@@ -19,7 +19,7 @@ Here is [DevNet](../../Core_Smart_Contract/Contract/DevNet.md) provided for deve
   - Call entry function `SyncSideChainGenesisHeader`
 
 > [!Note|style:flat|label:Notice]
-> This step is currently completed by `poly team`  with the trusted account.
+> Registration is currently completed by `poly team`  with the trusted account.
 
 - Launch your relayer. 
 
