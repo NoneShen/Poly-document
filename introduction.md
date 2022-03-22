@@ -37,7 +37,7 @@ Poly Network has integrated over 18 blockchains, including Ethereum, BNB Chain, 
 
 ---
 
-> @[Discord]{`https://discord.com/invite/y6MuEnq`}
+> @[Discord]{`<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>`}
 > `resources/Discord.png` "rect"
 
 ---

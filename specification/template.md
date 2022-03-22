@@ -41,7 +41,7 @@
 
 #### 样式2
 ```markdown
-> [!Note]
+> [!Note|style:flat|label:Notice]
 > 提示框样式2
 ```
 
@@ -85,7 +85,7 @@ Please refer to the [code](https://github.com/polynetwork/poly/blob/4323af5cfcd2
 
 ```markdown
 > [!Note|style:flat|label:Notice]
-> If your chain doesn't support techniques like Simple Payment Verification (SPV) protocol in Bitcoin or Light Ethereum Subprotocol (LES) in Ethereum, please get in touch with the 'poly team' via <a href="mailto:contact@poly.network">contact@poly.network</a> or https://discord.com/invite/y6MuEnq for more support.
+> If your chain doesn't support techniques like Simple Payment Verification (SPV) protocol in Bitcoin or Light Ethereum Subprotocol (LES) in Ethereum, please get in touch with the 'poly team' via <a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a> for more support.
 ```
 
 ### 表格样例

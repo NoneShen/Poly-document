@@ -14,7 +14,7 @@ The source NFT contract must support the [EIP-721 standard](https://eips.ethereu
   `function mintWithURI(address to, uint256 tokenId, string memory uri) external`
 - This method will be called in Poly Network’s PolyNFTLockProxy contract.
 
-> [!Note]
+> [!Note|style:flat|label:Notice]
 >If you want to deploy the NFT contract on the target chain by yourself, please implement the above interface and ensure that the method name, parameters, and order are strictly consistent.
 
 - If your contract does not implement `_safeMint`, `_setTokenURI`, etc., you should implement first. If you have implemented these methods, you can directly copy the following code:
@@ -71,12 +71,12 @@ You can follow the manual to check whether your NFT is successfully deployed.
 - Then, you should click “connect Wallet” on the up right and connect to the wallet.
 <div align=center><img src="resources/nft_step1.png" alt=""/></div>
  
-  > [!NOTE]
+  > [!Note|style:flat|label:Notice]
   > If you have not connected any wallet, you will be required to connect your wallet first and see a guide interface when clicking any NFT image, as shown in the figure.
 
 <div align=center><img src="resources/nft_step2.png" alt=""/></div>
   
-  > [!NOTE]
+  > [!Note|style:flat|label:Notice]
   > If the selected chain does not match the current active chain in Metamask, the following error will occur. In this case, the chain in the wallet needs to be switched to the one selected in the Bridge.
 
 <div align=center><img src="resources/nft_step3.png" alt=""/></div>

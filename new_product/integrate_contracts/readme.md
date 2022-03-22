@@ -6,5 +6,3 @@ CCM contract remains two interfaces for direct interconnection with customized b
 
 Here, this section introduces you the process of cross-chain interconnection, and how to build your own business logic contract and join into the vast cross-chain ecosystem.
 
-
-<div align=center><img src="resources/business_contract_flow.png" alt=""/></div>

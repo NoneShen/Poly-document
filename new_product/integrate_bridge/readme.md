@@ -21,7 +21,7 @@ During transaction, `Poly Bridge` will monitor the wrapper events emitted by the
 * Synchronize cross-chain token price  
 `Poly Bridge` also synchronizes the price of tokens both on source chain and target chain from the market, making users be informed about the exchange rate and accurately calculate transaction fee.
 
-> [!NOTE]
+> [!Note|style:flat|label:Notice]
 > For now, `Poly Bridge` is deployed by the poly team.
 
 ## 2. Integrate `Poly Bridge` APIs into Other Cross-chain Bridge.
