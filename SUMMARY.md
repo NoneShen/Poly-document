@@ -18,6 +18,9 @@
   * [Guidelines for Developing](new_product/integrate_contracts/Customizing Business Logic Contract.md)
   * [Test and Launch](new_product/integrate_contracts/launch.md)
 
+### User Manual
+* 
+
 ----
 ### Appendix
 * [Contracts]()

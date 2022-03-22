@@ -1,21 +1,21 @@
 <h1 align="center">API</h1>
 
-> [!Note|style:flat|label:Notice]
-> The following APIs are provided for developers who need to implement the bridge function. If you want to integrate into the poly bridge, please get in touch with the `poly team` via <a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a> for more support.
+The following APIs are provided for developers who need to implement the bridge function. 
+If you want to integrate into the Poly bridge, please get in touch with Poly team via <a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a> for more support.
 
 ## Poly Bridge APIs:
 
 - Get cross chain fee
 - Get cross chain transaction status
-- Get history transactions of address
-- Get token basics information
+- Get transaction history
+- Get token basic information
 - Get token mapping relationship between different chains
 - Get the expected cross chain duration
 
 ### Get cross chain fee
 
 This API returns transaction fee which will be charged on the source chain in cross-chain transaction.
-And if SwapTokenHash is specified, the transferable amount will be returned.
+And if `SwapTokenHash` is specified, the transferable amount will be returned.
 
 API
 ```
@@ -147,7 +147,7 @@ Example Response
     ]
 }
 ```
-### Get history transactions of address
+### Get transaction history
 
 This API returns the cross-chain history of the assigned address.
 
@@ -250,7 +250,7 @@ Example Response
   ]
 }
 ```
-### Get token basics information
+### Get token basic information
 
 This API returns the basic information of the token, including price, precision, meta data and the token information mapped on each chain.
 
