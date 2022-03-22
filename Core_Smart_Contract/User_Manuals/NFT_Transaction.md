@@ -24,13 +24,13 @@ Make sure your wallet has switched to the **same network** as the chain you sele
 <img alt="img_2.png" src="img_2.png"/>
 <img alt="img_3.png" src="img_3.png"/>
 
-> [!Note ]
+> [!Note|style:flat|label:Notice]
 **All existing NFT assets** will be shown before your wallet is connected or switched to the appropriate chain, as shown in this figure.
    
 <img alt="img_4.png" src="img_4.png"/>
 
-> And a window will pop up to suggest you **connecting your wallet** of this chain when you click any NFT assets on it, 
-> as shown in here: 
+And a window will pop up to suggest you **connecting your wallet** of this chain when you click any NFT assets on it, 
+as shown in here: 
   
 <img alt="img_5.png" src="img_5.png"/>
 
@@ -46,22 +46,27 @@ Next, click **CONNECT WALLET** and connect the wallet on **target chain**, e.g.,
 
 ### Step 5. Transaction submission
 Now you should click **APPROVE** and confirm in your wallet to authorize Poly for this NFT.
-   <img alt="img_9.png" src="img_9.png"/>
+
+<img alt="img_9.png" src="img_9.png"/>
 
 After authorization and confirmation, you can click **NEXT** to proceed. 
 Confirm the core information including the **two chains** and **transaction fee**, and then click **CONFIRM** in the pop-window. 
-   <img alt="img_10.png" src="img_10.png"/>
-   <img alt="img_11.png" src="img_11.png"/>
 
-> [!Note]
+<img alt="img_10.png" src="img_10.png"/>
+
+<img alt="img_11.png" src="img_11.png"/>
+
+> [!Note|style:flat|label:Notice]
 > The **Fee** collected by Poly shown in this page is used to cover the transaction fee on target chain.
 
 
 
 During the transaction, you can click on the **transaction hash** to open it in the [Poly Network](https://explorer.poly.network) to check its status. 
 Wait for several minutes, and you can check your transaction in **History**.
-   <img alt="img_12.png" src="img_12.png"/>
-   <img alt="img_13.png" src="img_13.png"/>
+
+<img alt="img_12.png" src="img_12.png"/>
+
+<img alt="img_13.png" src="img_13.png"/>
 
 Congratulations! Till now, you've successfully completed your NFT transaction, and you can continue your cross-chain journey!
  

@@ -19,7 +19,7 @@ After asset selection, click **From Network**, select the source network contain
 Select the target network in the same way. 
 <img alt="img_17.png" src="img_17.png"/>
 
-> [!Note]
+> [!Note|style:flat|label:Notice]
 > The optional network shown in this figure is the network types supported by Metis token. Different networks are supported by different assets. Please choose it according to the actual situation.
 
 Here the figure indicates that Metis token will be sent from Metis to the target network BSC.
@@ -29,22 +29,23 @@ Here the figure indicates that Metis token will be sent from Metis to the target
 
 The next step is to connect the wallet. 
 You can either click **Connect Wallet** or the **wallet icon** to connect your wallet.  
-The difference comes that clicking **Connect Wallet** will enable you to select wallets both on the source and target network, as shown in the latter figure. 
-<img alt="img_21.png" src="img_21.png"/>
-<img alt="img_19.png" src="C:\Users\Dell\learngit\Poly-document\Core_Smart_Contract\User_Manuals\img_19.png"/>
+The difference comes that clicking **Connect Wallet** will enable you to select wallets both on the source and target network, as shown in the latter figure.
 
-> [!Note]
+<img alt="img_35.png" src="img_35.png"/>
+<img alt="img_32.png" src="img_32.png"/>
+
+> [!Note|style:flat|label:Notice]
 Different networks support different wallets, and the current support status is shown in the table.
 
-| Network               | 	Wallet                |
-|-----------------------|------------------------|
-| ETH	                  | Metamask/Math          |
-| BSC	                  | Metamask/Binance/Math  |
-| HECO/OK/Polygon/Metis | Metamask               |
-| Neo	                  | Metis/Neoline          |
-| Ontology              | 	Cyano                 |
+| **Network**             | 	**Wallet**           |
+|-------------------------|-----------------------|
+| ETH	                    | Metamask/Math         |
+| BSC	                    | Metamask/Binance/Math |
+| HECO/OK/Polygon/Metis   | Metamask              |
+| Neo	                    | Metis/Neoline         |
+| Ontology                | 	Cyano                |
 
-> [!Note]
+> [!Note|style:flat|label:Notice]
 > If the warning "**Please switch network**" appears, the thing you should do is to switch the network of wallet in order to keep consistent with the source network.
 
 <img alt="img_23.png" src="img_23.png"/>
@@ -57,7 +58,8 @@ Please check it carefully.
 
 If you make sure the transaction information is correct，you can click **Confirm** to submit the transaction and confirm it in wallet again.
 <img alt="img_24.png" src="img_24.png"/>
-> [!Note]
+
+> [!Note|style:flat|label:Notice]
 > If you are the first time to swap, an approval operation is required before transaction submission. 
 > Approve Infinity or not depends on your actual situation.
 
@@ -65,6 +67,7 @@ If you make sure the transaction information is correct，you can click **Confir
 
 After the submission, you can view the transaction result in **History**. 
 When the transaction details are displayed as shown in the figure, it means that the transaction has been successfully competed.
+
 <img alt="img_25.png" src="img_25.png"/>
 
 Congratulations! Till now, you've successfully completed your token transaction, and you can continue your cross-chain journey!
