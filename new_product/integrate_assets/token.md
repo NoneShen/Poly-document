@@ -27,7 +27,7 @@ Follow the listed four steps to import your token into Poly Network.
 
 You can follow the manual to check whether your token is successfully deployed.
 
-> [!NOTE]
+> [!Note|style:flat|label:Notice]
 > Here we take the token $METIS as an example.
 
 ### Step1. Select asset
@@ -38,7 +38,7 @@ You can follow the manual to check whether your token is successfully deployed.
 
 ### Step2. Select network
 - After asset selection, click “From Network” and select the source network in which the chosen token locates in the pop-window. Select the target network in the same way.
-  > [!NOTE]
+  > [!Note|style:flat|label:Notice]
   > The optional networks shown in the picture are the network types supporting $METIS. The network should be switched according to different assets. Please choose the assigned network according to the corresponding asset.
 
 <div align=center><img src="resources/token_selectnetwork_step1.png" alt=""/></div>
@@ -54,12 +54,12 @@ You can follow the manual to check whether your token is successfully deployed.
 
 <div align=center><img src="resources/token_connectwallet_step2.png" alt=""/></div>
 
-  > [!NOTE]
+  > [!Note|style:flat|label:Notice]
   > Each network supports specific wallet, and the current status is shown in the table.
 
 <div align=center><img src="resources/token_connectwallet_step3.png" alt=""/></div>
 
-  > [!NOTE]
+  > [!Note|style:flat|label:Notice]
   > When the red warning “Please switch network” appears, you should switch the network of wallet to keep consistent with the source network.
 
 <div align=center><img src="resources/token_connectwallet_step4.png" alt=""/></div>
@@ -68,7 +68,7 @@ You can follow the manual to check whether your token is successfully deployed.
 - Now you can enter the value of input token, then click “Next”. 
 - A pop-window will appear to show the details of the transaction. Please check it carefully. 
 - After carefully checking, click “Confirm” to submit the transaction and confirm it in wallet again.
-  > [!NOTE]
+  > [!Note|style:flat|label:Notice]
   > If you are the first time to Swap, an approval operation is required before you submit transaction (approve Infinity or not according to your actual situation).
 
 <div align=center><img src="resources/token_connectwallet_step5.png" alt=""/></div>
@@ -78,7 +78,7 @@ You can follow the manual to check whether your token is successfully deployed.
 - The transaction is completed when the transaction details are displayed.
 <div align=center><img src="resources/token_connectwallet_step6.png" alt=""/></div>
  
-  > [!NOTE]
+  > [!Note|style:flat|label:Notice]
   > The processing time of Poly Network Swaps are limited by the amount of the transaction fee. 
   > In order to avoid network congestion, Poly Network defaults to the maximum gas fee which will be used as the transaction fee on the source chain. 
   > ATTENTION: Poly Network does NOT charge any gas fee.

@@ -325,7 +325,7 @@ A: Please check which step your transaction has reached. Solutions vary from dif
 <ul>
  <li>The transaction hasn't been completed on the source chain：For safety reasons, Poly Bridge will not confirm your transaction immediately until subsequent blocks have been confirmed (the number of subsequent blocks is different for different chains), please wait for block confirmation.</li>
  <li>The transaction has been completed on the source chain, but not completed on Poly: if the transaction has been stuck in this step for over 5 min, please do not hesitate to contact the Poly Network Team.</li>
- <li>The transaction hasn't been completed on the target chain: it’s perhaps down to the transaction congestion of the target chain, please wait for a while or refer to the accelerated transaction <a href="https://medium.com/poly-network/poly-bridge-new-acceleration-function-pc-user-manual-cd0b6cacceea">tutorial</a>. If the accelerated tutorial doesn't work, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.</li>
+ <li>The transaction hasn't been completed on the target chain: it’s perhaps down to the transaction congestion of the target chain, please wait for a while or refer to the accelerated transaction <a href="https://medium.com/poly-network/poly-bridge-new-acceleration-function-pc-user-manual-cd0b6cacceea">tutorial</a>. If the accelerated tutorial doesn't work, please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a>.</li>
 </ul>
 </div>
     </div>
@@ -383,7 +383,7 @@ For your better use, Poly Bridge set as follows:
    <li>If $native token amount in your wallet > transfer token amount + src chain gas fee + target chain gas fee, the max amount of transferable token = $native token amount in your wallet -target chain gas fee -estimated src chain gas fee. To guarantee the sufficient transaction fee on src chain, the estimated src chain gas fee could be slightly higher than the actual fee, so that some native tokens will remain in your account after transaction (i.e., native token won’t be totally transferred);</li>
 </ol>
    </li>
-<li>Thirdly, if you encounter other types of error, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.</li>
+<li>Thirdly, if you encounter other types of error, please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a>.</li>
      </div>
     </div>
   </div>
@@ -402,7 +402,7 @@ A: Here are three conditions:
 <ol>
 <li>Poly bridge will reserve transaction fee of both src chain and target chain for users (Tips: the fee will be reserved only when the transferred token is native token). So, the transferable token amount doesn't equal to your account balance.</li>
 <li>Some tokens may have their own characteristics that limit the amount of transfer, so you may not be able to transfer all your assets in one time (but you can break it into several times).</li>
-<li>When the liquidity of target chain is lower than your account balance, you cannot transfer all your assets in one time. Please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a> under this condition.</li>
+<li>When the liquidity of target chain is lower than your account balance, you cannot transfer all your assets in one time. Please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a> under this condition.</li>
 </ol>
       </div>
     </div>
@@ -469,7 +469,7 @@ Q14: When I encounter an error submitting an accelerated transaction, what shall
    <div id="collapse25" class="collapse" aria-labelledby="heading25">
     <div class="card-body">
 A: <li>First of all, please do not submit the accelerated transaction when you encounter an error. Because when the error is shown, the transaction has already been completed on the target chain.</li>
-<li>Please check the balance in your wallet to see whether you have received your assets. If you have not, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>.</li>
+<li>Please check the balance in your wallet to see whether you have received your assets. If you have not, please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a>.</li>
       </div>
     </div>
   </div>
@@ -505,7 +505,7 @@ Q16: If I have not applied Poly Bridge frontend to process my transaction and ca
     <div class="card-body">
 A: <ul>
 <li>Firstly, please make sure you have paid enough fee to Poly Bridge, and you can check it by calling the “get fee” api. If you haven’t paid enough fee, it is recommended that you use the acceleration function to speed up the target chain transaction.</li>
-<li>Secondly, if you have already paid enough fee or tried to accelerate but the transaction still fails, please contact <a href="https://discord.com/invite/y6MuEnq">Poly Network team</a>. </li>
+<li>Secondly, if you have already paid enough fee or tried to accelerate but the transaction still fails, please contact <a href="<a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>">Poly Network team</a>. </li>
 </ul>
       </div>
     </div>

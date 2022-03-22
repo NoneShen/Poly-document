@@ -5,7 +5,6 @@
 This step shows how to develop a relayer for your chain or your project. The relayer plays a role to deliver message between different chains, which is a part of cross-chain ecosystem. 
 
 There are two components required: **Chain Listener** and **Chain Submitter**. 
-<div align=center><img src="resources/develop_for_relayer.png" alt=""/></div>
 
 ### 1.1 Chain Listener
 Chain listener is used to fetch data from the source chain and poly chain, including block header, cross chain events emitted from CCM, transaction execution message from CCD and merkle proofs which are used to verify the cross chain message in the poly chain. Here is an interface provided for you.
@@ -48,7 +47,6 @@ type IChainSubmitter interface {
   ProcessTx(*msg.Tx, msg.PolyComposer) error
 }
 ```
-
 ##2. Develop on Poly-Relayer
 Poly-Relayer is a relayer project maintained by Poly Network.If you choose to develop based on poly-relayer, the following will show the steps to join.
 
@@ -86,4 +84,5 @@ The configs are required when launching relayer:
 
 
 Here are ready for the relayer, please see the chapter of 'test and launch' for details to launch.
+
 

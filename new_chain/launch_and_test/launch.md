@@ -1,6 +1,8 @@
 <h1 align="center">Test and Launch</h1>
 
+
 ## 1. Test the Project 
+
 There are three steps for you to test the interaction between your chain and poly chain.
 
 ### 1.1 Debug on DevNet 	
@@ -16,7 +18,7 @@ Here is [DevNet](../../Core_Smart_Contract/Contract/DevNet.md) provided for deve
   Sync genesis block header
   - Call entry function `SyncSideChainGenesisHeader`
 
-> [!Note]
+> [!Note|style:flat|label:Notice]
 > This step is currently completed by `poly team`  with the trusted account.
 
 - Launch your relayer. 
@@ -52,7 +54,7 @@ Here is [DevNet](../../Core_Smart_Contract/Contract/DevNet.md) provided for deve
   - Make sure relayer can work correctly, based on whether the block header can be correctly and continuously synchronized in both poly chain and your chain. Synchronization is the prerequisite of processing the cross-chain information.
   - Check the cross-chain transaction can be verified correctly. Here suggest  to depoly a simple business logic contract logic to call the cross-chain function and test if the three parts(poly chain,your contract and relayer) work well together.
 
-> [!Note]
+> [!Note|style:flat|label:Notice]
 > Here you are recommended to interact with your own chain on dev-net, that means when you call the cross-chain function,the "toChainId" (the input parameter of cross chain function,)is your chain ID registered in Poly Chain.
 
 ### 1.2 Test on TestNet

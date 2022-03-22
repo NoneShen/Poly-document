@@ -6,7 +6,7 @@ Chains must and only must be deployed with one CCM contract so as to implement c
 > [!Note|style:flat|label:Notice]
 > To implement cross-chain features, you need to make sure that the cross chain methods in your business logic contracts have authorized our Cross Chain Manager Contract to call.
 
-### Step1. Implement methods of inputting the mapping relationship
+### Step1. Input the mapping relationship
 
 Except for verifying the existence of transaction through CCM contract, business logic contract needs to make sure the accuracy of the assets relationship in the transaction. 
 Therefore, the business contract should maintain both the **asset mapping** and **business logic contract mapping**. 
@@ -44,7 +44,7 @@ contract LockProxy is Ownable {
 }
 ```
 
-### Step2. Implement methods of initiating a cross-chain request
+### Step2. Initiate a cross-chain request
 
 #### Interface:
 
@@ -106,7 +106,7 @@ function lock(address fromAssetHash, uint64 toChainId, bytes memory toAddress, u
 - Then the transaction data will be packed, which then in turn invokes the CCM contract. The management contract transfers the parameters of transaction data to the target chain and a cross chain transaction is created by management contract which is sent to the target chain based on block generation on source chain;
 - The serialized **transaction data**, along with **chain ID**, **business logic contract address** of target chain and the method needing to be called on target chain, will be sent through `crossChain()` in CCM contract.
 
-### Step3. Implement methods of verifying and executing cross-chain transactions
+### Step3. Verify and executing cross-chain transactions
 
 #### Interface:
 
