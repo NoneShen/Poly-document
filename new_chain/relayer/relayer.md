@@ -52,7 +52,7 @@ type IChainSubmitter interface {
 ```
 ##2. Develop Steps on Poly-Relayer
 Poly-Relayer is a relayer project maintained by Poly Network.
-If you choose to develop based on Poly-Relayer, follow the listed steps please.
+If you choose to develop based on Poly-Relayer, follow the listed steps, please.
 
 ### Step1. Prerequisites
 The [Poly-Relayer](https://github.com/polynetwork/poly-relayer) project is based on the [bridge-common](https://github.com/polynetwork/bridge-common) library. So you need to:
