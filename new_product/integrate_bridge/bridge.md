@@ -5,16 +5,16 @@ If you want to integrate into the Poly bridge, please get in touch with Poly tea
 
 ## Poly Bridge APIs:
 
-- Get cross chain fee
-- Get cross chain transaction status
-- Get transaction history
-- Get token basic information
-- Get token mapping relationship between different chains
-- Get the expected cross chain duration
+- Get cross-chain fee.
+- Get cross-chain transaction status.
+- Get transaction history.
+- Get basic token information.
+- Get token mapping relationship between different chains.
+- Get the expected cross-chain duration.
 
 ### Get cross chain fee
 
-This API returns transaction fee which will be charged on the source chain in cross-chain transaction.
+This API returns a transaction fee charged on the source chain in a cross-chain transaction.
 And if `SwapTokenHash` is specified, the transferable amount will be returned.
 
 API
@@ -25,8 +25,8 @@ Mainnet: https://bridge.poly.network/v1/getfee
 
 Parameter
 ```
-/* @SrcChainId:    source chian id
- * @SwapTokenHash: the hahs of the cross-chain token on the source chain
+/* @SrcChainId:    source chain id
+ * @SwapTokenHash: the hash of the cross-chain token on the source chain
  * @Hash: The token hash used to charge fees
  * @DstChainId: target chain id
 */
@@ -364,7 +364,7 @@ Example Response
 ```
 
 
-### Get the expected cross chain duration
+### Get the expected cross-chain duration
 
 This API returns the expected elapsed time for token to transfer from source chain to target chain.
 

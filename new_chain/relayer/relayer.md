@@ -2,12 +2,12 @@
 
 ## 1. Development Specifications
 
-This step shows how to develop a relayer for your chain or your project. The relayer plays a role to deliver message between different chains, which is a part of cross-chain ecosystem. 
+This step shows how to develop a relayer for your chain or project. The relayer plays a role in delivering messages between different chains, which is part of the cross-chain ecosystem. 
 
 There are two components required: **Chain Listener** and **Chain Submitter**. 
 
 ### 1.1 Chain Listener
-Chain listener is used to fetch data from the source chain and poly chain, including block header, cross chain events emitted from CCM and merkle proofs which are used to verify the cross chain message in the poly chain.
+Chain listener fetches data from the source chain and poly chain, including block header, cross-chain events emitted from CCM, and Merkle proofs used to verify the cross-chain message in the poly chain.
 And the interface listed is necessary.
 
 ```go
@@ -34,7 +34,7 @@ type IChainListener interface {
 ```
 
 ### 1.2 Chain Submitter
-Chain Submitter is used to deliver messages to the target chain, including  **validator changes** of poly chain to CCD and **cross chain messages**.
+Chain Submitter delivers messages to the target chain, including **validator changes** of poly chain to CCD and **cross-chain messages**.
 Additionally, Chain Submitter will check whether the transaction has been verified in CCD.
 And the interface listed is necessary.
 
@@ -52,7 +52,7 @@ type IChainSubmitter interface {
 ```
 ##2. Develop Steps on Poly-Relayer
 Poly-Relayer is a relayer project maintained by Poly Network.
-If you choose to develop based on Poly-Relayer, follow the listed steps, please.
+If you choose to develop based on Poly-Relayer, please follow the listed steps.
 
 ### Step1. Prerequisites
 The [Poly-Relayer](https://github.com/polynetwork/poly-relayer) project is based on the [bridge-common](https://github.com/polynetwork/bridge-common) library. So you need to:
@@ -69,25 +69,25 @@ Register `ChainListener` and `ChainSubmitter` in [selectors](https://github.com/
 ##3. Preparation for Launch
 The configs are required when launching relayer:
 
-- Make sure necessary configuration is specified in `config.json` including CCM contract, CCD contract and other details for chain.
-- You can see a [sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json) in here.
+- Make sure necessary configuration is specified in `config.json,` including CCM contract, CCD contract, and other details for the chain.
+- You can see a [sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json) here.
 
 > [!Note|style:flat|label:Notice]
-> - If you develop the relayer for the chain which has been integrated in Poly Network, you can directly fetch [CCD](../../Core_Smart_Contract/Contract/CCD.md) and [CCM](../../Core_Smart_Contract/Contract/CCM.md) contracts.
-> - If you develop the relayer for a new chain, please complete the contract by yourself.
+>
+> - If you develop the relayer for the chain integrated with Poly Network, you can directly fetch [CCD](../../Core_Smart_Contract/Contract/CCD.md) and [CCM](../../Core_Smart_Contract/Contract/CCM.md) contracts.
+> - If you develop the relayer for a new chain, please complete the contract yourself.
 > - Check Poly public [nodes](../../Core_Smart_Contract/Nodes/Nodes.md) in here.
 
-- Specify roles to enable in `roles.json` and see a [sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json) in here. 
+- Specify roles to enable in `roles.json` and see a [sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json) here. 
 
-| Roles      | Quantity Demand                 | Description                                                                                 |
-|------------|---------------------------------|---------------------------------------------------------------------------------------------|
-| HeaderSync | One or multiple for each chain  | It submits chain headers to poly chain.                                                     |
-| TxListen   | Only one for each chain         | It observes cross chain transactions from source chain, and pushes them to message queue.   |
-| TxCommit   | One or multiple for each chain  | It consumes the message queue, and submits the cross chain transactions to poly.            |
-| PolyListen | Only One for poly chain         | It observes cross chain transactions from poly chain and pushes them to message queue.      |
-| PolyCommit | One or multiple for poly chain  | It consumes the message queue, and submits the cross chain transaction to the target chain. |
+| Roles      | Quantity Demand                | Description                                                  |
+| ---------- | ------------------------------ | ------------------------------------------------------------ |
+| HeaderSync | One or multiple for each chain | It submits chain headers to the poly chain.                  |
+| TxListen   | Only one for each chain        | It observes cross-chain transactions from the source chain and pushes them to the message queue. |
+| TxCommit   | One or multiple for each chain | It consumes the message queue and submits the cross-chain transactions to poly. |
+| PolyListen | Only One for poly chain        | It observes cross-chain transactions from the poly chain and pushes them to the message queue. |
+| PolyCommit | One or multiple for poly chain | It consumes the message queue and submits the cross-chain transaction to the target chain. |
 
 
 Now you are ready for the relayer, and please see the chapter of [Test and Launch](../../new_chain/launch_and_test/launch.md) for details to launch.
-
 

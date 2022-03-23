@@ -3,19 +3,19 @@
 ## 1. Environmental Requirements:
 
 - Make sure your device has got access to the Internet; 
-- Make sure your device has installed and launched: golang>=1.17 and git.
+- Make sure your device has been installed and launched: golang>=1.17 and git.
 
 ## 2. Deploy Bridge Server and Bridge Http
-Under the required environment, you can deploy bridge server and bridge http separately to launch your `Poly Bridge`.
+Under the required environment, you can deploy bridge server and bridge HTTP separately to launch your `Poly Bridge`.
 
 ### Step 1. Clone code
-Firstly, you have to clone the core code from the remote repository of polynetwork. Run `git bash` in your assigned file and to do so:
+Firstly, you have to clone the core code from the remote repository of the poly network. Run `git bash` in your assigned file and to do so:
 ```bash
 git clone https://github.com/polynetwork/poly-bridge.git
 ```
 
 ### Step 2. Build binaries
-Then build bridge server and bridge http binaries separately via:
+Then build bridge server and bridge HTTP binaries separately via:
 ```bash
 # Compile the bridge server
 go build -o bridge_server -tags testnet/mainnet ./cmd/
@@ -149,4 +149,4 @@ Now you can launch and run the two functions:
 ### Step 5. Test
 There are detailed unit tests in the code repository, which can be tested as needed before the service starts.
 And after the service starts, you need to check the **log for errors**, such as **program panic**, **node connection failure**, etc. 
-Additionally you need to pay attention to whether the **monitoring height** of the chain increases normally. 
+Additionally, you need to pay attention to whether the **monitoring height** of the chain increases normally. 
