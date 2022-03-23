@@ -5,7 +5,7 @@ Here are five steps listed for you to complete the cross-chain transaction on [P
 For your better understand, we take the NFT transaction between **Bytom** and **BSC** on [Poly Bridge](https://bridge.poly.network/) as an example.
 
 
-At the very first beginning, make sure you have entered [NFT Asset](https://bridge.poly.network/testnet/nft) of Poly Bridge and seen page as below:
+At the very beginning, make sure you have entered [NFT Asset](https://bridge.poly.network/testnet/nft) of Poly Bridge and seen page as below:
  
 <img alt="img.png" src="img.png"/> 
 
@@ -40,7 +40,7 @@ Now **select a NFT asset**, e.g., #0.
    <img alt="img_6.png" src="img_6.png"/>
 
 ### Step 4. Wallet connection on target chain
-Next, click **CONNECT WALLET** and connect the wallet on **target chain**, e.g., BNB, as shown in below, and connect your target wallet:
+Next, click **CONNECT WALLET** and connect the wallet on **target chain**, e.g., BNB, as shown in below:
    <img alt="img_7.png" src="img_7.png"/>
    <img alt="img_8.png" src="img_8.png"/>
 

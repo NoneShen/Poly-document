@@ -3,7 +3,7 @@
 Poly Bridge releases the **acceleration function** to help users speed up transaction when dealing with congested network. 
 This manual will show you how to use this function with the example of token transfer between **Arbitrum** and **Ethereum**.
 
-At the very first beginning, please check the status of your transaction.
+At the very beginning, please check the status of your transaction.
 When you have submitted a cross-chain transaction completed in Poly, you can click **SPEED UP** to use **acceleration function**.
 
 <img alt="img_26.png" src="img_26.png"/>
@@ -11,7 +11,7 @@ When you have submitted a cross-chain transaction completed in Poly, you can cli
 > [!Note|style:flat|label:Notice]
 > If your transaction is only completed in the source chain, this function does not work
 
-Here are five steps listed for you to accelerate your transaction on [Poly Bridge](https://bridge.poly.network/).
+Here are three steps listed for you to accelerate your transaction on [Poly Bridge](https://bridge.poly.network/).
 
 ### Step 1. Transaction selection
 Firstly, you should find the transaction that you want to accelerate. Click **History** on [Poly Bridge](https://bridge.poly.network/) to view the previous transaction, as shown in the figure.
@@ -33,10 +33,10 @@ Now you can click **SPEED UP** or **PAY** if you didn't pay gas fee for this tra
 If you encounter an error report as shown in the figure, please do not resubmit this transaction. Turn back to your wallet to check the balance.  
 <img alt="img_30.png" src="img_30.png"/>
 
-### Step 4. 
+
 After successfully submitting accelerate transaction, you'll see a page as below, and please wait for a while.
       <img alt="img_31.png" src="img_31.png"/>
 
-If it still doesn't work, please contact [Poly Network](https://discord.com/invite/y6MuEnq). 
+If it still doesn't work, please contact Poly team via <a class="fab fa-discord" href= "https://discord.com/invite/y6MuEnq"></a>.
 
 

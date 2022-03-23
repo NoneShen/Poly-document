@@ -1,6 +1,6 @@
 <h1 align="center">Develop for Relayer</h1>
 
-## 1. Development Specifications for Relayer
+## 1. Development Specifications
 
 This step shows how to develop a relayer for your chain or your project. The relayer plays a role to deliver message between different chains, which is a part of cross-chain ecosystem. 
 
@@ -47,42 +47,43 @@ type IChainSubmitter interface {
   ProcessTx(*msg.Tx, msg.PolyComposer) error
 }
 ```
-##2. Develop on Poly-Relayer
-Poly-Relayer is a relayer project maintained by Poly Network.If you choose to develop based on poly-relayer, the following will show the steps to join.
+##2. Develop Steps on Poly-Relayer
+Poly-relayer is a relayer project maintained by Poly Network.If you choose to develop based on poly-relayer, the following will show the steps to join.
 
-### Step1. Necessary for Develop
-The [poly-relayer](https://github.com/polynetwork/poly-relayer) project depends on the [bridge-common](https://github.com/polynetwork/bridge-common) library. So you need to:
+### Step1. Prerequisites
+The [Poly-Relayer](https://github.com/polynetwork/poly-relayer) project is based on the [bridge-common](https://github.com/polynetwork/bridge-common) library. So you need to:
  - Add chain ID in the `bridge-common` project [here](https://github.com/polynetwork/bridge-common/base).
  - Add chain client SDK [here](https://github.com/polynetwork/bridge-common/tree/main/chains) for common usage.
  - Add chain wallet [here](https://github.com/polynetwork/bridge-common/tree/main/wallet) for common usage.
 
-### Step2. Realize Chain Listener and Submitter
+### Step2. Interface implementation
 Implement interface `IChainListener` and `IChainSubmitter` for the new chain. 
 
-### Step3. Register 
+### Step3. Registration 
 Register `ChainListener` and `ChainSubmitter` in [selectors](https://github.com/polynetwork/poly-relayer/blob/main/relayer/relayer.go#L73) located in the `relayer.go` file.
 
-##3. Prepare for launch
+##3. Preparation for Launch
 The configs are required when launching relayer:
 
--Make sure necessary configuration is specified in `config.json` include 'CCM' contract,'CCD' contract and some details for chain.[Sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json).
+- Make sure necessary configuration is specified in `config.json` including CCM contract, CCD contract and other details for chain.
+- You can see a [sample](https://github.com/polynetwork/poly-relayer/blob/main/config.sample.json) in here.
 
-> [!Note]
-> - If you develop the relayer for the chain which has been integrated in Poly Network, check [here](Core_Smart_Contract/Contract/MainNet.md) to fetch the 'CCM' and 'CCD' contract .
+> [!Note|style:flat|label:Notice]
+> - If you develop the relayer for the chain which has been integrated in Poly Network, you can directly fetch [CCD](../../Core_Smart_Contract/Contract/CCD.md) and [CCM](../../Core_Smart_Contract/Contract/CCM.md) contracts.
 > - If you develop the relayer for a new chain, please complete the contract by yourself.
-> - For poly public nodes, check [here](Core_Smart_Contract/Contract/MainNet.md).
+> - Check Poly public [nodes](../../Core_Smart_Contract/Nodes/Nodes.md) in here.
 
--Specify roles to enable in `roles.json` [Sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json)
+- Specify roles to enable in `roles.json` and see a [sample](https://github.com/polynetwork/poly-relayer/blob/main/roles.sample.json) in here. 
 
-| Roles      | Quantity Demand                 | Description                                                                                     |
-|------------|---------------------------------|-------------------------------------------------------------------------------------------------|
-| HeaderSync | One or multiple for each chain  | It submits chain headers to poly chain.                                                         |
-| TxListen   | Only one for each chain         | It observes cross chain transactions from source chain, and push them to message queue.         |
-| TxCommit   | One or multiple for each chain  | It consumes the message queue, and submit the cross chain transactions to poly.                 |
-| PolyListen | Only One for poly chain         | It observes cross chain transactions from poly chain and push them to message queue.            |
-| PolyCommit | One or multiple for poly chain  | It consumes the message queue, and submit the cross chain transaction to the destination chain. |
+| Roles      | Quantity Demand                 | Description                                                                                 |
+|------------|---------------------------------|---------------------------------------------------------------------------------------------|
+| HeaderSync | One or multiple for each chain  | It submits chain headers to poly chain.                                                     |
+| TxListen   | Only one for each chain         | It observes cross chain transactions from source chain, and pushes them to message queue.   |
+| TxCommit   | One or multiple for each chain  | It consumes the message queue, and submits the cross chain transactions to poly.            |
+| PolyListen | Only One for poly chain         | It observes cross chain transactions from poly chain and pushes them to message queue.      |
+| PolyCommit | One or multiple for poly chain  | It consumes the message queue, and submits the cross chain transaction to the target chain. |
 
 
-Here are ready for the relayer, please see the chapter of 'test and launch' for details to launch.
+Now you are ready for the relayer, and please see the chapter of [Test and Launch](../../new_chain/launch_and_test/launch.md) for details to launch.
 
 
