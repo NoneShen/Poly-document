@@ -59,7 +59,7 @@ Q1: What is Poly Bridge? What functions does it provide? Where is the website?
    </div>
    <div id="collapse7" class="collapse" aria-labelledby="heading7">
     <div class="card-body">
-A: Poly Bridge is a bridge through which you can transfer your asset (include tokens and NFTs) between different chains easily and quickly.
+A: Poly Bridge is a bridge through which you can transfer your asset (including tokens and NFTs) between different chains easily and quickly.
       </div>
     </div>
   </div>
@@ -80,26 +80,12 @@ A: Poly Network incorporated many dApps, including Poly Bridge that was created 
   </div>
 
 ####<img alt="img_4.png" height="25pcs" src="img_4.png" width="25pcs"/> If you are a developer, you may concern:
-<div class="card">
-    <div class="card-header" id="heading8">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-Q1: What kind of pairs are available on the Poly Bridge?
-</button>
-      </h5>
-   </div>
-   <div id="collapse8" class="collapse" aria-labelledby="heading8">
-    <div class="card-body">
-A: Here is an interface provided for querying pairs on Poly Bridge.
-      </div>
-    </div>
-  </div>
 
 <div class="card">
     <div class="card-header" id="heading9">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-Q2: How to integrate token onto Poly Bridge?
+Q1: How to integrate token onto Poly Bridge?
 </button>
       </h5>
    </div>
@@ -115,7 +101,7 @@ A: Here is a <a href="https://medium.com/poly-network/poly-bridge-personal-compu
     <div class="card-header" id="heading11">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-Q3: Where can I find the contract?
+Q2: Where can I find the contract?
 </button>
       </h5>
    </div>

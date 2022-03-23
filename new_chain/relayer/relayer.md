@@ -7,7 +7,8 @@ This step shows how to develop a relayer for your chain or your project. The rel
 There are two components required: **Chain Listener** and **Chain Submitter**. 
 
 ### 1.1 Chain Listener
-Chain listener is used to fetch data from the source chain and poly chain, including block header, cross chain events emitted from CCM, transaction execution message from CCD and merkle proofs which are used to verify the cross chain message in the poly chain. Here is an interface provided for you.
+Chain listener is used to fetch data from the source chain and poly chain, including block header, cross chain events emitted from CCM and merkle proofs which are used to verify the cross chain message in the poly chain.
+And the interface listed is necessary.
 
 ```go
 type IChainListener interface {
@@ -33,7 +34,9 @@ type IChainListener interface {
 ```
 
 ### 1.2 Chain Submitter
-Chain Submitter is used to deliver messages to the target chain, including  **validator changes** of poly chain to CCD and **cross chain messages**. Here is an interface provided for you.
+Chain Submitter is used to deliver messages to the target chain, including  **validator changes** of poly chain to CCD and **cross chain messages**.
+Additionally, Chain Submitter will check whether the transaction has been verified in CCD.
+And the interface listed is necessary.
 
 ```go
 type IChainSubmitter interface {
@@ -48,7 +51,8 @@ type IChainSubmitter interface {
 }
 ```
 ##2. Develop Steps on Poly-Relayer
-Poly-relayer is a relayer project maintained by Poly Network.If you choose to develop based on poly-relayer, the following will show the steps to join.
+Poly-Relayer is a relayer project maintained by Poly Network.
+If you choose to develop based on Poly-Relayer, follow the listed steps please.
 
 ### Step1. Prerequisites
 The [Poly-Relayer](https://github.com/polynetwork/poly-relayer) project is based on the [bridge-common](https://github.com/polynetwork/bridge-common) library. So you need to:
